@@ -1,0 +1,224 @@
+[
+  {
+    "id": "steam-deck-oled",
+    "category": "gaming-handheld",
+    "manufacturer": "Valve",
+    "model": "Steam Deck OLED",
+    "aliases": [
+      "steam deck oled",
+      "steamdeck oled",
+      "deck oled"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [
+            "UHS-I"
+          ],
+          "requirements": {},
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "game-storage",
+        "label": "Game storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Valve documents UHS-I support for SD, SDHC, and SDXC media."
+    ],
+    "sources": [
+      {
+        "id": "valve-steam-deck-oled-tech-specs",
+        "type": "manufacturer_specification",
+        "publisher": "Valve",
+        "title": "Steam Deck Tech Specs",
+        "url": "https://www.steamdeck.com/en/tech",
+        "verified_at": "2026-08-27",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.bus_support"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-27"
+  },
+
+  {
+    "id": "gopro-hero13-black",
+    "category": "action-camera",
+    "manufacturer": "GoPro",
+    "model": "HERO13 Black",
+    "aliases": [
+      "hero13",
+      "hero 13",
+      "hero13 black",
+      "gopro 13",
+      "gopro hero 13"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [
+            "UHS-I"
+          ],
+          "requirements": {
+            "minimum_uhs_speed_class": "U3",
+            "minimum_video_speed_class": "V30"
+          },
+          "max_capacity_gb": 1024,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3",
+          "minimum_video_speed_class": "V30"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "GoPro specifies a brand-name microSD card rated V30/UHS-3 or higher."
+    ],
+    "sources": [
+      {
+        "id": "gopro-hero13-black-setup",
+        "type": "manufacturer_specification",
+        "publisher": "GoPro",
+        "title": "HERO13 Black Setup",
+        "url": "https://gopro.com/en/us/out-of-the-box-experience/hero-13-black-creator-edition",
+        "verified_at": "2026-08-27",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.requirements",
+          "storage.slots.0.max_capacity_gb"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-27"
+  },
+
+  {
+    "id": "sony-a7-iv",
+    "category": "camera",
+    "manufacturer": "Sony",
+    "model": "a7 IV",
+    "aliases": [
+      "a7 iv",
+      "a7iv",
+      "alpha 7 iv",
+      "alpha7 iv",
+      "ilce-7m4"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented",
+          "notes": [
+            "Slot 1 also accepts CFexpress Type A media."
+          ]
+        },
+        {
+          "slot": 2,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "Standard video up to 200 Mbps",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3",
+          "minimum_video_speed_class": "V30"
+        }
+      },
+      {
+        "id": "slow-quick-video",
+        "label": "Selected S&Q recording modes",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        }
+      },
+      {
+        "id": "all-intra-video",
+        "label": "XAVC S-I recording",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        }
+      }
+    ],
+    "notes": [
+      "Exact speed requirement depends on recording format, frame rate, and bit rate.",
+      "Slot 1 supports CFexpress Type A in addition to SD media."
+    ],
+    "sources": [
+      {
+        "id": "sony-a7iv-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ILCE-7M4 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/ilc/2110/v1/en/contents/TP1000640149.html",
+        "verified_at": "2026-08-27",
+        "supports": [
+          "storage.slots",
+          "usage_profiles"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-27"
+  }
+]
