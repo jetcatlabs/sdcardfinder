@@ -3,35 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SD Card Finder</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <title>SD Card Finder — Find the Right SD Card for Your Device</title>
+
+    <meta
+        name="description"
+        content="Find compatible SD cards for cameras, handhelds, action cameras, and other devices."
+    >
+
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    <main>
-        <h1>SD Card Finder</h1>
-        <p>Choose a device and card to check compatibility.</p>
+    <header class="site-header">
+        <a class="brand" href="/">SD Card Finder</a>
+    </header>
 
-        <section>
-            <label for="device-select">Device</label>
-            <select id="device-select"></select>
+    <main class="home">
+        <section class="hero">
+            <p class="eyebrow">DEVICE COMPATIBILITY</p>
+
+            <h1>Find the right SD card<br>for your device.</h1>
+
+            <p class="hero-description">
+                Search your device and we'll show you what fits,
+                what performance it supports, and which cards make sense.
+            </p>
+
+            <div class="finder">
+                <label for="device-search">
+                    What device do you have?
+                </label>
+
+                <div class="search-box">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+
+                    <input
+                        id="device-search"
+                        type="search"
+                        placeholder="Search devices..."
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div
+                    id="device-results"
+                    class="device-results"
+                ></div>
+            </div>
         </section>
 
-        <section>
-            <label for="profile-select">Use case</label>
-            <select id="profile-select"></select>
+        <section class="supported">
+            <div class="section-heading">
+                <h2>Supported devices</h2>
+                <p>
+                    We're starting small and verifying compatibility
+                    against manufacturer documentation.
+                </p>
+            </div>
+
+            <div
+                id="device-grid"
+                class="device-grid"
+            ></div>
         </section>
-
-        <section>
-            <label for="card-select">SD card</label>
-            <select id="card-select"></select>
-        </section>
-
-        <button id="check-button">Check compatibility</button>
-
-        <section id="result"></section>
     </main>
 
-    <script src="js/compatibility.js"></script>
-    <script src="js/app.js"></script>
+    <footer class="site-footer">
+        <p>
+            Compatibility information is based on manufacturer
+            documentation and published SD card specifications.
+        </p>
+    </footer>
+
+    <script src="/js/app.js"></script>
 </body>
 </html>

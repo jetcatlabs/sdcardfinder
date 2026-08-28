@@ -1,161 +1,123 @@
 let devices = [];
-let cards = [];
 
-const deviceSelect = document.getElementById("device-select");
-const profileSelect = document.getElementById("profile-select");
-const cardSelect = document.getElementById("card-select");
-const checkButton = document.getElementById("check-button");
-const resultElement = document.getElementById("result");
+const searchInput = document.getElementById("device-search");
+const resultsElement = document.getElementById("device-results");
+const deviceGrid = document.getElementById("device-grid");
 
-async function loadData() {
-    const [deviceResponse, cardResponse] = await Promise.all([
-        fetch("data/devices.json"),
-        fetch("data/cards.json")
-    ]);
 
-    if (!deviceResponse.ok || !cardResponse.ok) {
-        throw new Error("Could not load device/card data.");
+async function loadDevices() {
+    const response = await fetch("/data/devices.json");
+
+    if (!response.ok) {
+        throw new Error("Could not load device data.");
     }
 
-    devices = await deviceResponse.json();
-    cards = await cardResponse.json();
+    devices = await response.json();
 
-    populateDevices();
-    populateCards();
-    populateProfiles();
+    renderSearchResults(devices);
+    renderDeviceGrid();
 }
 
-function populateDevices() {
-    deviceSelect.innerHTML = "";
+
+function deviceUrl(device) {
+    return `/device/${device.id}/`;
+}
+
+
+function searchableText(device) {
+    return [
+        device.manufacturer,
+        device.model,
+        ...(device.aliases ?? [])
+    ]
+        .join(" ")
+        .toLowerCase();
+}
+
+
+function renderSearchResults(matches) {
+    resultsElement.innerHTML = "";
+
+    if (matches.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "no-results";
+        empty.textContent = "No supported devices found yet.";
+
+        resultsElement.appendChild(empty);
+        return;
+    }
+
+    for (const device of matches) {
+        const link = document.createElement("a");
+
+        link.className = "device-result";
+        link.href = deviceUrl(device);
+
+        link.innerHTML = `
+            <span>
+                <strong>${device.manufacturer} ${device.model}</strong>
+                <small>${formatCategory(device.category)}</small>
+            </span>
+
+            <span class="chevron">›</span>
+        `;
+
+        resultsElement.appendChild(link);
+    }
+}
+
+
+function renderDeviceGrid() {
+    deviceGrid.innerHTML = "";
 
     for (const device of devices) {
-        const option = document.createElement("option");
-        option.value = device.id;
-        option.textContent = `${device.manufacturer} ${device.model}`;
+        const link = document.createElement("a");
 
-        deviceSelect.appendChild(option);
+        link.className = "device-card";
+        link.href = deviceUrl(device);
+
+        link.innerHTML = `
+            <small>${formatCategory(device.category)}</small>
+            <strong>${device.manufacturer} ${device.model}</strong>
+            <span>View compatibility →</span>
+        `;
+
+        deviceGrid.appendChild(link);
     }
 }
 
-function populateCards() {
-    cardSelect.innerHTML = "";
 
-    for (const card of cards) {
-        const option = document.createElement("option");
-        option.value = card.id;
-        option.textContent =
-            `${card.manufacturer} ${card.product_family} - ${card.capacity_gb}GB`;
+function formatCategory(category) {
+    return category
+        .split("-")
+        .map(word =>
+            word.charAt(0).toUpperCase() + word.slice(1)
+        )
+        .join(" ");
+}
 
-        cardSelect.appendChild(option);
+
+searchInput.addEventListener("input", () => {
+    const query = searchInput.value
+        .trim()
+        .toLowerCase();
+
+    if (!query) {
+        renderSearchResults(devices);
+        return;
     }
-}
 
-function populateProfiles() {
-    const device = getSelectedDevice();
-
-    profileSelect.innerHTML = "";
-
-    const defaultOption = document.createElement("option");
-    defaultOption.value = "";
-    defaultOption.textContent = "General compatibility";
-
-    profileSelect.appendChild(defaultOption);
-
-    for (const profile of device.usage_profiles ?? []) {
-        const option = document.createElement("option");
-        option.value = profile.id;
-        option.textContent = profile.label;
-
-        profileSelect.appendChild(option);
-    }
-}
-
-function getSelectedDevice() {
-    return devices.find(
-        device => device.id === deviceSelect.value
-    );
-}
-
-function getSelectedCard() {
-    return cards.find(
-        card => card.id === cardSelect.value
-    );
-}
-
-function displayResults(results) {
-    resultElement.innerHTML = "";
-
-    for (const result of results) {
-        const container = document.createElement("div");
-        container.className = result.compatible
-            ? "result compatible"
-            : "result incompatible";
-
-        const heading = document.createElement("h2");
-
-        heading.textContent = result.compatible
-            ? `Compatible with slot ${result.slot}`
-            : `Not compatible with slot ${result.slot}`;
-
-        container.appendChild(heading);
-
-        if (result.failures.length > 0) {
-            const failureList = document.createElement("ul");
-
-            for (const failure of result.failures) {
-                const item = document.createElement("li");
-                item.textContent = failure;
-                failureList.appendChild(item);
-            }
-
-            container.appendChild(failureList);
-        }
-
-        if (result.notes.length > 0) {
-            const notesList = document.createElement("ul");
-
-            for (const note of result.notes) {
-                const item = document.createElement("li");
-                item.textContent = note;
-                notesList.appendChild(item);
-            }
-
-            container.appendChild(notesList);
-        }
-
-        resultElement.appendChild(container);
-    }
-}
-
-function runCompatibilityCheck() {
-    const device = getSelectedDevice();
-    const card = getSelectedCard();
-
-    const profileId =
-        profileSelect.value || null;
-
-    const results = checkCompatibility(
-        device,
-        card,
-        profileId
+    const matches = devices.filter(device =>
+        searchableText(device).includes(query)
     );
 
-    displayResults(results);
-}
-
-deviceSelect.addEventListener("change", () => {
-    populateProfiles();
-    resultElement.innerHTML = "";
+    renderSearchResults(matches);
 });
 
-checkButton.addEventListener(
-    "click",
-    runCompatibilityCheck
-);
 
-loadData().catch(error => {
+loadDevices().catch(error => {
     console.error(error);
 
-    resultElement.textContent =
-        "Failed to load SD Card Finder data.";
+    resultsElement.innerHTML =
+        `<div class="no-results">Unable to load devices.</div>`;
 });
