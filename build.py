@@ -918,6 +918,12 @@ def generate_device_page(device, cards):
 
 <footer class="site-footer">
     <p>
+        <a href="/about/">
+            About & Methodology
+        </a>
+    </p>
+
+    <p>
         Compatibility information is based on
         manufacturer documentation and published
         SD card specifications.
@@ -957,7 +963,8 @@ Sitemap: {SITE_URL}/sitemap.xml
 
 def generate_sitemap(devices):
     urls = [
-        f"{SITE_URL}/"
+        f"{SITE_URL}/",
+        f"{SITE_URL}/about/",
     ]
 
     for device in devices:
@@ -989,6 +996,306 @@ def generate_sitemap(devices):
 
     print("Generated: sitemap.xml")
 
+def generate_about_page():
+    about_dir = DIST / "about"
+    about_dir.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    canonical_url = f"{SITE_URL}/about/"
+
+    page = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        About & Methodology | SD Card Finder
+    </title>
+
+    <meta
+        name="description"
+        content="Learn how SD Card Finder researches device compatibility, evaluates SD card specifications, and generates recommendations."
+    >
+
+    <link
+        rel="canonical"
+        href="{canonical_url}"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+</head>
+
+<body>
+
+<header class="site-header">
+    <a class="brand" href="/">
+        SD Card Finder
+    </a>
+</header>
+
+<main class="content-page">
+
+    <nav class="breadcrumb">
+        <a href="/">
+            SD Card Finder
+        </a>
+
+        <span>›</span>
+
+        <span>
+            About & Methodology
+        </span>
+    </nav>
+
+    <section class="content-hero">
+        <p class="eyebrow">
+            ABOUT
+        </p>
+
+        <h1>
+            How SD Card Finder works
+        </h1>
+
+        <p class="content-intro">
+            SD Card Finder is built to answer a simple
+            question: what SD card will actually work
+            with a specific device?
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>
+            The basic idea
+        </h2>
+
+        <p>
+            Device compatibility can be surprisingly
+            confusing. Card format, capacity, bus
+            interface, speed class, video speed class,
+            and application rating can all matter,
+            depending on the device.
+        </p>
+
+        <p>
+            SD Card Finder collects those requirements
+            into structured data and compares them
+            against documented SD card specifications.
+        </p>
+    </section>
+
+    <section class="method-grid">
+
+        <article class="method-card">
+            <span class="method-step">
+                1
+            </span>
+
+            <h2>
+                Manufacturer facts
+            </h2>
+
+            <p>
+                Device compatibility information is
+                based primarily on documentation from
+                the device manufacturer.
+            </p>
+
+            <p>
+                Card specifications are taken from card
+                manufacturer documentation whenever
+                possible.
+            </p>
+        </article>
+
+        <article class="method-card">
+            <span class="method-step">
+                2
+            </span>
+
+            <h2>
+                Compatibility rules
+            </h2>
+
+            <p>
+                SD Card Finder compares device
+                requirements with card specifications
+                such as format, capacity, interface,
+                and speed class.
+            </p>
+
+            <p>
+                Compatibility logic is kept separate
+                from the underlying source data.
+            </p>
+        </article>
+
+        <article class="method-card">
+            <span class="method-step">
+                3
+            </span>
+
+            <h2>
+                Recommendations
+            </h2>
+
+            <p>
+                Recommendations are derived from
+                compatibility and device use cases.
+            </p>
+
+            <p>
+                For example, a gaming handheld may be
+                organized primarily around storage
+                capacity, while a camera may require
+                different speed classes for different
+                recording modes.
+            </p>
+        </article>
+
+        <article class="method-card">
+            <span class="method-step">
+                4
+            </span>
+
+            <h2>
+                Commercial links
+            </h2>
+
+            <p>
+                SD Card Finder may eventually use
+                affiliate links or other commercial
+                relationships.
+            </p>
+
+            <p>
+                Those relationships do not determine
+                whether a card is marked compatible.
+                Compatibility is based on the technical
+                data and rules described above.
+            </p>
+        </article>
+
+    </section>
+
+    <section class="content-section">
+        <h2>
+            We leave unknowns unknown
+        </h2>
+
+        <p>
+            If a manufacturer does not document a
+            maximum capacity or other limitation,
+            SD Card Finder reports that information
+            as unspecified rather than inventing a
+            value.
+        </p>
+
+        <p>
+            Some compatibility conclusions may rely on
+            established SD standards or backward
+            compatibility rules. When possible, those
+            inferences are kept distinct from direct
+            manufacturer claims.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>
+            Requirements and recommendations are not
+            the same thing
+        </h2>
+
+        <p>
+            A device may accept many cards while only
+            requiring a subset of their performance.
+            A faster or more expensive card is not
+            automatically a better recommendation.
+        </p>
+
+        <p>
+            SD Card Finder tries to distinguish between
+            what a device requires, what it supports,
+            and what is practically useful for a
+            particular use case.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>
+            Sources and verification
+        </h2>
+
+        <p>
+            Device pages include links to the
+            manufacturer documentation used to support
+            compatibility information.
+        </p>
+
+        <p>
+            Records also carry verification dates so
+            specifications can be reviewed again as
+            manufacturers update products and
+            documentation.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>
+            Still a growing catalog
+        </h2>
+
+        <p>
+            SD Card Finder is starting with a small
+            number of carefully verified devices and
+            cards rather than a large automatically
+            generated catalog.
+        </p>
+
+        <p>
+            Coverage will expand over time while
+            keeping the same source-backed approach.
+        </p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <a href="/about/">
+            About & Methodology
+        </a>
+    </p>
+
+    <p>
+        Compatibility information is based on
+        manufacturer documentation and published
+        SD card specifications.
+    </p>
+</footer>
+
+</body>
+</html>
+"""
+
+    output_file = about_dir / "index.html"
+
+    output_file.write_text(
+        page,
+        encoding="utf-8"
+    )
+
+    print("Generated: about/")
+
 def build():
     print("Building SD Card Finder...")
 
@@ -1005,7 +1312,8 @@ def build():
     
     generate_robots_txt()
     generate_sitemap(devices)
-
+    generate_about_page()
+    
     for device in devices:
         generate_device_page(
             device,
