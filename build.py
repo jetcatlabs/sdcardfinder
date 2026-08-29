@@ -11,6 +11,7 @@ DIST = ROOT / "dist"
 DEVICES_FILE = SRC / "data" / "devices.json"
 CARDS_FILE = SRC / "data" / "cards.json"
 
+SITE_URL = "https://sdcardfinder.com"
 
 VIDEO_SPEED_RANK = {
     "V6": 6,
@@ -780,6 +781,11 @@ def generate_device_page(device, cards):
         name="description"
         content="Find compatible SD cards for the {manufacturer} {model}, including supported formats, speeds and capacities."
     >
+    
+    <link
+        rel="canonical"
+        href="{SITE_URL}/device/{device["id"]}/"
+    >
 
     <link
         rel="stylesheet"
@@ -934,6 +940,54 @@ def generate_device_page(device, cards):
         f"Generated: device/{device['id']}/"
     )
 
+def generate_robots_txt():
+    content = f"""User-agent: *
+Allow: /
+
+Sitemap: {SITE_URL}/sitemap.xml
+"""
+
+    (DIST / "robots.txt").write_text(
+        content,
+        encoding="utf-8"
+    )
+
+    print("Generated: robots.txt")
+
+
+def generate_sitemap(devices):
+    urls = [
+        f"{SITE_URL}/"
+    ]
+
+    for device in devices:
+        urls.append(
+            f"{SITE_URL}/device/{device['id']}/"
+        )
+
+    url_entries = ""
+
+    for url in urls:
+        url_entries += f"""
+    <url>
+        <loc>{html.escape(url)}</loc>
+    </url>
+"""
+
+    sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+{url_entries}
+</urlset>
+"""
+
+    (DIST / "sitemap.xml").write_text(
+        sitemap,
+        encoding="utf-8"
+    )
+
+    print("Generated: sitemap.xml")
 
 def build():
     print("Building SD Card Finder...")
@@ -948,6 +1002,9 @@ def build():
 
     clean_dist()
     copy_static_files()
+    
+    generate_robots_txt()
+    generate_sitemap(devices)
 
     for device in devices:
         generate_device_page(
