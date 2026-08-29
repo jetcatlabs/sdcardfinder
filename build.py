@@ -58,7 +58,7 @@ def copy_static_files():
         DIST / "index.html"
     )
 
-    for directory in ["css", "js", "data"]:
+    for directory in ["css", "js", "data", "assets"]:
         shutil.copytree(
             SRC / directory,
             DIST / directory
@@ -780,6 +780,11 @@ def generate_device_page(device, cards):
     <meta
         name="description"
         content="Find compatible SD cards for the {manufacturer} {model}, including supported formats, speeds and capacities."
+    >
+    <link
+        rel="icon"
+        href="/assets/favicon.svg"
+        type="image/svg+xml"
     >
     
     <link
@@ -1535,6 +1540,99 @@ def generate_privacy_page():
 
     print("Generated: privacy/")
 
+def generate_404_page():
+    page = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Page Not Found | SD Card Finder</title>
+
+    <meta
+        name="robots"
+        content="noindex"
+    >
+
+    <link
+        rel="icon"
+        href="/assets/favicon.svg"
+        type="image/svg+xml"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+</head>
+
+<body>
+
+<header class="site-header">
+    <a class="brand" href="/">
+        SD Card Finder
+    </a>
+</header>
+
+<main class="not-found-page">
+
+    <section class="not-found-content">
+        <p class="eyebrow">
+            404
+        </p>
+
+        <h1>
+            Couldn't find that page.
+        </h1>
+
+        <p>
+            The device or page you're looking for may
+            not exist yet, or the address may have changed.
+        </p>
+
+        <a
+            class="primary-link"
+            href="/"
+        >
+            Search SD Card Finder
+        </a>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <a href="/about/">
+            About & Methodology
+        </a>
+        ·
+        <a href="/privacy/">
+            Privacy
+        </a>
+    </p>
+
+    <p>
+        Compatibility information is based on
+        manufacturer documentation and published
+        SD card specifications.
+    </p>
+</footer>
+
+</body>
+</html>
+"""
+
+    (DIST / "404.html").write_text(
+        page,
+        encoding="utf-8"
+    )
+
+    print("Generated: 404.html")
+
 def build():
     print("Building SD Card Finder...")
 
@@ -1553,6 +1651,7 @@ def build():
     generate_sitemap(devices)
     generate_about_page()
     generate_privacy_page()
+    generate_404_page()
     
     for device in devices:
         generate_device_page(
