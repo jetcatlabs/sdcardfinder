@@ -102,6 +102,7 @@
     "form_factor": "SDXC",
     "bus": "UHS-I",
     "speed_classes": {
+	  "uhs": "U3",
       "video": "V30"
     },
     "performance": {
@@ -182,5 +183,37 @@
     ],
     "status": "verified",
     "last_verified": "2026-08-27"
+  },
+  
+  {
+	"id": "lexar-1066x-silver-microsdxc-512gb",
+	"manufacturer": "Lexar",
+	"product_family": "Professional 1066x SILVER Series",
+	"model": "512GB microSDXC",
+	"capacity_gb": 512,
+	"form_factor": "microSDXC",
+	"bus": "UHS-I",
+	"speed_classes": {
+		"uhs": "U3",
+		"video": "V30",
+		"application": "A2"
+	},
+	"performance": {
+		"max_read_mbps": 160,
+		"max_write_mbps": 120,
+		"minimum_sustained_write_mbps": 30
+	},
+	"part_number": "LMS1066512G-BNANU",
+	"sources": [
+		{
+		"type": "manufacturer",
+		"publisher": "Lexar",
+		"title": "Lexar Professional 1066x microSDXC UHS-I Card SILVER Series",
+		"url": "https://americas.lexar.com/product/lexar-professional-1066x-microsdxc-uhs-i-card-silver-series/",
+		"verified_at": "2026-08-28"
+		}
+	],
+	"status": "verified",
+	"last_verified": "2026-08-28"
   }
 ]

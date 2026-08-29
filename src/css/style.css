@@ -377,9 +377,7 @@ h1 {
 }
 
 .recommendation-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    display: block;
 }
 
 .recommendation-card {
@@ -570,5 +568,67 @@ h1 {
     .source-list li {
         flex-direction: column;
         gap: 5px;
+    }
+}
+
+.featured-recommendations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.recommendation-label {
+    margin: 0 0 12px;
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.other-compatible {
+    margin-top: 32px;
+}
+
+.other-compatible h3 {
+    margin: 0 0 14px;
+    font-size: 17px;
+}
+
+.other-compatible-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+@media (max-width: 700px) {
+    .featured-recommendations,
+    .other-compatible-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.usage-recommendation-group {
+    margin-top: 28px;
+}
+
+.usage-recommendation-group:first-child {
+    margin-top: 0;
+}
+
+.usage-recommendation-group > h3 {
+    margin: 0 0 14px;
+    font-size: 17px;
+}
+
+.usage-recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+@media (max-width: 700px) {
+    .usage-recommendation-grid {
+        grid-template-columns: 1fr;
     }
 }

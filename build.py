@@ -25,6 +25,19 @@ UHS_SPEED_RANK = {
     "U3": 3,
 }
 
+RECOMMENDATION_STRATEGIES = {
+    "gaming-handheld": "capacity",
+    "action-camera": "usage",
+    "camera": "usage",
+}
+
+CAPACITY_PROFILES = {
+    "gaming-handheld": {
+        "smallest": 128,
+        "recommended": 512,
+        "more_storage": 1024,
+    }
+}
 
 def load_json(path):
     with path.open("r", encoding="utf-8") as file:
@@ -157,8 +170,126 @@ def build_speed_text(card):
 
     return " · ".join(values)
 
+def select_featured_cards(device, matches):
+    profile = CAPACITY_PROFILES.get(
+        device["category"]
+    )
 
-def generate_card_recommendations(device, cards):
+    if not profile:
+        return []
+
+    featured = []
+
+    tiers = [
+        (
+            "Smallest option",
+            profile["smallest"]
+        ),
+        (
+            "Recommended",
+            profile["recommended"]
+        ),
+        (
+            "More storage",
+            profile["more_storage"]
+        ),
+    ]
+
+    for label, capacity in tiers:
+        match = next(
+            (
+                item
+                for item in matches
+                if item["card"]["capacity_gb"] == capacity
+            ),
+            None
+        )
+
+        if match:
+            featured.append({
+                "label": label,
+                "match": match
+            })
+
+    return featured
+
+def format_capacity(capacity_gb):
+    if capacity_gb == 1024:
+        return "1 TB"
+
+    if capacity_gb > 1024 and capacity_gb % 1024 == 0:
+        return f"{capacity_gb // 1024} TB"
+
+    return f"{capacity_gb} GB"
+
+def render_recommendation_card(match, label=None):
+    card = match["card"]
+
+    manufacturer = html.escape(
+        card["manufacturer"]
+    )
+
+    family = html.escape(
+        card["product_family"]
+    )
+
+    form_factor = html.escape(
+        card["form_factor"]
+    )
+
+    bus = html.escape(
+        card["bus"]
+    )
+
+    speed = html.escape(
+        build_speed_text(card)
+    )
+
+    speed_html = ""
+
+    if speed:
+        speed_html = f"""
+            <span>{speed}</span>
+        """
+
+    label_html = ""
+
+    if label:
+        label_html = f"""
+            <p class="recommendation-label">
+                {html.escape(label)}
+            </p>
+        """
+
+    return f"""
+    <article class="recommendation-card">
+        {label_html}
+
+        <div class="recommendation-top">
+            <div>
+                <p class="card-capacity">
+                    {format_capacity(card["capacity_gb"])}
+                </p>
+
+                <h3>
+                    {manufacturer} {family}
+                </h3>
+            </div>
+
+            <span class="compatible-badge">
+                Compatible
+            </span>
+        </div>
+
+        <div class="card-specs">
+            <span>{form_factor}</span>
+            <span>{bus}</span>
+            {speed_html}
+        </div>
+    </article>
+    """
+
+def generate_capacity_recommendations(device, cards):
     matches = compatible_cards(
         device,
         cards
@@ -172,66 +303,152 @@ def generate_card_recommendations(device, cards):
         </div>
         """
 
+    featured = select_featured_cards(
+        device,
+        matches
+    )
+
+    featured_ids = {
+        item["match"]["card"]["id"]
+        for item in featured
+    }
+
+    other_matches = [
+        match
+        for match in matches
+        if match["card"]["id"] not in featured_ids
+    ]
+
     output = ""
 
-    for match in matches:
-        card = match["card"]
+    if featured:
+        output += """
+        <div class="featured-recommendations">
+        """
 
-        manufacturer = html.escape(
-            card["manufacturer"]
-        )
+        for item in featured:
+            output += render_recommendation_card(
+                item["match"],
+                item["label"]
+            )
 
-        family = html.escape(
-            card["product_family"]
-        )
+        output += """
+        </div>
+        """
 
-        form_factor = html.escape(
-            card["form_factor"]
-        )
+    if other_matches:
+        output += """
+        <div class="other-compatible">
+            <h3>Other compatible cards</h3>
 
-        bus = html.escape(
-            card["bus"]
-        )
+            <div class="other-compatible-grid">
+        """
 
-        speed = html.escape(
-            build_speed_text(card)
-        )
+        for match in other_matches:
+            output += render_recommendation_card(
+                match
+            )
 
-        speed_html = ""
-
-        if speed:
-            speed_html = f"""
-                <span>{speed}</span>
-            """
-
-        output += f"""
-        <article class="recommendation-card">
-            <div class="recommendation-top">
-                <div>
-                    <p class="card-capacity">
-                        {card["capacity_gb"]} GB
-                    </p>
-
-                    <h3>
-                        {manufacturer} {family}
-                    </h3>
-                </div>
-
-                <span class="compatible-badge">
-                    Compatible
-                </span>
+        output += """
             </div>
-
-            <div class="card-specs">
-                <span>{form_factor}</span>
-                <span>{bus}</span>
-                {speed_html}
-            </div>
-        </article>
+        </div>
         """
 
     return output
 
+def generate_usage_recommendations(device, cards):
+    matches = compatible_cards(
+        device,
+        cards
+    )
+
+    if not matches:
+        return """
+        <div class="empty-state">
+            We don't have a verified matching card in
+            our catalog yet.
+        </div>
+        """
+
+    profiles = [
+        profile
+        for profile in device.get("usage_profiles", [])
+        if profile.get("requirements")
+    ]
+
+    output = ""
+
+    if not profiles:
+        output += """
+        <div class="other-compatible">
+            <h3>Compatible cards</h3>
+            <div class="other-compatible-grid">
+        """
+
+        for match in matches:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </div>
+        """
+
+        return output
+
+    for profile in profiles:
+        profile_matches = []
+
+        for match in matches:
+            card = match["card"]
+
+            if card_meets_requirements(
+                card,
+                profile.get("requirements", {})
+            ):
+                profile_matches.append(match)
+
+        if not profile_matches:
+            continue
+
+        output += f"""
+        <div class="usage-recommendation-group">
+            <h3>
+                {html.escape(profile["label"])}
+            </h3>
+
+            <div class="usage-recommendation-grid">
+        """
+
+        for match in profile_matches:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </div>
+        """
+
+    return output
+
+def generate_card_recommendations(device, cards):
+    strategy = RECOMMENDATION_STRATEGIES.get(
+        device["category"],
+        "usage"
+    )
+
+    if strategy == "capacity":
+        return generate_capacity_recommendations(
+            device,
+            cards
+        )
+
+    return generate_usage_recommendations(
+        device,
+        cards
+    )
 
 def generate_requirements_summary(device):
     slot = device["storage"]["slots"][0]
@@ -251,7 +468,7 @@ def generate_requirements_summary(device):
     if max_capacity is None:
         capacity = "Not specified by manufacturer"
     else:
-        capacity = f"Up to {max_capacity} GB"
+        capacity = f"Up to {format_capacity(max_capacity)}"
 
     return f"""
     <div class="requirement-grid">
@@ -462,6 +679,21 @@ def generate_sources(device):
 
 
 def generate_device_page(device, cards):
+    strategy = RECOMMENDATION_STRATEGIES.get(
+    device["category"],
+    "usage"
+    )
+
+    if strategy == "capacity":
+        recommendation_intro = (
+        "A few sensible choices depending on "
+        "how much storage you want."
+    )
+    else:
+        recommendation_intro = (
+        "Cards that meet the requirements for "
+        "different ways you use this device."
+    )
     device_dir = (
         DIST
         / "device"
@@ -511,6 +743,22 @@ def generate_device_page(device, cards):
     sources = \
         generate_sources(
             device
+        )
+
+    strategy = RECOMMENDATION_STRATEGIES.get(
+        device["category"],
+        "usage"
+        )
+
+    if strategy == "capacity":
+        recommendation_intro = (
+            "A few sensible choices depending on "
+            "how much storage you want."
+        )
+    else:
+        recommendation_intro = (
+            "Cards that meet the requirements for "
+            "different ways you use this device."
         )
 
     page = f"""<!DOCTYPE html>
@@ -610,9 +858,7 @@ def generate_device_page(device, cards):
             </h2>
 
             <p>
-                These cards match the documented
-                device-level requirements in our
-                current catalog.
+                {recommendation_intro}
             </p>
         </div>
 
@@ -712,6 +958,46 @@ def build():
     print()
     print("Build complete: dist")
 
+def select_featured_cards(device, matches):
+    profile = CAPACITY_PROFILES.get(
+        device["category"]
+    )
+
+    if not profile:
+        return []
+
+    by_capacity = {
+        item["card"]["capacity_gb"]: item
+        for item in matches
+    }
+
+    featured = []
+
+    tiers = [
+        (
+            "Smallest option",
+            profile["smallest"]
+        ),
+        (
+            "Recommended",
+            profile["recommended"]
+        ),
+        (
+            "More storage",
+            profile["more_storage"]
+        ),
+    ]
+
+    for label, capacity in tiers:
+        match = by_capacity.get(capacity)
+
+        if match:
+            featured.append({
+                "label": label,
+                "match": match
+            })
+
+    return featured
 
 if __name__ == "__main__":
     build()
