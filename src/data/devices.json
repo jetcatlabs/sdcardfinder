@@ -479,5 +479,328 @@
   ],
   "status": "verified",
   "last_verified": "2026-08-28"
+},
+{
+  "id": "raspberry-pi-5",
+  "category": "single-board-computer",
+  "manufacturer": "Raspberry Pi",
+  "model": "5",
+  "aliases": [
+    "raspberry pi 5",
+    "raspberrypi 5",
+    "rpi 5",
+    "pi 5"
+  ],
+  "storage": {
+    "slots": [
+      {
+        "slot": 1,
+        "accepted_formats": [
+          "microSDHC",
+          "microSDXC"
+        ],
+        "bus_support": [
+          "UHS-I"
+        ],
+        "requirements": {},
+        "recommendations": {
+          "application_class": "A2",
+          "uhs_speed_class": "U3",
+          "video_speed_class": "V30",
+          "host_bus_mode": "SDR104"
+        },
+        "max_capacity_gb": null,
+        "max_capacity_status": "not_documented"
+      }
+    ]
+  },
+  "usage_profiles": [
+    {
+      "id": "operating-system-storage",
+      "label": "Operating system and application storage",
+      "requirements": {},
+      "recommendations": {
+        "application_class": "A2"
+      }
+    }
+  ],
+  "notes": [
+    "Raspberry Pi emphasizes random I/O performance and command queueing for responsive system storage.",
+    "Official Raspberry Pi SD cards are C10, U3, V30, and A2."
+  ],
+  "sources": [
+    {
+      "id": "raspberry-pi-sd-card-docs",
+      "type": "manufacturer_documentation",
+      "publisher": "Raspberry Pi",
+      "title": "SD Cards - Raspberry Pi Documentation",
+      "url": "https://www.raspberrypi.com/documentation/accessories/sd-cards.html",
+      "verified_at": "2026-08-28",
+      "supports": [
+        "storage.slots.0.accepted_formats",
+        "storage.slots.0.recommendations"
+      ]
+    }
+  ],
+  "status": "verified",
+  "last_verified": "2026-08-28"
+},
+{
+  "id": "nintendo-switch-lite",
+  "category": "gaming-handheld",
+  "manufacturer": "Nintendo",
+  "model": "Switch Lite",
+  "aliases": [
+    "nintendo switch lite",
+    "switch lite",
+    "switchlite"
+  ],
+  "storage": {
+    "slots": [
+      {
+        "slot": 1,
+        "accepted_formats": [
+          "microSD",
+          "microSDHC",
+          "microSDXC"
+        ],
+        "bus_support": [
+          "UHS-I"
+        ],
+        "requirements": {},
+        "max_capacity_gb": 2048,
+        "max_capacity_status": "manufacturer_documented"
+      }
+    ]
+  },
+  "usage_profiles": [
+    {
+      "id": "game-storage",
+      "label": "Game storage",
+      "requirements": {}
+    }
+  ],
+  "notes": [
+    "Nintendo documents support for microSD, microSDHC, and microSDXC cards.",
+    "Storage expansion is supported up to 2 TB."
+  ],
+  "sources": [
+    {
+      "id": "nintendo-switch-lite-tech-specs",
+      "type": "manufacturer_specification",
+      "publisher": "Nintendo",
+      "title": "Nintendo Switch Technical Specs",
+      "url": "https://www.nintendo.com/us/gaming-systems/switch/tech-specs/",
+      "verified_at": "2026-08-28",
+      "supports": [
+        "storage.slots.0.accepted_formats",
+        "storage.slots.0.max_capacity_gb"
+      ]
+    }
+  ],
+  "status": "verified",
+  "last_verified": "2026-08-28"
+},
+{
+  "id": "dji-osmo-action-4",
+  "category": "action-camera",
+  "manufacturer": "DJI",
+  "model": "Osmo Action 4",
+  "aliases": [
+    "osmo action 4",
+    "dji action 4",
+    "action 4",
+    "osmo action4"
+  ],
+  "storage": {
+    "slots": [
+      {
+        "slot": 1,
+        "accepted_formats": [
+          "microSD",
+          "microSDHC",
+          "microSDXC"
+        ],
+        "bus_support": [
+          "UHS-I"
+        ],
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3",
+          "video_speed_class": "V30"
+        },
+        "max_capacity_gb": 512,
+        "max_capacity_status": "manufacturer_documented"
+      }
+    ]
+  },
+  "usage_profiles": [],
+  "notes": [
+    "DJI documents microSD support up to 512 GB.",
+    "DJI publishes recommended U3/V30 and faster cards for this model."
+  ],
+  "sources": [
+    {
+      "id": "dji-osmo-action-4-support",
+      "type": "manufacturer_support",
+      "publisher": "DJI",
+      "title": "Support for Osmo Action 4",
+      "url": "https://www.dji.com/support/product/osmo-action-4",
+      "verified_at": "2026-08-28",
+      "supports": [
+        "storage.slots.0.max_capacity_gb",
+        "storage.slots.0.recommendations"
+      ]
+    }
+  ],
+  "status": "verified",
+  "last_verified": "2026-08-28"
+},
+{
+  "id": "gopro-hero12-black",
+  "category": "action-camera",
+  "manufacturer": "GoPro",
+  "model": "HERO12 Black",
+  "aliases": [
+    "hero12",
+    "hero 12",
+    "hero12 black",
+    "gopro 12",
+    "gopro hero 12"
+  ],
+  "storage": {
+    "slots": [
+      {
+        "slot": 1,
+        "accepted_formats": [
+          "microSD",
+          "microSDHC",
+          "microSDXC"
+        ],
+        "bus_support": [
+          "UHS-I"
+        ],
+        "requirements": {
+          "minimum_uhs_speed_class": "U3",
+          "minimum_video_speed_class": "V30"
+        },
+        "max_capacity_gb": 1024,
+        "max_capacity_status": "manufacturer_documented"
+      }
+    ]
+  },
+  "usage_profiles": [
+    {
+      "id": "video-recording",
+      "label": "Video recording",
+      "requirements": {
+        "minimum_uhs_speed_class": "U3",
+        "minimum_video_speed_class": "V30"
+      }
+    }
+  ],
+  "notes": [
+    "GoPro specifies V30/UHS-3 or better cards.",
+    "Maximum documented capacity is 1 TB."
+  ],
+  "sources": [
+    {
+      "id": "gopro-hero12-black-setup",
+      "type": "manufacturer_support",
+      "publisher": "GoPro",
+      "title": "HERO12 Black Setup",
+      "url": "https://gopro.com/en/us/out-of-the-box-experience/hero-12-black-creator-edition",
+      "verified_at": "2026-08-28",
+      "supports": [
+        "storage.slots.0.accepted_formats",
+        "storage.slots.0.requirements",
+        "storage.slots.0.max_capacity_gb"
+      ]
+    }
+  ],
+  "status": "verified",
+  "last_verified": "2026-08-28"
+},
+{
+  "id": "sony-a6700",
+  "category": "camera",
+  "manufacturer": "Sony",
+  "model": "a6700",
+  "aliases": [
+    "sony a6700",
+    "a6700",
+    "alpha 6700",
+    "alpha6700",
+    "ilce-6700"
+  ],
+  "storage": {
+    "slots": [
+      {
+        "slot": 1,
+        "accepted_formats": [
+          "SD",
+          "SDHC",
+          "SDXC"
+        ],
+        "bus_support": [
+          "UHS-I",
+          "UHS-II"
+        ],
+        "requirements": {},
+        "max_capacity_gb": null,
+        "max_capacity_status": "not_documented"
+      }
+    ]
+  },
+  "usage_profiles": [
+    {
+      "id": "still-photography",
+      "label": "Still photography",
+      "requirements": {}
+    },
+    {
+      "id": "xavc-s-hd",
+      "label": "XAVC S HD up to 100 Mbps",
+      "requirements": {
+        "minimum_uhs_speed_class": "U3"
+      }
+    },
+    {
+      "id": "high-bitrate-4k",
+      "label": "High-bitrate 4K recording",
+      "requirements": {
+        "minimum_video_speed_class": "V60"
+      }
+    },
+    {
+      "id": "xavc-s-i",
+      "label": "XAVC S-I recording",
+      "requirements": {
+        "minimum_video_speed_class": "V90"
+      }
+    }
+  ],
+  "notes": [
+    "The required card speed depends on file format and recording bit rate.",
+    "High-bitrate 4K modes can require V60 or better.",
+    "XAVC S-I recording requires V90 or better."
+  ],
+  "sources": [
+    {
+      "id": "sony-a6700-memory-cards",
+      "type": "manufacturer_manual",
+      "publisher": "Sony",
+      "title": "ILCE-6700 Help Guide - Memory cards that can be used",
+      "url": "https://helpguide.sony.net/ilc/2320/v1/en/contents/0405B_memory_card_usable.html",
+      "verified_at": "2026-08-28",
+      "supports": [
+        "storage.slots",
+        "usage_profiles"
+      ]
+    }
+  ],
+  "status": "verified",
+  "last_verified": "2026-08-28"
 }
+
 ]

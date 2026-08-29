@@ -26,10 +26,16 @@ UHS_SPEED_RANK = {
     "U3": 3,
 }
 
+DEVICE_RECOMMENDATION_OVERRIDES = {
+    "dji-osmo-action-4": "recommended-spec",
+    "dji-osmo-action-5-pro": "recommended-spec",
+}
+
 RECOMMENDATION_STRATEGIES = {
     "gaming-handheld": "capacity",
     "action-camera": "usage",
     "camera": "usage",
+    "single-board-computer": "application",
 }
 
 CAPACITY_PROFILES = {
@@ -442,14 +448,224 @@ def generate_usage_recommendations(device, cards):
 
     return output
 
+def generate_application_recommendations(device, cards):
+    matches = compatible_cards(
+        device,
+        cards
+    )
+
+    if not matches:
+        return """
+        <div class="empty-state">
+            We don't have a verified matching card in
+            our catalog yet.
+        </div>
+        """
+
+    preferred = []
+    others = []
+
+    for match in matches:
+        application_class = match["card"].get(
+            "speed_classes",
+            {}
+        ).get("application")
+
+        if application_class == "A2":
+            preferred.append(match)
+        else:
+            others.append(match)
+
+    output = ""
+
+    if preferred:
+        output += """
+        <div class="usage-recommendation-group">
+            <h3>Recommended for best responsiveness</h3>
+
+            <div class="usage-recommendation-grid">
+        """
+
+        for match in preferred:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </div>
+        """
+
+    if others:
+        output += """
+        <div class="other-compatible">
+            <h3>Other compatible cards</h3>
+
+            <div class="other-compatible-grid">
+        """
+
+        for match in others:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </div>
+        """
+
+    return output
+
+def generate_recommended_spec_recommendations(device, cards):
+    matches = compatible_cards(
+        device,
+        cards
+    )
+
+    if not matches:
+        return """
+        <div class="empty-state">
+            We don't have a verified matching card in
+            our catalog yet.
+        </div>
+        """
+
+    slot = device["storage"]["slots"][0]
+
+    recommendations = slot.get(
+        "recommendations",
+        {}
+    )
+
+    preferred = []
+    others = []
+
+    for match in matches:
+        card = match["card"]
+
+        if card_meets_recommendations(
+            card,
+            recommendations
+        ):
+            preferred.append(match)
+        else:
+            others.append(match)
+
+    output = ""
+
+    if preferred:
+        output += """
+        <div class="usage-recommendation-group">
+            <h3>Matches manufacturer recommendations</h3>
+
+            <div class="usage-recommendation-grid">
+        """
+
+        for match in preferred:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </div>
+        """
+
+    if others:
+        output += """
+        <div class="other-compatible">
+            <h3>Other compatible cards</h3>
+
+            <div class="other-compatible-grid">
+        """
+
+        for match in others:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </div>
+        """
+
+    return output
+
+def card_meets_recommendations(card, recommendations):
+    recommendations = recommendations or {}
+
+    recommended_uhs = recommendations.get(
+        "uhs_speed_class"
+    )
+
+    if recommended_uhs:
+        card_uhs = card.get(
+            "speed_classes",
+            {}
+        ).get("uhs")
+
+        if not card_uhs:
+            return False
+
+        if UHS_SPEED_RANK.get(card_uhs, 0) < \
+                UHS_SPEED_RANK.get(recommended_uhs, 0):
+            return False
+
+    recommended_video = recommendations.get(
+        "video_speed_class"
+    )
+
+    if recommended_video:
+        card_video = card.get(
+            "speed_classes",
+            {}
+        ).get("video")
+
+        if not card_video:
+            return False
+
+        if VIDEO_SPEED_RANK.get(card_video, 0) < \
+                VIDEO_SPEED_RANK.get(recommended_video, 0):
+            return False
+
+    recommended_application = recommendations.get(
+        "application_class"
+    )
+
+    if recommended_application:
+        card_application = card.get(
+            "speed_classes",
+            {}
+        ).get("application")
+
+        if card_application != recommended_application:
+            return False
+
+    return True
+
 def generate_card_recommendations(device, cards):
-    strategy = RECOMMENDATION_STRATEGIES.get(
-        device["category"],
-        "usage"
+    strategy = DEVICE_RECOMMENDATION_OVERRIDES.get(
+        device["id"],
+        RECOMMENDATION_STRATEGIES.get(
+            device["category"],
+            "usage"
+        )
     )
 
     if strategy == "capacity":
         return generate_capacity_recommendations(
+            device,
+            cards
+        )
+
+    if strategy == "application":
+        return generate_application_recommendations(
+            device,
+            cards
+        )
+
+    if strategy == "recommended-spec":
+        return generate_recommended_spec_recommendations(
             device,
             cards
         )
@@ -688,21 +904,43 @@ def generate_sources(device):
 
 
 def generate_device_page(device, cards):
-    strategy = RECOMMENDATION_STRATEGIES.get(
-    device["category"],
-    "usage"
+    strategy = DEVICE_RECOMMENDATION_OVERRIDES.get(
+        device["id"],
+        RECOMMENDATION_STRATEGIES.get(
+            device["category"],
+            "usage"
+        )
     )
 
     if strategy == "capacity":
         recommendation_intro = (
-        "A few sensible choices depending on "
-        "how much storage you want."
-    )
+            "A few sensible choices depending on "
+            "how much storage you want."
+        )
+    
+    elif strategy == "application":
+        recommendation_intro = (
+            "Compatible cards, with faster application-class "
+            "options highlighted for better responsiveness."
+        )
+    
+    elif strategy == "recommended-spec":
+        recommendation_intro = (
+            "Compatible cards, with options that match the "
+            "manufacturer's recommended specifications highlighted."
+        )
+    
+    elif strategy == "usage":
+        recommendation_intro = (
+            "Cards that meet the requirements for "
+            "different ways you use this device."
+        )
+    
     else:
         recommendation_intro = (
-        "Cards that meet the requirements for "
-        "different ways you use this device."
-    )
+            "Compatible SD card options for this device."
+        )
+    
     device_dir = (
         DIST
         / "device"
@@ -752,22 +990,6 @@ def generate_device_page(device, cards):
     sources = \
         generate_sources(
             device
-        )
-
-    strategy = RECOMMENDATION_STRATEGIES.get(
-        device["category"],
-        "usage"
-        )
-
-    if strategy == "capacity":
-        recommendation_intro = (
-            "A few sensible choices depending on "
-            "how much storage you want."
-        )
-    else:
-        recommendation_intro = (
-            "Cards that meet the requirements for "
-            "different ways you use this device."
         )
 
     page = f"""<!DOCTYPE html>
