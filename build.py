@@ -921,6 +921,10 @@ def generate_device_page(device, cards):
         <a href="/about/">
             About & Methodology
         </a>
+        ·
+        <a href="/privacy/">
+            Privacy
+        </a>
     </p>
 
     <p>
@@ -965,6 +969,7 @@ def generate_sitemap(devices):
     urls = [
         f"{SITE_URL}/",
         f"{SITE_URL}/about/",
+        f"{SITE_URL}/privacy/",
     ]
 
     for device in devices:
@@ -1296,6 +1301,240 @@ def generate_about_page():
 
     print("Generated: about/")
 
+def generate_privacy_page():
+    privacy_dir = DIST / "privacy"
+    privacy_dir.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    canonical_url = f"{SITE_URL}/privacy/"
+
+    page = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Privacy Policy | SD Card Finder
+    </title>
+
+    <meta
+        name="description"
+        content="Privacy information for SD Card Finder."
+    >
+
+    <link
+        rel="canonical"
+        href="{canonical_url}"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+</head>
+
+<body>
+
+<header class="site-header">
+    <a class="brand" href="/">
+        SD Card Finder
+    </a>
+</header>
+
+<main class="content-page">
+
+    <nav class="breadcrumb">
+        <a href="/">
+            SD Card Finder
+        </a>
+
+        <span>›</span>
+
+        <span>
+            Privacy Policy
+        </span>
+    </nav>
+
+    <section class="content-hero">
+        <p class="eyebrow">
+            PRIVACY
+        </p>
+
+        <h1>
+            Privacy Policy
+        </h1>
+
+        <p class="content-intro">
+            SD Card Finder is a simple informational
+            website. We do not currently offer user
+            accounts, comments, or forms that collect
+            personal information directly from visitors.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>
+            Information collected automatically
+        </h2>
+
+        <p>
+            Like most websites, SD Card Finder is served
+            through infrastructure that may automatically
+            process technical information such as IP
+            address, browser type, device type, request
+            information, and approximate location.
+        </p>
+
+        <p>
+            This information may be used for security,
+            reliability, traffic measurement, and site
+            performance analysis.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>
+            Cloudflare
+        </h2>
+
+        <p>
+            SD Card Finder uses Cloudflare for hosting,
+            content delivery, security, and website
+            analytics.
+        </p>
+
+        <p>
+            Cloudflare may process limited technical and
+            usage information in connection with these
+            services.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>
+            Cookies and local storage
+        </h2>
+
+        <p>
+            SD Card Finder does not currently set its own
+            advertising or account-related cookies.
+        </p>
+
+        <p>
+            Infrastructure providers may use limited
+            technical storage or similar mechanisms where
+            necessary to provide security, analytics, or
+            site functionality.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>
+            Affiliate links
+        </h2>
+
+        <p>
+            SD Card Finder may add affiliate links in the
+            future. If affiliate links are used, a retailer
+            or affiliate network may receive information
+            about a referral when a visitor follows one of
+            those links.
+        </p>
+
+        <p>
+            This policy will be updated if the site's
+            tracking or commercial practices materially
+            change.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>
+            Information we do not currently collect
+        </h2>
+
+        <p>
+            SD Card Finder does not currently provide user
+            accounts, accept payments, or operate a
+            newsletter or contact form.
+        </p>
+
+        <p>
+            We therefore do not intentionally collect
+            names, email addresses, payment information,
+            or account credentials through the site.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>
+            Changes to this policy
+        </h2>
+
+        <p>
+            This privacy policy may be updated as SD Card
+            Finder adds new features, analytics tools, or
+            commercial relationships.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>
+            Contact
+        </h2>
+
+        <p>
+            Questions about this privacy policy can be
+            sent to:
+        </p>
+
+        <p>
+            <a href="mailto:jetcatlabs@gmail.com">
+                jetcatlabs@gmail.com
+            </a>
+        </p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <a href="/about/">
+            About & Methodology
+        </a>
+        ·
+        <a href="/privacy/">
+            Privacy
+        </a>
+    </p>
+
+    <p>
+        Compatibility information is based on
+        manufacturer documentation and published
+        SD card specifications.
+    </p>
+</footer>
+
+</body>
+</html>
+"""
+
+    output_file = privacy_dir / "index.html"
+
+    output_file.write_text(
+        page,
+        encoding="utf-8"
+    )
+
+    print("Generated: privacy/")
+
 def build():
     print("Building SD Card Finder...")
 
@@ -1313,6 +1552,7 @@ def build():
     generate_robots_txt()
     generate_sitemap(devices)
     generate_about_page()
+    generate_privacy_page()
     
     for device in devices:
         generate_device_page(
