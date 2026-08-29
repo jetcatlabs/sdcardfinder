@@ -115,6 +115,14 @@ def card_fits_slot(card, slot):
             slot.get("accepted_formats", []):
         return False
 
+    incompatible_buses = slot.get(
+        "explicitly_incompatible_buses",
+        []
+    )
+
+    if card.get("bus") in incompatible_buses:
+        return False
+
     max_capacity = slot.get("max_capacity_gb")
 
     if (

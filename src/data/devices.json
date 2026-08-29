@@ -220,5 +220,264 @@
     ],
     "status": "verified",
     "last_verified": "2026-08-27"
-  }
+  },
+  {
+  "id": "steam-deck-lcd",
+  "category": "gaming-handheld",
+  "manufacturer": "Valve",
+  "model": "Steam Deck LCD",
+  "aliases": [
+    "steam deck lcd",
+    "steamdeck lcd",
+    "original steam deck",
+    "steam deck"
+  ],
+  "storage": {
+    "slots": [
+      {
+        "slot": 1,
+        "accepted_formats": [
+          "microSD",
+          "microSDHC",
+          "microSDXC"
+        ],
+        "bus_support": [
+          "UHS-I"
+        ],
+        "requirements": {},
+        "max_capacity_gb": null,
+        "max_capacity_status": "not_documented"
+      }
+    ]
+  },
+  "usage_profiles": [
+    {
+      "id": "game-storage",
+      "label": "Game storage",
+      "requirements": {},
+      "recommendations": {}
+    }
+  ],
+  "notes": [
+    "Valve documents UHS-I support for SD, SDHC, and SDXC media."
+  ],
+  "sources": [
+    {
+      "id": "valve-steam-deck-lcd-tech-specs",
+      "type": "manufacturer_specification",
+      "publisher": "Valve",
+      "title": "Steam Deck Tech Specs",
+      "url": "https://www.steamdeck.com/en/tech",
+      "verified_at": "2026-08-28",
+      "supports": [
+        "storage.slots.0.accepted_formats",
+        "storage.slots.0.bus_support"
+      ]
+    }
+  ],
+  "status": "verified",
+  "last_verified": "2026-08-28"
+},
+{
+  "id": "nintendo-switch-oled",
+  "category": "gaming-handheld",
+  "manufacturer": "Nintendo",
+  "model": "Switch OLED",
+  "aliases": [
+    "nintendo switch oled",
+    "switch oled",
+    "switch oled model",
+    "nintendo switch oled model"
+  ],
+  "storage": {
+    "slots": [
+      {
+        "slot": 1,
+        "accepted_formats": [
+          "microSD",
+          "microSDHC",
+          "microSDXC"
+        ],
+        "bus_support": [
+          "UHS-I"
+        ],
+        "requirements": {},
+        "recommendations": {
+          "preferred_bus": "UHS-I",
+          "recommended_transfer_mbps": "60-95"
+        },
+        "max_capacity_gb": 2048,
+        "max_capacity_status": "manufacturer_documented"
+      }
+    ]
+  },
+  "usage_profiles": [
+    {
+      "id": "game-storage",
+      "label": "Game storage",
+      "requirements": {},
+      "recommendations": {
+        "preferred_bus": "UHS-I"
+      }
+    }
+  ],
+  "notes": [
+    "microSDXC use may require a system update.",
+    "Nintendo recommends UHS-I-compatible cards with transfer speeds around 60-95 MB/s for better gameplay experience."
+  ],
+  "sources": [
+    {
+      "id": "nintendo-switch-oled-tech-specs",
+      "type": "manufacturer_specification",
+      "publisher": "Nintendo",
+      "title": "Nintendo Switch Technical Specs",
+      "url": "https://www.nintendo.com/us/gaming-systems/switch/tech-specs/",
+      "verified_at": "2026-08-28",
+      "supports": [
+        "storage.slots.0.accepted_formats",
+        "storage.slots.0.max_capacity_gb"
+      ]
+    },
+    {
+      "id": "nintendo-switch-microsd-faq",
+      "type": "manufacturer_support",
+      "publisher": "Nintendo",
+      "title": "microSD Card FAQ",
+      "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/22481/~/microsd-card-faq",
+      "verified_at": "2026-08-28",
+      "supports": [
+        "storage.slots.0.bus_support",
+        "storage.slots.0.recommendations"
+      ]
+    }
+  ],
+  "status": "verified",
+  "last_verified": "2026-08-28"
+},
+{
+  "id": "dji-osmo-action-5-pro",
+  "category": "action-camera",
+  "manufacturer": "DJI",
+  "model": "Osmo Action 5 Pro",
+  "aliases": [
+    "osmo action 5 pro",
+    "action 5 pro",
+    "dji action 5",
+    "dji action 5 pro",
+    "osmo action5 pro"
+  ],
+  "storage": {
+    "slots": [
+      {
+        "slot": 1,
+        "accepted_formats": [
+          "microSD",
+          "microSDHC",
+          "microSDXC"
+        ],
+        "bus_support": [
+          "UHS-I"
+        ],
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3",
+          "video_speed_class": "V30"
+        },
+        "max_capacity_gb": 1024,
+        "max_capacity_status": "manufacturer_documented"
+      }
+    ]
+  },
+  "usage_profiles": [],
+  "notes": [
+    "DJI publishes a list of recommended cards, including U3/V30 and faster models.",
+    "The manufacturer-documented maximum capacity is 1 TB."
+  ],
+  "sources": [
+    {
+      "id": "dji-osmo-action-5-pro-faq",
+      "type": "manufacturer_support",
+      "publisher": "DJI",
+      "title": "Osmo Action 5 Pro FAQ",
+      "url": "https://www.dji.com/osmo-action-5-pro/faq",
+      "verified_at": "2026-08-28",
+      "supports": [
+        "storage.slots.0.max_capacity_gb",
+        "storage.slots.0.recommendations"
+      ]
+    }
+  ],
+  "status": "verified",
+  "last_verified": "2026-08-28"
+},
+{
+  "id": "insta360-x4",
+  "category": "action-camera",
+  "manufacturer": "Insta360",
+  "model": "X4",
+  "aliases": [
+    "insta360 x4",
+    "insta 360 x4",
+    "x4 camera"
+  ],
+  "storage": {
+    "slots": [
+      {
+        "slot": 1,
+        "accepted_formats": [
+          "microSD",
+          "microSDHC",
+          "microSDXC"
+        ],
+        "bus_support": [
+          "UHS-I"
+        ],
+        "explicitly_incompatible_buses": [
+          "UHS-II",
+          "UHS-III"
+        ],
+        "requirements": {
+          "minimum_video_speed_class": "V30"
+        },
+        "recommendations": {
+          "filesystem": "exFAT"
+        },
+        "max_capacity_gb": 1024,
+        "max_capacity_status": "manufacturer_documented"
+      }
+    ]
+  },
+  "usage_profiles": [
+    {
+      "id": "video-recording",
+      "label": "Video recording",
+      "requirements": {
+        "minimum_video_speed_class": "V30"
+      }
+    }
+  ],
+  "notes": [
+    "Insta360 specifies UHS-I microSD cards rated V30 or above and formatted as exFAT.",
+    "Insta360 explicitly states not to use UHS-II or UHS-III cards with the X4.",
+    "Cards larger than 1 TB are not supported."
+  ],
+  "sources": [
+    {
+      "id": "insta360-x4-storage-compatibility",
+      "type": "manufacturer_support",
+      "publisher": "Insta360",
+      "title": "X4 Storage Compatibility",
+      "url": "https://onlinemanual.insta360.com/x4/en-us/faq/compatibility/storage",
+      "verified_at": "2026-08-28",
+      "supports": [
+        "storage.slots.0.bus_support",
+        "storage.slots.0.explicitly_incompatible_buses",
+        "storage.slots.0.requirements",
+        "storage.slots.0.max_capacity_gb"
+      ]
+    }
+  ],
+  "status": "verified",
+  "last_verified": "2026-08-28"
+}
 ]
