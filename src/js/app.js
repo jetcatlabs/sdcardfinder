@@ -4,6 +4,7 @@ const searchInput = document.getElementById("device-search");
 const resultsElement = document.getElementById("device-results");
 const deviceGrid = document.getElementById("device-grid");
 
+const DEFAULT_RESULT_COUNT = 5;
 
 async function loadDevices() {
     const response = await fetch("/data/devices.json");
@@ -14,8 +15,7 @@ async function loadDevices() {
 
     devices = await response.json();
 
-    renderSearchResults(devices);
-    renderDeviceGrid();
+    renderDefaultResults();
 }
 
 
@@ -96,16 +96,21 @@ function formatCategory(category) {
         .join(" ");
 }
 
+function renderDefaultResults() {
+    renderSearchResults(
+        devices.slice(0, DEFAULT_RESULT_COUNT)
+    );
+}
 
 searchInput.addEventListener("input", () => {
     const query = searchInput.value
         .trim()
         .toLowerCase();
 
-    if (!query) {
-        renderSearchResults(devices);
-        return;
-    }
+	if (!query) {
+		renderSearchResults(devices.slice(0, 5));
+		return;
+	}
 
     const matches = devices.filter(device =>
         searchableText(device).includes(query)

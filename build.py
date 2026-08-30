@@ -1153,15 +1153,18 @@ def generate_device_page(device, cards):
 
 <footer class="site-footer">
     <p>
-        <a href="/about/">
-            About & Methodology
-        </a>
-        ·
-        <a href="/privacy/">
-            Privacy
-        </a>
+        <a href="/devices/">
+			Devices
+		</a>
+		·
+		<a href="/about/">
+			About & Methodology
+		</a>
+		·
+		<a href="/privacy/">
+			Privacy
+		</a>
     </p>
-
     <p>
         Compatibility information is based on
         manufacturer documentation and published
@@ -1203,6 +1206,7 @@ Sitemap: {SITE_URL}/sitemap.xml
 def generate_sitemap(devices):
     urls = [
         f"{SITE_URL}/",
+        f"{SITE_URL}/devices/",
         f"{SITE_URL}/about/",
         f"{SITE_URL}/privacy/",
     ]
@@ -1511,11 +1515,18 @@ def generate_about_page():
 
 <footer class="site-footer">
     <p>
-        <a href="/about/">
-            About & Methodology
-        </a>
+        <a href="/devices/">
+			Devices
+		</a>
+		·
+		<a href="/about/">
+			About & Methodology
+		</a>
+		·
+		<a href="/privacy/">
+			Privacy
+		</a>
     </p>
-
     <p>
         Compatibility information is based on
         manufacturer documentation and published
@@ -1741,15 +1752,18 @@ def generate_privacy_page():
 
 <footer class="site-footer">
     <p>
-        <a href="/about/">
-            About & Methodology
-        </a>
-        ·
-        <a href="/privacy/">
-            Privacy
-        </a>
+        <a href="/devices/">
+			Devices
+		</a>
+		·
+		<a href="/about/">
+			About & Methodology
+		</a>
+		·
+		<a href="/privacy/">
+			Privacy
+		</a>
     </p>
-
     <p>
         Compatibility information is based on
         manufacturer documentation and published
@@ -1836,6 +1850,226 @@ def generate_404_page():
 
 <footer class="site-footer">
     <p>
+        <a href="/devices/">
+			Devices
+		</a>
+		·
+		<a href="/about/">
+			About & Methodology
+		</a>
+		·
+		<a href="/privacy/">
+			Privacy
+		</a>
+    </p>
+    <p>
+        Compatibility information is based on
+        manufacturer documentation and published
+        SD card specifications.
+    </p>
+</footer>
+
+</body>
+</html>
+"""
+
+    (DIST / "404.html").write_text(
+        page,
+        encoding="utf-8"
+    )
+
+    print("Generated: 404.html")
+
+def generate_devices_page(devices):
+    devices_dir = DIST / "devices"
+    devices_dir.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    canonical_url = f"{SITE_URL}/devices/"
+
+    category_labels = {
+        "gaming-handheld": "Gaming handhelds",
+        "action-camera": "Action cameras",
+        "camera": "Cameras",
+        "single-board-computer": "Single-board computers",
+    }
+
+    grouped = {}
+
+    for device in devices:
+        grouped.setdefault(
+            device["category"],
+            []
+        ).append(device)
+
+    category_sections = ""
+
+    for category, label in category_labels.items():
+        category_devices = grouped.get(
+            category,
+            []
+        )
+
+        if not category_devices:
+            continue
+
+        cards = ""
+
+        for device in sorted(
+            category_devices,
+            key=lambda item: (
+                item["manufacturer"].lower(),
+                item["model"].lower()
+            )
+        ):
+            name = html.escape(
+                f'{device["manufacturer"]} {device["model"]}'
+            )
+
+            cards += f"""
+            <a
+                class="catalog-device-card"
+                href="/device/{device["id"]}/"
+            >
+                <span class="catalog-device-name">
+                    {name}
+                </span>
+
+                <span class="catalog-device-link">
+                    View compatibility →
+                </span>
+            </a>
+            """
+
+        category_sections += f"""
+        <section
+            class="catalog-category"
+            id="{category}"
+        >
+            <div class="section-heading">
+                <p class="eyebrow">
+                    {html.escape(label)}
+                </p>
+
+                <h2>
+                    {html.escape(label)}
+                </h2>
+
+                <p>
+                    {len(category_devices)}
+                    {"device" if len(category_devices) == 1 else "devices"}
+                </p>
+            </div>
+
+            <div class="catalog-device-grid">
+                {cards}
+            </div>
+        </section>
+        """
+
+    page = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Supported Devices | SD Card Finder
+    </title>
+
+    <meta
+        name="description"
+        content="Browse devices with verified SD card compatibility information, grouped by category."
+    >
+
+    <link
+        rel="canonical"
+        href="{canonical_url}"
+    >
+
+    <link
+        rel="icon"
+        href="/assets/favicon.svg"
+        type="image/svg+xml"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+</head>
+
+<body>
+
+<header class="site-header">
+    <a class="brand" href="/">
+        SD Card Finder
+    </a>
+</header>
+
+<main class="content-page catalog-page">
+
+    <nav class="breadcrumb">
+        <a href="/">
+            SD Card Finder
+        </a>
+
+        <span>›</span>
+
+        <span>
+            Devices
+        </span>
+    </nav>
+
+    <section class="content-hero">
+        <p class="eyebrow">
+            DEVICE CATALOG
+        </p>
+
+        <h1>
+            Browse supported devices
+        </h1>
+
+        <p class="content-intro">
+            Explore devices with compatibility information
+            verified against manufacturer documentation.
+        </p>
+    </section>
+
+    <nav class="category-nav">
+        <a href="#gaming-handheld">
+            Gaming handhelds
+        </a>
+
+        <a href="#action-camera">
+            Action cameras
+        </a>
+
+        <a href="#camera">
+            Cameras
+        </a>
+
+        <a href="#single-board-computer">
+            Single-board computers
+        </a>
+    </nav>
+
+    {category_sections}
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <a href="/devices/">
+            Devices
+        </a>
+        ·
         <a href="/about/">
             About & Methodology
         </a>
@@ -1856,12 +2090,12 @@ def generate_404_page():
 </html>
 """
 
-    (DIST / "404.html").write_text(
+    (devices_dir / "index.html").write_text(
         page,
         encoding="utf-8"
     )
 
-    print("Generated: 404.html")
+    print("Generated: devices/")
 
 def build():
     print("Building SD Card Finder...")
@@ -1876,6 +2110,8 @@ def build():
 
     clean_dist()
     copy_static_files()
+    
+    generate_devices_page(devices)
     
     generate_robots_txt()
     generate_sitemap(devices)

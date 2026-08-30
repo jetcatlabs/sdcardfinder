@@ -771,3 +771,96 @@ h1 {
     font-weight: 650;
     text-decoration: none;
 }
+
+.catalog-page {
+    padding-bottom: 90px;
+}
+
+.category-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 0 26px;
+}
+
+.category-nav a {
+    padding: 9px 13px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+.category-nav a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.catalog-category {
+    padding-top: 54px;
+}
+
+.catalog-category .section-heading {
+    margin-bottom: 18px;
+}
+
+.catalog-category .section-heading h2 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: -0.025em;
+}
+
+.catalog-category .section-heading > p:last-child {
+    margin: 7px 0 0;
+    color: var(--muted);
+}
+
+.catalog-device-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.catalog-device-card {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    text-decoration: none;
+}
+
+.catalog-device-card:hover {
+    border-color: var(--accent);
+}
+
+.catalog-device-name {
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.catalog-device-link {
+    margin-top: 24px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+@media (max-width: 850px) {
+    .catalog-device-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog-device-grid {
+        grid-template-columns: 1fr;
+    }
+}
