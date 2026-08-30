@@ -9,6 +9,9 @@
       "steamdeck oled",
       "deck oled"
     ],
+	"related_devices": [
+		"steam-deck-lcd"
+	],
     "storage": {
       "slots": [
         {
@@ -68,6 +71,9 @@
       "gopro 13",
       "gopro hero 13"
     ],
+	"related_devices": [
+		"gopro-hero12-black"
+	],
     "storage": {
       "slots": [
         {
@@ -134,6 +140,9 @@
       "alpha7 iv",
       "ilce-7m4"
     ],
+	"related_devices": [
+	  "sony-a6700"
+	],
     "storage": {
       "slots": [
         {
@@ -231,7 +240,10 @@
     "steamdeck lcd",
     "original steam deck",
     "steam deck"
-  ],
+	],
+  "related_devices": [
+	"steam-deck-oled"
+	],
   "storage": {
     "slots": [
       {
@@ -288,6 +300,9 @@
     "switch oled",
     "switch oled model",
     "nintendo switch oled model"
+  ],
+  "related_devices": [
+    "nintendo-switch-lite"
   ],
   "storage": {
     "slots": [
@@ -365,6 +380,9 @@
     "dji action 5",
     "dji action 5 pro",
     "osmo action5 pro"
+  ],
+  "related_devices": [
+	"dji-osmo-action-4"
   ],
   "storage": {
     "slots": [
@@ -555,6 +573,9 @@
     "switch lite",
     "switchlite"
   ],
+  "related_devices": [
+	"nintendo-switch-oled"
+  ],
   "storage": {
     "slots": [
       {
@@ -612,6 +633,9 @@
     "action 4",
     "osmo action4"
   ],
+  "related_devices": [
+	"dji-osmo-action-5-pro"
+  ],
   "storage": {
     "slots": [
       {
@@ -667,6 +691,9 @@
     "hero12 black",
     "gopro 12",
     "gopro hero 12"
+  ],
+  "related_devices": [
+	"gopro-hero13-black"
   ],
   "storage": {
     "slots": [
@@ -732,6 +759,9 @@
     "alpha 6700",
     "alpha6700",
     "ilce-6700"
+  ],
+  "related_devices": [
+	"sony-a7-iv"
   ],
   "storage": {
     "slots": [

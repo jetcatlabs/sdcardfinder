@@ -902,8 +902,101 @@ def generate_sources(device):
 
     return output
 
+def format_category(category):
+    return category.replace(
+        "-",
+        " "
+    ).title()
 
-def generate_device_page(device, cards):
+def generate_related_devices(device, devices):
+    related_ids = device.get(
+        "related_devices",
+        []
+    )
+
+    if not related_ids:
+        return ""
+
+    device_lookup = {
+        item["id"]: item
+        for item in devices
+    }
+
+    related = []
+
+    for related_id in related_ids:
+        related_device = device_lookup.get(
+            related_id
+        )
+
+        if related_device:
+            related.append(
+                related_device
+            )
+
+    if not related:
+        return ""
+
+    cards = ""
+
+    for related_device in related:
+        manufacturer = html.escape(
+            related_device["manufacturer"]
+        )
+
+        model = html.escape(
+            related_device["model"]
+        )
+
+        category = html.escape(
+            format_category(
+                related_device["category"]
+            )
+        )
+
+        cards += f"""
+        <a
+            class="related-device-card"
+            href="/device/{related_device["id"]}/"
+        >
+            <span class="related-device-category">
+                {category}
+            </span>
+
+            <strong>
+                {manufacturer} {model}
+            </strong>
+
+            <span class="related-device-link">
+                View compatibility →
+            </span>
+        </a>
+        """
+
+    return f"""
+    <section class="device-section related-devices">
+        <div class="section-heading">
+            <p class="eyebrow">
+                RELATED DEVICES
+            </p>
+
+            <h2>
+                Similar devices
+            </h2>
+
+            <p>
+                Compare SD card compatibility with
+                related models.
+            </p>
+        </div>
+
+        <div class="related-device-grid">
+            {cards}
+        </div>
+    </section>
+    """
+
+def generate_device_page(device, cards, devices):
     strategy = DEVICE_RECOMMENDATION_OVERRIDES.get(
         device["id"],
         RECOMMENDATION_STRATEGIES.get(
@@ -990,6 +1083,11 @@ def generate_device_page(device, cards):
     sources = \
         generate_sources(
             device
+        )
+    
+    related_devices = generate_related_devices(
+        device,
+        devices
         )
 
     page = f"""<!DOCTYPE html>
@@ -1129,7 +1227,7 @@ def generate_device_page(device, cards):
             </div>
         </details>
 
-    </section>
+    {related_devices}
 
     <section class="device-section sources-section">
 
@@ -2122,7 +2220,8 @@ def build():
     for device in devices:
         generate_device_page(
             device,
-            cards
+            cards,
+            devices
         )
 
     print()

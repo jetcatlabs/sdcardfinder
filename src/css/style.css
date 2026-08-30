@@ -864,3 +864,53 @@ h1 {
         grid-template-columns: 1fr;
     }
 }
+
+.related-devices {
+    padding-top: 56px;
+}
+
+.related-device-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.related-device-card {
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    text-decoration: none;
+}
+
+.related-device-card:hover {
+    border-color: var(--accent);
+}
+
+.related-device-category {
+    margin-bottom: 10px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.related-device-card strong {
+    font-size: 17px;
+}
+
+.related-device-link {
+    margin-top: auto;
+    padding-top: 24px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+    .related-device-grid {
+        grid-template-columns: 1fr;
+    }
+}
