@@ -6,6 +6,34 @@ const deviceGrid = document.getElementById("device-grid");
 
 const DEFAULT_RESULT_COUNT = 5;
 
+const categoryGrid = document.getElementById(
+    "category-grid"
+);
+
+const featuredGrid = document.getElementById(
+    "featured-grid"
+);
+const CATEGORY_ORDER = [
+    "gaming-handheld",
+    "action-camera",
+    "camera",
+    "single-board-computer"
+];
+
+const CATEGORY_LABELS = {
+    "gaming-handheld": "Gaming handhelds",
+    "action-camera": "Action cameras",
+    "camera": "Cameras",
+    "single-board-computer": "Single-board computers"
+};
+
+const FEATURED_DEVICE_IDS = [
+    "steam-deck-oled",
+    "gopro-hero13-black",
+    "sony-a7-iv",
+    "raspberry-pi-5"
+];
+
 async function loadDevices() {
     const response = await fetch("/data/devices.json");
 
@@ -16,6 +44,8 @@ async function loadDevices() {
     devices = await response.json();
 
     renderDefaultResults();
+	renderCategoryGrid();
+	renderFeaturedDevices();
 }
 
 
@@ -86,6 +116,47 @@ function renderDeviceGrid() {
     }
 }
 
+function renderCategoryGrid() {
+    if (!categoryGrid) {
+        return;
+    }
+
+    categoryGrid.innerHTML = "";
+
+    for (const category of CATEGORY_ORDER) {
+        const matches = devices.filter(
+            device => device.category === category
+        );
+
+        if (!matches.length) {
+            continue;
+        }
+
+        const link = document.createElement("a");
+
+        link.className = "category-card";
+
+        link.href =
+            `/devices/#${category}`;
+
+        link.innerHTML = `
+            <span class="category-card-name">
+                ${CATEGORY_LABELS[category]}
+            </span>
+
+            <span class="category-card-count">
+                ${matches.length}
+                ${matches.length === 1 ? "device" : "devices"}
+            </span>
+
+            <span class="category-card-link">
+                Browse →
+            </span>
+        `;
+
+        categoryGrid.appendChild(link);
+    }
+}
 
 function formatCategory(category) {
     return category
@@ -100,6 +171,45 @@ function renderDefaultResults() {
     renderSearchResults(
         devices.slice(0, DEFAULT_RESULT_COUNT)
     );
+}
+
+function renderFeaturedDevices() {
+    if (!featuredGrid) {
+        return;
+    }
+
+    featuredGrid.innerHTML = "";
+
+    for (const id of FEATURED_DEVICE_IDS) {
+        const device = devices.find(
+            item => item.id === id
+        );
+
+        if (!device) {
+            continue;
+        }
+
+        const link = document.createElement("a");
+
+        link.className = "featured-device-card";
+        link.href = deviceUrl(device);
+
+        link.innerHTML = `
+            <span class="featured-category">
+                ${formatCategory(device.category)}
+            </span>
+
+            <strong>
+                ${device.manufacturer} ${device.model}
+            </strong>
+
+            <span class="featured-link">
+                View guide →
+            </span>
+        `;
+
+        featuredGrid.appendChild(link);
+    }
 }
 
 searchInput.addEventListener("input", () => {
