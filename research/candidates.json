@@ -1,0 +1,34 @@
+[
+  {
+    "id": "gopro-hero11-black",
+    "manufacturer": "GoPro",
+    "model": "HERO11 Black",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "raspberry-pi-4",
+    "manufacturer": "Raspberry Pi",
+    "model": "4",
+    "category": "single-board-computer",
+    "priority": "medium",
+    "status": "todo"
+  },
+  {
+    "id": "insta360-x5",
+    "manufacturer": "Insta360",
+    "model": "X5",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": "sony-a7c-ii",
+    "manufacturer": "Sony",
+    "model": "a7C II",
+    "category": "camera",
+    "priority": "medium",
+    "status": "todo"
+  }
+]

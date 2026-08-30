@@ -1,0 +1,28 @@
+{
+  "GoPro": [
+    "gopro.com",
+	"gopro.my.salesforce.com"
+  ],
+  "Valve": [
+    "steamdeck.com"
+  ],
+  "Nintendo": [
+    "nintendo.com"
+  ],
+  "Sony": [
+    "sony.net",
+    "sony.com"
+  ],
+  "Canon": [
+    "start.canon"
+  ],
+  "DJI": [
+    "dji.com"
+  ],
+  "Insta360": [
+    "insta360.com"
+  ],
+  "Raspberry Pi": [
+    "raspberrypi.com"
+  ]
+}

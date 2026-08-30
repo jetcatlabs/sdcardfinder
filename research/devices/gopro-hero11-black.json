@@ -1,0 +1,101 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "gopro-hero11-black",
+    "category": "action-camera",
+    "manufacturer": "GoPro",
+    "model": "HERO11 Black",
+    "aliases": [
+      "hero11",
+      "hero 11",
+      "hero11 black",
+      "gopro 11",
+      "gopro hero 11"
+    ],
+    "related_devices": [
+      "gopro-hero12-black",
+      "gopro-hero10-black"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [],
+          "requirements": {
+            "minimum_uhs_speed_class": "U3",
+            "minimum_video_speed_class": "V30"
+          },
+          "recommendations": {},
+          "max_capacity_gb": 512,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3",
+          "minimum_video_speed_class": "V30"
+        }
+      }
+    ],
+    "notes": [
+      "GoPro specifies V30/U3 or better cards.",
+      "Maximum manufacturer-documented capacity is 512 GB."
+    ],
+    "sources": [
+      {
+        "id": "gopro-hero11-manual",
+        "type": "manufacturer_manual",
+        "publisher": "GoPro",
+        "title": "HERO11 Black User Manual",
+        "url": "https://gopro.my.salesforce.com/sfc/p/#o0000000HJuF/a/3b000000NSpR/sWOFUJHFwK2PyJA0yZsLKU8HmjjoS9Gx2FYAkMNxlDg",
+        "verified_at": "2026-08-30",
+		"authority": "manufacturer",
+		"first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "gopro-hero11-manual",
+      "evidence": "User Manual, pages 8-9, Setting Up Your Camera > SD CARDS"
+    },
+    {
+      "field": "storage.slots.0.requirements.minimum_uhs_speed_class",
+      "source_id": "gopro-hero11-manual",
+      "evidence": "User Manual, pages 8-9, SD CARDS: rated UHS-3 or higher"
+    },
+    {
+      "field": "storage.slots.0.requirements.minimum_video_speed_class",
+      "source_id": "gopro-hero11-manual",
+      "evidence": "User Manual, pages 8-9, SD CARDS: rated Class V30 or higher"
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "gopro-hero11-manual",
+      "evidence": "User Manual, pages 8-9, SD CARDS: capacity up to 512GB"
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_uhs_speed_class",
+      "source_id": "gopro-hero11-manual",
+      "evidence": "User Manual, pages 8-9, SD CARDS: rated UHS-3 or higher"
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_video_speed_class",
+      "source_id": "gopro-hero11-manual",
+      "evidence": "User Manual, pages 8-9, SD CARDS: rated Class V30 or higher"
+    }
+  ]
+}
