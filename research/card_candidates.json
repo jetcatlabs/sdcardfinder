@@ -1,0 +1,23 @@
+[
+  {
+    "id": "samsung-pro-plus-microsd",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "sandisk-extreme-pro-microsd",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme PRO",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": "kingston-canvas-go-plus-microsd",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Go! Plus",
+    "priority": "high",
+    "status": "todo"
+  }
+]

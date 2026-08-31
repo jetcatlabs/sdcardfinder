@@ -1,0 +1,147 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "samsung-pro-plus-microsd",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "uhs": "U3",
+        "video": "V30",
+        "application": "A2"
+      },
+      "performance": {
+        "max_read_mbps": 180,
+        "max_write_mbps": 130,
+        "minimum_sustained_write_mbps": 30
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "part_number": "MB-MD128S"
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "MB-MD256S"
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "MB-MD512S"
+      },
+      {
+        "capacity_gb": 1024,
+        "part_number": "MB-MD1T0S"
+      }
+    ],
+    "sources": [
+      {
+        "id": "samsung-pro-plus-microsd-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "Samsung",
+        "title": "Samsung microSD UHS-I Card PRO Plus 2024 Data Sheet Revision 2.2",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_PRO_Plus_v2.2.pdf",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "samsung-pro-plus-microsd-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Samsung",
+        "title": "Samsung PRO Plus microSD Card",
+        "url": "https://semiconductor.samsung.com/us/consumer-storage/memory-card/micro-sd-pro-plus-2021/",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "samsung-pro-plus-microsd-datasheet",
+      "evidence": "Technical Specifications, page 3: Form Factor is microSDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "samsung-pro-plus-microsd-datasheet",
+      "evidence": "Technical Specifications, page 3: Bus Speed Mode is UHS-I."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "samsung-pro-plus-microsd-datasheet",
+      "evidence": "Technical Specifications, page 3: Speed Grade is Grade 3 (U3)."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "samsung-pro-plus-microsd-datasheet",
+      "evidence": "Technical Specifications, page 3: Speed Class includes V30."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "samsung-pro-plus-microsd-datasheet",
+      "evidence": "Technical Specifications, page 3: App Performance Class is A2."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "samsung-pro-plus-microsd-datasheet",
+      "evidence": "Technical Specifications, page 3: Sequential read speed up to 180MB/s."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "samsung-pro-plus-microsd-datasheet",
+      "evidence": "Technical Specifications, page 3: Sequential write speed up to 130MB/s."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-pro-plus-microsd-datasheet",
+      "evidence": "Technical Specifications footnote 4, page 3: V30 means sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "samsung-pro-plus-microsd-product-page",
+      "evidence": "Samsung lists a 128GB PRO Plus variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "samsung-pro-plus-microsd-product-page",
+      "evidence": "Samsung lists model code MB-MD128S for 128GB."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "samsung-pro-plus-microsd-product-page",
+      "evidence": "Samsung lists a 256GB PRO Plus variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "samsung-pro-plus-microsd-product-page",
+      "evidence": "Samsung lists model code MB-MD256S for 256GB."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "samsung-pro-plus-microsd-product-page",
+      "evidence": "Samsung lists a 512GB PRO Plus variant."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "samsung-pro-plus-microsd-product-page",
+      "evidence": "Samsung lists model code MB-MD512S for 512GB."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "samsung-pro-plus-microsd-product-page",
+      "evidence": "Samsung lists a 1TB PRO Plus variant."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "samsung-pro-plus-microsd-product-page",
+      "evidence": "Samsung lists model code MB-MD1T0S for 1TB."
+    }
+  ]
+}

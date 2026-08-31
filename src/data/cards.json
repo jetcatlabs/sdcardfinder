@@ -29,7 +29,6 @@
     "status": "verified",
     "last_verified": "2026-08-27"
   },
-
   {
     "id": "lexar-1066x-silver-microsdxc-256gb",
     "manufacturer": "Lexar",
@@ -61,7 +60,6 @@
     "status": "verified",
     "last_verified": "2026-08-27"
   },
-
   {
     "id": "lexar-play-microsdxc-1tb",
     "manufacturer": "Lexar",
@@ -92,7 +90,6 @@
     "status": "verified",
     "last_verified": "2026-08-27"
   },
-
   {
     "id": "lexar-800x-pro-sdxc-128gb",
     "manufacturer": "Lexar",
@@ -102,7 +99,7 @@
     "form_factor": "SDXC",
     "bus": "UHS-I",
     "speed_classes": {
-	  "uhs": "U3",
+      "uhs": "U3",
       "video": "V30"
     },
     "performance": {
@@ -123,7 +120,6 @@
     "status": "verified",
     "last_verified": "2026-08-27"
   },
-
   {
     "id": "lexar-1800x-gold-sdxc-256gb",
     "manufacturer": "Lexar",
@@ -154,7 +150,6 @@
     "status": "verified",
     "last_verified": "2026-08-27"
   },
-
   {
     "id": "lexar-2000x-gold-sdxc-256gb",
     "manufacturer": "Lexar",
@@ -184,36 +179,243 @@
     "status": "verified",
     "last_verified": "2026-08-27"
   },
-  
   {
-	"id": "lexar-1066x-silver-microsdxc-512gb",
-	"manufacturer": "Lexar",
-	"product_family": "Professional 1066x SILVER Series",
-	"model": "512GB microSDXC",
-	"capacity_gb": 512,
-	"form_factor": "microSDXC",
-	"bus": "UHS-I",
-	"speed_classes": {
-		"uhs": "U3",
-		"video": "V30",
-		"application": "A2"
-	},
-	"performance": {
-		"max_read_mbps": 160,
-		"max_write_mbps": 120,
-		"minimum_sustained_write_mbps": 30
-	},
-	"part_number": "LMS1066512G-BNANU",
-	"sources": [
-		{
-		"type": "manufacturer",
-		"publisher": "Lexar",
-		"title": "Lexar Professional 1066x microSDXC UHS-I Card SILVER Series",
-		"url": "https://americas.lexar.com/product/lexar-professional-1066x-microsdxc-uhs-i-card-silver-series/",
-		"verified_at": "2026-08-28"
-		}
-	],
-	"status": "verified",
-	"last_verified": "2026-08-28"
+    "id": "lexar-1066x-silver-microsdxc-512gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1066x SILVER Series",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 160,
+      "max_write_mbps": 120,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "LMS1066512G-BNANU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1066x microSDXC UHS-I Card SILVER Series",
+        "url": "https://americas.lexar.com/product/lexar-professional-1066x-microsdxc-uhs-i-card-silver-series/",
+        "verified_at": "2026-08-28"
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-28"
+  },
+  {
+    "id": "samsung-pro-plus-microsdxc-128gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 180,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MD128S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD UHS-I Card PRO Plus 2024 Data Sheet Revision 2.2",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_PRO_Plus_v2.2.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung PRO Plus microSD Card",
+        "url": "https://semiconductor.samsung.com/us/consumer-storage/memory-card/micro-sd-pro-plus-2021/",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "samsung-pro-plus-microsdxc-256gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 180,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MD256S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD UHS-I Card PRO Plus 2024 Data Sheet Revision 2.2",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_PRO_Plus_v2.2.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung PRO Plus microSD Card",
+        "url": "https://semiconductor.samsung.com/us/consumer-storage/memory-card/micro-sd-pro-plus-2021/",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "samsung-pro-plus-microsdxc-512gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 180,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MD512S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD UHS-I Card PRO Plus 2024 Data Sheet Revision 2.2",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_PRO_Plus_v2.2.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung PRO Plus microSD Card",
+        "url": "https://semiconductor.samsung.com/us/consumer-storage/memory-card/micro-sd-pro-plus-2021/",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "samsung-pro-plus-microsdxc-1tb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "model": "1TB microSDXC",
+    "capacity_gb": 1024,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 180,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MD1T0S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD UHS-I Card PRO Plus 2024 Data Sheet Revision 2.2",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_PRO_Plus_v2.2.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung PRO Plus microSD Card",
+        "url": "https://semiconductor.samsung.com/us/consumer-storage/memory-card/micro-sd-pro-plus-2021/",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
   }
 ]
