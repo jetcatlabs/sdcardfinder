@@ -36,6 +36,7 @@ RECOMMENDATION_STRATEGIES = {
     "action-camera": "usage",
     "camera": "usage",
     "single-board-computer": "application",
+    "dash-camera": "recommended-spec",
 }
 
 CAPACITY_PROFILES = {
@@ -117,8 +118,15 @@ def card_meets_requirements(card, requirements):
 
 
 def card_fits_slot(card, slot):
-    if card.get("form_factor") not in \
-            slot.get("accepted_formats", []):
+    if not form_factor_matches(
+        slot.get(
+            "accepted_formats",
+            []
+        ),
+        card.get(
+            "form_factor"
+        ),
+    ):
         return False
 
     incompatible_buses = slot.get(
@@ -145,6 +153,38 @@ def card_fits_slot(card, slot):
 
     return True
 
+def form_factor_matches(
+    accepted_formats,
+    card_form_factor,
+):
+    if card_form_factor in accepted_formats:
+        return True
+
+    format_families = {
+        "microSD": {
+            "microSD",
+            "microSDHC",
+            "microSDXC",
+        },
+        "SD": {
+            "SD",
+            "SDHC",
+            "SDXC",
+        },
+    }
+
+    for accepted_format in accepted_formats:
+        family = format_families.get(
+            accepted_format
+        )
+
+        if (
+            family
+            and card_form_factor in family
+        ):
+            return True
+
+    return False
 
 def compatible_cards(device, cards):
     matches = []
@@ -307,8 +347,14 @@ def render_recommendation_card(match, label=None):
         card["form_factor"]
     )
 
-    bus = html.escape(
-        card["bus"]
+    bus_value = card.get(
+        "bus"
+    )
+    
+    bus = (
+        html.escape(bus_value)
+        if bus_value
+        else "Not documented"
     )
 
     speed = html.escape(
@@ -703,7 +749,46 @@ def card_meets_recommendations(card, recommendations):
         if card_application != recommended_application:
             return False
 
+    recommended_endurance = recommendations.get(
+        "endurance"
+    )
+
+    if recommended_endurance:
+        if not card_matches_endurance_recommendation(
+            card,
+            recommendations
+        ):
+            return False
+
     return True
+
+def card_matches_endurance_recommendation(
+    card,
+    recommendations,
+):
+    endurance_rec = recommendations.get(
+        "endurance",
+        {}
+    )
+
+    if not endurance_rec:
+        return False
+
+    card_endurance = card.get(
+        "endurance",
+        {}
+    )
+
+    if endurance_rec.get(
+        "continuous_recording"
+    ) is True:
+        return (
+            card_endurance.get(
+                "continuous_recording"
+            ) is True
+        )
+
+    return False
 
 def generate_card_recommendations(device, cards):
     strategy = DEVICE_RECOMMENDATION_OVERRIDES.get(

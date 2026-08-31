@@ -165,6 +165,57 @@ def validate(device_id):
             ),
             errors
         )
+        
+        recommendations = slot.get(
+            "recommendations",
+            {}
+        )
+
+        endurance_rec = recommendations.get(
+            "endurance"
+        )
+
+        if endurance_rec is not None:
+            if not isinstance(
+                endurance_rec,
+                dict
+            ):
+                errors.append(
+                    "storage.slots.{}.recommendations.endurance "
+                    "must be an object.".format(
+                        index
+                    )
+                )
+            else:
+                allowed_endurance_keys = {
+                    "continuous_recording",
+                }
+
+                for key in endurance_rec:
+                    if key not in allowed_endurance_keys:
+                        errors.append(
+                            "Unknown endurance recommendation: {}".format(
+                                key
+                            )
+                        )
+
+                continuous_recording = endurance_rec.get(
+                    "continuous_recording"
+                )
+
+                if (
+                    continuous_recording is not None
+                    and not isinstance(
+                        continuous_recording,
+                        bool
+                    )
+                ):
+                    errors.append(
+                        "storage.slots.{}.recommendations.endurance."
+                        "continuous_recording must be true or false.".format(
+                            index
+                        )
+                    )
 
     for profile in device.get(
         "usage_profiles",
@@ -457,15 +508,33 @@ def factual_fields(device):
                 + key
             )
 
-        for key in slot.get(
+        recommendations = slot.get(
             "recommendations",
             {}
-        ):
-            fields.add(
-                base
-                + ".recommendations."
-                + key
-            )
+        )
+
+        for key, value in recommendations.items():
+            if key == "endurance":
+                if isinstance(
+                    value,
+                    dict
+                ):
+                    for endurance_key, endurance_value in value.items():
+                        if endurance_value is not None:
+                            fields.add(
+                                base
+                                + ".recommendations.endurance."
+                                + endurance_key
+                            )
+
+                continue
+
+            if value is not None:
+                fields.add(
+                    base
+                    + ".recommendations."
+                    + key
+                )
 
     profiles = device.get(
         "usage_profiles",

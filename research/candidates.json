@@ -30,5 +30,13 @@
     "category": "camera",
     "priority": "medium",
     "status": "todo"
+  },
+  {
+    "id": "viofo-a229-pro",
+    "manufacturer": "VIOFO",
+    "model": "A229 Pro",
+    "category": "dash-camera",
+    "priority": "high",
+    "status": "published"
   }
 ]

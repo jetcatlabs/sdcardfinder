@@ -29,6 +29,7 @@ ALLOWED_CATEGORIES = {
     "action-camera",
     "camera",
     "single-board-computer",
+    "dash-camera",
 }
 
 ALLOWED_RESEARCH_STATUSES = {

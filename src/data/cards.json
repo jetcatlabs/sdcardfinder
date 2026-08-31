@@ -2122,5 +2122,288 @@
       "recording_hours": 26900,
       "pe_cycles": 3000
     }
+  },
+  {
+    "id": "viofo-industrial-grade-microsdxc-64gb",
+    "manufacturer": "VIOFO",
+    "product_family": "Industrial Grade",
+    "model": "64GB microSDXC",
+    "capacity_gb": 64,
+    "form_factor": "microSDXC",
+    "bus": null,
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 40,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 64GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-64gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "capacity_gb",
+          "endurance.continuous_recording",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 128GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-128gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 256GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-256gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 512GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-512gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": []
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "viofo-industrial-grade-microsdxc-128gb",
+    "manufacturer": "VIOFO",
+    "product_family": "Industrial Grade",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": null,
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 80,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 64GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-64gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "endurance.continuous_recording",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 128GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-128gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "capacity_gb",
+          "performance.max_write_mbps"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 256GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-256gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 512GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-512gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": []
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "viofo-industrial-grade-microsdxc-256gb",
+    "manufacturer": "VIOFO",
+    "product_family": "Industrial Grade",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": null,
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 90,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 64GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-64gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "endurance.continuous_recording",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 128GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-128gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 256GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-256gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "capacity_gb",
+          "performance.max_write_mbps"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 512GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-512gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": []
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "viofo-industrial-grade-microsdxc-512gb",
+    "manufacturer": "VIOFO",
+    "product_family": "Industrial Grade",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": null,
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 90,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 64GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-64gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "endurance.continuous_recording",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 128GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-128gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 256GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-256gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "VIOFO",
+        "title": "VIOFO 512GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-512gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "capacity_gb",
+          "performance.max_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
   }
 ]

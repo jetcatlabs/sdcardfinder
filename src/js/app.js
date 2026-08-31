@@ -17,14 +17,16 @@ const CATEGORY_ORDER = [
     "gaming-handheld",
     "action-camera",
     "camera",
-    "single-board-computer"
+    "single-board-computer",
+	"dash-camera"
 ];
 
 const CATEGORY_LABELS = {
     "gaming-handheld": "Gaming handhelds",
     "action-camera": "Action cameras",
     "camera": "Cameras",
-    "single-board-computer": "Single-board computers"
+    "single-board-computer": "Single-board computers",
+	"dash-camera": "Dash cameras"
 };
 
 const FEATURED_DEVICE_IDS = [

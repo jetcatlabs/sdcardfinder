@@ -61,5 +61,12 @@
     "product_family": "High-Endurance",
     "priority": "high",
     "status": "published"
+  },
+  {
+    "id": "viofo-industrial-microsd",
+    "manufacturer": "VIOFO",
+    "product_family": "Industrial Grade",
+    "priority": "high",
+    "status": "published"
   }
 ]

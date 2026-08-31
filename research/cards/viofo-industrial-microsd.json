@@ -1,0 +1,182 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "viofo-industrial-microsd",
+    "manufacturer": "VIOFO",
+    "product_family": "Industrial Grade",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": null,
+      "speed_classes": {
+        "uhs": "U3",
+        "video": "V30",
+        "application": "A2"
+      },
+      "performance": {
+        "max_read_mbps": 100,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": null
+      },
+      "endurance": {
+        "continuous_recording": true,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": null,
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 40
+          }
+        }
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": null,
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 80
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": null,
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 90
+          }
+        }
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": null,
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 90
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "viofo-industrial-64gb",
+        "type": "manufacturer_product_page",
+        "publisher": "VIOFO",
+        "title": "VIOFO 64GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-64gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "viofo-industrial-128gb",
+        "type": "manufacturer_product_page",
+        "publisher": "VIOFO",
+        "title": "VIOFO 128GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-128gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "viofo-industrial-256gb",
+        "type": "manufacturer_product_page",
+        "publisher": "VIOFO",
+        "title": "VIOFO 256GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-256gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "viofo-industrial-512gb",
+        "type": "manufacturer_product_page",
+        "publisher": "VIOFO",
+        "title": "VIOFO 512GB U3 A2 V30 Industrial microSD Card for Dash Cams",
+        "url": "https://www.viofo.com/products/viofo-512gb-industrial-grade-microsd-card-u3-a2-v30-high-speed-memory-card-with-adapter-support-ultra-hd-4k-video-recording",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "viofo-industrial-64gb",
+      "evidence": "VIOFO identifies the Industrial Grade cards as microSDXC memory cards."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "viofo-industrial-64gb",
+      "evidence": "VIOFO specifies U3 performance."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "viofo-industrial-64gb",
+      "evidence": "VIOFO specifies V30 performance."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "viofo-industrial-64gb",
+      "evidence": "VIOFO specifies A2 performance."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "viofo-industrial-64gb",
+      "evidence": "VIOFO specifies read speeds up to 100MB/s."
+    },
+    {
+      "field": "common.endurance.continuous_recording",
+      "source_id": "viofo-industrial-64gb",
+      "evidence": "VIOFO describes the Industrial Grade card as high endurance and optimized for write-intensive dashcam recording."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "viofo-industrial-64gb",
+      "evidence": "VIOFO product information specifies 64GB."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "viofo-industrial-64gb",
+      "evidence": "VIOFO specifies write speeds up to 40MB/s for the 64GB card."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "viofo-industrial-128gb",
+      "evidence": "VIOFO product information specifies 128GB."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "viofo-industrial-128gb",
+      "evidence": "VIOFO specifies write speeds up to 80MB/s for the 128GB card."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "viofo-industrial-256gb",
+      "evidence": "VIOFO product information specifies 256GB."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "viofo-industrial-256gb",
+      "evidence": "VIOFO specifies write speeds up to 90MB/s for the 256GB card."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "viofo-industrial-512gb",
+      "evidence": "VIOFO product information specifies 512GB."
+    },
+    {
+      "field": "variants.3.overrides.performance.max_write_mbps",
+      "source_id": "viofo-industrial-512gb",
+      "evidence": "VIOFO specifies write speeds up to 90MB/s for the 512GB card."
+    }
+  ]
+}

@@ -120,7 +120,7 @@ def factual_fields(card_family):
                 )
             )
             
-            overrides = variant.get(
+        overrides = variant.get(
             "overrides",
             {}
         )
@@ -315,11 +315,10 @@ def validate(card_id):
         "bus"
     )
 
-    if not bus:
-        errors.append(
-            "common.bus is missing."
-        )
-    elif bus not in BUSES:
+    if (
+        bus is not None
+        and bus not in BUSES
+    ):
         errors.append(
             "Unknown bus: {}".format(
                 bus
@@ -547,15 +546,10 @@ def validate(card_id):
             "part_number"
         )
 
-        if not part_number:
-            errors.append(
-                "variants.{}.part_number is missing.".format(
-                    index
-                )
-            )
-        elif part_number in part_numbers:
-            errors.append(
-                "Duplicate part number: {}".format(
+        if part_number:
+            if part_number in part_numbers:
+                errors.append(
+                    "Duplicate part number: {}".format(
                     part_number
                 )
             )
