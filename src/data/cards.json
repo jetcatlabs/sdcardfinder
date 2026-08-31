@@ -625,5 +625,245 @@
     ],
     "status": "verified",
     "last_verified": "2026-08-30"
+  },
+  {
+    "id": "kingston-canvas-go-plus-microsdxc-128gb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Go! Plus",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 100,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDCG4/128GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas Go! Plus microSD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/SDCG4_us.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas Go! Plus microSD Memory Card",
+        "url": "https://www.kingston.com/en/memory-cards/canvas-go-plus-microsd-card-sdcg4",
+        "verified_at": "2026-08-30",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Glossary",
+        "url": "https://www.kingston.com/en/memory/kingston-glossary",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "kingston-canvas-go-plus-microsdxc-256gb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Go! Plus",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 160,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDCG4/256GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas Go! Plus microSD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/SDCG4_us.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas Go! Plus microSD Memory Card",
+        "url": "https://www.kingston.com/en/memory-cards/canvas-go-plus-microsd-card-sdcg4",
+        "verified_at": "2026-08-30",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Glossary",
+        "url": "https://www.kingston.com/en/memory/kingston-glossary",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "kingston-canvas-go-plus-microsdxc-512gb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Go! Plus",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 160,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDCG4/512GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas Go! Plus microSD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/SDCG4_us.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas Go! Plus microSD Memory Card",
+        "url": "https://www.kingston.com/en/memory-cards/canvas-go-plus-microsd-card-sdcg4",
+        "verified_at": "2026-08-30",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Glossary",
+        "url": "https://www.kingston.com/en/memory/kingston-glossary",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "kingston-canvas-go-plus-microsdxc-1tb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Go! Plus",
+    "model": "1TB microSDXC",
+    "capacity_gb": 1024,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 160,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDCG4/1TB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas Go! Plus microSD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/SDCG4_us.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas Go! Plus microSD Memory Card",
+        "url": "https://www.kingston.com/en/memory-cards/canvas-go-plus-microsd-card-sdcg4",
+        "verified_at": "2026-08-30",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Glossary",
+        "url": "https://www.kingston.com/en/memory/kingston-glossary",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
   }
 ]

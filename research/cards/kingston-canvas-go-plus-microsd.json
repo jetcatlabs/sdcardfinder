@@ -1,0 +1,192 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "kingston-canvas-go-plus-microsd",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Go! Plus",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "uhs": "U3",
+        "video": "V30",
+        "application": "A2"
+      },
+      "performance": {
+        "max_read_mbps": 200,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": 30
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "part_number": "SDCG4/128GB",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 100
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "SDCG4/256GB",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 160
+          }
+        }
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "SDCG4/512GB",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 160
+          }
+        }
+      },
+      {
+        "capacity_gb": 1024,
+        "part_number": "SDCG4/1TB",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 160
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "kingston-canvas-go-plus-microsd-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas Go! Plus microSD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/SDCG4_us.pdf",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "kingston-canvas-go-plus-microsd-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas Go! Plus microSD Memory Card",
+        "url": "https://www.kingston.com/en/memory-cards/canvas-go-plus-microsd-card-sdcg4",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "kingston-memory-glossary",
+        "type": "manufacturer_reference",
+        "publisher": "Kingston",
+        "title": "Kingston Glossary",
+        "url": "https://www.kingston.com/en/memory/kingston-glossary",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Specifications identify the card dimensions as microSDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Standard/Class lists UHS-I."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Standard/Class lists U3."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Standard/Class lists V30."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Standard/Class lists A2."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Performance is rated up to 200MB/s read."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "kingston-memory-glossary",
+      "evidence": "Kingston defines V30 as a minimum write speed of 30MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Specifications list a 128GB capacity."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Adapter-included part numbers list SDCG4/128GB."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "64GB-128GB models are rated up to 100MB/s write."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Specifications list a 256GB capacity."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Adapter-included part numbers list SDCG4/256GB."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "256GB-1TB models are rated up to 160MB/s write."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Specifications list a 512GB capacity."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Adapter-included part numbers list SDCG4/512GB."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "256GB-1TB models are rated up to 160MB/s write."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Specifications list a 1TB capacity."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Adapter-included part numbers list SDCG4/1TB."
+    },
+    {
+      "field": "variants.3.overrides.performance.max_write_mbps",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "256GB-1TB models are rated up to 160MB/s write."
+    }
+  ]
+}
