@@ -1,0 +1,128 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "sandisk-extreme-pro-v90-sd",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme PRO V90",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "uhs": "U3",
+        "video": "V90",
+        "application": null
+      },
+      "performance": {
+        "max_read_mbps": 300,
+        "max_write_mbps": 300,
+        "minimum_sustained_write_mbps": 90
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "part_number": "SDSDXDM-128G-GN4IN"
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "SDSDXDM-256G-GN4IN"
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "SDSDXDM-512G-GN4IN"
+      }
+    ],
+    "sources": [
+      {
+        "id": "sandisk-extreme-pro-v90-sd-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO SDXC UHS-II Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-pro-uhs-ii-v90-sd/data-sheet-sandisk-extreme-pro-uhs-ii-v90-sd.pdf",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sandisk-extreme-pro-v90-sd-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO SD UHS-II Card (V90)",
+        "url": "https://www.sandisk.com/en-se/products/memory-cards/sd-cards/sandisk-extreme-pro-uhs-ii-v90-sd",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "sandisk-extreme-pro-v90-sd-datasheet",
+      "evidence": "SanDisk datasheet identifies the product as an SDXC UHS-II card."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "sandisk-extreme-pro-v90-sd-datasheet",
+      "evidence": "Product Specifications specify SD UHS-II."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "sandisk-extreme-pro-v90-sd-datasheet",
+      "evidence": "Video Performance Rating specifies U3."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "sandisk-extreme-pro-v90-sd-datasheet",
+      "evidence": "Video Performance Rating specifies V90."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "sandisk-extreme-pro-v90-sd-datasheet",
+      "evidence": "Product Specifications specify up to 300MB/s read."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-pro-v90-sd-datasheet",
+      "evidence": "Product Specifications specify up to 300MB/s write."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "sandisk-extreme-pro-v90-sd-datasheet",
+      "evidence": "SanDisk specifies a 90MB/s minimum sustained write speed."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "sandisk-extreme-pro-v90-sd-product-page",
+      "evidence": "SanDisk lists a 128GB SDXC variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "sandisk-extreme-pro-v90-sd-product-page",
+      "evidence": "SanDisk lists SDSDXDM-128G-GN4IN for 128GB."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "sandisk-extreme-pro-v90-sd-product-page",
+      "evidence": "SanDisk lists a 256GB SDXC variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "sandisk-extreme-pro-v90-sd-product-page",
+      "evidence": "SanDisk lists SDSDXDM-256G-GN4IN for 256GB."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "sandisk-extreme-pro-v90-sd-product-page",
+      "evidence": "SanDisk lists a 512GB SDXC variant."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "sandisk-extreme-pro-v90-sd-product-page",
+      "evidence": "SanDisk lists SDSDXDM-512G-GN4IN for 512GB."
+    }
+  ]
+}

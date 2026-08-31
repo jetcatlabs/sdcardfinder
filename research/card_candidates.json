@@ -19,5 +19,26 @@
     "product_family": "Canvas Go! Plus",
     "priority": "high",
     "status": "published"
+  },
+  {
+    "id": "samsung-pro-plus-sd",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "kingston-canvas-react-plus-v60-sd",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas React Plus V60",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "sandisk-extreme-pro-v90-sd",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme PRO V90",
+    "priority": "high",
+    "status": "published"
   }
 ]

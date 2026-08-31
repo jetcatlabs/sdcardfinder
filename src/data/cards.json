@@ -865,5 +865,574 @@
     ],
     "status": "verified",
     "last_verified": "2026-08-30"
+  },
+  {
+    "id": "samsung-pro-plus-sdxc-128gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "model": "128GB SDXC",
+    "capacity_gb": 128,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 180,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-SD128S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "128GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-128gb-sku-mb-sd128s-am/",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "256GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-256gb-sku-mb-sd256s-am/",
+        "verified_at": "2026-08-30",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "512GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-512gb-sku-mb-sd512s-am/",
+        "verified_at": "2026-08-30",
+        "supports": []
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "samsung-pro-plus-sdxc-256gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "model": "256GB SDXC",
+    "capacity_gb": 256,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 180,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-SD256S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "128GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-128gb-sku-mb-sd128s-am/",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "256GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-256gb-sku-mb-sd256s-am/",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "512GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-512gb-sku-mb-sd512s-am/",
+        "verified_at": "2026-08-30",
+        "supports": []
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "samsung-pro-plus-sdxc-512gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "model": "512GB SDXC",
+    "capacity_gb": 512,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 180,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-SD512S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "128GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-128gb-sku-mb-sd128s-am/",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "256GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-256gb-sku-mb-sd256s-am/",
+        "verified_at": "2026-08-30",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "512GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-512gb-sku-mb-sd512s-am/",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "sandisk-extreme-pro-v90-sdxc-128gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme PRO V90",
+    "model": "128GB SDXC",
+    "capacity_gb": 128,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V90",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 300,
+      "max_write_mbps": 300,
+      "minimum_sustained_write_mbps": 90
+    },
+    "part_number": "SDSDXDM-128G-GN4IN",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO SDXC UHS-II Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-pro-uhs-ii-v90-sd/data-sheet-sandisk-extreme-pro-uhs-ii-v90-sd.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO SD UHS-II Card (V90)",
+        "url": "https://www.sandisk.com/en-se/products/memory-cards/sd-cards/sandisk-extreme-pro-uhs-ii-v90-sd",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "sandisk-extreme-pro-v90-sdxc-256gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme PRO V90",
+    "model": "256GB SDXC",
+    "capacity_gb": 256,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V90",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 300,
+      "max_write_mbps": 300,
+      "minimum_sustained_write_mbps": 90
+    },
+    "part_number": "SDSDXDM-256G-GN4IN",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO SDXC UHS-II Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-pro-uhs-ii-v90-sd/data-sheet-sandisk-extreme-pro-uhs-ii-v90-sd.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO SD UHS-II Card (V90)",
+        "url": "https://www.sandisk.com/en-se/products/memory-cards/sd-cards/sandisk-extreme-pro-uhs-ii-v90-sd",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "sandisk-extreme-pro-v90-sdxc-512gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme PRO V90",
+    "model": "512GB SDXC",
+    "capacity_gb": 512,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V90",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 300,
+      "max_write_mbps": 300,
+      "minimum_sustained_write_mbps": 90
+    },
+    "part_number": "SDSDXDM-512G-GN4IN",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO SDXC UHS-II Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-pro-uhs-ii-v90-sd/data-sheet-sandisk-extreme-pro-uhs-ii-v90-sd.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO SD UHS-II Card (V90)",
+        "url": "https://www.sandisk.com/en-se/products/memory-cards/sd-cards/sandisk-extreme-pro-uhs-ii-v90-sd",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "kingston-canvas-react-plus-v60-sdxc-128gb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas React Plus V60",
+    "model": "128GB SDXC",
+    "capacity_gb": 128,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V60",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 100,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": "SDR2V6/128GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas React Plus V60 SD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/SDR2V6_us.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas React Plus SDXC UHS-II Product Listings",
+        "url": "https://www.kingston.com/en/memory/search/model/101906/nikon-digital-slr-z6-ii",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "form_factor"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "kingston-canvas-react-plus-v60-sdxc-256gb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas React Plus V60",
+    "model": "256GB SDXC",
+    "capacity_gb": 256,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V60",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 150,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": "SDR2V6/256GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas React Plus V60 SD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/SDR2V6_us.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas React Plus SDXC UHS-II Product Listings",
+        "url": "https://www.kingston.com/en/memory/search/model/101906/nikon-digital-slr-z6-ii",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "form_factor"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "kingston-canvas-react-plus-v60-sdxc-512gb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas React Plus V60",
+    "model": "512GB SDXC",
+    "capacity_gb": 512,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V60",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 150,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": "SDR2V6/512GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas React Plus V60 SD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/SDR2V6_us.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas React Plus SDXC UHS-II Product Listings",
+        "url": "https://www.kingston.com/en/memory/search/model/101906/nikon-digital-slr-z6-ii",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "form_factor"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "kingston-canvas-react-plus-v60-sdxc-1tb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas React Plus V60",
+    "model": "1TB SDXC",
+    "capacity_gb": 1024,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V60",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 150,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": "SDR2V6/1TB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas React Plus V60 SD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/SDR2V6_us.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas React Plus SDXC UHS-II Product Listings",
+        "url": "https://www.kingston.com/en/memory/search/model/101906/nikon-digital-slr-z6-ii",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "form_factor"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
   }
 ]

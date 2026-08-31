@@ -1,0 +1,138 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "samsung-pro-plus-sd",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "uhs": "U3",
+        "video": "V30",
+        "application": null
+      },
+      "performance": {
+        "max_read_mbps": 180,
+        "max_write_mbps": 130,
+        "minimum_sustained_write_mbps": 30
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "part_number": "MB-SD128S"
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "MB-SD256S"
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "MB-SD512S"
+      }
+    ],
+    "sources": [
+      {
+        "id": "samsung-pro-plus-sd-128-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Samsung",
+        "title": "128GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-128gb-sku-mb-sd128s-am/",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "samsung-pro-plus-sd-256-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Samsung",
+        "title": "256GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-256gb-sku-mb-sd256s-am/",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "samsung-pro-plus-sd-512-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Samsung",
+        "title": "512GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-512gb-sku-mb-sd512s-am/",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "samsung-pro-plus-sd-128-product-page",
+      "evidence": "Samsung identifies the product as a full-size SDXC card."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "samsung-pro-plus-sd-128-product-page",
+      "evidence": "Samsung identifies the PRO Plus full-size card as UHS-I."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "samsung-pro-plus-sd-128-product-page",
+      "evidence": "Key Features specify UHS Speed Class 3 (U3)."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "samsung-pro-plus-sd-128-product-page",
+      "evidence": "Key Features specify Video Speed Class V30."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "samsung-pro-plus-sd-128-product-page",
+      "evidence": "Samsung specifies read speeds up to 180MB/s."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "samsung-pro-plus-sd-128-product-page",
+      "evidence": "Samsung specifies write speeds up to 130MB/s."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-pro-plus-sd-128-product-page",
+      "evidence": "Samsung's V30 footnote specifies a sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "samsung-pro-plus-sd-128-product-page",
+      "evidence": "Samsung product page identifies the 128GB variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "samsung-pro-plus-sd-128-product-page",
+      "evidence": "Samsung identifies the 128GB base model as MB-SD128S."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "samsung-pro-plus-sd-256-product-page",
+      "evidence": "Samsung product page identifies the 256GB variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "samsung-pro-plus-sd-256-product-page",
+      "evidence": "Samsung identifies the 256GB base model as MB-SD256S."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "samsung-pro-plus-sd-512-product-page",
+      "evidence": "Samsung product page identifies the 512GB variant."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "samsung-pro-plus-sd-512-product-page",
+      "evidence": "Samsung identifies the 512GB base model as MB-SD512S."
+    }
+  ]
+}

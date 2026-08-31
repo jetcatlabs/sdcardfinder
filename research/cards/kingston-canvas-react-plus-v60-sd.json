@@ -1,0 +1,187 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "kingston-canvas-react-plus-v60-sd",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas React Plus V60",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "uhs": "U3",
+        "video": "V60",
+        "application": null
+      },
+      "performance": {
+        "max_read_mbps": 280,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": 60
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "part_number": "SDR2V6/128GB",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 100
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "SDR2V6/256GB",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 150
+          }
+        }
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "SDR2V6/512GB",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 150
+          }
+        }
+      },
+      {
+        "capacity_gb": 1024,
+        "part_number": "SDR2V6/1TB",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 150
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "kingston-canvas-react-plus-v60-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas React Plus V60 SD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/SDR2V6_us.pdf",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "kingston-canvas-react-plus-v60-sdxc-listing",
+        "type": "manufacturer_compatibility_listing",
+        "publisher": "Kingston",
+        "title": "Kingston Canvas React Plus SDXC UHS-II Product Listings",
+        "url": "https://www.kingston.com/en/memory/search/model/101906/nikon-digital-slr-z6-ii",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "kingston-speed-class-guide",
+        "type": "manufacturer_reference",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "kingston-canvas-react-plus-v60-sdxc-listing",
+      "evidence": "Kingston lists the 128GB, 256GB, 512GB and 1TB SDR2V6 cards as Canvas React Plus SDXC UHS-II."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Standard/Class specifies UHS-II."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Standard/Class specifies U3."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Standard/Class specifies V60."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Performance table specifies up to 280MB/s read."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "kingston-speed-class-guide",
+      "evidence": "Kingston defines V60 as a minimum write speed of 60MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Specifications list a 128GB capacity."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Part Numbers table lists SDR2V6/128GB."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "128GB performance is rated up to 100MB/s write."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Specifications list a 256GB capacity."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Part Numbers table lists SDR2V6/256GB."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "256GB-1TB performance is rated up to 150MB/s write."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Specifications list a 512GB capacity."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Part Numbers table lists SDR2V6/512GB."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "256GB-1TB performance is rated up to 150MB/s write."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Specifications list a 1TB capacity."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Part Numbers table lists SDR2V6/1TB."
+    },
+    {
+      "field": "variants.3.overrides.performance.max_write_mbps",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "256GB-1TB performance is rated up to 150MB/s write."
+    }
+  ]
+}
