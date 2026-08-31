@@ -332,8 +332,17 @@ def format_capacity(capacity_gb):
 
     return f"{capacity_gb} GB"
 
-def render_recommendation_card(match, label=None):
+def render_recommendation_card(
+        match,
+        label=None,
+        badge_text="Compatible",
+    ):
+    
     card = match["card"]
+
+    badge_text = html.escape(
+        badge_text
+    )
 
     manufacturer = html.escape(
         card["manufacturer"]
@@ -397,7 +406,7 @@ def render_recommendation_card(match, label=None):
             </div>
 
             <span class="compatible-badge">
-                Compatible
+                {badge_text}
             </span>
         </div>
 
@@ -671,7 +680,8 @@ def generate_recommended_spec_recommendations(device, cards):
 
         for match in preferred:
             output += render_recommendation_card(
-                match
+                match,
+                badge_text="Recommended",
             )
 
         output += """
