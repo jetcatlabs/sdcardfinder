@@ -40,5 +40,26 @@
     "product_family": "Extreme PRO V90",
     "priority": "high",
     "status": "published"
+  },
+  {
+    "id": "samsung-pro-endurance-microsd",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Endurance",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "sandisk-high-endurance-microsd",
+    "manufacturer": "SanDisk",
+    "product_family": "High Endurance",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "kingston-high-endurance-microsd",
+    "manufacturer": "Kingston",
+    "product_family": "High-Endurance",
+    "priority": "high",
+    "status": "published"
   }
 ]

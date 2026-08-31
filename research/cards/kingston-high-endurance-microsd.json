@@ -1,0 +1,231 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "kingston-high-endurance-microsd",
+    "manufacturer": "Kingston",
+    "product_family": "High-Endurance",
+    "common": {
+      "form_factor": null,
+      "bus": "UHS-I",
+      "speed_classes": {
+        "uhs": "U1",
+        "video": "V10",
+        "application": "A1"
+      },
+      "performance": {
+        "max_read_mbps": 95,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": 10
+      },
+      "endurance": {
+        "continuous_recording": true,
+        "recording_hours": 26900,
+        "pe_cycles": 3000
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": "SDCE/64GB",
+        "overrides": {
+          "form_factor": "microSDXC",
+          "performance": {
+            "max_write_mbps": 30
+          }
+        }
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "SDCE/128GB",
+        "overrides": {
+          "form_factor": "microSDXC",
+          "performance": {
+            "max_write_mbps": 45
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "SDCE/256GB",
+        "overrides": {
+          "form_factor": "microSDXC",
+          "performance": {
+            "max_write_mbps": 45
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "kingston-high-endurance-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "Kingston",
+        "title": "Kingston High-Endurance microSD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/sdce_en.pdf",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "kingston-microsd-comparison",
+        "type": "manufacturer_reference",
+        "publisher": "Kingston",
+        "title": "Kingston microSD Comparison Chart",
+        "url": "https://www.kingston.com/en/memory-cards/microsd-comparison-chart",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "kingston-speed-class-guide",
+        "type": "manufacturer_reference",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "kingston-sdce-64-part",
+        "type": "manufacturer_product_listing",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/64GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F64GB",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "kingston-sdce-128-part",
+        "type": "manufacturer_product_listing",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/128GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F128GB",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "kingston-sdce-256-part",
+        "type": "manufacturer_product_listing",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/256GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F256GB",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31"
+  },
+  "claims": [
+    {
+      "field": "common.bus",
+      "source_id": "kingston-high-endurance-datasheet",
+      "evidence": "Specifications list UHS-I."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "kingston-high-endurance-datasheet",
+      "evidence": "Specifications list U1."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "kingston-microsd-comparison",
+      "evidence": "Kingston's comparison chart identifies High-Endurance as V10."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "kingston-high-endurance-datasheet",
+      "evidence": "Specifications list A1."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "kingston-high-endurance-datasheet",
+      "evidence": "Specifications list up to 95MB/s read."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "kingston-speed-class-guide",
+      "evidence": "Kingston defines V10 and U1 as 10MB/s minimum sustained write classes."
+    },
+    {
+      "field": "common.endurance.continuous_recording",
+      "source_id": "kingston-high-endurance-datasheet",
+      "evidence": "Kingston specifies 24/7 reliable recording for surveillance systems."
+    },
+    {
+      "field": "common.endurance.recording_hours",
+      "source_id": "kingston-high-endurance-datasheet",
+      "evidence": "Specifications list 26.9K operating hours for 24/7 recording over the three-year warranty."
+    },
+    {
+      "field": "common.endurance.pe_cycles",
+      "source_id": "kingston-high-endurance-datasheet",
+      "evidence": "Specifications rate endurance at 3K P/E cycles."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "kingston-sdce-64-part",
+      "evidence": "Kingston identifies SDCE/64GB as the 64GB card."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "kingston-sdce-64-part",
+      "evidence": "Kingston lists part number SDCE/64GB."
+    },
+    {
+      "field": "variants.0.overrides.form_factor",
+      "source_id": "kingston-sdce-64-part",
+      "evidence": "Kingston identifies SDCE/64GB as a 64GB microSDXC card."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "kingston-sdce-64-part",
+      "evidence": "Kingston specifies up to 30MB/s write for SDCE/64GB."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "kingston-sdce-128-part",
+      "evidence": "Kingston identifies SDCE/128GB as the 128GB card."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "kingston-sdce-128-part",
+      "evidence": "Kingston lists part number SDCE/128GB."
+    },
+    {
+      "field": "variants.1.overrides.form_factor",
+      "source_id": "kingston-sdce-128-part",
+      "evidence": "Kingston identifies SDCE/128GB as a 128GB microSDXC card."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "kingston-sdce-128-part",
+      "evidence": "Kingston specifies up to 45MB/s write for SDCE/128GB."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "kingston-sdce-256-part",
+      "evidence": "Kingston identifies SDCE/256GB as the 256GB card."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "kingston-sdce-256-part",
+      "evidence": "Kingston lists part number SDCE/256GB."
+    },
+    {
+      "field": "variants.2.overrides.form_factor",
+      "source_id": "kingston-sdce-256-part",
+      "evidence": "Kingston identifies SDCE/256GB as a 256GB microSDXC card."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "kingston-sdce-256-part",
+      "evidence": "Kingston specifies up to 45MB/s write for SDCE/256GB."
+    }
+  ]
+}

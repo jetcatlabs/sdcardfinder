@@ -72,6 +72,12 @@ def main():
                     "max_read_mbps": None,
                     "max_write_mbps": None,
                     "minimum_sustained_write_mbps": None
+                },
+                
+                "endurance": {
+                    "continuous_recording": None,
+                    "recording_hours": None,
+                    "pe_cycles": None
                 }
             },
 

@@ -1,0 +1,232 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "samsung-pro-endurance-microsd",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Endurance",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "uhs": null,
+        "video": null,
+        "application": null
+      },
+      "performance": {
+        "max_read_mbps": 100,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": null
+      },
+      "endurance": {
+        "continuous_recording": true,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": "MB-MJ64K",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U1",
+            "video": "V10"
+          },
+          "performance": {
+            "max_write_mbps": 30,
+            "minimum_sustained_write_mbps": 10
+          },
+          "endurance": {
+            "recording_hours": 35040
+          }
+        }
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "MB-MJ128K",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U3",
+            "video": "V30"
+          },
+          "performance": {
+            "max_write_mbps": 40,
+            "minimum_sustained_write_mbps": 30
+          },
+          "endurance": {
+            "recording_hours": 70080
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "MB-MJ256K",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U3",
+            "video": "V30"
+          },
+          "performance": {
+            "max_write_mbps": 40,
+            "minimum_sustained_write_mbps": 30
+          },
+          "endurance": {
+            "recording_hours": 140160
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "samsung-pro-endurance-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "Samsung",
+        "title": "Samsung microSD UHS-I Card PRO Endurance 2024 Data Sheet Revision 1.1",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_PRO_Endurance_v.1.1.pdf",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "samsung-pro-endurance-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Samsung",
+        "title": "Samsung PRO Endurance microSDXC Card",
+        "url": "https://www.samsung.com/us/memory-storage/memory-card/pro-endurance-adapter-microsdxc-256gb-sku-mb-mj256ka-am/",
+        "verified_at": "2026-08-31",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications, page 3: 64GB, 128GB and 256GB variants are microSDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications, page 3: Bus Speed Mode is UHS-I SDR104."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications, page 3: transfer speed is up to 100MB/s read."
+    },
+    {
+      "field": "common.endurance.continuous_recording",
+      "source_id": "samsung-pro-endurance-product-page",
+      "evidence": "Samsung identifies PRO Endurance for consistent recording and monitoring devices including CCTV, dash cams and body cams."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Product Lineup lists 64GB."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Product Lineup lists model MB-MJ64K for 64GB."
+    },
+    {
+      "field": "variants.0.overrides.speed_classes.uhs",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications: 64GB is Grade 1 (U1)."
+    },
+    {
+      "field": "variants.0.overrides.speed_classes.video",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications: 64GB is V10."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications: 64GB write speed is up to 30MB/s."
+    },
+    {
+      "field": "variants.0.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "V10 footnote defines a sustained video capture rate of 10MB/s."
+    },
+    {
+      "field": "variants.0.overrides.endurance.recording_hours",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Reliability table lists 35,040 endurance hours for 64GB."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Product Lineup lists 128GB."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Product Lineup lists model MB-MJ128K for 128GB."
+    },
+    {
+      "field": "variants.1.overrides.speed_classes.uhs",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications: 128GB is Grade 3 (U3)."
+    },
+    {
+      "field": "variants.1.overrides.speed_classes.video",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications: 128GB is V30."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications: 128GB write speed is up to 40MB/s."
+    },
+    {
+      "field": "variants.1.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "V30 footnote defines a sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "variants.1.overrides.endurance.recording_hours",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Reliability table lists 70,080 endurance hours for 128GB."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Product Lineup lists 256GB."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Product Lineup lists model MB-MJ256K for 256GB."
+    },
+    {
+      "field": "variants.2.overrides.speed_classes.uhs",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications: 256GB is Grade 3 (U3)."
+    },
+    {
+      "field": "variants.2.overrides.speed_classes.video",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications: 256GB is V30."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Technical Specifications: 256GB write speed is up to 40MB/s."
+    },
+    {
+      "field": "variants.2.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "V30 footnote defines a sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "variants.2.overrides.endurance.recording_hours",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Reliability table lists 140,160 endurance hours for 256GB."
+    }
+  ]
+}

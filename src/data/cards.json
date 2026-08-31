@@ -1434,5 +1434,693 @@
     ],
     "status": "verified",
     "last_verified": "2026-08-30"
+  },
+  {
+    "id": "samsung-pro-endurance-microsdxc-64gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Endurance",
+    "model": "64GB microSDXC",
+    "capacity_gb": 64,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U1",
+      "video": "V10",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 30,
+      "minimum_sustained_write_mbps": 10
+    },
+    "part_number": "MB-MJ64K",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD UHS-I Card PRO Endurance 2024 Data Sheet Revision 1.1",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_PRO_Endurance_v.1.1.pdf",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "endurance.recording_hours",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung PRO Endurance microSDXC Card",
+        "url": "https://www.samsung.com/us/memory-storage/memory-card/pro-endurance-adapter-microsdxc-256gb-sku-mb-mj256ka-am/",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "endurance.continuous_recording"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 35040,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-pro-endurance-microsdxc-128gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Endurance",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 40,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MJ128K",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD UHS-I Card PRO Endurance 2024 Data Sheet Revision 1.1",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_PRO_Endurance_v.1.1.pdf",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "endurance.recording_hours",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung PRO Endurance microSDXC Card",
+        "url": "https://www.samsung.com/us/memory-storage/memory-card/pro-endurance-adapter-microsdxc-256gb-sku-mb-mj256ka-am/",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "endurance.continuous_recording"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 70080,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-pro-endurance-microsdxc-256gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Endurance",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 40,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MJ256K",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD UHS-I Card PRO Endurance 2024 Data Sheet Revision 1.1",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_PRO_Endurance_v.1.1.pdf",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "endurance.recording_hours",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung PRO Endurance microSDXC Card",
+        "url": "https://www.samsung.com/us/memory-storage/memory-card/pro-endurance-adapter-microsdxc-256gb-sku-mb-mj256ka-am/",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "endurance.continuous_recording"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 140160,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-high-endurance-microsdxc-64gb",
+    "manufacturer": "SanDisk",
+    "product_family": "High Endurance",
+    "model": "64GB microSDXC",
+    "capacity_gb": 64,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 40,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQQNR-064G-GN6IA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk High Endurance microSD Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/high-endurance-uhs-i-microsd/data-sheet-high-endurance-uhs-i-microsd.pdf",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "endurance.continuous_recording",
+          "endurance.recording_hours",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk High Endurance microSD Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-high-endurance-uhs-i-microsd",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 5000,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-high-endurance-microsdxc-128gb",
+    "manufacturer": "SanDisk",
+    "product_family": "High Endurance",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 40,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQQNR-128G-GN6IA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk High Endurance microSD Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/high-endurance-uhs-i-microsd/data-sheet-high-endurance-uhs-i-microsd.pdf",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "endurance.continuous_recording",
+          "endurance.recording_hours",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk High Endurance microSD Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-high-endurance-uhs-i-microsd",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 10000,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-high-endurance-microsdxc-256gb",
+    "manufacturer": "SanDisk",
+    "product_family": "High Endurance",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 40,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQQNR-256G-GN6IA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk High Endurance microSD Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/high-endurance-uhs-i-microsd/data-sheet-high-endurance-uhs-i-microsd.pdf",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "endurance.continuous_recording",
+          "endurance.recording_hours",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk High Endurance microSD Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-high-endurance-uhs-i-microsd",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 20000,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-high-endurance-microsdxc-512gb",
+    "manufacturer": "SanDisk",
+    "product_family": "High Endurance",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 40,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQQNR-512G-GN6IA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk High Endurance microSD Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/high-endurance-uhs-i-microsd/data-sheet-high-endurance-uhs-i-microsd.pdf",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "endurance.continuous_recording",
+          "endurance.recording_hours",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk High Endurance microSD Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-high-endurance-uhs-i-microsd",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 40000,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "kingston-high-endurance-microsdxc-64gb",
+    "manufacturer": "Kingston",
+    "product_family": "High-Endurance",
+    "model": "64GB microSDXC",
+    "capacity_gb": 64,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U1",
+      "video": "V10",
+      "application": "A1"
+    },
+    "performance": {
+      "max_read_mbps": 95,
+      "max_write_mbps": 30,
+      "minimum_sustained_write_mbps": 10
+    },
+    "part_number": "SDCE/64GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston High-Endurance microSD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/sdce_en.pdf",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "bus",
+          "endurance.continuous_recording",
+          "endurance.pe_cycles",
+          "endurance.recording_hours",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston microSD Comparison Chart",
+        "url": "https://www.kingston.com/en/memory-cards/microsd-comparison-chart",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/64GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F64GB",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_write_mbps"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/128GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F128GB",
+        "verified_at": "2026-08-31",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/256GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F256GB",
+        "verified_at": "2026-08-31",
+        "supports": []
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 26900,
+      "pe_cycles": 3000
+    }
+  },
+  {
+    "id": "kingston-high-endurance-microsdxc-128gb",
+    "manufacturer": "Kingston",
+    "product_family": "High-Endurance",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U1",
+      "video": "V10",
+      "application": "A1"
+    },
+    "performance": {
+      "max_read_mbps": 95,
+      "max_write_mbps": 45,
+      "minimum_sustained_write_mbps": 10
+    },
+    "part_number": "SDCE/128GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston High-Endurance microSD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/sdce_en.pdf",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "bus",
+          "endurance.continuous_recording",
+          "endurance.pe_cycles",
+          "endurance.recording_hours",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston microSD Comparison Chart",
+        "url": "https://www.kingston.com/en/memory-cards/microsd-comparison-chart",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/64GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F64GB",
+        "verified_at": "2026-08-31",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/128GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F128GB",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_write_mbps"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/256GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F256GB",
+        "verified_at": "2026-08-31",
+        "supports": []
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 26900,
+      "pe_cycles": 3000
+    }
+  },
+  {
+    "id": "kingston-high-endurance-microsdxc-256gb",
+    "manufacturer": "Kingston",
+    "product_family": "High-Endurance",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U1",
+      "video": "V10",
+      "application": "A1"
+    },
+    "performance": {
+      "max_read_mbps": 95,
+      "max_write_mbps": 45,
+      "minimum_sustained_write_mbps": 10
+    },
+    "part_number": "SDCE/256GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston High-Endurance microSD Memory Card Data Sheet",
+        "url": "https://www.kingston.com/datasheets/sdce_en.pdf",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "bus",
+          "endurance.continuous_recording",
+          "endurance.pe_cycles",
+          "endurance.recording_hours",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston microSD Comparison Chart",
+        "url": "https://www.kingston.com/en/memory-cards/microsd-comparison-chart",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/64GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F64GB",
+        "verified_at": "2026-08-31",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/128GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F128GB",
+        "verified_at": "2026-08-31",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Kingston SDCE/256GB Parts Search",
+        "url": "https://www.kingston.com/en/memory/search?partId=SDCE%2F256GB",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 26900,
+      "pe_cycles": 3000
+    }
   }
 ]

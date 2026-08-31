@@ -83,6 +83,23 @@ def factual_fields(card_family):
                 )
             )
 
+    endurance = common.get(
+        "endurance",
+        {}
+    )
+
+    for key in (
+        "continuous_recording",
+        "recording_hours",
+        "pe_cycles",
+    ):
+        if endurance.get(key) is not None:
+            fields.append(
+                "common.endurance.{}".format(
+                    key
+                )
+            )    
+
     for index, variant in enumerate(
         card_family.get(
             "variants",
@@ -161,6 +178,26 @@ def factual_fields(card_family):
             ) is not None:
                 fields.append(
                     "variants.{}.overrides.performance.{}".format(
+                        index,
+                        key,
+                    )
+                )
+
+        override_endurance = overrides.get(
+            "endurance",
+            {}
+        )
+
+        for key in (
+            "continuous_recording",
+            "recording_hours",
+            "pe_cycles",
+        ):
+            if override_endurance.get(
+                key
+            ) is not None:
+                fields.append(
+                    "variants.{}.overrides.endurance.{}".format(
                         index,
                         key,
                     )
@@ -264,11 +301,10 @@ def validate(card_id):
         "form_factor"
     )
 
-    if not form_factor:
-        errors.append(
-            "common.form_factor is missing."
-        )
-    elif form_factor not in FORM_FACTORS:
+    if (
+        form_factor is not None
+        and form_factor not in FORM_FACTORS
+    ):
         errors.append(
             "Unknown form factor: {}".format(
                 form_factor
@@ -382,6 +418,65 @@ def validate(card_id):
             )
         )
 
+    endurance = common.get(
+        "endurance",
+        {}
+    )
+
+    continuous_recording = endurance.get(
+        "continuous_recording"
+    )
+
+    if (
+        continuous_recording is not None
+        and not isinstance(
+            continuous_recording,
+            bool
+        )
+    ):
+        errors.append(
+            "common.endurance.continuous_recording "
+            "must be true or false."
+        )
+
+    recording_hours = endurance.get(
+        "recording_hours"
+    )
+
+    if (
+        recording_hours is not None
+        and (
+            not isinstance(
+                recording_hours,
+                (int, float)
+            )
+            or recording_hours <= 0
+        )
+    ):
+        errors.append(
+            "common.endurance.recording_hours "
+            "must be a positive number."
+        )
+
+    pe_cycles = endurance.get(
+        "pe_cycles"
+    )
+
+    if (
+        pe_cycles is not None
+        and (
+            not isinstance(
+                pe_cycles,
+                int
+            )
+            or pe_cycles <= 0
+        )
+    ):
+        errors.append(
+            "common.endurance.pe_cycles "
+            "must be a positive integer."
+        )
+
     variants = card_family.get(
         "variants",
         []
@@ -391,7 +486,29 @@ def validate(card_id):
         errors.append(
             "card_family.variants is empty."
         )
-
+    
+    if form_factor is None:
+        for index, variant in enumerate(
+            variants
+        ):
+            variant_form_factor = (
+                variant.get(
+                    "overrides",
+                    {}
+                ).get(
+                    "form_factor"
+                )
+            )
+    
+            if variant_form_factor is None:
+                errors.append(
+                    "common.form_factor is missing and "
+                    "variants.{}.overrides.form_factor "
+                    "is not set.".format(
+                        index
+                    )
+                )
+    
     capacities = set()
     part_numbers = set()
 
@@ -559,6 +676,71 @@ def validate(card_id):
                         key,
                     )
                 )
+
+        override_endurance = overrides.get(
+            "endurance",
+            {}
+        )
+
+        override_continuous = override_endurance.get(
+            "continuous_recording"
+        )
+
+        if (
+            override_continuous is not None
+            and not isinstance(
+                override_continuous,
+                bool
+            )
+        ):
+            errors.append(
+                "variants.{}.overrides.endurance."
+                "continuous_recording must be true or false.".format(
+                    index
+                )
+            )
+
+        override_hours = override_endurance.get(
+            "recording_hours"
+        )
+
+        if (
+            override_hours is not None
+            and (
+                not isinstance(
+                    override_hours,
+                    (int, float)
+                )
+                or override_hours <= 0
+            )
+        ):
+            errors.append(
+                "variants.{}.overrides.endurance."
+                "recording_hours must be a positive number.".format(
+                    index
+                )
+            )
+
+        override_cycles = override_endurance.get(
+            "pe_cycles"
+        )
+
+        if (
+            override_cycles is not None
+            and (
+                not isinstance(
+                    override_cycles,
+                    int
+                )
+                or override_cycles <= 0
+            )
+        ):
+            errors.append(
+                "variants.{}.overrides.endurance."
+                "pe_cycles must be a positive integer.".format(
+                    index
+                )
+            )
 
     sources = card_family.get(
         "sources",

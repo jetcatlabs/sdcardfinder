@@ -334,8 +334,20 @@ def main():
             "status": "verified",
             "last_verified": card_family[
                 "last_verified"
-            ],
+            ]
         }
+        
+        endurance = variant_specs.get(
+            "endurance",
+            {}
+        )
+
+        if endurance:
+            production_card[
+                "endurance"
+            ] = copy.deepcopy(
+                endurance
+            )        
 
         existing_index = existing_by_id.get(
             production_id
