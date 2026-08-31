@@ -185,6 +185,61 @@ def build_speed_text(card):
 
     return " · ".join(values)
 
+def generate_endurance_badge(card):
+    endurance = card.get(
+        "endurance",
+        {}
+    )
+
+    if not endurance.get(
+        "continuous_recording"
+    ):
+        return ""
+
+    details = []
+
+    recording_hours = endurance.get(
+        "recording_hours"
+    )
+
+    if recording_hours:
+        details.append(
+            "{:,} hrs documented recording".format(
+                recording_hours
+            )
+        )
+
+    pe_cycles = endurance.get(
+        "pe_cycles"
+    )
+
+    if pe_cycles:
+        details.append(
+            "{:,} P/E cycles".format(
+                pe_cycles
+            )
+        )
+
+    detail_html = ""
+
+    if details:
+        detail_html = (
+            '<div class="card-endurance-detail">'
+            + " · ".join(details)
+            + "</div>"
+        )
+
+    return (
+        '<div class="card-endurance">'
+        '<span class="card-endurance-badge">'
+        'High endurance'
+        '</span>'
+        '{}'
+        '</div>'
+    ).format(
+        detail_html
+    )
+
 def select_featured_cards(device, matches):
     profile = CAPACITY_PROFILES.get(
         device["category"]
@@ -267,6 +322,10 @@ def render_recommendation_card(match, label=None):
             <span>{speed}</span>
         """
 
+    endurance_badge = generate_endurance_badge(
+        card
+    )
+
     label_html = ""
 
     if label:
@@ -301,6 +360,9 @@ def render_recommendation_card(match, label=None):
             <span>{bus}</span>
             {speed_html}
         </div>
+        
+        {endurance_badge}
+        
     </article>
     """
 

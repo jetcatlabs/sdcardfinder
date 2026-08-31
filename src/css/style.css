@@ -983,3 +983,22 @@ h1 {
         grid-template-columns: 1fr;
     }
 }
+
+.card-endurance {
+    margin-top: 12px;
+}
+
+.card-endurance-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #eef6ff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.card-endurance-detail {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #667085;
+}
