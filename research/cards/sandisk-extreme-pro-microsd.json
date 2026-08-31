@@ -1,0 +1,182 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "sandisk-extreme-pro-microsd",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme PRO",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "uhs": "U3",
+        "video": "V30",
+        "application": "A2"
+      },
+      "performance": {
+        "max_read_mbps": 200,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": 30
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "part_number": "SDSQXCD-128G-GN6MA",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 90
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "SDSQXCD-256G-GN6MA",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 140
+          }
+        }
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "SDSQXCD-512G-GN6MA",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 140
+          }
+        }
+      },
+      {
+        "capacity_gb": 1024,
+        "part_number": "SDSQXCD-1T00-GN6MA",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 140
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "sandisk-extreme-pro-microsd-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-pro-uhs-i-microsd/data-sheet-extreme-pro-uhs-i-microsd-200mbps.pdf",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sandisk-extreme-pro-microsd-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO microSDXC UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-pro-uhs-i-microsd",
+        "verified_at": "2026-08-30",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "sandisk-extreme-pro-microsd-product-page",
+      "evidence": "SanDisk specifications identify the 128GB-1TB models as microSDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "sandisk-extreme-pro-microsd-product-page",
+      "evidence": "SanDisk specifications list Interface as UHS-I."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "sandisk-extreme-pro-microsd-datasheet",
+      "evidence": "Performance table lists U3 for 64GB-1TB."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "sandisk-extreme-pro-microsd-datasheet",
+      "evidence": "Performance table lists V30 for 64GB-1TB."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "sandisk-extreme-pro-microsd-datasheet",
+      "evidence": "Performance table lists A2 for 64GB-1TB."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "sandisk-extreme-pro-microsd-datasheet",
+      "evidence": "64GB-1TB performance is rated up to 200MB/s read."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "sandisk-extreme-pro-microsd-product-page",
+      "evidence": "SanDisk defines V30 as a sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "sandisk-extreme-pro-microsd-product-page",
+      "evidence": "SanDisk lists a 128GB model."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "sandisk-extreme-pro-microsd-product-page",
+      "evidence": "SanDisk lists SDSQXCD-128G-GN6MA for 128GB."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-pro-microsd-datasheet",
+      "evidence": "64GB-128GB are rated up to 90MB/s write."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "sandisk-extreme-pro-microsd-product-page",
+      "evidence": "SanDisk lists a 256GB model."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "sandisk-extreme-pro-microsd-product-page",
+      "evidence": "SanDisk lists SDSQXCD-256G-GN6MA for 256GB."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-pro-microsd-datasheet",
+      "evidence": "256GB-1TB are rated up to 140MB/s write."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "sandisk-extreme-pro-microsd-product-page",
+      "evidence": "SanDisk lists a 512GB model."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "sandisk-extreme-pro-microsd-product-page",
+      "evidence": "SanDisk lists SDSQXCD-512G-GN6MA for 512GB."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-pro-microsd-datasheet",
+      "evidence": "256GB-1TB are rated up to 140MB/s write."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "sandisk-extreme-pro-microsd-product-page",
+      "evidence": "SanDisk lists a 1TB model."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "sandisk-extreme-pro-microsd-product-page",
+      "evidence": "SanDisk lists SDSQXCD-1T00-GN6MA for 1TB."
+    },
+    {
+      "field": "variants.3.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-pro-microsd-datasheet",
+      "evidence": "256GB-1TB are rated up to 140MB/s write."
+    }
+  ]
+}

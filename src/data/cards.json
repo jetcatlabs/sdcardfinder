@@ -417,5 +417,213 @@
     ],
     "status": "verified",
     "last_verified": "2026-08-30"
+  },
+  {
+    "id": "sandisk-extreme-pro-microsdxc-1tb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme PRO",
+    "model": "1TB microSDXC",
+    "capacity_gb": 1024,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 140,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQXCD-1T00-GN6MA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-pro-uhs-i-microsd/data-sheet-extreme-pro-uhs-i-microsd-200mbps.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO microSDXC UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-pro-uhs-i-microsd",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "sandisk-extreme-pro-microsdxc-128gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme PRO",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 90,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQXCD-128G-GN6MA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-pro-uhs-i-microsd/data-sheet-extreme-pro-uhs-i-microsd-200mbps.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO microSDXC UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-pro-uhs-i-microsd",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "sandisk-extreme-pro-microsdxc-256gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme PRO",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 140,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQXCD-256G-GN6MA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-pro-uhs-i-microsd/data-sheet-extreme-pro-uhs-i-microsd-200mbps.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO microSDXC UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-pro-uhs-i-microsd",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
+  },
+  {
+    "id": "sandisk-extreme-pro-microsdxc-512gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme PRO",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2"
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 140,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQXCD-512G-GN6MA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-pro-uhs-i-microsd/data-sheet-extreme-pro-uhs-i-microsd-200mbps.pdf",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme PRO microSDXC UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-pro-uhs-i-microsd",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
   }
 ]

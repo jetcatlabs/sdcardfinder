@@ -37,7 +37,9 @@ def production_field_for_claim(
     if claim_field.startswith(
         "common."
     ):
-        return claim_field[len("common."):]
+        return claim_field[
+            len("common.") :
+        ]
 
     prefix = "variants.{}.".format(
         variant_index
@@ -46,7 +48,18 @@ def production_field_for_claim(
     if claim_field.startswith(
         prefix
     ):
-        return claim_field[len(prefix):]
+        field = claim_field[
+            len(prefix) :
+        ]
+
+        if field.startswith(
+            "overrides."
+        ):
+            field = field[
+                len("overrides.") :
+            ]
+
+        return field
 
     return None
 
@@ -107,6 +120,32 @@ def build_production_sources(
 
     return production_sources
 
+def merge_specs(
+    base,
+    overrides,
+):
+    result = copy.deepcopy(
+        base
+    )
+
+    for key, value in overrides.items():
+        if (
+            isinstance(value, dict)
+            and isinstance(
+                result.get(key),
+                dict
+            )
+        ):
+            result[key] = merge_specs(
+                result[key],
+                value,
+            )
+        else:
+            result[key] = copy.deepcopy(
+                value
+            )
+
+    return result
 
 def main():
     if len(sys.argv) != 2:
@@ -225,7 +264,15 @@ def main():
             "capacity_gb"
         ]
 
-        form_factor = common[
+        variant_specs = merge_specs(
+            common,
+            variant.get(
+                "overrides",
+                {}
+            ),
+        )
+
+        form_factor = variant_specs[
             "form_factor"
         ]
 
@@ -263,14 +310,16 @@ def main():
             ),
             "capacity_gb": capacity_gb,
             "form_factor": form_factor,
-            "bus": common["bus"],
+            "bus": variant_specs[
+                "bus"
+            ],
             "speed_classes": copy.deepcopy(
-                common[
+                variant_specs[
                     "speed_classes"
                 ]
             ),
             "performance": copy.deepcopy(
-                common[
+                variant_specs[
                     "performance"
                 ]
             ),

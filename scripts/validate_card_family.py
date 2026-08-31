@@ -102,6 +102,69 @@ def factual_fields(card_family):
                     index
                 )
             )
+            
+            overrides = variant.get(
+            "overrides",
+            {}
+        )
+
+        if overrides.get(
+            "form_factor"
+        ) is not None:
+            fields.append(
+                "variants.{}.overrides.form_factor".format(
+                    index
+                )
+            )
+
+        if overrides.get(
+            "bus"
+        ) is not None:
+            fields.append(
+                "variants.{}.overrides.bus".format(
+                    index
+                )
+            )
+
+        override_speed = overrides.get(
+            "speed_classes",
+            {}
+        )
+
+        for key in (
+            "uhs",
+            "video",
+            "application",
+        ):
+            if override_speed.get(
+                key
+            ) is not None:
+                fields.append(
+                    "variants.{}.overrides.speed_classes.{}".format(
+                        index,
+                        key,
+                    )
+                )
+
+        override_performance = overrides.get(
+            "performance",
+            {}
+        )
+
+        for key in (
+            "max_read_mbps",
+            "max_write_mbps",
+            "minimum_sustained_write_mbps",
+        ):
+            if override_performance.get(
+                key
+            ) is not None:
+                fields.append(
+                    "variants.{}.overrides.performance.{}".format(
+                        index,
+                        key,
+                    )
+                )
 
     return fields
 
@@ -383,6 +446,119 @@ def validate(card_id):
             part_numbers.add(
                 part_number
             )
+            
+        overrides = variant.get(
+            "overrides",
+            {}
+        )
+
+        override_form_factor = overrides.get(
+            "form_factor"
+        )
+
+        if (
+            override_form_factor is not None
+            and override_form_factor not in FORM_FACTORS
+        ):
+            errors.append(
+                "Unknown form factor override: {}".format(
+                    override_form_factor
+                )
+            )
+
+        override_bus = overrides.get(
+            "bus"
+        )
+
+        if (
+            override_bus is not None
+            and override_bus not in BUSES
+        ):
+            errors.append(
+                "Unknown bus override: {}".format(
+                    override_bus
+                )
+            )
+
+        override_speed = overrides.get(
+            "speed_classes",
+            {}
+        )
+
+        override_uhs = override_speed.get(
+            "uhs"
+        )
+
+        if (
+            override_uhs is not None
+            and override_uhs not in UHS_SPEED_CLASSES
+        ):
+            errors.append(
+                "Unknown UHS speed class override: {}".format(
+                    override_uhs
+                )
+            )
+
+        override_video = override_speed.get(
+            "video"
+        )
+
+        if (
+            override_video is not None
+            and override_video not in VIDEO_SPEED_CLASSES
+        ):
+            errors.append(
+                "Unknown video speed class override: {}".format(
+                    override_video
+                )
+            )
+
+        override_application = override_speed.get(
+            "application"
+        )
+
+        if (
+            override_application is not None
+            and override_application not in APPLICATION_CLASSES
+        ):
+            errors.append(
+                "Unknown application class override: {}".format(
+                    override_application
+                )
+            )
+
+        override_performance = overrides.get(
+            "performance",
+            {}
+        )
+
+        for key, value in override_performance.items():
+            if key not in {
+                "max_read_mbps",
+                "max_write_mbps",
+                "minimum_sustained_write_mbps",
+            }:
+                errors.append(
+                    "Unknown performance override: {}".format(
+                        key
+                    )
+                )
+                continue
+
+            if (
+                not isinstance(
+                    value,
+                    (int, float)
+                )
+                or value <= 0
+            ):
+                errors.append(
+                    "variants.{}.overrides.performance.{} "
+                    "must be a positive number.".format(
+                        index,
+                        key,
+                    )
+                )
 
     sources = card_family.get(
         "sources",
