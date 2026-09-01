@@ -26,6 +26,20 @@ UHS_SPEED_RANK = {
     "U3": 3,
 }
 
+SD_SPEED_RANK = {
+    "C2": 2,
+    "C4": 4,
+    "C6": 6,
+    "C10": 10,
+}
+
+SD_EXPRESS_SPEED_RANK = {
+    "E150": 150,
+    "E300": 300,
+    "E450": 450,
+    "E600": 600,
+}
+
 DEVICE_RECOMMENDATION_OVERRIDES = {
     "dji-osmo-action-4": "recommended-spec",
     "dji-osmo-action-5-pro": "recommended-spec",
@@ -46,6 +60,7 @@ CAPACITY_PROFILES = {
         "more_storage": 1024,
     }
 }
+
 
 def load_json(path):
     with path.open("r", encoding="utf-8") as file:
@@ -112,6 +127,43 @@ def card_meets_requirements(card, requirements):
 
         if UHS_SPEED_RANK.get(card_uhs, 0) < \
                 UHS_SPEED_RANK.get(minimum_uhs, 0):
+            return False
+
+    required_sd = requirements.get(
+        "minimum_sd_speed_class"
+    )
+
+    if required_sd:
+        card_sd = card.get(
+            "speed_classes",
+            {}
+        ).get("sd")
+
+        if not card_sd:
+            return False
+
+        if SD_SPEED_RANK.get(card_sd, 0) < \
+                SD_SPEED_RANK.get(required_sd, 0):
+            return False
+
+    required_express = requirements.get(
+        "minimum_sd_express_speed_class"
+    )
+
+    if required_express:
+        card_express = card.get(
+            "speed_classes",
+            {}
+        ).get("express")
+
+        if not card_express:
+            return False
+
+        if SD_EXPRESS_SPEED_RANK.get(card_express, 0) < \
+                SD_EXPRESS_SPEED_RANK.get(
+                    required_express,
+                    0
+                ):
             return False
 
     return True
@@ -217,7 +269,13 @@ def build_speed_text(card):
         {}
     )
 
-    for key in ["uhs", "video", "application"]:
+    for key in [
+        "sd",
+        "uhs",
+        "video",
+        "application",
+        "express",
+    ]:
         value = speed_classes.get(key)
 
         if value:
@@ -1052,6 +1110,43 @@ def card_meets_recommendations(card, recommendations):
             card,
             recommendations
         ):
+            return False
+
+    recommended_sd = recommendations.get(
+        "minimum_sd_speed_class"
+    )
+
+    if recommended_sd:
+        card_sd = card.get(
+            "speed_classes",
+            {}
+        ).get("sd")
+
+        if not card_sd:
+            return False
+
+        if SD_SPEED_RANK.get(card_sd, 0) < \
+                SD_SPEED_RANK.get(recommended_sd, 0):
+            return False
+
+    recommended_express = recommendations.get(
+        "minimum_sd_express_speed_class"
+    )
+
+    if recommended_express:
+        card_express = card.get(
+            "speed_classes",
+            {}
+        ).get("express")
+
+        if not card_express:
+            return False
+
+        if SD_EXPRESS_SPEED_RANK.get(card_express, 0) < \
+                SD_EXPRESS_SPEED_RANK.get(
+                    recommended_express,
+                    0
+                ):
             return False
 
     return True

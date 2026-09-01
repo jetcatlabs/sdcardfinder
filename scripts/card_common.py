@@ -53,6 +53,19 @@ APPLICATION_CLASSES = {
     "A2",
 }
 
+SD_SPEED_CLASSES = {
+    "C2",
+    "C4",
+    "C6",
+    "C10",
+}
+
+SD_EXPRESS_SPEED_CLASSES = {
+    "E150",
+    "E300",
+    "E450",
+    "E600",
+}
 
 def find_card_candidate(card_id):
     candidates = load_json(

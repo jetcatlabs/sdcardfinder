@@ -7,6 +7,8 @@ from card_common import (
     FORM_FACTORS,
     UHS_SPEED_CLASSES,
     VIDEO_SPEED_CLASSES,
+    SD_SPEED_CLASSES,
+    SD_EXPRESS_SPEED_CLASSES,
     card_research_path,
     find_card_candidate,
     hostname_is_allowed,
@@ -58,6 +60,8 @@ def factual_fields(card_family):
         "uhs",
         "video",
         "application",
+        "sd",
+        "express"
     ):
         if speed_classes.get(key) is not None:
             fields.append(
@@ -149,9 +153,11 @@ def factual_fields(card_family):
         )
 
         for key in (
+            "sd",
             "uhs",
             "video",
             "application",
+            "express",
         ):
             if override_speed.get(
                 key
@@ -329,6 +335,34 @@ def validate(card_id):
         "speed_classes",
         {}
     )
+
+    sd_class = speed_classes.get(
+        "sd"
+    )
+
+    if (
+        sd_class is not None
+        and sd_class not in SD_SPEED_CLASSES
+    ):
+        errors.append(
+            "Unknown SD Speed Class: {}".format(
+                sd_class
+            )
+        )
+
+    express_class = speed_classes.get(
+        "express"
+    )
+
+    if (
+        express_class is not None
+        and express_class not in SD_EXPRESS_SPEED_CLASSES
+    ):
+        errors.append(
+            "Unknown SD Express Speed Class: {}".format(
+                express_class
+            )
+        )
 
     uhs = speed_classes.get(
         "uhs"
@@ -595,6 +629,34 @@ def validate(card_id):
             "speed_classes",
             {}
         )
+        
+        override_sd = override_speed.get(
+            "sd"
+        )
+
+        if (
+            override_sd is not None
+            and override_sd not in SD_SPEED_CLASSES
+        ):
+            errors.append(
+                "Unknown SD Speed Class override: {}".format(
+                    override_sd
+                )
+            )
+
+        override_express = override_speed.get(
+            "express"
+        )
+
+        if (
+            override_express is not None
+            and override_express not in SD_EXPRESS_SPEED_CLASSES
+        ):
+            errors.append(
+                "Unknown SD Express Speed Class override: {}".format(
+                    override_express
+                )
+            )
 
         override_uhs = override_speed.get(
             "uhs"

@@ -9,6 +9,8 @@ from device_common import (
     ALLOWED_RESEARCH_STATUSES,
     ALLOWED_UHS_SPEED_CLASSES,
     ALLOWED_VIDEO_SPEED_CLASSES,
+    SD_SPEED_CLASSES,
+    SD_EXPRESS_SPEED_CLASSES,
     hostname_is_allowed,
     manufacturer_domains,
     research_path,
@@ -458,6 +460,33 @@ def validate_speed_values(values, errors):
             "{}".format(application)
         )
 
+    sd_speed = values.get(
+        "minimum_sd_speed_class"
+    )
+
+    if (
+        sd_speed is not None
+        and sd_speed not in SD_SPEED_CLASSES
+    ):
+        errors.append(
+            "Unknown SD Speed Class: {}".format(
+                sd_speed
+            )
+        )
+
+    express_speed = values.get(
+        "minimum_sd_express_speed_class"
+    )
+
+    if (
+        express_speed is not None
+        and express_speed not in SD_EXPRESS_SPEED_CLASSES
+    ):
+        errors.append(
+            "Unknown SD Express Speed Class: {}".format(
+                express_speed
+            )
+        )
 
 def factual_fields(device):
     fields = set()
