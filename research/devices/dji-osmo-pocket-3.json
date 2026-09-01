@@ -1,0 +1,105 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "dji-osmo-pocket-3",
+    "category": "camera",
+    "manufacturer": "DJI",
+    "model": "Osmo Pocket 3",
+    "aliases": [
+      "dji osmo pocket 3",
+      "osmo pocket 3",
+      "pocket 3",
+      "dji pocket 3",
+      "osmo pocket3"
+    ],
+    "related_devices": [],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3"
+          },
+          "setup_requirements": {
+            "filesystem": "exFAT"
+          },
+          "min_capacity_gb": null,
+          "max_capacity_gb": 1024,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3"
+        }
+      }
+    ],
+    "notes": [
+      "DJI documents microSD support up to 1 TB and exFAT as the supported filesystem.",
+      "DJI recommends a microSD card with UHS Speed Grade 3 for optimal transfer speed.",
+      "DJI publishes a list of recommended microSD cards, including both UHS-I and UHS-II models, so no host bus generation is inferred."
+    ],
+    "sources": [
+      {
+        "id": "dji-osmo-pocket-3-support",
+        "type": "manufacturer_support",
+        "publisher": "DJI",
+        "title": "Support for Osmo Pocket 3",
+        "url": "https://www.dji.com/support/product/osmo-pocket-3",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "dji-osmo-pocket-3-beginner-guide",
+        "type": "manufacturer_support",
+        "publisher": "DJI",
+        "title": "A Beginner's Guide to Osmo Pocket 3",
+        "url": "https://repair.dji.com/help/content?customId=en-us03400009024&documentType=artical&lang=en&paperDocType=paper&re=US&spaceId=34",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "dji-osmo-pocket-3-support",
+      "evidence": "DJI lists microSD as the supported storage-card type for Osmo Pocket 3."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "dji-osmo-pocket-3-support",
+      "evidence": "DJI specifies support for microSD cards up to 1TB."
+    },
+    {
+      "field": "storage.slots.0.setup_requirements.filesystem",
+      "source_id": "dji-osmo-pocket-3-support",
+      "evidence": "DJI specifies exFAT as the supported filesystem for Osmo Pocket 3."
+    },
+    {
+      "field": "storage.slots.0.recommendations.uhs_speed_class",
+      "source_id": "dji-osmo-pocket-3-beginner-guide",
+      "evidence": "DJI recommends a microSD card with UHS Speed Grade 3 for optimal transfer speed."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.uhs_speed_class",
+      "source_id": "dji-osmo-pocket-3-beginner-guide",
+      "evidence": "DJI recommends UHS Speed Grade 3 media for optimal Osmo Pocket 3 storage performance."
+    }
+  ]
+}

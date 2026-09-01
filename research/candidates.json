@@ -190,5 +190,13 @@
     "category": "single-board-computer",
     "priority": "high",
     "status": "published"
+  },
+  {
+    "id": "dji-osmo-pocket-3",
+    "manufacturer": "DJI",
+    "model": "Osmo Pocket 3",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
   }
 ]
