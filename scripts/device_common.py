@@ -51,6 +51,11 @@ ALLOWED_FORMATS = {
     "microSDXC",
 }
 
+FILESYSTEMS = {
+    "FAT32",
+    "exFAT",
+}
+
 SD_SPEED_CLASSES = {
     "C2",
     "C4",

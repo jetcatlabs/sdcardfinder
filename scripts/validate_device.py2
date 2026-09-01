@@ -6,7 +6,6 @@ from device_common import (
     ALLOWED_BUSES,
     ALLOWED_CATEGORIES,
     ALLOWED_FORMATS,
-    FILESYSTEMS,
     ALLOWED_RESEARCH_STATUSES,
     ALLOWED_UHS_SPEED_CLASSES,
     ALLOWED_VIDEO_SPEED_CLASSES,
@@ -150,49 +149,7 @@ def validate(device_id):
                 "but max_capacity_gb is null."
                 .format(prefix)
             )
-        
-        min_capacity = slot.get(
-            "min_capacity_gb"
-        )
-        
-        if (
-            min_capacity is not None
-            and (
-                not isinstance(min_capacity, int)
-                or isinstance(min_capacity, bool)
-                or min_capacity <= 0
-            )
-        ):
-            errors.append(
-                "{} min_capacity_gb must be a positive integer or null."
-                .format(prefix)
-            )
 
-        if (
-            min_capacity is not None
-            and maximum is not None
-            and min_capacity > maximum
-        ):
-            errors.append(
-                "{} min_capacity_gb cannot exceed max_capacity_gb."
-                .format(prefix)
-            )
-
-        max_capacity = slot.get(
-            "max_capacity_gb"
-        )
-        
-        if (
-            min_capacity is not None
-            and max_capacity is not None
-            and min_capacity > max_capacity
-        ):
-            errors.append(
-                "storage.slots.{}.min_capacity_gb cannot exceed max_capacity_gb.".format(
-                    slot_index
-                )
-            )
-        
         validate_speed_values(
             slot.get(
                 "requirements",
@@ -208,58 +165,7 @@ def validate(device_id):
             ),
             errors
         )
-        
-        setup_requirements = slot.get(
-            "setup_requirements",
-            {}
-        )
-        
-        if not isinstance(
-            setup_requirements,
-            dict
-        ):
-            errors.append(
-                "{} setup_requirements must be an object."
-                .format(prefix)
-            )
-        else:
-            allowed_setup_keys = {
-                "filesystem",
-            }
-        
-            unknown_setup_keys = (
-                set(setup_requirements)
-                - allowed_setup_keys
-            )
-        
-            for key in sorted(
-                unknown_setup_keys
-            ):
-                errors.append(
-                    "{} unknown setup requirement: {}"
-                    .format(
-                        prefix,
-                        key
-                    )
-                )
-        
-            filesystem = (
-                setup_requirements
-                .get("filesystem")
-            )
-        
-            if (
-                filesystem is not None
-                and filesystem not in FILESYSTEMS
-            ):
-                errors.append(
-                    "{} unsupported filesystem: {}"
-                    .format(
-                        prefix,
-                        filesystem
-                    )
-                )
-        
+
     for profile in device.get(
         "usage_profiles",
         []
@@ -329,14 +235,7 @@ def validate(device_id):
                 "manufacturer authority."
                 .format(source_id)
             )
-        
-        if not source.get("publisher"):
-            errors.append(
-                "{} missing publisher.".format(
-                    source.get("id", "<unknown source>")
-                )
-            )
-        
+
         if source.get(
             "first_party_confirmed"
         ) is not True:
@@ -512,16 +411,6 @@ def validate_speed_values(values, errors):
 def factual_fields(device):
     fields = set()
 
-    def add_nested_fields(base, value):
-        if isinstance(value, dict):
-            for key, nested_value in value.items():
-                add_nested_fields(
-                    base + "." + key,
-                    nested_value
-                )
-        else:
-            fields.add(base)
-
     slots = (
         device
         .get("storage", {})
@@ -551,51 +440,32 @@ def factual_fields(device):
             )
 
         if slot.get(
-            "min_capacity_gb"
-        ) is not None:
-            fields.add(
-                base + ".min_capacity_gb"
-            )
-
-        if slot.get(
             "max_capacity_gb"
         ) is not None:
+
             fields.add(
                 base + ".max_capacity_gb"
             )
 
-        for key, value in slot.get(
+        for key in slot.get(
             "requirements",
             {}
-        ).items():
-            add_nested_fields(
+        ):
+            fields.add(
                 base
                 + ".requirements."
-                + key,
-                value
+                + key
             )
 
-        for key, value in slot.get(
+        for key in slot.get(
             "recommendations",
             {}
-        ).items():
-            add_nested_fields(
+        ):
+            fields.add(
                 base
                 + ".recommendations."
-                + key,
-                value
-            )
-
-        for key, value in slot.get(
-            "setup_requirements",
-            {}
-        ).items():
-            add_nested_fields(
-                base
-                + ".setup_requirements."
-                + key,
-                value
-            )
+                + key
+            )z
 
     profiles = device.get(
         "usage_profiles",
@@ -607,29 +477,28 @@ def factual_fields(device):
             index
         )
 
-        for key, value in profile.get(
+        for key in profile.get(
             "requirements",
             {}
-        ).items():
-            add_nested_fields(
+        ):
+            fields.add(
                 base
                 + ".requirements."
-                + key,
-                value
+                + key
             )
 
-        for key, value in profile.get(
+        for key in profile.get(
             "recommendations",
             {}
-        ).items():
-            add_nested_fields(
+        ):
+            fields.add(
                 base
                 + ".recommendations."
-                + key,
-                value
+                + key
             )
 
     return fields
+
 
 def main():
     if len(sys.argv) != 2:

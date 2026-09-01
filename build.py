@@ -189,6 +189,26 @@ def card_fits_slot(card, slot):
     if card.get("bus") in incompatible_buses:
         return False
 
+    min_capacity = slot.get(
+        "min_capacity_gb"
+    )
+    
+    if (
+        min_capacity is not None
+        and card.get("capacity_gb", 0) < min_capacity
+    ):
+        return False    
+
+    min_capacity = slot.get(
+        "min_capacity_gb"
+    )
+
+    if (
+        min_capacity is not None
+        and card.get("capacity_gb", 0) < min_capacity
+    ):
+        return False
+
     max_capacity = slot.get("max_capacity_gb")
 
     if (
@@ -817,6 +837,26 @@ def generate_recommended_spec_recommendations(device, cards):
         "recommendations",
         {}
     )
+    
+    if not recommendations:
+        output = """
+        <div class="other-compatible">
+            <h3>Compatible cards</h3>
+
+            <div class="other-compatible-grid">
+        """
+
+        for match in matches:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </div>
+        """
+
+        return output
 
     recommendation_reason = build_recommendation_reason(
         recommendations
@@ -1210,9 +1250,40 @@ def generate_card_recommendations(device, cards):
         device,
         cards
     )
+    
+def generate_setup_requirements(slot):
+    setup = slot.get(
+        "setup_requirements",
+        {}
+    )
+
+    filesystem = setup.get(
+        "filesystem"
+    )
+
+    if not filesystem:
+        return ""
+
+    return """
+    <div class="requirement">
+        <span class="requirement-label">
+            Formatting
+        </span>
+
+        <strong>
+            {} required
+        </strong>
+    </div>
+    """.format(
+        html.escape(filesystem)
+    )
 
 def generate_requirements_summary(device):
     slot = device["storage"]["slots"][0]
+    
+    setup_html = generate_setup_requirements(
+        slot
+    )
 
     formats = format_list(
         slot.get("accepted_formats", [])
@@ -1222,14 +1293,35 @@ def generate_requirements_summary(device):
         slot.get("bus_support", [])
     )
 
+    min_capacity = slot.get(
+        "min_capacity_gb"
+    )
+
     max_capacity = slot.get(
         "max_capacity_gb"
     )
-
-    if max_capacity is None:
-        capacity = "Not specified by manufacturer"
+    
+    if (
+        min_capacity is not None
+        and max_capacity is not None
+    ):
+        capacity = "{} to {}".format(
+            format_capacity(min_capacity),
+            format_capacity(max_capacity)
+        )
+    
+    elif max_capacity is not None:
+        capacity = "Up to {}".format(
+            format_capacity(max_capacity)
+        )
+    
+    elif min_capacity is not None:
+        capacity = "At least {}".format(
+            format_capacity(min_capacity)
+        )
+    
     else:
-        capacity = f"Up to {format_capacity(max_capacity)}"
+        capacity = "Not specified by manufacturer"
 
     return f"""
     <div class="requirement-grid">
@@ -1262,6 +1354,8 @@ def generate_requirements_summary(device):
                 {html.escape(capacity)}
             </strong>
         </div>
+        
+        {setup_html}
     </div>
     """
 
@@ -1554,10 +1648,23 @@ def generate_device_page(device, cards, devices):
         )
 
     elif strategy == "recommended-spec":
-        recommendation_intro = (
-            "Compatible cards, with options that match the "
-            "manufacturer's recommended specifications highlighted."
+        slot = device["storage"]["slots"][0]
+    
+        recommendations = slot.get(
+            "recommendations",
+            {}
         )
+
+        if recommendations:
+            recommendation_intro = (
+                "Compatible cards, with options that match the "
+                "manufacturer's recommended specifications highlighted."
+            )
+        else:
+            recommendation_intro = (
+                "Compatible cards that meet the manufacturer's "
+                "documented requirements."
+            )
 
     elif strategy == "usage":
         recommendation_intro = (
@@ -1686,9 +1793,14 @@ def generate_device_page(device, cards, devices):
 
     <section class="device-hero">
         <p class="eyebrow">
-            {category}
+            <a
+                class="category-link"
+                href="/devices/#{html.escape(device['category'])}"
+            >
+                {category}
+            </a>
         </p>
-
+    
         <h1>
             {manufacturer} {model}
         </h1>
@@ -2528,8 +2640,9 @@ def generate_devices_page(devices):
         "action-camera": "Action cameras",
         "camera": "Cameras",
         "single-board-computer": "Single-board computers",
+        "dash-camera": "Dash cameras"
     }
-
+ 
     grouped = {}
 
     for device in devices:
@@ -2691,6 +2804,10 @@ def generate_devices_page(devices):
 
         <a href="#single-board-computer">
             Single-board computers
+        </a>
+        
+        <a href="#dash-camera">
+            Dash cameras
         </a>
     </nav>
 

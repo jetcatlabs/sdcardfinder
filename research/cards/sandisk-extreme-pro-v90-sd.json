@@ -9,6 +9,7 @@
       "form_factor": "SDXC",
       "bus": "UHS-II",
       "speed_classes": {
+		"sd": "C10",
         "uhs": "U3",
         "video": "V90",
         "application": null

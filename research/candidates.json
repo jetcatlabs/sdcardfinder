@@ -38,5 +38,21 @@
     "category": "dash-camera",
     "priority": "high",
     "status": "published"
+  },
+  {
+    "id": "garmin-dash-cam-x310",
+    "manufacturer": "Garmin",
+    "model": "Dash Cam X310",
+    "category": "dash-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "garmin-dash-cam-x310",
+    "manufacturer": "Garmin",
+    "model": "Dash Cam X310",
+    "category": "dash-camera",
+    "priority": "high",
+    "status": "todo"
   }
 ]

@@ -104,22 +104,16 @@ def main():
                 []
             )
         )
-
-        # Research-only metadata does not need
-        # to ship in production JSON.
-        for source in production_device.get(
-            "sources",
-            []
-        ):
-            source.pop(
-                "authority",
-                None
-            )
-        
-            source.pop(
-                "first_party_confirmed",
-                None
-            )
+    
+        source.pop(
+            "authority",
+            None
+        )
+    
+        source.pop(
+            "first_party_confirmed",
+            None
+        )
 
     devices = load_json(
         DEVICES_PATH

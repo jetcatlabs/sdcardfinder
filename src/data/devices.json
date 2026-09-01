@@ -1418,5 +1418,57 @@
     ],
     "status": "verified",
     "last_verified": "2026-08-31"
+  },
+  {
+    "id": "garmin-dash-cam-x310",
+    "category": "dash-camera",
+    "manufacturer": "Garmin",
+    "model": "Dash Cam X310",
+    "aliases": [],
+    "related_devices": [],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [],
+          "explicitly_incompatible_buses": [],
+          "requirements": {
+            "minimum_sd_speed_class": "C10"
+          },
+          "recommendations": {},
+          "setup_requirements": {
+            "filesystem": "exFAT"
+          },
+          "min_capacity_gb": 8,
+          "max_capacity_gb": 512,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [],
+    "notes": [],
+    "sources": [
+      {
+        "id": "garmin-x310-memory-card-specifications",
+        "type": "manufacturer_manual",
+        "publisher": "Garmin",
+        "title": "Garmin Dash Cam X310 Owner's Manual - Memory Card Specifications",
+        "url": "https://www8.garmin.com/manuals/webhelp/GUID-D9E2A866-74A8-4380-BE21-F1522E0149BC/EN-US/GUID-7D4A7BEE-124E-4D06-857C-8D497AFE81F4.html",
+        "verified_at": "2026-08-31",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.min_capacity_gb",
+          "storage.slots.0.requirements.minimum_sd_speed_class",
+          "storage.slots.0.setup_requirements.filesystem"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-31"
   }
 ]

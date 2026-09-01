@@ -1,5 +1,5 @@
 {
-  "research_status": "published",
+  "research_status": "Verified",
   "reviewed_by_human": true,
   "card_family": {
     "id": "kingston-canvas-go-plus-microsd",
@@ -9,6 +9,7 @@
       "form_factor": "microSDXC",
       "bus": "UHS-I",
       "speed_classes": {
+        "sd": "C10",
         "uhs": "U3",
         "video": "V30",
         "application": "A2"
@@ -187,6 +188,11 @@
       "field": "variants.3.overrides.performance.max_write_mbps",
       "source_id": "kingston-canvas-go-plus-microsd-datasheet",
       "evidence": "256GB-1TB models are rated up to 160MB/s write."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "kingston-canvas-go-plus-microsd-datasheet",
+      "evidence": "Kingston specifies Class 10 for the Canvas Go! Plus microSD card."
     }
   ]
 }

@@ -9,6 +9,7 @@
       "form_factor": "microSDXC",
       "bus": "UHS-I",
       "speed_classes": {
+        "sd": "C10",
         "uhs": "U3",
         "video": "V30",
         "application": "A2"
@@ -142,6 +143,11 @@
       "field": "variants.3.part_number",
       "source_id": "samsung-pro-plus-microsd-product-page",
       "evidence": "Samsung lists model code MB-MD1T0S for 1TB."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "samsung-pro-plus-microsd-datasheet",
+      "evidence": "Samsung specifies Class 10 for the PRO Plus microSD card."
     }
   ]
 }

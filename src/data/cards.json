@@ -219,6 +219,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -243,6 +244,7 @@
           "performance.max_write_mbps",
           "performance.minimum_sustained_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -271,6 +273,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -295,6 +298,7 @@
           "performance.max_write_mbps",
           "performance.minimum_sustained_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -323,6 +327,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -347,6 +352,7 @@
           "performance.max_write_mbps",
           "performance.minimum_sustained_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -375,6 +381,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -399,6 +406,7 @@
           "performance.max_write_mbps",
           "performance.minimum_sustained_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -427,6 +435,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -448,6 +457,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -479,6 +489,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -500,6 +511,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -531,6 +543,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -552,6 +565,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -583,6 +597,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -604,6 +619,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -635,6 +651,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -660,6 +677,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -695,6 +713,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -720,6 +739,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -755,6 +775,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -780,6 +801,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -815,6 +837,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": "A2"
@@ -840,6 +863,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]

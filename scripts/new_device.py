@@ -64,6 +64,8 @@ def main():
                         "bus_support": [],
                         "requirements": {},
                         "recommendations": {},
+                        "setup_requirements": {},
+                        "min_capacity_gb": None,
                         "max_capacity_gb": None,
                         "max_capacity_status":
                             "not_documented"
