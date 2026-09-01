@@ -74,6 +74,48 @@ def validate_research_files(
     for path in files:
         item_id = path.stem
 
+        try:
+            record = load_json(
+                path
+            )
+        except Exception as exc:
+            failures.append(
+                (
+                    item_id,
+                    "Could not load research file: {}".format(
+                        exc
+                    ),
+                    "",
+                )
+            )
+
+            print(
+                "FAIL  {}".format(
+                    item_id
+                )
+            )
+
+            continue
+
+        research_status = record.get(
+            "research_status"
+        )
+
+        # Work-in-progress records are allowed to be
+        # incomplete. They will receive full validation
+        # before review/promotion.
+        if research_status in {
+            "researching",
+            "blocked",
+        }:
+            print(
+                "SKIP  {} ({})".format(
+                    item_id,
+                    research_status,
+                )
+            )
+            continue
+
         result = run_command([
             sys.executable,
             validator_script,
@@ -82,6 +124,7 @@ def validate_research_files(
 
         if result.returncode == 0:
             passed += 1
+
             print(
                 "PASS  {}".format(
                     item_id

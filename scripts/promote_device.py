@@ -192,26 +192,6 @@ def main():
             )
         )
 
-    # Add reciprocal related-device links.
-    related_ids = device.get(
-        "related_devices",
-        []
-    )
-
-    for related_id in related_ids:
-        for related_device in devices:
-            if related_device["id"] != related_id:
-                continue
-
-            reciprocal = related_device.setdefault(
-                "related_devices",
-                []
-            )
-
-            if device_id not in reciprocal:
-                reciprocal.append(device_id)
-                reciprocal.sort()
-
     write_json(
         DEVICES_PATH,
         devices
