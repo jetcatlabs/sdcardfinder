@@ -225,6 +225,43 @@ def build_speed_text(card):
 
     return " · ".join(values)
 
+def build_recommendation_reason(recommendations):
+    reasons = []
+
+    recommended_uhs = recommendations.get(
+        "uhs_speed_class"
+    )
+
+    if recommended_uhs:
+        reasons.append(
+            recommended_uhs
+        )
+
+    recommended_video = recommendations.get(
+        "video_speed_class"
+    )
+
+    if recommended_video:
+        reasons.append(
+            recommended_video
+        )
+
+    recommended_application = recommendations.get(
+        "application_class"
+    )
+
+    if recommended_application:
+        reasons.append(
+            recommended_application
+        )
+
+    if not reasons:
+        return None
+
+    return "Matches recommended specs: " + " · ".join(
+        reasons
+    )
+
 def generate_endurance_badge(card):
     endurance = card.get(
         "endurance",
@@ -336,8 +373,9 @@ def render_recommendation_card(
         match,
         label=None,
         badge_text="Compatible",
+        recommendation_reason=None,
     ):
-    
+
     card = match["card"]
 
     badge_text = html.escape(
@@ -359,11 +397,11 @@ def render_recommendation_card(
     bus_value = card.get(
         "bus"
     )
-    
+
     bus = (
         html.escape(bus_value)
         if bus_value
-        else "Not documented"
+        else "BUS Unspecified"
     )
 
     speed = html.escape(
@@ -388,6 +426,15 @@ def render_recommendation_card(
             <p class="recommendation-label">
                 {html.escape(label)}
             </p>
+        """
+
+    reason_html = ""
+
+    if recommendation_reason:
+        reason_html = f"""
+            <div class="recommendation-reason">
+                {html.escape(recommendation_reason)}
+            </div>
         """
 
     return f"""
@@ -415,9 +462,10 @@ def render_recommendation_card(
             <span>{bus}</span>
             {speed_html}
         </div>
-        
+
+        {reason_html}
         {endurance_badge}
-        
+
     </article>
     """
 
@@ -654,6 +702,10 @@ def generate_recommended_spec_recommendations(device, cards):
         {}
     )
 
+    recommendation_reason = build_recommendation_reason(
+        recommendations
+    )
+
     preferred = []
     others = []
 
@@ -667,6 +719,44 @@ def generate_recommended_spec_recommendations(device, cards):
             preferred.append(match)
         else:
             others.append(match)
+
+    others.sort(
+        key=lambda match: other_recommendation_sort_key(
+            match,
+            recommendations
+        )
+    )
+    
+    endurance_recommended = bool(
+        recommendations.get(
+            "endurance"
+        )
+    )
+
+    endurance_others = []
+    standard_others = []
+
+    for match in others:
+        card = match["card"]
+
+        endurance = card.get(
+            "endurance",
+            {}
+        )
+
+        if (
+            endurance_recommended
+            and endurance.get(
+                "continuous_recording"
+            ) is True
+        ):
+            endurance_others.append(
+                match
+            )
+        else:
+            standard_others.append(
+                match
+            )
 
     output = ""
 
@@ -682,6 +772,7 @@ def generate_recommended_spec_recommendations(device, cards):
             output += render_recommendation_card(
                 match,
                 badge_text="Recommended",
+                recommendation_reason=recommendation_reason,
             )
 
         output += """
@@ -689,7 +780,25 @@ def generate_recommended_spec_recommendations(device, cards):
         </div>
         """
 
-    if others:
+    if endurance_others:
+        output += """
+        <div class="other-compatible">
+            <h3>High-endurance alternatives</h3>
+
+            <div class="other-compatible-grid">
+        """
+
+        for match in endurance_others:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </div>
+        """
+
+    if standard_others:
         output += """
         <div class="other-compatible">
             <h3>Other compatible cards</h3>
@@ -697,7 +806,7 @@ def generate_recommended_spec_recommendations(device, cards):
             <div class="other-compatible-grid">
         """
 
-        for match in others:
+        for match in standard_others:
             output += render_recommendation_card(
                 match
             )
@@ -708,6 +817,123 @@ def generate_recommended_spec_recommendations(device, cards):
         """
 
     return output
+
+def other_recommendation_sort_key(
+    match,
+    recommendations,
+):
+    card = match["card"]
+
+    match_count = 0
+    non_endurance_matches = 0
+    non_endurance_total = 0
+
+    recommended_uhs = recommendations.get(
+        "uhs_speed_class"
+    )
+
+    if recommended_uhs:
+        non_endurance_total += 1
+
+        card_uhs = card.get(
+            "speed_classes",
+            {}
+        ).get("uhs")
+
+        if (
+            card_uhs
+            and UHS_SPEED_RANK.get(card_uhs, 0)
+            >= UHS_SPEED_RANK.get(
+                recommended_uhs,
+                0
+            )
+        ):
+            match_count += 1
+            non_endurance_matches += 1
+
+    recommended_video = recommendations.get(
+        "video_speed_class"
+    )
+
+    if recommended_video:
+        non_endurance_total += 1
+
+        card_video = card.get(
+            "speed_classes",
+            {}
+        ).get("video")
+
+        if (
+            card_video
+            and VIDEO_SPEED_RANK.get(card_video, 0)
+            >= VIDEO_SPEED_RANK.get(
+                recommended_video,
+                0
+            )
+        ):
+            match_count += 1
+            non_endurance_matches += 1
+
+    recommended_application = recommendations.get(
+        "application_class"
+    )
+
+    if recommended_application:
+        non_endurance_total += 1
+
+        card_application = card.get(
+            "speed_classes",
+            {}
+        ).get("application")
+
+        if card_application == recommended_application:
+            match_count += 1
+            non_endurance_matches += 1
+
+    endurance_match = False
+
+    if recommendations.get(
+        "endurance"
+    ):
+        endurance_match = (
+            card_matches_endurance_recommendation(
+                card,
+                recommendations
+            )
+        )
+
+        if endurance_match:
+            match_count += 1
+
+    all_non_endurance_match = (
+        non_endurance_total > 0
+        and non_endurance_matches
+        == non_endurance_total
+    )
+
+    if endurance_match:
+        tier = 0
+    elif all_non_endurance_match:
+        tier = 1
+    else:
+        tier = 2
+
+    return (
+        tier,
+        -match_count,
+        card.get(
+            "capacity_gb",
+            0
+        ),
+        card.get(
+            "manufacturer",
+            ""
+        ),
+        card.get(
+            "product_family",
+            ""
+        ),
+    )
 
 def card_meets_recommendations(card, recommendations):
     recommendations = recommendations or {}
@@ -1167,30 +1393,30 @@ def generate_device_page(device, cards, devices):
             "A few sensible choices depending on "
             "how much storage you want."
         )
-    
+
     elif strategy == "application":
         recommendation_intro = (
             "Compatible cards, with faster application-class "
             "options highlighted for better responsiveness."
         )
-    
+
     elif strategy == "recommended-spec":
         recommendation_intro = (
             "Compatible cards, with options that match the "
             "manufacturer's recommended specifications highlighted."
         )
-    
+
     elif strategy == "usage":
         recommendation_intro = (
             "Cards that meet the requirements for "
             "different ways you use this device."
         )
-    
+
     else:
         recommendation_intro = (
             "Compatible SD card options for this device."
         )
-    
+
     device_dir = (
         DIST
         / "device"
@@ -1241,7 +1467,7 @@ def generate_device_page(device, cards, devices):
         generate_sources(
             device
         )
-    
+
     related_devices = generate_related_devices(
         device,
         devices
@@ -1271,7 +1497,7 @@ def generate_device_page(device, cards, devices):
         href="/assets/favicon.svg"
         type="image/svg+xml"
     >
-    
+
     <link
         rel="canonical"
         href="{SITE_URL}/device/{device["id"]}/"
@@ -2365,15 +2591,15 @@ def build():
 
     clean_dist()
     copy_static_files()
-    
+
     generate_devices_page(devices)
-    
+
     generate_robots_txt()
     generate_sitemap(devices)
     generate_about_page()
     generate_privacy_page()
     generate_404_page()
-    
+
     for device in devices:
         generate_device_page(
             device,
