@@ -1,216 +1,5 @@
 [
   {
-    "id": "lexar-633x-blue-microsdxc-128gb",
-    "manufacturer": "Lexar",
-    "product_family": "High-Performance 633x BLUE Series",
-    "model": "128GB microSDXC",
-    "capacity_gb": 128,
-    "form_factor": "microSDXC",
-    "bus": "UHS-I",
-    "speed_classes": {
-      "video": "V30",
-      "application": "A1"
-    },
-    "performance": {
-      "max_read_mbps": 100,
-      "max_write_mbps": 70,
-      "minimum_sustained_write_mbps": 30
-    },
-    "part_number": "LSDMI128BBNL633A",
-    "sources": [
-      {
-        "type": "manufacturer",
-        "publisher": "Lexar",
-        "title": "Lexar High-Performance 633x microSDHC/microSDXC UHS-I Card BLUE Series",
-        "url": "https://americas.lexar.com/product/lexar-high-performance-633x-microsdhc-microsdxc-uhs-i-card-blue-series/",
-        "verified_at": "2026-08-27"
-      }
-    ],
-    "status": "verified",
-    "last_verified": "2026-08-27"
-  },
-  {
-    "id": "lexar-1066x-silver-microsdxc-256gb",
-    "manufacturer": "Lexar",
-    "product_family": "Professional 1066x SILVER Series",
-    "model": "256GB microSDXC",
-    "capacity_gb": 256,
-    "form_factor": "microSDXC",
-    "bus": "UHS-I",
-    "speed_classes": {
-      "uhs": "U3",
-      "video": "V30",
-      "application": "A2"
-    },
-    "performance": {
-      "max_read_mbps": 160,
-      "max_write_mbps": 120,
-      "minimum_sustained_write_mbps": 30
-    },
-    "part_number": "LMS1066256G-BNANU",
-    "sources": [
-      {
-        "type": "manufacturer",
-        "publisher": "Lexar",
-        "title": "Lexar Professional 1066x microSDXC UHS-I Card SILVER Series",
-        "url": "https://americas.lexar.com/product/lexar-professional-1066x-microsdxc-uhs-i-card-silver-series/",
-        "verified_at": "2026-08-27"
-      }
-    ],
-    "status": "verified",
-    "last_verified": "2026-08-27"
-  },
-  {
-    "id": "lexar-play-microsdxc-1tb",
-    "manufacturer": "Lexar",
-    "product_family": "PLAY",
-    "model": "1TB microSDXC",
-    "capacity_gb": 1024,
-    "form_factor": "microSDXC",
-    "bus": "UHS-I",
-    "speed_classes": {
-      "video": "V30",
-      "application": "A2"
-    },
-    "performance": {
-      "max_read_mbps": 205,
-      "max_write_mbps": 140,
-      "minimum_sustained_write_mbps": 30
-    },
-    "part_number": "LMSPLAY001T-BNSNU",
-    "sources": [
-      {
-        "type": "manufacturer",
-        "publisher": "Lexar",
-        "title": "Lexar PLAY microSDXC UHS-I Card",
-        "url": "https://americas.lexar.com/product/lexar-play-microsdxc-uhs-i-card/",
-        "verified_at": "2026-08-27"
-      }
-    ],
-    "status": "verified",
-    "last_verified": "2026-08-27"
-  },
-  {
-    "id": "lexar-800x-pro-sdxc-128gb",
-    "manufacturer": "Lexar",
-    "product_family": "High-Performance 800x PRO BLUE Series",
-    "model": "128GB SDXC",
-    "capacity_gb": 128,
-    "form_factor": "SDXC",
-    "bus": "UHS-I",
-    "speed_classes": {
-      "uhs": "U3",
-      "video": "V30"
-    },
-    "performance": {
-      "max_read_mbps": 150,
-      "max_write_mbps": 45,
-      "minimum_sustained_write_mbps": 30
-    },
-    "part_number": "LSD0800P128G-BNNNU",
-    "sources": [
-      {
-        "type": "manufacturer",
-        "publisher": "Lexar",
-        "title": "Lexar High-Performance 800x PRO SDHC/SDXC UHS-I Card BLUE Series",
-        "url": "https://americas.lexar.com/product/lexar-high-performance-800xpro-sdhc-sdxc-uhs-i-card-blue-series/",
-        "verified_at": "2026-08-27"
-      }
-    ],
-    "status": "verified",
-    "last_verified": "2026-08-27"
-  },
-  {
-    "id": "lexar-1800x-gold-sdxc-256gb",
-    "manufacturer": "Lexar",
-    "product_family": "Professional 1800x GOLD Series",
-    "model": "256GB SDXC",
-    "capacity_gb": 256,
-    "form_factor": "SDXC",
-    "bus": "UHS-II",
-    "speed_classes": {
-      "uhs": "U3",
-      "video": "V60"
-    },
-    "performance": {
-      "max_read_mbps": 280,
-      "max_write_mbps": 205,
-      "minimum_sustained_write_mbps": 60
-    },
-    "part_number": "LSD1800256G-BNNNU",
-    "sources": [
-      {
-        "type": "manufacturer",
-        "publisher": "Lexar",
-        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
-        "url": "https://www.lexar.com/global/products/Lexar-Professional-1800x-SDXC-UHS-II-Card-GOLD-Series/",
-        "verified_at": "2026-08-27"
-      }
-    ],
-    "status": "verified",
-    "last_verified": "2026-08-27"
-  },
-  {
-    "id": "lexar-2000x-gold-sdxc-256gb",
-    "manufacturer": "Lexar",
-    "product_family": "Professional 2000x GOLD Series",
-    "model": "256GB SDXC",
-    "capacity_gb": 256,
-    "form_factor": "SDXC",
-    "bus": "UHS-II",
-    "speed_classes": {
-      "uhs": "U3",
-      "video": "V90"
-    },
-    "performance": {
-      "max_read_mbps": 300,
-      "max_write_mbps": 260,
-      "minimum_sustained_write_mbps": 90
-    },
-    "sources": [
-      {
-        "type": "manufacturer",
-        "publisher": "Lexar",
-        "title": "Lexar Professional 2000x SDXC UHS-II Card GOLD Series",
-        "url": "https://americas.lexar.com/product/lexar-professional-2000x-sdhc-sdxc-uhs-ii-card-gold-series/",
-        "verified_at": "2026-08-27"
-      }
-    ],
-    "status": "verified",
-    "last_verified": "2026-08-27"
-  },
-  {
-    "id": "lexar-1066x-silver-microsdxc-512gb",
-    "manufacturer": "Lexar",
-    "product_family": "Professional 1066x SILVER Series",
-    "model": "512GB microSDXC",
-    "capacity_gb": 512,
-    "form_factor": "microSDXC",
-    "bus": "UHS-I",
-    "speed_classes": {
-      "uhs": "U3",
-      "video": "V30",
-      "application": "A2"
-    },
-    "performance": {
-      "max_read_mbps": 160,
-      "max_write_mbps": 120,
-      "minimum_sustained_write_mbps": 30
-    },
-    "part_number": "LMS1066512G-BNANU",
-    "sources": [
-      {
-        "type": "manufacturer",
-        "publisher": "Lexar",
-        "title": "Lexar Professional 1066x microSDXC UHS-I Card SILVER Series",
-        "url": "https://americas.lexar.com/product/lexar-professional-1066x-microsdxc-uhs-i-card-silver-series/",
-        "verified_at": "2026-08-28"
-      }
-    ],
-    "status": "verified",
-    "last_verified": "2026-08-28"
-  },
-  {
     "id": "samsung-pro-plus-microsdxc-128gb",
     "manufacturer": "Samsung",
     "product_family": "PRO Plus",
@@ -2426,6 +2215,1289 @@
     "last_verified": "2026-08-31",
     "endurance": {
       "continuous_recording": true,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-high-performance-633x-blue-series-microsdxc-64gb",
+    "manufacturer": "Lexar",
+    "product_family": "High-Performance 633x BLUE Series",
+    "model": "64GB microSDXC",
+    "capacity_gb": 64,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 633x microSDHC/microSDXC UHS-I Cards BLUE Series Setup Sheet",
+        "url": "https://resources.lexar.com/download/1119/document/14953/setup_633x_microsdhcxc_blue_series_32-512gb_100mb_s_202508.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-high-performance-633x-blue-series-microsdxc-128gb",
+    "manufacturer": "Lexar",
+    "product_family": "High-Performance 633x BLUE Series",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 633x microSDHC/microSDXC UHS-I Cards BLUE Series Setup Sheet",
+        "url": "https://resources.lexar.com/download/1119/document/14953/setup_633x_microsdhcxc_blue_series_32-512gb_100mb_s_202508.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-high-performance-633x-blue-series-microsdxc-256gb",
+    "manufacturer": "Lexar",
+    "product_family": "High-Performance 633x BLUE Series",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 633x microSDHC/microSDXC UHS-I Cards BLUE Series Setup Sheet",
+        "url": "https://resources.lexar.com/download/1119/document/14953/setup_633x_microsdhcxc_blue_series_32-512gb_100mb_s_202508.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-high-performance-633x-blue-series-microsdxc-512gb",
+    "manufacturer": "Lexar",
+    "product_family": "High-Performance 633x BLUE Series",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 633x microSDHC/microSDXC UHS-I Cards BLUE Series Setup Sheet",
+        "url": "https://resources.lexar.com/download/1119/document/14953/setup_633x_microsdhcxc_blue_series_32-512gb_100mb_s_202508.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-1066x-silver-series-microsdxc-64gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1066x SILVER Series",
+    "model": "64GB microSDXC",
+    "capacity_gb": 64,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 160,
+      "max_write_mbps": 70,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMS1066064G-BNANU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1066x microSDXC UHS-I Card SILVER Series",
+        "url": "https://americas.lexar.com/product/lexar-professional-1066x-microsdxc-uhs-i-card-silver-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-1066x-silver-series-microsdxc-128gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1066x SILVER Series",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 160,
+      "max_write_mbps": 120,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMS1066128G-BNANU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1066x microSDXC UHS-I Card SILVER Series",
+        "url": "https://americas.lexar.com/product/lexar-professional-1066x-microsdxc-uhs-i-card-silver-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-1066x-silver-series-microsdxc-256gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1066x SILVER Series",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 160,
+      "max_write_mbps": 120,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMS1066256G-BNANU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1066x microSDXC UHS-I Card SILVER Series",
+        "url": "https://americas.lexar.com/product/lexar-professional-1066x-microsdxc-uhs-i-card-silver-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-1066x-silver-series-microsdxc-512gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1066x SILVER Series",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 160,
+      "max_write_mbps": 120,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMS1066512G-BNANU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1066x microSDXC UHS-I Card SILVER Series",
+        "url": "https://americas.lexar.com/product/lexar-professional-1066x-microsdxc-uhs-i-card-silver-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-1066x-silver-series-microsdxc-1tb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1066x SILVER Series",
+    "model": "1TB microSDXC",
+    "capacity_gb": 1024,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 160,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMS1066001T-BNANU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1066x microSDXC UHS-I Card SILVER Series",
+        "url": "https://americas.lexar.com/product/lexar-professional-1066x-microsdxc-uhs-i-card-silver-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-play-microsdxc-128gb",
+    "manufacturer": "Lexar",
+    "product_family": "PLAY",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": null,
+      "uhs": null,
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 205,
+      "max_write_mbps": 140,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY microSDXC UHS-I Card",
+        "url": "https://americas.lexar.com/product/lexar-play-microsdxc-uhs-i-card/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-play-microsdxc-256gb",
+    "manufacturer": "Lexar",
+    "product_family": "PLAY",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": null,
+      "uhs": null,
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 205,
+      "max_write_mbps": 140,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMSPLAY256G-BNSNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY microSDXC UHS-I Card",
+        "url": "https://americas.lexar.com/product/lexar-play-microsdxc-uhs-i-card/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-play-microsdxc-512gb",
+    "manufacturer": "Lexar",
+    "product_family": "PLAY",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": null,
+      "uhs": null,
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 205,
+      "max_write_mbps": 140,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMSPLAY512G-BNSNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY microSDXC UHS-I Card",
+        "url": "https://americas.lexar.com/product/lexar-play-microsdxc-uhs-i-card/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-play-microsdxc-1tb",
+    "manufacturer": "Lexar",
+    "product_family": "PLAY",
+    "model": "1TB microSDXC",
+    "capacity_gb": 1024,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": null,
+      "uhs": null,
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 205,
+      "max_write_mbps": 140,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMSPLAY001T-BNSNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY microSDXC UHS-I Card",
+        "url": "https://americas.lexar.com/product/lexar-play-microsdxc-uhs-i-card/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-high-performance-800x-pro-blue-series-sdxc-64gb",
+    "manufacturer": "Lexar",
+    "product_family": "High-Performance 800x PRO BLUE Series",
+    "model": "64GB SDXC",
+    "capacity_gb": 64,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 150,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD0800P064G-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 800x PRO SDHC/SDXC UHS-I Card BLUE Series Setup Sheet",
+        "url": "https://resources.lexar.com/download/950/documents/9511/setup_800x-pro_sdhcxc_uhs-i-_blue_series_20240209.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 800x PRO SDHC/SDXC UHS-I Card BLUE Series",
+        "url": "https://americas.lexar.com/product/lexar-high-performance-800xpro-sdhc-sdxc-uhs-i-card-blue-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-high-performance-800x-pro-blue-series-sdxc-128gb",
+    "manufacturer": "Lexar",
+    "product_family": "High-Performance 800x PRO BLUE Series",
+    "model": "128GB SDXC",
+    "capacity_gb": 128,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 150,
+      "max_write_mbps": 45,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD0800P128G-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 800x PRO SDHC/SDXC UHS-I Card BLUE Series Setup Sheet",
+        "url": "https://resources.lexar.com/download/950/documents/9511/setup_800x-pro_sdhcxc_uhs-i-_blue_series_20240209.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 800x PRO SDHC/SDXC UHS-I Card BLUE Series",
+        "url": "https://americas.lexar.com/product/lexar-high-performance-800xpro-sdhc-sdxc-uhs-i-card-blue-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-high-performance-800x-pro-blue-series-sdxc-256gb",
+    "manufacturer": "Lexar",
+    "product_family": "High-Performance 800x PRO BLUE Series",
+    "model": "256GB SDXC",
+    "capacity_gb": 256,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 150,
+      "max_write_mbps": 45,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD0800P256G-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 800x PRO SDHC/SDXC UHS-I Card BLUE Series Setup Sheet",
+        "url": "https://resources.lexar.com/download/950/documents/9511/setup_800x-pro_sdhcxc_uhs-i-_blue_series_20240209.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 800x PRO SDHC/SDXC UHS-I Card BLUE Series",
+        "url": "https://americas.lexar.com/product/lexar-high-performance-800xpro-sdhc-sdxc-uhs-i-card-blue-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-1800x-gold-series-sdxc-64gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1800x GOLD Series",
+    "model": "64GB SDXC",
+    "capacity_gb": 64,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 210,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD1800064G-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://www.lexar.com/global/products/Lexar-Professional-1800x-SDXC-UHS-II-Card-GOLD-Series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://americas.lexar.com/es/product/lexar-professional-1800x-sdxc-uhs-ii-card-gold-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "part_number",
+          "performance.max_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-1800x-gold-series-sdxc-128gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1800x GOLD Series",
+    "model": "128GB SDXC",
+    "capacity_gb": 128,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 210,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD1800128G-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://www.lexar.com/global/products/Lexar-Professional-1800x-SDXC-UHS-II-Card-GOLD-Series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://americas.lexar.com/es/product/lexar-professional-1800x-sdxc-uhs-ii-card-gold-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "part_number",
+          "performance.max_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-1800x-gold-series-sdxc-256gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1800x GOLD Series",
+    "model": "256GB SDXC",
+    "capacity_gb": 256,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 205,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD1800256G-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://www.lexar.com/global/products/Lexar-Professional-1800x-SDXC-UHS-II-Card-GOLD-Series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://americas.lexar.com/es/product/lexar-professional-1800x-sdxc-uhs-ii-card-gold-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "part_number",
+          "performance.max_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-1800x-gold-series-sdxc-512gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1800x GOLD Series",
+    "model": "512GB SDXC",
+    "capacity_gb": 512,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 205,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD1800512G-BNNNG",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://www.lexar.com/global/products/Lexar-Professional-1800x-SDXC-UHS-II-Card-GOLD-Series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://americas.lexar.com/es/product/lexar-professional-1800x-sdxc-uhs-ii-card-gold-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "part_number",
+          "performance.max_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-1800x-gold-series-sdxc-1tb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1800x GOLD Series",
+    "model": "1TB SDXC",
+    "capacity_gb": 1024,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 205,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD1800001T-BNNNG",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://www.lexar.com/global/products/Lexar-Professional-1800x-SDXC-UHS-II-Card-GOLD-Series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://americas.lexar.com/es/product/lexar-professional-1800x-sdxc-uhs-ii-card-gold-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "part_number",
+          "performance.max_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-2000x-gold-series-sdxc-64gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 2000x GOLD Series",
+    "model": "64GB SDXC",
+    "capacity_gb": 64,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V90",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 300,
+      "max_write_mbps": 260,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD2000064G-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 2000x SDXC UHS-II Card GOLD Series",
+        "url": "https://americas.lexar.com/product/lexar-professional-2000x-sdhc-sdxc-uhs-ii-card-gold-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-2000x-gold-series-sdxc-128gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 2000x GOLD Series",
+    "model": "128GB SDXC",
+    "capacity_gb": 128,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V90",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 300,
+      "max_write_mbps": 260,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD2000128G-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 2000x SDXC UHS-II Card GOLD Series",
+        "url": "https://americas.lexar.com/product/lexar-professional-2000x-sdhc-sdxc-uhs-ii-card-gold-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-2000x-gold-series-sdxc-256gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 2000x GOLD Series",
+    "model": "256GB SDXC",
+    "capacity_gb": 256,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V90",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 300,
+      "max_write_mbps": 260,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD2000256G-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 2000x SDXC UHS-II Card GOLD Series",
+        "url": "https://americas.lexar.com/product/lexar-professional-2000x-sdhc-sdxc-uhs-ii-card-gold-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-2000x-gold-series-sdxc-512gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 2000x GOLD Series",
+    "model": "512GB SDXC",
+    "capacity_gb": 512,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V90",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 300,
+      "max_write_mbps": 260,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LSD2000512G-RNNNG",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 2000x SDXC UHS-II Card GOLD Series",
+        "url": "https://americas.lexar.com/product/lexar-professional-2000x-sdhc-sdxc-uhs-ii-card-gold-series/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
       "recording_hours": null,
       "pe_cycles": null
     }

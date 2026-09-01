@@ -1,0 +1,151 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "lexar-800x-pro-blue-sd",
+    "manufacturer": "Lexar",
+    "product_family": "High-Performance 800x PRO BLUE Series",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V30",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 150,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": null
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": "LSD0800P064G-BNNNU",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "LSD0800P128G-BNNNU",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 45
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "LSD0800P256G-BNNNU",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 45
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "lexar-800x-pro-blue-sd-setup-sheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 800x PRO SDHC/SDXC UHS-I Card BLUE Series Setup Sheet",
+        "url": "https://resources.lexar.com/download/950/documents/9511/setup_800x-pro_sdhcxc_uhs-i-_blue_series_20240209.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "lexar-800x-pro-blue-sd-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 800x PRO SDHC/SDXC UHS-I Card BLUE Series",
+        "url": "https://americas.lexar.com/product/lexar-high-performance-800xpro-sdhc-sdxc-uhs-i-card-blue-series/",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "lexar-800x-pro-blue-sd-setup-sheet",
+      "evidence": "Lexar identifies the 64GB, 128GB, and 256GB variants as SDXC cards."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "lexar-800x-pro-blue-sd-setup-sheet",
+      "evidence": "Lexar specifies UHS-I for the SDXC variants."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "lexar-800x-pro-blue-sd-setup-sheet",
+      "evidence": "Lexar specifies Class 10 for the 64GB, 128GB, and 256GB variants."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "lexar-800x-pro-blue-sd-setup-sheet",
+      "evidence": "Lexar specifies U3 for the 64GB, 128GB, and 256GB variants."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "lexar-800x-pro-blue-sd-setup-sheet",
+      "evidence": "Lexar specifies V30 for the 64GB, 128GB, and 256GB variants."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "lexar-800x-pro-blue-sd-setup-sheet",
+      "evidence": "Lexar specifies read performance up to 150MB/s for the 64GB, 128GB, and 256GB variants."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "lexar-800x-pro-blue-sd-product-page",
+      "evidence": "Lexar lists a 64GB variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "lexar-800x-pro-blue-sd-product-page",
+      "evidence": "Lexar lists North American part number LSD0800P064G-BNNNU for the 64GB variant."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "lexar-800x-pro-blue-sd-product-page",
+      "evidence": "Lexar lists a 128GB variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "lexar-800x-pro-blue-sd-product-page",
+      "evidence": "Lexar lists North American part number LSD0800P128G-BNNNU for the 128GB variant."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "lexar-800x-pro-blue-sd-setup-sheet",
+      "evidence": "Lexar specifies write performance up to 45MB/s for the 128GB variant."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "lexar-800x-pro-blue-sd-product-page",
+      "evidence": "Lexar lists a 256GB variant."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "lexar-800x-pro-blue-sd-product-page",
+      "evidence": "Lexar lists North American part number LSD0800P256G-BNNNU for the 256GB variant."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "lexar-800x-pro-blue-sd-setup-sheet",
+      "evidence": "Lexar specifies write performance up to 45MB/s for the 256GB variant."
+    }
+  ]
+}

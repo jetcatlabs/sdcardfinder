@@ -1,0 +1,132 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "lexar-633x-blue-microsd",
+    "manufacturer": "Lexar",
+    "product_family": "High-Performance 633x BLUE Series",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V30",
+        "application": "A1",
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 100,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": null
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": null,
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": null,
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": null,
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": null,
+        "overrides": {
+          "speed_classes": {
+            "application": "A2"
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "lexar-633x-blue-microsd-setup-sheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "Lexar",
+        "title": "Lexar High-Performance 633x microSDHC/microSDXC UHS-I Cards BLUE Series Setup Sheet",
+        "url": "https://resources.lexar.com/download/1119/document/14953/setup_633x_microsdhcxc_blue_series_32-512gb_100mb_s_202508.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar identifies the 64GB through 512GB variants as microSDXC UHS-I cards."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar specifies UHS-I for the High-Performance 633x BLUE Series."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar specifies Class 10 for the 64GB, 128GB, 256GB, and 512GB variants."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar specifies U3 for the 64GB, 128GB, 256GB, and 512GB variants."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar specifies V30 for the 64GB, 128GB, 256GB, and 512GB variants."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar specifies A1 for the 64GB, 128GB, and 256GB variants."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar specifies read performance up to 100MB/s for these variants."
+    },
+    {
+      "field": "variants.3.overrides.speed_classes.application",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar specifies A2 for the 512GB variant."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar lists a 64GB variant in the High-Performance 633x BLUE Series."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar lists a 128GB variant in the High-Performance 633x BLUE Series."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar lists a 256GB variant in the High-Performance 633x BLUE Series."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "lexar-633x-blue-microsd-setup-sheet",
+      "evidence": "Lexar lists a 512GB variant in the High-Performance 633x BLUE Series."
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "lexar-1800x-gold-sd",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1800x GOLD Series",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "sd": null,
+        "uhs": "U3",
+        "video": "V60",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 280,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": null
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": "LSD1800064G-BNNNU",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 210
+          }
+        }
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "LSD1800128G-BNNNU",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 210
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "LSD1800256G-BNNNU",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 205
+          }
+        }
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "LSD1800512G-BNNNG",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 205
+          }
+        }
+      },
+      {
+        "capacity_gb": 1024,
+        "part_number": "LSD1800001T-BNNNG",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 205
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "lexar-1800x-gold-sd-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://www.lexar.com/global/products/Lexar-Professional-1800x-SDXC-UHS-II-Card-GOLD-Series/",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "lexar-1800x-gold-sd-americas-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 1800x SDXC UHS-II Card GOLD Series",
+        "url": "https://americas.lexar.com/es/product/lexar-professional-1800x-sdxc-uhs-ii-card-gold-series/",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "lexar-1800x-gold-sd-product-page",
+      "evidence": "Lexar identifies the Professional 1800x GOLD Series as SDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "lexar-1800x-gold-sd-product-page",
+      "evidence": "Lexar specifies UHS-II for the Professional 1800x GOLD Series."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "lexar-1800x-gold-sd-product-page",
+      "evidence": "Lexar specifies UHS Speed Class 3 (U3)."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "lexar-1800x-gold-sd-product-page",
+      "evidence": "Lexar specifies Video Speed Class 60 (V60)."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "lexar-1800x-gold-sd-product-page",
+      "evidence": "Lexar specifies read speeds up to 280MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar lists a 64GB variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar lists North American part number LSD1800064G-BNNNU for the 64GB variant."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar specifies write speeds up to 210MB/s for the 64GB variant."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar lists a 128GB variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar lists North American part number LSD1800128G-BNNNU for the 128GB variant."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar specifies write speeds up to 210MB/s for the 128GB variant."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar lists a 256GB variant."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar lists North American part number LSD1800256G-BNNNU for the 256GB variant."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar specifies write speeds up to 205MB/s for the 256GB variant."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar lists a 512GB variant."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar lists North American part number LSD1800512G-BNNNG for the 512GB variant."
+    },
+    {
+      "field": "variants.3.overrides.performance.max_write_mbps",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar specifies write speeds up to 205MB/s for the 512GB variant."
+    },
+    {
+      "field": "variants.4.capacity_gb",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar lists a 1TB variant."
+    },
+    {
+      "field": "variants.4.part_number",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar lists North American part number LSD1800001T-BNNNG for the 1TB variant."
+    },
+    {
+      "field": "variants.4.overrides.performance.max_write_mbps",
+      "source_id": "lexar-1800x-gold-sd-americas-page",
+      "evidence": "Lexar specifies write speeds up to 205MB/s for the 1TB variant."
+    }
+  ]
+}

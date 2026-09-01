@@ -68,5 +68,47 @@
     "product_family": "Industrial Grade",
     "priority": "high",
     "status": "published"
+  },
+  {
+    "id": "lexar-633x-blue-microsd",
+    "manufacturer": "Lexar",
+    "product_family": "High-Performance 633x BLUE Series",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "lexar-1066x-silver-microsd",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1066x SILVER Series",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "lexar-play-microsd",
+    "manufacturer": "Lexar",
+    "product_family": "PLAY",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "lexar-800x-pro-blue-sd",
+    "manufacturer": "Lexar",
+    "product_family": "High-Performance 800x PRO BLUE Series",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "lexar-1800x-gold-sd",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 1800x GOLD Series",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "lexar-2000x-gold-sd",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 2000x GOLD Series",
+    "priority": "high",
+    "status": "published"
   }
 ]

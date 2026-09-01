@@ -1,0 +1,138 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "lexar-2000x-gold-sd",
+    "manufacturer": "Lexar",
+    "product_family": "Professional 2000x GOLD Series",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "sd": null,
+        "uhs": "U3",
+        "video": "V90",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 300,
+        "max_write_mbps": 260,
+        "minimum_sustained_write_mbps": null
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": "LSD2000064G-BNNNU",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "LSD2000128G-BNNNU",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "LSD2000256G-BNNNU",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "LSD2000512G-RNNNG",
+        "overrides": {}
+      }
+    ],
+    "sources": [
+      {
+        "id": "lexar-2000x-gold-sd-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Lexar",
+        "title": "Lexar Professional 2000x SDXC UHS-II Card GOLD Series",
+        "url": "https://americas.lexar.com/product/lexar-professional-2000x-sdhc-sdxc-uhs-ii-card-gold-series/",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar identifies the current Professional 2000x GOLD Series lineup as SDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar specifies UHS-II for the Professional 2000x GOLD Series."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar specifies UHS Speed Class 3 (U3)."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar specifies Video Speed Class 90 (V90)."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar specifies read speeds up to 300MB/s."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar specifies write speeds up to 260MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar lists a 64GB variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar lists North American part number LSD2000064G-BNNNU for the 64GB variant."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar lists a 128GB variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar lists North American part number LSD2000128G-BNNNU for the 128GB variant."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar lists a 256GB variant."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar lists North American part number LSD2000256G-BNNNU for the 256GB variant."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar lists a 512GB variant."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "lexar-2000x-gold-sd-product-page",
+      "evidence": "Lexar lists North American part number LSD2000512G-RNNNG for the 512GB variant."
+    }
+  ]
+}

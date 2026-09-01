@@ -1,0 +1,133 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "lexar-play-microsd",
+    "manufacturer": "Lexar",
+    "product_family": "PLAY",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "sd": null,
+        "uhs": null,
+        "video": "V30",
+        "application": "A2",
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 205,
+        "max_write_mbps": 140,
+        "minimum_sustained_write_mbps": null
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "part_number": null,
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "LMSPLAY256G-BNSNU",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "LMSPLAY512G-BNSNU",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 1024,
+        "part_number": "LMSPLAY001T-BNSNU",
+        "overrides": {}
+      }
+    ],
+    "sources": [
+      {
+        "id": "lexar-play-microsd-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY microSDXC UHS-I Card",
+        "url": "https://americas.lexar.com/product/lexar-play-microsdxc-uhs-i-card/",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar identifies the PLAY card as microSDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar identifies the PLAY card as UHS-I."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar specifies Video Speed Class 30 (V30) for the PLAY card."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar specifies Application Performance Class 2 (A2) for the PLAY card."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar specifies read speeds up to 205MB/s."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar specifies write speeds up to 140MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar lists a 128GB PLAY variant."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar lists a 256GB PLAY variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar lists North American part number LMSPLAY256G-BNSNU for the 256GB variant."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar lists a 512GB PLAY variant."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar lists North American part number LMSPLAY512G-BNSNU for the 512GB variant."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar lists a 1TB PLAY variant."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "lexar-play-microsd-product-page",
+      "evidence": "Lexar lists North American part number LMSPLAY001T-BNSNU for the 1TB variant."
+    }
+  ]
+}

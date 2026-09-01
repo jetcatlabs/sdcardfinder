@@ -63,11 +63,11 @@ def main():
                 "bus": None,
 
                 "speed_classes": {
-                "sd": null,
-                "uhs": null,
-                "video": null,
-                "application": null,
-                "express": null
+                "sd": None,
+                "uhs": None,
+                "video": None,
+                "application": None,
+                "express": None
                 },
 
                 "performance": {
