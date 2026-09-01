@@ -1,0 +1,33 @@
+{
+  "research_status": "researching",
+  "reviewed_by_human": false,
+  "device": {
+    "id": "raspberry-pi-zero-2-w",
+    "category": "single-board-computer",
+    "manufacturer": "Raspberry Pi",
+    "model": "Zero 2 W",
+    "aliases": [],
+    "related_devices": [],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [],
+    "notes": [],
+    "sources": [],
+    "status": "draft",
+    "last_verified": null
+  },
+  "claims": []
+}

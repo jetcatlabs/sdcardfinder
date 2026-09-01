@@ -1,0 +1,78 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "gopro-hero9-black",
+    "category": "action-camera",
+    "manufacturer": "GoPro",
+    "model": "HERO9 Black",
+    "aliases": [
+      "hero9",
+      "hero 9",
+      "hero9 black",
+      "gopro 9",
+      "gopro hero 9"
+    ],
+    "related_devices": [
+      "gopro-hero10-black"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 256,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "GoPro specifies a brand-name microSD, microSDHC, or microSDXC card with a Class 10 or UHS-I rating.",
+      "The Class 10-or-UHS-I condition is preserved as manufacturer wording rather than converted into separate AND requirements.",
+      "Maximum documented capacity is 256 GB."
+    ],
+    "sources": [
+      {
+        "id": "gopro-hero9-manual",
+        "type": "manufacturer_manual",
+        "publisher": "GoPro",
+        "title": "HERO9 Black User Manual",
+        "url": "https://gopro.com/content/dam/help/hero9-black/manuals/HERO9Black_UM_ENG_REVB.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "gopro-hero9-manual",
+      "evidence": "GoPro specifies microSD, microSDHC, or microSDXC cards for HERO9 Black."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "gopro-hero9-manual",
+      "evidence": "GoPro specifies memory-card capacity up to 256GB."
+    }
+  ]
+}

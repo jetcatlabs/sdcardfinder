@@ -1,0 +1,35 @@
+{
+  "research_status": "blocked",
+  "reviewed_by_human": false,
+  "device": {
+    "id": "insta360-go-3s",
+    "category": "action-camera",
+    "manufacturer": "Insta360",
+    "model": "GO 3S",
+    "aliases": [],
+    "related_devices": [],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [],
+    "notes": [
+      "GO 3S uses built-in storage and does not provide a microSD card slot; microSD support documented by Insta360 applies to the optional Quick Reader accessory."
+    ],
+    "sources": [],
+    "status": "draft",
+    "last_verified": null
+  },
+  "claims": []
+}

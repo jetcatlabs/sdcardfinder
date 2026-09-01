@@ -198,5 +198,85 @@
     "category": "camera",
     "priority": "high",
     "status": "published"
+  },
+  {
+    "id": "gopro-hero9-black",
+    "manufacturer": "GoPro",
+    "model": "HERO9 Black",
+    "category": "action-camera",
+    "priority": "medium",
+    "status": "published"
+  },
+  {
+    "id": "gopro-max",
+    "manufacturer": "GoPro",
+    "model": "MAX",
+    "category": "action-camera",
+    "priority": "medium",
+    "status": "researching"
+  },
+  {
+    "id": "dji-osmo-action-3",
+    "manufacturer": "DJI",
+    "model": "Osmo Action 3",
+    "category": "action-camera",
+    "priority": "medium",
+    "status": "published"
+  },
+  {
+    "id": "insta360-ace-pro-2",
+    "manufacturer": "Insta360",
+    "model": "Ace Pro 2",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "insta360-go-3s",
+    "manufacturer": "Insta360",
+    "model": "GO 3S",
+    "category": "action-camera",
+    "priority": "medium",
+    "status": "blocked"
+  },
+  {
+    "id": "sony-fx30",
+    "manufacturer": "Sony",
+    "model": "FX30",
+    "category": "camera",
+    "priority": "high",
+    "status": "researching"
+  },
+  {
+    "id": "sony-zv-1-ii",
+    "manufacturer": "Sony",
+    "model": "ZV-1 II",
+    "category": "camera",
+    "priority": "medium",
+    "status": "researching"
+  },
+  {
+    "id": "canon-eos-r8",
+    "manufacturer": "Canon",
+    "model": "EOS R8",
+    "category": "camera",
+    "priority": "high",
+    "status": "researching"
+  },
+  {
+    "id": "raspberry-pi-zero-2-w",
+    "manufacturer": "Raspberry Pi",
+    "model": "Zero 2 W",
+    "category": "single-board-computer",
+    "priority": "medium",
+    "status": "researching"
+  },
+  {
+    "id": "garmin-dash-cam-mini-3",
+    "manufacturer": "Garmin",
+    "model": "Dash Cam Mini 3",
+    "category": "dash-camera",
+    "priority": "medium",
+    "status": "researching"
   }
 ]

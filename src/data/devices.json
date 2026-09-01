@@ -1996,5 +1996,215 @@
     ],
     "status": "verified",
     "last_verified": "2026-09-01"
+  },
+  {
+    "id": "dji-osmo-action-3",
+    "category": "action-camera",
+    "manufacturer": "DJI",
+    "model": "Osmo Action 3",
+    "aliases": [
+      "osmo action 3",
+      "dji action 3",
+      "action 3",
+      "osmo action3"
+    ],
+    "related_devices": [
+      "dji-osmo-action-4",
+      "dji-osmo-action-5-pro"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 256,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3"
+        }
+      }
+    ],
+    "notes": [
+      "DJI documents microSD support up to 256 GB.",
+      "DJI's published recommended-card list consists of U3 cards.",
+      "DJI recommends both UHS-I and UHS-II cards, so no host bus generation is inferred."
+    ],
+    "sources": [
+      {
+        "id": "dji-osmo-action-3-support",
+        "type": "manufacturer_support",
+        "publisher": "DJI",
+        "title": "Support for Osmo Action 3",
+        "url": "https://www.dji.com/global/mobile/support/product/osmo-action-3",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.recommendations.uhs_speed_class",
+          "usage_profiles.0.recommendations.uhs_speed_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  {
+    "id": "insta360-ace-pro-2",
+    "category": "action-camera",
+    "manufacturer": "Insta360",
+    "model": "Ace Pro 2",
+    "aliases": [
+      "insta360 ace pro 2",
+      "ace pro 2",
+      "acepro 2",
+      "acepro2"
+    ],
+    "related_devices": [
+      "insta360-x5"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [
+            "UHS-I"
+          ],
+          "explicitly_incompatible_buses": [
+            "UHS-II",
+            "UHS-III"
+          ],
+          "requirements": {
+            "minimum_video_speed_class": "V30"
+          },
+          "recommendations": {},
+          "setup_requirements": {
+            "filesystem": "exFAT"
+          },
+          "min_capacity_gb": null,
+          "max_capacity_gb": 1024,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {
+          "minimum_video_speed_class": "V30"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Insta360 specifies UHS-I microSD cards rated V30 or above and formatted as exFAT.",
+      "UHS-II and UHS-III cards are explicitly listed as incompatible.",
+      "Cards larger than 1 TB are not supported."
+    ],
+    "sources": [
+      {
+        "id": "insta360-ace-pro-2-storage",
+        "type": "manufacturer_support",
+        "publisher": "Insta360",
+        "title": "Ace Series: Memory & Storage Card FAQ",
+        "url": "https://onlinemanual.insta360.com/acepro2/en-us/operation-tutorials/storage/card",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.bus_support",
+          "storage.slots.0.explicitly_incompatible_buses",
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.requirements.minimum_video_speed_class",
+          "storage.slots.0.setup_requirements.filesystem",
+          "usage_profiles.0.requirements.minimum_video_speed_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  {
+    "id": "gopro-hero9-black",
+    "category": "action-camera",
+    "manufacturer": "GoPro",
+    "model": "HERO9 Black",
+    "aliases": [
+      "hero9",
+      "hero 9",
+      "hero9 black",
+      "gopro 9",
+      "gopro hero 9"
+    ],
+    "related_devices": [
+      "gopro-hero10-black"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 256,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "GoPro specifies a brand-name microSD, microSDHC, or microSDXC card with a Class 10 or UHS-I rating.",
+      "The Class 10-or-UHS-I condition is preserved as manufacturer wording rather than converted into separate AND requirements.",
+      "Maximum documented capacity is 256 GB."
+    ],
+    "sources": [
+      {
+        "id": "gopro-hero9-manual",
+        "type": "manufacturer_manual",
+        "publisher": "GoPro",
+        "title": "HERO9 Black User Manual",
+        "url": "https://gopro.com/content/dam/help/hero9-black/manuals/HERO9Black_UM_ENG_REVB.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.max_capacity_gb"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
   }
 ]

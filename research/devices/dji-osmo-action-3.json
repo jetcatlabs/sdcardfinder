@@ -1,0 +1,90 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "dji-osmo-action-3",
+    "category": "action-camera",
+    "manufacturer": "DJI",
+    "model": "Osmo Action 3",
+    "aliases": [
+      "osmo action 3",
+      "dji action 3",
+      "action 3",
+      "osmo action3"
+    ],
+    "related_devices": [
+      "dji-osmo-action-4",
+      "dji-osmo-action-5-pro"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 256,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3"
+        }
+      }
+    ],
+    "notes": [
+      "DJI documents microSD support up to 256 GB.",
+      "DJI's published recommended-card list consists of U3 cards.",
+      "DJI recommends both UHS-I and UHS-II cards, so no host bus generation is inferred."
+    ],
+    "sources": [
+      {
+        "id": "dji-osmo-action-3-support",
+        "type": "manufacturer_support",
+        "publisher": "DJI",
+        "title": "Support for Osmo Action 3",
+        "url": "https://www.dji.com/global/mobile/support/product/osmo-action-3",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "dji-osmo-action-3-support",
+      "evidence": "DJI lists microSD as the supported storage-card type for Osmo Action 3."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "dji-osmo-action-3-support",
+      "evidence": "DJI specifies microSD support up to 256GB."
+    },
+    {
+      "field": "storage.slots.0.recommendations.uhs_speed_class",
+      "source_id": "dji-osmo-action-3-support",
+      "evidence": "DJI's published recommended-card list for Osmo Action 3 uses UHS Speed Grade 3 cards."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.uhs_speed_class",
+      "source_id": "dji-osmo-action-3-support",
+      "evidence": "DJI recommends U3 cards for Osmo Action 3 recording."
+    }
+  ]
+}
