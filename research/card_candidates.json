@@ -110,5 +110,12 @@
     "product_family": "Professional 2000x GOLD Series",
     "priority": "high",
     "status": "published"
+  },
+  {
+    "id": "samsung-evo-plus-microsd",
+    "manufacturer": "Samsung",
+    "product_family": "EVO Plus",
+    "priority": "high",
+    "status": "published"
   }
 ]

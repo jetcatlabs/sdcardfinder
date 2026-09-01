@@ -3661,5 +3661,255 @@
     ],
     "status": "verified",
     "last_verified": "2026-08-30"
+  },
+  {
+    "id": "samsung-evo-plus-microsdxc-64gb",
+    "manufacturer": "Samsung",
+    "product_family": "EVO Plus",
+    "model": "64GB microSDXC",
+    "capacity_gb": 64,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U1",
+      "video": "V10",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 160,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": 10
+    },
+    "part_number": "MB-MC64S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD Card EVO Plus 2024 Data Sheet Revision 2.1",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_EVO_Plus_v2.1.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-evo-plus-microsdxc-128gb",
+    "manufacturer": "Samsung",
+    "product_family": "EVO Plus",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 160,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MC128S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD Card EVO Plus 2024 Data Sheet Revision 2.1",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_EVO_Plus_v2.1.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-evo-plus-microsdxc-256gb",
+    "manufacturer": "Samsung",
+    "product_family": "EVO Plus",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 160,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MC256S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD Card EVO Plus 2024 Data Sheet Revision 2.1",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_EVO_Plus_v2.1.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-evo-plus-microsdxc-512gb",
+    "manufacturer": "Samsung",
+    "product_family": "EVO Plus",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 160,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MC512S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD Card EVO Plus 2024 Data Sheet Revision 2.1",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_EVO_Plus_v2.1.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-evo-plus-microsdxc-1tb",
+    "manufacturer": "Samsung",
+    "product_family": "EVO Plus",
+    "model": "1TB microSDXC",
+    "capacity_gb": 1024,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 160,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MC1T0S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD Card EVO Plus 2024 Data Sheet Revision 2.1",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_EVO_Plus_v2.1.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
   }
 ]

@@ -1,0 +1,288 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "samsung-evo-plus-microsd",
+    "manufacturer": "Samsung",
+    "product_family": "EVO Plus",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": null,
+        "video": null,
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 160,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": null
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": "MB-MC64S",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U1",
+            "video": "V10",
+            "application": "A1"
+          },
+          "performance": {
+            "minimum_sustained_write_mbps": 10
+          }
+        }
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "MB-MC128S",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U3",
+            "video": "V30",
+            "application": "A2"
+          },
+          "performance": {
+            "minimum_sustained_write_mbps": 30
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "MB-MC256S",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U3",
+            "video": "V30",
+            "application": "A2"
+          },
+          "performance": {
+            "minimum_sustained_write_mbps": 30
+          }
+        }
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "MB-MC512S",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U3",
+            "video": "V30",
+            "application": "A2"
+          },
+          "performance": {
+            "minimum_sustained_write_mbps": 30
+          }
+        }
+      },
+      {
+        "capacity_gb": 1024,
+        "part_number": "MB-MC1T0S",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U3",
+            "video": "V30",
+            "application": "A2"
+          },
+          "performance": {
+            "minimum_sustained_write_mbps": 30
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "samsung-evo-plus-2024-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "Samsung",
+        "title": "Samsung microSD Card EVO Plus 2024 Data Sheet Revision 2.1",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_microSD_Card_EVO_Plus_v2.1.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies microSDXC as the form factor for the EVO Plus lineup."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies UHS-I for the EVO Plus lineup."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies Class 10 across the EVO Plus lineup."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies transfer speeds up to 160MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung lists a 64GB EVO Plus model."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung lists model MB-MC64S for the 64GB EVO Plus."
+    },
+    {
+      "field": "variants.0.overrides.speed_classes.uhs",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies U1 for the 64GB EVO Plus."
+    },
+    {
+      "field": "variants.0.overrides.speed_classes.video",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies V10 for the 64GB EVO Plus."
+    },
+    {
+      "field": "variants.0.overrides.speed_classes.application",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies A1 for the 64GB EVO Plus."
+    },
+    {
+      "field": "variants.0.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung defines V10 as a sustained video capture rate of 10MB/s."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung lists a 128GB EVO Plus model."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung lists model MB-MC128S for the 128GB EVO Plus."
+    },
+    {
+      "field": "variants.1.overrides.speed_classes.uhs",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies U3 for the 128GB EVO Plus."
+    },
+    {
+      "field": "variants.1.overrides.speed_classes.video",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies V30 for the 128GB EVO Plus."
+    },
+    {
+      "field": "variants.1.overrides.speed_classes.application",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies A2 for the 128GB EVO Plus."
+    },
+    {
+      "field": "variants.1.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung defines V30 as a sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung lists a 256GB EVO Plus model."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung lists model MB-MC256S for the 256GB EVO Plus."
+    },
+    {
+      "field": "variants.2.overrides.speed_classes.uhs",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies U3 for the 256GB EVO Plus."
+    },
+    {
+      "field": "variants.2.overrides.speed_classes.video",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies V30 for the 256GB EVO Plus."
+    },
+    {
+      "field": "variants.2.overrides.speed_classes.application",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies A2 for the 256GB EVO Plus."
+    },
+    {
+      "field": "variants.2.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung defines V30 as a sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung lists a 512GB EVO Plus model."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung lists model MB-MC512S for the 512GB EVO Plus."
+    },
+    {
+      "field": "variants.3.overrides.speed_classes.uhs",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies U3 for the 512GB EVO Plus."
+    },
+    {
+      "field": "variants.3.overrides.speed_classes.video",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies V30 for the 512GB EVO Plus."
+    },
+    {
+      "field": "variants.3.overrides.speed_classes.application",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies A2 for the 512GB EVO Plus."
+    },
+    {
+      "field": "variants.3.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung defines V30 as a sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "variants.4.capacity_gb",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung lists a 1TB EVO Plus model."
+    },
+    {
+      "field": "variants.4.part_number",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung lists model MB-MC1T0S for the 1TB EVO Plus."
+    },
+    {
+      "field": "variants.4.overrides.speed_classes.uhs",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies U3 for the 1TB EVO Plus."
+    },
+    {
+      "field": "variants.4.overrides.speed_classes.video",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies V30 for the 1TB EVO Plus."
+    },
+    {
+      "field": "variants.4.overrides.speed_classes.application",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung specifies A2 for the 1TB EVO Plus."
+    },
+    {
+      "field": "variants.4.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-evo-plus-2024-datasheet",
+      "evidence": "Samsung defines V30 as a sustained video capture rate of 30MB/s."
+    }
+  ]
+}
