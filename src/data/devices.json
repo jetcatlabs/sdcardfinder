@@ -25,6 +25,9 @@
             "UHS-I"
           ],
           "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": null,
           "max_capacity_status": "not_documented"
         }
@@ -39,16 +42,17 @@
       }
     ],
     "notes": [
-      "Valve documents UHS-I support for SD, SDHC, and SDXC media."
+      "Valve documents a UHS-I microSD card slot supporting SD, SDHC, and SDXC media.",
+      "Valve does not document a maximum microSD card capacity in the Steam Deck OLED technical specifications."
     ],
     "sources": [
       {
         "id": "valve-steam-deck-oled-tech-specs",
         "type": "manufacturer_specification",
         "publisher": "Valve",
-        "title": "Steam Deck Tech Specs",
-        "url": "https://www.steamdeck.com/en/tech",
-        "verified_at": "2026-08-27",
+        "title": "Steam Deck OLED Tech Specs",
+        "url": "https://www.steamdeck.com/en/tech/oled",
+        "verified_at": "2026-09-01",
         "supports": [
           "storage.slots.0.accepted_formats",
           "storage.slots.0.bus_support"
@@ -56,7 +60,7 @@
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-27"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "gopro-hero13-black",
@@ -82,13 +86,15 @@
             "microSDHC",
             "microSDXC"
           ],
-          "bus_support": [
-            "UHS-I"
-          ],
+          "bus_support": [],
           "requirements": {
             "minimum_uhs_speed_class": "U3",
-            "minimum_video_speed_class": "V30"
+            "minimum_video_speed_class": "V30",
+            "minimum_application_class": "A2"
           },
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": 1024,
           "max_capacity_status": "manufacturer_documented"
         }
@@ -100,13 +106,14 @@
         "label": "Video recording",
         "requirements": {
           "minimum_uhs_speed_class": "U3",
-          "minimum_video_speed_class": "V30"
+          "minimum_video_speed_class": "V30",
+          "minimum_application_class": "A2"
         },
         "recommendations": {}
       }
     ],
     "notes": [
-      "GoPro specifies a brand-name microSD card rated V30/UHS-3 or higher."
+      "GoPro specifies a brand-name microSD card rated A2, V30, U3 or higher."
     ],
     "sources": [
       {
@@ -114,17 +121,32 @@
         "type": "manufacturer_specification",
         "publisher": "GoPro",
         "title": "HERO13 Black Setup",
-        "url": "https://gopro.com/en/us/out-of-the-box-experience/hero-13-black-creator-edition",
-        "verified_at": "2026-08-27",
+        "url": "https://gopro.com/en/gi/out-of-the-box-experience/hero-13-black",
+        "verified_at": "2026-09-01",
         "supports": [
           "storage.slots.0.accepted_formats",
-          "storage.slots.0.requirements",
+          "storage.slots.0.requirements.minimum_application_class",
+          "storage.slots.0.requirements.minimum_uhs_speed_class",
+          "storage.slots.0.requirements.minimum_video_speed_class",
+          "usage_profiles.0.requirements.minimum_application_class",
+          "usage_profiles.0.requirements.minimum_uhs_speed_class",
+          "usage_profiles.0.requirements.minimum_video_speed_class"
+        ]
+      },
+      {
+        "id": "gopro-hero13-black-creator-setup",
+        "type": "manufacturer_specification",
+        "publisher": "GoPro",
+        "title": "HERO13 Black Creator Edition Setup",
+        "url": "https://gopro.com/en/ca/out-of-the-box-experience/hero-13-black-creator-edition",
+        "verified_at": "2026-09-01",
+        "supports": [
           "storage.slots.0.max_capacity_gb"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-27"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "sony-a7-iv",
@@ -155,6 +177,9 @@
             "UHS-II"
           ],
           "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": null,
           "max_capacity_status": "not_documented",
           "notes": [
@@ -173,6 +198,9 @@
             "UHS-II"
           ],
           "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": null,
           "max_capacity_status": "not_documented"
         }
@@ -182,7 +210,8 @@
       {
         "id": "still-photography",
         "label": "Still photography",
-        "requirements": {}
+        "requirements": {},
+        "recommendations": {}
       },
       {
         "id": "standard-video",
@@ -190,21 +219,24 @@
         "requirements": {
           "minimum_uhs_speed_class": "U3",
           "minimum_video_speed_class": "V30"
-        }
+        },
+        "recommendations": {}
       },
       {
         "id": "slow-quick-video",
         "label": "Selected S&Q recording modes",
         "requirements": {
           "minimum_video_speed_class": "V60"
-        }
+        },
+        "recommendations": {}
       },
       {
         "id": "all-intra-video",
         "label": "XAVC S-I recording",
         "requirements": {
           "minimum_video_speed_class": "V90"
-        }
+        },
+        "recommendations": {}
       }
     ],
     "notes": [
@@ -218,15 +250,31 @@
         "publisher": "Sony",
         "title": "ILCE-7M4 Help Guide - Memory cards that can be used",
         "url": "https://helpguide.sony.net/ilc/2110/v1/en/contents/TP1000640149.html",
-        "verified_at": "2026-08-27",
+        "verified_at": "2026-09-01",
         "supports": [
-          "storage.slots",
-          "usage_profiles"
+          "storage.slots.0.accepted_formats",
+          "storage.slots.1.accepted_formats",
+          "usage_profiles.1.requirements.minimum_uhs_speed_class",
+          "usage_profiles.1.requirements.minimum_video_speed_class",
+          "usage_profiles.2.requirements.minimum_video_speed_class",
+          "usage_profiles.3.requirements.minimum_video_speed_class"
+        ]
+      },
+      {
+        "id": "sony-a7iv-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ILCE-7M4 Help Guide - Specifications",
+        "url": "https://helpguide.sony.net/ilc/2110/v1/en/contents/TP1000660153.html",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.bus_support",
+          "storage.slots.1.bus_support"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-27"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "steam-deck-lcd",
@@ -255,6 +303,9 @@
             "UHS-I"
           ],
           "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": null,
           "max_capacity_status": "not_documented"
         }
@@ -269,16 +320,17 @@
       }
     ],
     "notes": [
-      "Valve documents UHS-I support for SD, SDHC, and SDXC media."
+      "Valve documents a UHS-I microSD card slot supporting SD, SDHC, and SDXC media.",
+      "Valve does not document a maximum microSD card capacity in the Steam Deck LCD technical specifications."
     ],
     "sources": [
       {
         "id": "valve-steam-deck-lcd-tech-specs",
         "type": "manufacturer_specification",
         "publisher": "Valve",
-        "title": "Steam Deck Tech Specs",
-        "url": "https://www.steamdeck.com/en/tech",
-        "verified_at": "2026-08-28",
+        "title": "Steam Deck LCD Tech Specs",
+        "url": "https://www.steamdeck.com/en/tech/deck",
+        "verified_at": "2026-09-01",
         "supports": [
           "storage.slots.0.accepted_formats",
           "storage.slots.0.bus_support"
@@ -286,7 +338,7 @@
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-28"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "nintendo-switch-oled",
@@ -312,14 +364,14 @@
             "microSDHC",
             "microSDXC"
           ],
-          "bus_support": [
-            "UHS-I"
-          ],
+          "bus_support": [],
           "requirements": {},
           "recommendations": {
             "preferred_bus": "UHS-I",
             "recommended_transfer_mbps": "60-95"
           },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": 2048,
           "max_capacity_status": "manufacturer_documented"
         }
@@ -336,37 +388,28 @@
       }
     ],
     "notes": [
-      "microSDXC use may require a system update.",
-      "Nintendo recommends UHS-I-compatible cards with transfer speeds around 60-95 MB/s for better gameplay experience."
+      "A system update is required to use microSDXC cards.",
+      "Nintendo recommends UHS-I-compatible cards with transfer speeds of 60-95 MB/s for improved gameplay experience."
     ],
     "sources": [
-      {
-        "id": "nintendo-switch-oled-tech-specs",
-        "type": "manufacturer_specification",
-        "publisher": "Nintendo",
-        "title": "Nintendo Switch Technical Specs",
-        "url": "https://www.nintendo.com/us/gaming-systems/switch/tech-specs/",
-        "verified_at": "2026-08-28",
-        "supports": [
-          "storage.slots.0.accepted_formats",
-          "storage.slots.0.max_capacity_gb"
-        ]
-      },
       {
         "id": "nintendo-switch-microsd-faq",
         "type": "manufacturer_support",
         "publisher": "Nintendo",
         "title": "microSD Card FAQ",
-        "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/22481/~/microsd-card-faq",
-        "verified_at": "2026-08-28",
+        "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/22481/",
+        "verified_at": "2026-09-01",
         "supports": [
-          "storage.slots.0.bus_support",
-          "storage.slots.0.recommendations"
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.recommendations.preferred_bus",
+          "storage.slots.0.recommendations.recommended_transfer_mbps",
+          "usage_profiles.0.recommendations.preferred_bus"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-28"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "dji-osmo-action-5-pro",
@@ -388,44 +431,65 @@
         {
           "slot": 1,
           "accepted_formats": [
-            "microSD",
-            "microSDHC",
-            "microSDXC"
+            "microSD"
           ],
-          "bus_support": [
-            "UHS-I"
-          ],
+          "bus_support": [],
           "requirements": {},
           "recommendations": {
             "uhs_speed_class": "U3",
             "video_speed_class": "V30"
           },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": 1024,
           "max_capacity_status": "manufacturer_documented"
         }
       ]
     },
-    "usage_profiles": [],
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3",
+          "video_speed_class": "V30"
+        }
+      }
+    ],
     "notes": [
-      "DJI publishes a list of recommended cards, including U3/V30 and faster models.",
-      "The manufacturer-documented maximum capacity is 1 TB."
+      "DJI publishes specific recommended microSD card models. The published list consists of U3 cards rated V30 or V90; V30 is the lowest listed video speed class.",
+      "The manufacturer-documented maximum microSD capacity is 1 TB."
     ],
     "sources": [
+      {
+        "id": "dji-osmo-action-5-pro-specs",
+        "type": "manufacturer_specification",
+        "publisher": "DJI",
+        "title": "Osmo Action 5 Pro Specifications",
+        "url": "https://www.dji.com/osmo-action-5-pro/specs",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.recommendations.uhs_speed_class",
+          "storage.slots.0.recommendations.video_speed_class",
+          "usage_profiles.0.recommendations.uhs_speed_class",
+          "usage_profiles.0.recommendations.video_speed_class"
+        ]
+      },
       {
         "id": "dji-osmo-action-5-pro-faq",
         "type": "manufacturer_support",
         "publisher": "DJI",
         "title": "Osmo Action 5 Pro FAQ",
         "url": "https://www.dji.com/osmo-action-5-pro/faq",
-        "verified_at": "2026-08-28",
-        "supports": [
-          "storage.slots.0.max_capacity_gb",
-          "storage.slots.0.recommendations"
-        ]
+        "verified_at": "2026-09-01",
+        "supports": []
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-28"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "insta360-x4",
@@ -445,9 +509,7 @@
         {
           "slot": 1,
           "accepted_formats": [
-            "microSD",
-            "microSDHC",
-            "microSDXC"
+            "microSD"
           ],
           "bus_support": [
             "UHS-I"
@@ -459,9 +521,11 @@
           "requirements": {
             "minimum_video_speed_class": "V30"
           },
-          "recommendations": {
+          "recommendations": {},
+          "setup_requirements": {
             "filesystem": "exFAT"
           },
+          "min_capacity_gb": null,
           "max_capacity_gb": 1024,
           "max_capacity_status": "manufacturer_documented"
         }
@@ -473,7 +537,8 @@
         "label": "Video recording",
         "requirements": {
           "minimum_video_speed_class": "V30"
-        }
+        },
+        "recommendations": {}
       }
     ],
     "notes": [
@@ -488,17 +553,20 @@
         "publisher": "Insta360",
         "title": "X4 Storage Compatibility",
         "url": "https://onlinemanual.insta360.com/x4/en-us/faq/compatibility/storage",
-        "verified_at": "2026-08-28",
+        "verified_at": "2026-09-01",
         "supports": [
+          "storage.slots.0.accepted_formats",
           "storage.slots.0.bus_support",
           "storage.slots.0.explicitly_incompatible_buses",
-          "storage.slots.0.requirements",
-          "storage.slots.0.max_capacity_gb"
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.requirements.minimum_video_speed_class",
+          "storage.slots.0.setup_requirements.filesystem",
+          "usage_profiles.0.requirements.minimum_video_speed_class"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-28"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "raspberry-pi-5",
@@ -511,24 +579,21 @@
       "rpi 5",
       "pi 5"
     ],
+    "related_devices": [],
     "storage": {
       "slots": [
         {
           "slot": 1,
           "accepted_formats": [
-            "microSDHC",
-            "microSDXC"
+            "microSD"
           ],
-          "bus_support": [
-            "UHS-I"
-          ],
+          "bus_support": [],
           "requirements": {},
           "recommendations": {
-            "application_class": "A2",
-            "uhs_speed_class": "U3",
-            "video_speed_class": "V30",
-            "host_bus_mode": "SDR104"
+            "application_class": "A2"
           },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": null,
           "max_capacity_status": "not_documented"
         }
@@ -545,25 +610,38 @@
       }
     ],
     "notes": [
-      "Raspberry Pi emphasizes random I/O performance and command queueing for responsive system storage.",
-      "Official Raspberry Pi SD cards are C10, U3, V30, and A2."
+      "Raspberry Pi 5 has a microSD card slot with support for the high-speed SDR104 mode.",
+      "Raspberry Pi emphasizes random I/O performance and command queueing for responsive system storage, and promotes A2 cards for improved Raspberry Pi 5 performance.",
+      "Official Raspberry Pi SD cards are C10, U3, V30, and A2, but U3 and V30 are not modeled as generic Raspberry Pi 5 requirements or recommendations.",
+      "Raspberry Pi does not document a maximum microSD card capacity for Raspberry Pi 5 in the cited specifications."
     ],
     "sources": [
       {
-        "id": "raspberry-pi-sd-card-docs",
+        "id": "raspberry-pi-5-product-brief",
+        "type": "manufacturer_specification",
+        "publisher": "Raspberry Pi",
+        "title": "Raspberry Pi 5 Product Brief",
+        "url": "https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.accepted_formats"
+        ]
+      },
+      {
+        "id": "raspberry-pi-sd-card-product",
         "type": "manufacturer_documentation",
         "publisher": "Raspberry Pi",
-        "title": "SD Cards - Raspberry Pi Documentation",
-        "url": "https://www.raspberrypi.com/documentation/accessories/sd-cards.html",
-        "verified_at": "2026-08-28",
+        "title": "Raspberry Pi SD Cards",
+        "url": "https://www.raspberrypi.com/products/sd-cards/",
+        "verified_at": "2026-09-01",
         "supports": [
-          "storage.slots.0.accepted_formats",
-          "storage.slots.0.recommendations"
+          "storage.slots.0.recommendations.application_class",
+          "usage_profiles.0.recommendations.application_class"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-28"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "nintendo-switch-lite",
@@ -588,10 +666,14 @@
             "microSDHC",
             "microSDXC"
           ],
-          "bus_support": [
-            "UHS-I"
-          ],
+          "bus_support": [],
           "requirements": {},
+          "recommendations": {
+            "preferred_bus": "UHS-I",
+            "recommended_transfer_mbps": "60-95"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": 2048,
           "max_capacity_status": "manufacturer_documented"
         }
@@ -601,29 +683,35 @@
       {
         "id": "game-storage",
         "label": "Game storage",
-        "requirements": {}
+        "requirements": {},
+        "recommendations": {
+          "preferred_bus": "UHS-I"
+        }
       }
     ],
     "notes": [
-      "Nintendo documents support for microSD, microSDHC, and microSDXC cards.",
-      "Storage expansion is supported up to 2 TB."
+      "A system update is required to use microSDXC cards.",
+      "Nintendo recommends UHS-I-compatible cards with transfer speeds of 60-95 MB/s for improved gameplay experience."
     ],
     "sources": [
       {
-        "id": "nintendo-switch-lite-tech-specs",
-        "type": "manufacturer_specification",
+        "id": "nintendo-switch-microsd-faq",
+        "type": "manufacturer_support",
         "publisher": "Nintendo",
-        "title": "Nintendo Switch Technical Specs",
-        "url": "https://www.nintendo.com/us/gaming-systems/switch/tech-specs/",
-        "verified_at": "2026-08-28",
+        "title": "microSD Card FAQ",
+        "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/22481/",
+        "verified_at": "2026-09-01",
         "supports": [
           "storage.slots.0.accepted_formats",
-          "storage.slots.0.max_capacity_gb"
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.recommendations.preferred_bus",
+          "storage.slots.0.recommendations.recommended_transfer_mbps",
+          "usage_profiles.0.recommendations.preferred_bus"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-28"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "dji-osmo-action-4",
@@ -644,27 +732,35 @@
         {
           "slot": 1,
           "accepted_formats": [
-            "microSD",
-            "microSDHC",
-            "microSDXC"
+            "microSD"
           ],
-          "bus_support": [
-            "UHS-I"
-          ],
+          "bus_support": [],
           "requirements": {},
           "recommendations": {
             "uhs_speed_class": "U3",
             "video_speed_class": "V30"
           },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": 512,
           "max_capacity_status": "manufacturer_documented"
         }
       ]
     },
-    "usage_profiles": [],
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3",
+          "video_speed_class": "V30"
+        }
+      }
+    ],
     "notes": [
-      "DJI documents microSD support up to 512 GB.",
-      "DJI publishes recommended U3/V30 and faster cards for this model."
+      "DJI publishes specific recommended microSD card models. The current list consists of U3 cards rated V30 or V90; V30 is the lowest listed video speed class.",
+      "The manufacturer-documented maximum microSD capacity is 512 GB."
     ],
     "sources": [
       {
@@ -673,15 +769,19 @@
         "publisher": "DJI",
         "title": "Support for Osmo Action 4",
         "url": "https://www.dji.com/support/product/osmo-action-4",
-        "verified_at": "2026-08-28",
+        "verified_at": "2026-09-01",
         "supports": [
+          "storage.slots.0.accepted_formats",
           "storage.slots.0.max_capacity_gb",
-          "storage.slots.0.recommendations"
+          "storage.slots.0.recommendations.uhs_speed_class",
+          "storage.slots.0.recommendations.video_speed_class",
+          "usage_profiles.0.recommendations.uhs_speed_class",
+          "usage_profiles.0.recommendations.video_speed_class"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-28"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "gopro-hero12-black",
@@ -709,13 +809,15 @@
             "microSDHC",
             "microSDXC"
           ],
-          "bus_support": [
-            "UHS-I"
-          ],
+          "bus_support": [],
           "requirements": {
             "minimum_uhs_speed_class": "U3",
-            "minimum_video_speed_class": "V30"
+            "minimum_video_speed_class": "V30",
+            "minimum_application_class": "A2"
           },
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": 1024,
           "max_capacity_status": "manufacturer_documented"
         }
@@ -727,31 +829,47 @@
         "label": "Video recording",
         "requirements": {
           "minimum_uhs_speed_class": "U3",
-          "minimum_video_speed_class": "V30"
-        }
+          "minimum_video_speed_class": "V30",
+          "minimum_application_class": "A2"
+        },
+        "recommendations": {}
       }
     ],
     "notes": [
-      "GoPro specifies V30/UHS-3 or better cards.",
-      "Maximum documented capacity is 1 TB."
+      "GoPro specifies a brand-name microSD card rated V30/U3 or higher; the current HERO12 product specification also specifies A2."
     ],
     "sources": [
       {
         "id": "gopro-hero12-black-setup",
         "type": "manufacturer_support",
         "publisher": "GoPro",
-        "title": "HERO12 Black Setup",
-        "url": "https://gopro.com/en/us/out-of-the-box-experience/hero-12-black-creator-edition",
-        "verified_at": "2026-08-28",
+        "title": "HERO12 Black Creator Edition Setup",
+        "url": "https://gopro.com/en/au/out-of-the-box-experience/hero-12-black-creator-edition",
+        "verified_at": "2026-09-01",
         "supports": [
           "storage.slots.0.accepted_formats",
-          "storage.slots.0.requirements",
-          "storage.slots.0.max_capacity_gb"
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.requirements.minimum_uhs_speed_class",
+          "storage.slots.0.requirements.minimum_video_speed_class",
+          "usage_profiles.0.requirements.minimum_uhs_speed_class",
+          "usage_profiles.0.requirements.minimum_video_speed_class"
+        ]
+      },
+      {
+        "id": "gopro-hero12-black-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "GoPro",
+        "title": "GoPro HERO12 Black",
+        "url": "https://gopro.com/en/us/shop/cameras/hero12-black/CHDHX-121-master.html",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.requirements.minimum_application_class",
+          "usage_profiles.0.requirements.minimum_application_class"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-28"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "sony-a6700",
@@ -783,6 +901,9 @@
             "UHS-II"
           ],
           "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": null,
           "max_capacity_status": "not_documented"
         }
@@ -792,28 +913,32 @@
       {
         "id": "still-photography",
         "label": "Still photography",
-        "requirements": {}
+        "requirements": {},
+        "recommendations": {}
       },
       {
         "id": "xavc-s-hd",
         "label": "XAVC S HD up to 100 Mbps",
         "requirements": {
           "minimum_uhs_speed_class": "U3"
-        }
+        },
+        "recommendations": {}
       },
       {
         "id": "high-bitrate-4k",
         "label": "High-bitrate 4K recording",
         "requirements": {
           "minimum_video_speed_class": "V60"
-        }
+        },
+        "recommendations": {}
       },
       {
         "id": "xavc-s-i",
         "label": "XAVC S-I recording",
         "requirements": {
           "minimum_video_speed_class": "V90"
-        }
+        },
+        "recommendations": {}
       }
     ],
     "notes": [
@@ -827,16 +952,29 @@
         "type": "manufacturer_manual",
         "publisher": "Sony",
         "title": "ILCE-6700 Help Guide - Memory cards that can be used",
-        "url": "https://helpguide.sony.net/ilc/2320/v1/en/contents/0405B_memory_card_usable.html",
-        "verified_at": "2026-08-28",
+        "url": "https://helpguide.sony.net/ilc/2320/v1/en/contents/0002H_usable_memory_card.html",
+        "verified_at": "2026-09-01",
         "supports": [
-          "storage.slots",
-          "usage_profiles"
+          "storage.slots.0.accepted_formats",
+          "usage_profiles.1.requirements.minimum_uhs_speed_class",
+          "usage_profiles.2.requirements.minimum_video_speed_class",
+          "usage_profiles.3.requirements.minimum_video_speed_class"
+        ]
+      },
+      {
+        "id": "sony-a6700-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ILCE-6700 Help Guide - Specifications",
+        "url": "https://helpguide.sony.net/ilc/2320/v1/en/contents/221h_specifications_ilc2320.html",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.bus_support"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-28"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "nintendo-switch",
@@ -863,14 +1001,14 @@
             "microSDHC",
             "microSDXC"
           ],
-          "bus_support": [
-            "UHS-I"
-          ],
+          "bus_support": [],
           "requirements": {},
           "recommendations": {
             "preferred_bus": "UHS-I",
             "recommended_transfer_mbps": "60-95"
           },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": 2048,
           "max_capacity_status": "manufacturer_documented"
         }
@@ -880,41 +1018,35 @@
       {
         "id": "game-storage",
         "label": "Game storage",
-        "requirements": {}
+        "requirements": {},
+        "recommendations": {
+          "preferred_bus": "UHS-I"
+        }
       }
     ],
     "notes": [
-      "A system update is required when using microSDXC cards.",
-      "Nintendo recommends UHS-I cards with transfer speeds around 60-95 MB/s."
+      "A system update is required to use microSDXC cards.",
+      "Nintendo recommends UHS-I-compatible cards with transfer speeds of 60-95 MB/s for improved gameplay experience."
     ],
     "sources": [
-      {
-        "id": "nintendo-switch-tech-specs",
-        "type": "manufacturer_specification",
-        "publisher": "Nintendo",
-        "title": "Nintendo Switch Technical Specs",
-        "url": "https://www.nintendo.com/us/gaming-systems/switch/tech-specs/",
-        "verified_at": "2026-08-30",
-        "supports": [
-          "storage.slots.0.accepted_formats",
-          "storage.slots.0.max_capacity_gb"
-        ]
-      },
       {
         "id": "nintendo-switch-microsd-faq",
         "type": "manufacturer_support",
         "publisher": "Nintendo",
         "title": "microSD Card FAQ",
         "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/22481/",
-        "verified_at": "2026-08-30",
+        "verified_at": "2026-09-01",
         "supports": [
-          "storage.slots.0.bus_support",
-          "storage.slots.0.recommendations"
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.recommendations.preferred_bus",
+          "storage.slots.0.recommendations.recommended_transfer_mbps",
+          "usage_profiles.0.recommendations.preferred_bus"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-30"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "insta360-x3",
@@ -934,9 +1066,7 @@
         {
           "slot": 1,
           "accepted_formats": [
-            "microSD",
-            "microSDHC",
-            "microSDXC"
+            "microSD"
           ],
           "bus_support": [
             "UHS-I"
@@ -948,9 +1078,11 @@
           "requirements": {
             "minimum_video_speed_class": "V30"
           },
-          "recommendations": {
+          "recommendations": {},
+          "setup_requirements": {
             "filesystem": "exFAT"
           },
+          "min_capacity_gb": null,
           "max_capacity_gb": 1024,
           "max_capacity_status": "manufacturer_documented"
         }
@@ -962,7 +1094,8 @@
         "label": "Video recording",
         "requirements": {
           "minimum_video_speed_class": "V30"
-        }
+        },
+        "recommendations": {}
       }
     ],
     "notes": [
@@ -976,18 +1109,21 @@
         "type": "manufacturer_support",
         "publisher": "Insta360",
         "title": "X3 Storage Compatibility",
-        "url": "https://onlinemanual.insta360.com/x3/en-us/specs/compatibility/storage",
-        "verified_at": "2026-08-30",
+        "url": "https://onlinemanual.insta360.com/x3/en-us/faq/compatibility/storage",
+        "verified_at": "2026-09-01",
         "supports": [
+          "storage.slots.0.accepted_formats",
           "storage.slots.0.bus_support",
           "storage.slots.0.explicitly_incompatible_buses",
-          "storage.slots.0.requirements",
-          "storage.slots.0.max_capacity_gb"
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.requirements.minimum_video_speed_class",
+          "storage.slots.0.setup_requirements.filesystem",
+          "usage_profiles.0.requirements.minimum_video_speed_class"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-30"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "gopro-hero10-black",
@@ -1014,13 +1150,14 @@
             "microSDHC",
             "microSDXC"
           ],
-          "bus_support": [
-            "UHS-I"
-          ],
+          "bus_support": [],
           "requirements": {
             "minimum_uhs_speed_class": "U3",
             "minimum_video_speed_class": "V30"
           },
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": 512,
           "max_capacity_status": "manufacturer_documented"
         }
@@ -1033,11 +1170,12 @@
         "requirements": {
           "minimum_uhs_speed_class": "U3",
           "minimum_video_speed_class": "V30"
-        }
+        },
+        "recommendations": {}
       }
     ],
     "notes": [
-      "GoPro specifies V30/UHS-3 or better cards.",
+      "GoPro specifies a brand-name microSD card rated V30, U3 or higher.",
       "Maximum documented capacity is 512 GB."
     ],
     "sources": [
@@ -1047,16 +1185,19 @@
         "publisher": "GoPro",
         "title": "HERO10 Black User Manual",
         "url": "https://gopro.com/content/dam/help/hero10-black/manuals/HERO10Black_UM_ENG_REVB.pdf",
-        "verified_at": "2026-08-30",
+        "verified_at": "2026-09-01",
         "supports": [
           "storage.slots.0.accepted_formats",
-          "storage.slots.0.requirements",
-          "storage.slots.0.max_capacity_gb"
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.requirements.minimum_uhs_speed_class",
+          "storage.slots.0.requirements.minimum_video_speed_class",
+          "usage_profiles.0.requirements.minimum_uhs_speed_class",
+          "usage_profiles.0.requirements.minimum_video_speed_class"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-30"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "sony-zv-e10-ii",
@@ -1087,6 +1228,9 @@
             "UHS-II"
           ],
           "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": null,
           "max_capacity_status": "not_documented"
         }
@@ -1098,25 +1242,29 @@
         "label": "XAVC S HD up to 100 Mbps",
         "requirements": {
           "minimum_uhs_speed_class": "U3"
-        }
+        },
+        "recommendations": {}
       },
       {
         "id": "4k-recording",
-        "label": "4K recording up to 280 Mbps",
+        "label": "4K recording up to 280 Mbps with 4K 120p upgrade",
         "requirements": {
           "minimum_video_speed_class": "V60"
-        }
+        },
+        "recommendations": {}
       },
       {
         "id": "xavc-s-i",
         "label": "XAVC S-I recording",
         "requirements": {
           "minimum_video_speed_class": "V90"
-        }
+        },
+        "recommendations": {}
       }
     ],
     "notes": [
       "Required card performance depends on recording format and bit rate.",
+      "The V60 280Mbps profile reflects Sony's optional 4K 120p upgrade documentation.",
       "XAVC S-I recording requires V90 or better."
     ],
     "sources": [
@@ -1124,17 +1272,40 @@
         "id": "sony-zv-e10-ii-memory-cards",
         "type": "manufacturer_manual",
         "publisher": "Sony",
-        "title": "ZV-E10 II Help Guide - Memory cards that can be used",
-        "url": "https://helpguide.sony.net/di/4k120p_2430/v1/en/contents/0002H_usable_memory_card_4K120p.html",
-        "verified_at": "2026-08-30",
+        "title": "ZV-E10M2 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/ilc/2430/v1/en/contents/0002H_usable_memory_card.html",
+        "verified_at": "2026-09-01",
         "supports": [
-          "storage.slots",
-          "usage_profiles"
+          "storage.slots.0.accepted_formats",
+          "usage_profiles.0.requirements.minimum_uhs_speed_class",
+          "usage_profiles.2.requirements.minimum_video_speed_class"
+        ]
+      },
+      {
+        "id": "sony-zv-e10-ii-upgrade-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ZV-E10M2 4K 120p Upgrade - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/di/4k120p_2430/v1/en/contents/0002H_usable_memory_card_4K120p.html",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "usage_profiles.1.requirements.minimum_video_speed_class"
+        ]
+      },
+      {
+        "id": "sony-zv-e10-ii-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ZV-E10M2 Help Guide - Specifications",
+        "url": "https://helpguide.sony.net/ilc/2430/v1/en/contents/232h_specifications_ilc2430.html",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.bus_support"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-30"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "canon-eos-r50",
@@ -1163,6 +1334,9 @@
             "UHS-I"
           ],
           "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": null,
           "max_capacity_status": "not_documented"
         }
@@ -1171,14 +1345,16 @@
     "usage_profiles": [
       {
         "id": "higher-performance-video",
-        "label": "4K UHD and high-frame-rate video",
+        "label": "Higher-performance 4K and high-frame-rate video",
         "requirements": {
           "minimum_uhs_speed_class": "U3"
-        }
+        },
+        "recommendations": {}
       }
     ],
     "notes": [
-      "Canon supports SD, SDHC, and SDXC cards.",
+      "Canon documents SD, SDHC, and SDXC cards as usable regardless of capacity.",
+      "The EOS R50 supports UHS-I.",
       "Card performance requirements vary with movie recording settings."
     ],
     "sources": [
@@ -1188,9 +1364,10 @@
         "publisher": "Canon",
         "title": "EOS R50 - Compatible Cards",
         "url": "https://cam.start.canon/en/C011/manual/html/UG-00_Before_0080.html",
-        "verified_at": "2026-08-30",
+        "verified_at": "2026-09-01",
         "supports": [
-          "storage.slots"
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.bus_support"
         ]
       },
       {
@@ -1199,14 +1376,14 @@
         "publisher": "Canon",
         "title": "EOS R50 - Specifications",
         "url": "https://cam.start.canon/en/C011/manual/html/UG-11_Reference_0090.html",
-        "verified_at": "2026-08-30",
+        "verified_at": "2026-09-01",
         "supports": [
-          "usage_profiles"
+          "usage_profiles.0.requirements.minimum_uhs_speed_class"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-30"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "canon-eos-r10",
@@ -1236,6 +1413,9 @@
             "UHS-II"
           ],
           "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
           "max_capacity_gb": null,
           "max_capacity_status": "not_documented"
         }
@@ -1247,18 +1427,20 @@
         "label": "4K and high-frame-rate video",
         "requirements": {
           "minimum_uhs_speed_class": "U3"
-        }
+        },
+        "recommendations": {}
       },
       {
         "id": "4k-hdr-high-frame-rate",
         "label": "4K 59.94/50 fps HDR PQ recording",
         "requirements": {
           "minimum_video_speed_class": "V60"
-        }
+        },
+        "recommendations": {}
       }
     ],
     "notes": [
-      "Canon supports both UHS-I and UHS-II cards.",
+      "Canon explicitly supports both UHS-I and UHS-II cards.",
       "Required card performance varies by resolution, frame rate, compression, and bit depth."
     ],
     "sources": [
@@ -1268,9 +1450,10 @@
         "publisher": "Canon",
         "title": "EOS R10 - Compatible Cards",
         "url": "https://cam.start.canon/en/C006/manual/html/UG-00_Before_0060.html",
-        "verified_at": "2026-08-30",
+        "verified_at": "2026-09-01",
         "supports": [
-          "storage.slots"
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.bus_support"
         ]
       },
       {
@@ -1279,14 +1462,15 @@
         "publisher": "Canon",
         "title": "EOS R10 - Specifications",
         "url": "https://cam.start.canon/en/C006/manual/html/UG-11_Reference_0090.html",
-        "verified_at": "2026-08-30",
+        "verified_at": "2026-09-01",
         "supports": [
-          "usage_profiles"
+          "usage_profiles.0.requirements.minimum_uhs_speed_class",
+          "usage_profiles.1.requirements.minimum_video_speed_class"
         ]
       }
     ],
     "status": "verified",
-    "last_verified": "2026-08-30"
+    "last_verified": "2026-09-01"
   },
   {
     "id": "gopro-hero11-black",

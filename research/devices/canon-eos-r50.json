@@ -1,0 +1,96 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "canon-eos-r50",
+    "category": "camera",
+    "manufacturer": "Canon",
+    "model": "EOS R50",
+    "aliases": [
+      "canon r50",
+      "canon eos r50",
+      "eos r50",
+      "r50"
+    ],
+    "related_devices": [
+      "canon-eos-r10"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "higher-performance-video",
+        "label": "Higher-performance 4K and high-frame-rate video",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Canon documents SD, SDHC, and SDXC cards as usable regardless of capacity.",
+      "The EOS R50 supports UHS-I.",
+      "Card performance requirements vary with movie recording settings."
+    ],
+    "sources": [
+      {
+        "id": "canon-r50-compatible-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Canon",
+        "title": "EOS R50 - Compatible Cards",
+        "url": "https://cam.start.canon/en/C011/manual/html/UG-00_Before_0080.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "canon-r50-specifications",
+        "type": "manufacturer_manual",
+        "publisher": "Canon",
+        "title": "EOS R50 - Specifications",
+        "url": "https://cam.start.canon/en/C011/manual/html/UG-11_Reference_0090.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "canon-r50-compatible-cards",
+      "evidence": "Canon documents SD, SDHC, and SDXC memory cards as compatible with the EOS R50."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "canon-r50-compatible-cards",
+      "evidence": "Canon explicitly states that UHS-I cards are supported."
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_uhs_speed_class",
+      "source_id": "canon-r50-specifications",
+      "evidence": "Canon specifies UHS Speed Class 3 or higher for higher-performance 4K and high-frame-rate movie settings."
+    }
+  ]
+}

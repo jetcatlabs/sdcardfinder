@@ -1,0 +1,97 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "nintendo-switch-oled",
+    "category": "gaming-handheld",
+    "manufacturer": "Nintendo",
+    "model": "Switch OLED",
+    "aliases": [
+      "nintendo switch oled",
+      "switch oled",
+      "switch oled model",
+      "nintendo switch oled model"
+    ],
+    "related_devices": [
+      "nintendo-switch",
+      "nintendo-switch-lite"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "preferred_bus": "UHS-I",
+            "recommended_transfer_mbps": "60-95"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 2048,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "game-storage",
+        "label": "Game storage",
+        "requirements": {},
+        "recommendations": {
+          "preferred_bus": "UHS-I"
+        }
+      }
+    ],
+    "notes": [
+      "A system update is required to use microSDXC cards.",
+      "Nintendo recommends UHS-I-compatible cards with transfer speeds of 60-95 MB/s for improved gameplay experience."
+    ],
+    "sources": [
+      {
+        "id": "nintendo-switch-microsd-faq",
+        "type": "manufacturer_support",
+        "publisher": "Nintendo",
+        "title": "microSD Card FAQ",
+        "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/22481/",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "nintendo-switch-microsd-faq",
+      "evidence": "Nintendo documents support for microSD, microSDHC, and microSDXC cards on Nintendo Switch family systems."
+    },
+    {
+      "field": "storage.slots.0.recommendations.preferred_bus",
+      "source_id": "nintendo-switch-microsd-faq",
+      "evidence": "Nintendo recommends high-speed microSD cards that are UHS-I compatible."
+    },
+    {
+      "field": "storage.slots.0.recommendations.recommended_transfer_mbps",
+      "source_id": "nintendo-switch-microsd-faq",
+      "evidence": "Nintendo recommends transfer speeds of 60-95 MB/s for improved gameplay experience."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "nintendo-switch-microsd-faq",
+      "evidence": "Nintendo documents microSDXC support from 64GB through 2TB."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.preferred_bus",
+      "source_id": "nintendo-switch-microsd-faq",
+      "evidence": "Nintendo recommends UHS-I-compatible high-speed microSD cards for improved gameplay experience."
+    }
+  ]
+}

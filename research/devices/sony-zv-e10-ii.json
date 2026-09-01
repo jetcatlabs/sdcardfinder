@@ -1,0 +1,134 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "sony-zv-e10-ii",
+    "category": "camera",
+    "manufacturer": "Sony",
+    "model": "ZV-E10 II",
+    "aliases": [
+      "sony zv-e10 ii",
+      "zv-e10 ii",
+      "zve10 ii",
+      "zv e10 ii",
+      "zv-e10m2"
+    ],
+    "related_devices": [
+      "sony-a6700"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "xavc-s-hd",
+        "label": "XAVC S HD up to 100 Mbps",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "4k-recording",
+        "label": "4K recording up to 280 Mbps with 4K 120p upgrade",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "xavc-s-i",
+        "label": "XAVC S-I recording",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Required card performance depends on recording format and bit rate.",
+      "The V60 280Mbps profile reflects Sony's optional 4K 120p upgrade documentation.",
+      "XAVC S-I recording requires V90 or better."
+    ],
+    "sources": [
+      {
+        "id": "sony-zv-e10-ii-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ZV-E10M2 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/ilc/2430/v1/en/contents/0002H_usable_memory_card.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-zv-e10-ii-upgrade-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ZV-E10M2 4K 120p Upgrade - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/di/4k120p_2430/v1/en/contents/0002H_usable_memory_card_4K120p.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-zv-e10-ii-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ZV-E10M2 Help Guide - Specifications",
+        "url": "https://helpguide.sony.net/ilc/2430/v1/en/contents/232h_specifications_ilc2430.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "sony-zv-e10-ii-memory-cards",
+      "evidence": "Sony documents SD, SDHC, and SDXC memory cards for the ZV-E10 II."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "sony-zv-e10-ii-specifications",
+      "evidence": "Sony specifies SD recording media compatible with UHS-I and UHS-II."
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_uhs_speed_class",
+      "source_id": "sony-zv-e10-ii-memory-cards",
+      "evidence": "Sony specifies U3 or higher for XAVC S HD recording up to 100Mbps."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_video_speed_class",
+      "source_id": "sony-zv-e10-ii-upgrade-memory-cards",
+      "evidence": "Sony's 4K 120p upgrade documentation specifies SDXC V60 or higher for 280Mbps 4K recording."
+    },
+    {
+      "field": "usage_profiles.2.requirements.minimum_video_speed_class",
+      "source_id": "sony-zv-e10-ii-memory-cards",
+      "evidence": "Sony specifies SDXC V90 or higher for XAVC S-I recording."
+    }
+  ]
+}

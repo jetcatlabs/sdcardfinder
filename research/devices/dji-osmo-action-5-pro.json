@@ -1,0 +1,101 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "dji-osmo-action-5-pro",
+    "category": "action-camera",
+    "manufacturer": "DJI",
+    "model": "Osmo Action 5 Pro",
+    "aliases": [
+      "osmo action 5 pro",
+      "action 5 pro",
+      "dji action 5",
+      "dji action 5 pro",
+      "osmo action5 pro"
+    ],
+    "related_devices": [
+      "dji-osmo-action-4"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3",
+            "video_speed_class": "V30"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 1024,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3",
+          "video_speed_class": "V30"
+        }
+      }
+    ],
+    "notes": [
+      "DJI publishes specific recommended microSD card models. The published list consists of U3 cards rated V30 or V90; V30 is the lowest listed video speed class.",
+      "The manufacturer-documented maximum microSD capacity is 1 TB."
+    ],
+    "sources": [
+      {
+        "id": "dji-osmo-action-5-pro-specs",
+        "type": "manufacturer_specification",
+        "publisher": "DJI",
+        "title": "Osmo Action 5 Pro Specifications",
+        "url": "https://www.dji.com/osmo-action-5-pro/specs",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "dji-osmo-action-5-pro-specs",
+      "evidence": "DJI lists the supported storage-card type for Osmo Action 5 Pro as microSD."
+    },
+    {
+      "field": "storage.slots.0.recommendations.uhs_speed_class",
+      "source_id": "dji-osmo-action-5-pro-specs",
+      "evidence": "Every card in DJI's published recommended-card list for Osmo Action 5 Pro is rated U3."
+    },
+    {
+      "field": "storage.slots.0.recommendations.video_speed_class",
+      "source_id": "dji-osmo-action-5-pro-specs",
+      "evidence": "DJI's published recommended-card list contains V30 and V90 cards; V30 is the lowest listed video speed class."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "dji-osmo-action-5-pro-specs",
+      "evidence": "DJI specifies support for microSD cards up to 1TB."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.uhs_speed_class",
+      "source_id": "dji-osmo-action-5-pro-specs",
+      "evidence": "Every card in DJI's published recommended-card list for Osmo Action 5 Pro is rated U3."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.video_speed_class",
+      "source_id": "dji-osmo-action-5-pro-specs",
+      "evidence": "DJI's published recommended-card list contains V30 and V90 cards; V30 is the lowest listed video speed class."
+    }
+  ]
+}

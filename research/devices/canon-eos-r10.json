@@ -1,0 +1,109 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "canon-eos-r10",
+    "category": "camera",
+    "manufacturer": "Canon",
+    "model": "EOS R10",
+    "aliases": [
+      "canon r10",
+      "canon eos r10",
+      "eos r10",
+      "r10"
+    ],
+    "related_devices": [
+      "canon-eos-r50"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "standard-high-performance-video",
+        "label": "4K and high-frame-rate video",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "4k-hdr-high-frame-rate",
+        "label": "4K 59.94/50 fps HDR PQ recording",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Canon explicitly supports both UHS-I and UHS-II cards.",
+      "Required card performance varies by resolution, frame rate, compression, and bit depth."
+    ],
+    "sources": [
+      {
+        "id": "canon-r10-compatible-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Canon",
+        "title": "EOS R10 - Compatible Cards",
+        "url": "https://cam.start.canon/en/C006/manual/html/UG-00_Before_0060.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "canon-r10-specifications",
+        "type": "manufacturer_manual",
+        "publisher": "Canon",
+        "title": "EOS R10 - Specifications",
+        "url": "https://cam.start.canon/en/C006/manual/html/UG-11_Reference_0090.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "canon-r10-compatible-cards",
+      "evidence": "Canon documents SD, SDHC, and SDXC memory cards as compatible with the EOS R10."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "canon-r10-compatible-cards",
+      "evidence": "Canon explicitly states that both UHS-I and UHS-II cards are compatible."
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_uhs_speed_class",
+      "source_id": "canon-r10-specifications",
+      "evidence": "Canon specifies UHS Speed Class 3 or higher for several 4K and high-frame-rate movie settings."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_video_speed_class",
+      "source_id": "canon-r10-specifications",
+      "evidence": "Canon specifies Video Speed Class V60 or higher for 4K 59.94/50 fps HDR PQ recording."
+    }
+  ]
+}

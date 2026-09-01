@@ -1,0 +1,111 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "insta360-x4",
+    "category": "action-camera",
+    "manufacturer": "Insta360",
+    "model": "X4",
+    "aliases": [
+      "insta360 x4",
+      "insta 360 x4",
+      "x4 camera"
+    ],
+    "related_devices": [
+      "insta360-x3"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [
+            "UHS-I"
+          ],
+          "explicitly_incompatible_buses": [
+            "UHS-II",
+            "UHS-III"
+          ],
+          "requirements": {
+            "minimum_video_speed_class": "V30"
+          },
+          "recommendations": {},
+          "setup_requirements": {
+            "filesystem": "exFAT"
+          },
+          "min_capacity_gb": null,
+          "max_capacity_gb": 1024,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {
+          "minimum_video_speed_class": "V30"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Insta360 specifies UHS-I microSD cards rated V30 or above and formatted as exFAT.",
+      "Insta360 explicitly states not to use UHS-II or UHS-III cards with the X4.",
+      "Cards larger than 1 TB are not supported."
+    ],
+    "sources": [
+      {
+        "id": "insta360-x4-storage-compatibility",
+        "type": "manufacturer_support",
+        "publisher": "Insta360",
+        "title": "X4 Storage Compatibility",
+        "url": "https://onlinemanual.insta360.com/x4/en-us/faq/compatibility/storage",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "insta360-x4-storage-compatibility",
+      "evidence": "Insta360 specifies microSD cards for the X4."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "insta360-x4-storage-compatibility",
+      "evidence": "Insta360 specifies UHS-I microSD cards for the X4."
+    },
+    {
+      "field": "storage.slots.0.explicitly_incompatible_buses",
+      "source_id": "insta360-x4-storage-compatibility",
+      "evidence": "Insta360 explicitly states not to use UHS-II or UHS-III microSD/TF cards with the X4."
+    },
+    {
+      "field": "storage.slots.0.requirements.minimum_video_speed_class",
+      "source_id": "insta360-x4-storage-compatibility",
+      "evidence": "Insta360 specifies V30 or above for the X4."
+    },
+    {
+      "field": "storage.slots.0.setup_requirements.filesystem",
+      "source_id": "insta360-x4-storage-compatibility",
+      "evidence": "Insta360 specifies exFAT-formatted microSD cards for the X4."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "insta360-x4-storage-compatibility",
+      "evidence": "Insta360 states that memory cards larger than 1TB are not compatible with the X4."
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_video_speed_class",
+      "source_id": "insta360-x4-storage-compatibility",
+      "evidence": "Insta360 specifies V30 or above to ensure normal recording with the X4."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "raspberry-pi-5",
+    "category": "single-board-computer",
+    "manufacturer": "Raspberry Pi",
+    "model": "5",
+    "aliases": [
+      "raspberry pi 5",
+      "raspberrypi 5",
+      "rpi 5",
+      "pi 5"
+    ],
+    "related_devices": [],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "application_class": "A2"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "operating-system-storage",
+        "label": "Operating system and application storage",
+        "requirements": {},
+        "recommendations": {
+          "application_class": "A2"
+        }
+      }
+    ],
+    "notes": [
+      "Raspberry Pi 5 has a microSD card slot with support for the high-speed SDR104 mode.",
+      "Raspberry Pi emphasizes random I/O performance and command queueing for responsive system storage, and promotes A2 cards for improved Raspberry Pi 5 performance.",
+      "Official Raspberry Pi SD cards are C10, U3, V30, and A2, but U3 and V30 are not modeled as generic Raspberry Pi 5 requirements or recommendations.",
+      "Raspberry Pi does not document a maximum microSD card capacity for Raspberry Pi 5 in the cited specifications."
+    ],
+    "sources": [
+      {
+        "id": "raspberry-pi-5-product-brief",
+        "type": "manufacturer_specification",
+        "publisher": "Raspberry Pi",
+        "title": "Raspberry Pi 5 Product Brief",
+        "url": "https://datasheets.raspberrypi.com/rpi5/raspberry-pi-5-product-brief.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "raspberry-pi-sd-card-product",
+        "type": "manufacturer_documentation",
+        "publisher": "Raspberry Pi",
+        "title": "Raspberry Pi SD Cards",
+        "url": "https://www.raspberrypi.com/products/sd-cards/",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "raspberry-pi-5-product-brief",
+      "evidence": "Raspberry Pi specifies a microSD card slot on Raspberry Pi 5."
+    },
+    {
+      "field": "storage.slots.0.recommendations.application_class",
+      "source_id": "raspberry-pi-sd-card-product",
+      "evidence": "Raspberry Pi describes its Class A2 microSD cards as tested for optimal performance and says they help provide the smoothest user experience on Raspberry Pi computers."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.application_class",
+      "source_id": "raspberry-pi-sd-card-product",
+      "evidence": "Raspberry Pi promotes Class A2 microSD cards for improved Raspberry Pi storage performance."
+    }
+  ]
+}

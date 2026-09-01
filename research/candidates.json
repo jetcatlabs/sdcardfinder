@@ -46,5 +46,149 @@
     "category": "dash-camera",
     "priority": "high",
     "status": "published"
+  },
+  {
+    "id": "gopro-hero13-black",
+    "manufacturer": "GoPro",
+    "model": "HERO13 Black",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "gopro-hero12-black",
+    "manufacturer": "GoPro",
+    "model": "HERO12 Black",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "gopro-hero10-black",
+    "manufacturer": "GoPro",
+    "model": "HERO10 Black",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "dji-osmo-action-5-pro",
+    "manufacturer": "DJI",
+    "model": "Osmo Action 5 Pro",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "dji-osmo-action-4",
+    "manufacturer": "DJI",
+    "model": "Osmo Action 4",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "insta360-x4",
+    "manufacturer": "Insta360",
+    "model": "X4",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "insta360-x3",
+    "manufacturer": "Insta360",
+    "model": "X3",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "steam-deck-oled",
+    "manufacturer": "Valve",
+    "model": "Steam Deck OLED",
+    "category": "gaming-handheld",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "steam-deck-lcd",
+    "manufacturer": "Valve",
+    "model": "Steam Deck LCD",
+    "category": "gaming-handheld",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "nintendo-switch-lite",
+    "manufacturer": "Nintendo",
+    "model": "Switch Lite",
+    "category": "gaming-handheld",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "nintendo-switch-oled",
+    "manufacturer": "Nintendo",
+    "model": "Switch OLED",
+    "category": "gaming-handheld",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "nintendo-switch",
+    "manufacturer": "Nintendo",
+    "model": "Switch",
+    "category": "gaming-handheld",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "sony-a7-iv",
+    "manufacturer": "Sony",
+    "model": "a7 IV",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "sony-a6700",
+    "manufacturer": "Sony",
+    "model": "a6700",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "sony-zv-e10-ii",
+    "manufacturer": "Sony",
+    "model": "ZV-E10 II",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "canon-eos-r50",
+    "manufacturer": "Canon",
+    "model": "EOS R50",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "canon-eos-r10",
+    "manufacturer": "Canon",
+    "model": "EOS R10",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "raspberry-pi-5",
+    "manufacturer": "Raspberry Pi",
+    "model": "5",
+    "category": "single-board-computer",
+    "priority": "high",
+    "status": "published"
   }
 ]

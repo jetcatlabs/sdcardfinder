@@ -1,0 +1,166 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "sony-a7-iv",
+    "category": "camera",
+    "manufacturer": "Sony",
+    "model": "a7 IV",
+    "aliases": [
+      "a7 iv",
+      "a7iv",
+      "alpha 7 iv",
+      "alpha7 iv",
+      "ilce-7m4"
+    ],
+    "related_devices": [
+      "sony-a6700"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented",
+          "notes": [
+            "Slot 1 also accepts CFexpress Type A media."
+          ]
+        },
+        {
+          "slot": 2,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "Standard video up to 200 Mbps",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3",
+          "minimum_video_speed_class": "V30"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "slow-quick-video",
+        "label": "Selected S&Q recording modes",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "all-intra-video",
+        "label": "XAVC S-I recording",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Exact speed requirement depends on recording format, frame rate, and bit rate.",
+      "Slot 1 supports CFexpress Type A in addition to SD media."
+    ],
+    "sources": [
+      {
+        "id": "sony-a7iv-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ILCE-7M4 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/ilc/2110/v1/en/contents/TP1000640149.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-a7iv-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ILCE-7M4 Help Guide - Specifications",
+        "url": "https://helpguide.sony.net/ilc/2110/v1/en/contents/TP1000660153.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "sony-a7iv-memory-cards",
+      "evidence": "Sony documents SD, SDHC, and SDXC memory cards as supported."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "sony-a7iv-specifications",
+      "evidence": "Sony specifies Slot 1 for SD cards compatible with UHS-I and UHS-II."
+    },
+    {
+      "field": "storage.slots.1.accepted_formats",
+      "source_id": "sony-a7iv-memory-cards",
+      "evidence": "Sony documents SD, SDHC, and SDXC memory cards as supported."
+    },
+    {
+      "field": "storage.slots.1.bus_support",
+      "source_id": "sony-a7iv-specifications",
+      "evidence": "Sony specifies Slot 2 for SD cards compatible with UHS-I and UHS-II."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_uhs_speed_class",
+      "source_id": "sony-a7iv-memory-cards",
+      "evidence": "Sony specifies U3 or higher for SDHC/SDXC cards in movie modes up to 200Mbps."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_video_speed_class",
+      "source_id": "sony-a7iv-memory-cards",
+      "evidence": "Sony specifies V30 or higher for SDHC/SDXC cards in movie modes up to 200Mbps."
+    },
+    {
+      "field": "usage_profiles.2.requirements.minimum_video_speed_class",
+      "source_id": "sony-a7iv-memory-cards",
+      "evidence": "Sony specifies SDXC V60 or higher for selected S&Q recording modes."
+    },
+    {
+      "field": "usage_profiles.3.requirements.minimum_video_speed_class",
+      "source_id": "sony-a7iv-memory-cards",
+      "evidence": "Sony specifies SDXC V90 or higher for XAVC S-I recording."
+    }
+  ]
+}

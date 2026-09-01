@@ -1,0 +1,77 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "steam-deck-oled",
+    "category": "gaming-handheld",
+    "manufacturer": "Valve",
+    "model": "Steam Deck OLED",
+    "aliases": [
+      "steam deck oled",
+      "steamdeck oled",
+      "deck oled"
+    ],
+    "related_devices": [
+      "steam-deck-lcd"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [
+            "UHS-I"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "game-storage",
+        "label": "Game storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Valve documents a UHS-I microSD card slot supporting SD, SDHC, and SDXC media.",
+      "Valve does not document a maximum microSD card capacity in the Steam Deck OLED technical specifications."
+    ],
+    "sources": [
+      {
+        "id": "valve-steam-deck-oled-tech-specs",
+        "type": "manufacturer_specification",
+        "publisher": "Valve",
+        "title": "Steam Deck OLED Tech Specs",
+        "url": "https://www.steamdeck.com/en/tech/oled",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "valve-steam-deck-oled-tech-specs",
+      "evidence": "Valve documents a microSD card slot and states that it supports SD, SDHC, and SDXC media."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "valve-steam-deck-oled-tech-specs",
+      "evidence": "Valve explicitly specifies UHS-I for the Steam Deck OLED microSD expansion interface."
+    }
+  ]
+}

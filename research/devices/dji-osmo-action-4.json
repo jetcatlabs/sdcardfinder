@@ -1,0 +1,100 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "dji-osmo-action-4",
+    "category": "action-camera",
+    "manufacturer": "DJI",
+    "model": "Osmo Action 4",
+    "aliases": [
+      "osmo action 4",
+      "dji action 4",
+      "action 4",
+      "osmo action4"
+    ],
+    "related_devices": [
+      "dji-osmo-action-5-pro"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3",
+            "video_speed_class": "V30"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 512,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3",
+          "video_speed_class": "V30"
+        }
+      }
+    ],
+    "notes": [
+      "DJI publishes specific recommended microSD card models. The current list consists of U3 cards rated V30 or V90; V30 is the lowest listed video speed class.",
+      "The manufacturer-documented maximum microSD capacity is 512 GB."
+    ],
+    "sources": [
+      {
+        "id": "dji-osmo-action-4-support",
+        "type": "manufacturer_support",
+        "publisher": "DJI",
+        "title": "Support for Osmo Action 4",
+        "url": "https://www.dji.com/support/product/osmo-action-4",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "dji-osmo-action-4-support",
+      "evidence": "DJI lists the supported storage-card type for Osmo Action 4 as microSD."
+    },
+    {
+      "field": "storage.slots.0.recommendations.uhs_speed_class",
+      "source_id": "dji-osmo-action-4-support",
+      "evidence": "Every card in DJI's published recommended-card list for Osmo Action 4 is rated U3."
+    },
+    {
+      "field": "storage.slots.0.recommendations.video_speed_class",
+      "source_id": "dji-osmo-action-4-support",
+      "evidence": "DJI's published recommended-card list contains V30 and V90 cards; V30 is the lowest listed video speed class."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "dji-osmo-action-4-support",
+      "evidence": "DJI specifies support for microSD cards up to 512GB."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.uhs_speed_class",
+      "source_id": "dji-osmo-action-4-support",
+      "evidence": "Every card in DJI's published recommended-card list for Osmo Action 4 is rated U3."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.video_speed_class",
+      "source_id": "dji-osmo-action-4-support",
+      "evidence": "DJI's published recommended-card list contains V30 and V90 cards; V30 is the lowest listed video speed class."
+    }
+  ]
+}

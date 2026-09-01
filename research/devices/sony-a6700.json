@@ -1,0 +1,131 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "sony-a6700",
+    "category": "camera",
+    "manufacturer": "Sony",
+    "model": "a6700",
+    "aliases": [
+      "sony a6700",
+      "a6700",
+      "alpha 6700",
+      "alpha6700",
+      "ilce-6700"
+    ],
+    "related_devices": [
+      "sony-a7-iv",
+      "sony-zv-e10-ii"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "xavc-s-hd",
+        "label": "XAVC S HD up to 100 Mbps",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "high-bitrate-4k",
+        "label": "High-bitrate 4K recording",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "xavc-s-i",
+        "label": "XAVC S-I recording",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "The required card speed depends on file format and recording bit rate.",
+      "High-bitrate 4K modes can require V60 or better.",
+      "XAVC S-I recording requires V90 or better."
+    ],
+    "sources": [
+      {
+        "id": "sony-a6700-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ILCE-6700 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/ilc/2320/v1/en/contents/0002H_usable_memory_card.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-a6700-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ILCE-6700 Help Guide - Specifications",
+        "url": "https://helpguide.sony.net/ilc/2320/v1/en/contents/221h_specifications_ilc2320.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "sony-a6700-memory-cards",
+      "evidence": "Sony documents SD, SDHC, and SDXC memory cards for the a6700."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "sony-a6700-specifications",
+      "evidence": "Sony specifies SD recording media compatible with UHS-I and UHS-II."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_uhs_speed_class",
+      "source_id": "sony-a6700-memory-cards",
+      "evidence": "Sony specifies U3 or higher for XAVC S HD recording up to 100Mbps."
+    },
+    {
+      "field": "usage_profiles.2.requirements.minimum_video_speed_class",
+      "source_id": "sony-a6700-memory-cards",
+      "evidence": "Sony specifies SDXC V60 or higher for high-bitrate 4K recording."
+    },
+    {
+      "field": "usage_profiles.3.requirements.minimum_video_speed_class",
+      "source_id": "sony-a6700-memory-cards",
+      "evidence": "Sony specifies SDXC V90 or higher for XAVC S-I recording."
+    }
+  ]
+}

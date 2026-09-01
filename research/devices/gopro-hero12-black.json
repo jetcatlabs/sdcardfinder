@@ -1,0 +1,126 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "gopro-hero12-black",
+    "category": "action-camera",
+    "manufacturer": "GoPro",
+    "model": "HERO12 Black",
+    "aliases": [
+      "hero12",
+      "hero 12",
+      "hero12 black",
+      "gopro 12",
+      "gopro hero 12"
+    ],
+    "related_devices": [
+      "gopro-hero10-black",
+      "gopro-hero11-black",
+      "gopro-hero13-black"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [],
+          "requirements": {
+            "minimum_uhs_speed_class": "U3",
+            "minimum_video_speed_class": "V30",
+            "minimum_application_class": "A2"
+          },
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 1024,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3",
+          "minimum_video_speed_class": "V30",
+          "minimum_application_class": "A2"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "GoPro specifies a brand-name microSD card rated V30/U3 or higher; the current HERO12 product specification also specifies A2."
+    ],
+    "sources": [
+      {
+        "id": "gopro-hero12-black-setup",
+        "type": "manufacturer_support",
+        "publisher": "GoPro",
+        "title": "HERO12 Black Creator Edition Setup",
+        "url": "https://gopro.com/en/au/out-of-the-box-experience/hero-12-black-creator-edition",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "gopro-hero12-black-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "GoPro",
+        "title": "GoPro HERO12 Black",
+        "url": "https://gopro.com/en/us/shop/cameras/hero12-black/CHDHX-121-master.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "gopro-hero12-black-setup",
+      "evidence": "GoPro specifies microSD, microSDHC, or microSDXC cards for HERO12 Black."
+    },
+    {
+      "field": "storage.slots.0.requirements.minimum_uhs_speed_class",
+      "source_id": "gopro-hero12-black-setup",
+      "evidence": "GoPro specifies UHS-3 or higher; this is represented as U3 UHS Speed Class."
+    },
+    {
+      "field": "storage.slots.0.requirements.minimum_video_speed_class",
+      "source_id": "gopro-hero12-black-setup",
+      "evidence": "GoPro specifies V30 or higher for HERO12 Black."
+    },
+    {
+      "field": "storage.slots.0.requirements.minimum_application_class",
+      "source_id": "gopro-hero12-black-product-page",
+      "evidence": "GoPro's HERO12 Black product specification lists the memory card requirement as A2."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "gopro-hero12-black-setup",
+      "evidence": "GoPro specifies memory card capacity up to 1TB for HERO12 Black."
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_uhs_speed_class",
+      "source_id": "gopro-hero12-black-setup",
+      "evidence": "GoPro specifies UHS-3 or higher for HERO12 Black recording media."
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_video_speed_class",
+      "source_id": "gopro-hero12-black-setup",
+      "evidence": "GoPro specifies V30 or higher for HERO12 Black recording media."
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_application_class",
+      "source_id": "gopro-hero12-black-product-page",
+      "evidence": "GoPro's HERO12 Black product specification lists the memory card requirement as A2."
+    }
+  ]
+}

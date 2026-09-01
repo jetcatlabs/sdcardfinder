@@ -1,0 +1,104 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "gopro-hero10-black",
+    "category": "action-camera",
+    "manufacturer": "GoPro",
+    "model": "HERO10 Black",
+    "aliases": [
+      "hero10",
+      "hero 10",
+      "hero10 black",
+      "gopro 10",
+      "gopro hero 10"
+    ],
+    "related_devices": [
+      "gopro-hero11-black",
+      "gopro-hero12-black"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [],
+          "requirements": {
+            "minimum_uhs_speed_class": "U3",
+            "minimum_video_speed_class": "V30"
+          },
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 512,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3",
+          "minimum_video_speed_class": "V30"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "GoPro specifies a brand-name microSD card rated V30, U3 or higher.",
+      "Maximum documented capacity is 512 GB."
+    ],
+    "sources": [
+      {
+        "id": "gopro-hero10-manual",
+        "type": "manufacturer_manual",
+        "publisher": "GoPro",
+        "title": "HERO10 Black User Manual",
+        "url": "https://gopro.com/content/dam/help/hero10-black/manuals/HERO10Black_UM_ENG_REVB.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "gopro-hero10-manual",
+      "evidence": "GoPro specifies microSD, microSDHC, or microSDXC cards for HERO10 Black."
+    },
+    {
+      "field": "storage.slots.0.requirements.minimum_uhs_speed_class",
+      "source_id": "gopro-hero10-manual",
+      "evidence": "GoPro specifies UHS-3 or higher; this is represented as U3 UHS Speed Class."
+    },
+    {
+      "field": "storage.slots.0.requirements.minimum_video_speed_class",
+      "source_id": "gopro-hero10-manual",
+      "evidence": "GoPro specifies V30 or higher for HERO10 Black."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "gopro-hero10-manual",
+      "evidence": "GoPro specifies memory card capacity up to 512GB for HERO10 Black."
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_uhs_speed_class",
+      "source_id": "gopro-hero10-manual",
+      "evidence": "GoPro specifies UHS-3 or higher for HERO10 Black recording media."
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_video_speed_class",
+      "source_id": "gopro-hero10-manual",
+      "evidence": "GoPro specifies V30 or higher for HERO10 Black recording media."
+    }
+  ]
+}
