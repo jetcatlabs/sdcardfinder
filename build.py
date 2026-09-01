@@ -317,6 +317,61 @@ def generate_endurance_badge(card):
         detail_html
     )
 
+def is_specialty_card(card):
+    endurance = card.get(
+        "endurance",
+        {}
+    )
+
+    if endurance.get(
+        "continuous_recording"
+    ) is True:
+        return True
+
+    return False
+
+def featured_card_sort_key(item):
+    card = item["card"]
+
+    speed_classes = card.get(
+        "speed_classes",
+        {}
+    )
+
+    application_rank = {
+        None: 0,
+        "A1": 1,
+        "A2": 2,
+    }
+
+    application = speed_classes.get(
+        "application"
+    )
+
+    uhs = speed_classes.get(
+        "uhs"
+    )
+
+    video = speed_classes.get(
+        "video"
+    )
+
+    return (
+        is_specialty_card(card),
+        -application_rank.get(
+            application,
+            0
+        ),
+        -UHS_SPEED_RANK.get(
+            uhs,
+            0
+        ),
+        -VIDEO_SPEED_RANK.get(
+            video,
+            0
+        ),
+    )
+
 def select_featured_cards(device, matches):
     profile = CAPACITY_PROFILES.get(
         device["category"]
@@ -333,7 +388,7 @@ def select_featured_cards(device, matches):
             profile["smallest"]
         ),
         (
-            "Recommended",
+            "Balanced Capacity",
             profile["recommended"]
         ),
         (
@@ -343,13 +398,16 @@ def select_featured_cards(device, matches):
     ]
 
     for label, capacity in tiers:
-        match = next(
-            (
-                item
-                for item in matches
-                if item["card"]["capacity_gb"] == capacity
-            ),
-            None
+        candidates = [
+            item
+            for item in matches
+            if item["card"]["capacity_gb"] == capacity
+        ]
+        
+        match = min(
+            candidates,
+            key=featured_card_sort_key,
+            default=None
         )
 
         if match:
@@ -2609,47 +2667,6 @@ def build():
 
     print()
     print("Build complete: dist")
-
-def select_featured_cards(device, matches):
-    profile = CAPACITY_PROFILES.get(
-        device["category"]
-    )
-
-    if not profile:
-        return []
-
-    by_capacity = {
-        item["card"]["capacity_gb"]: item
-        for item in matches
-    }
-
-    featured = []
-
-    tiers = [
-        (
-            "Smallest option",
-            profile["smallest"]
-        ),
-        (
-            "Recommended",
-            profile["recommended"]
-        ),
-        (
-            "More storage",
-            profile["more_storage"]
-        ),
-    ]
-
-    for label, capacity in tiers:
-        match = by_capacity.get(capacity)
-
-        if match:
-            featured.append({
-                "label": label,
-                "match": match
-            })
-
-    return featured
 
 if __name__ == "__main__":
     build()
