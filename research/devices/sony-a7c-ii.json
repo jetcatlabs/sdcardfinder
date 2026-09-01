@@ -1,0 +1,132 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "sony-a7c-ii",
+    "category": "camera",
+    "manufacturer": "Sony",
+    "model": "a7C II",
+    "aliases": [
+      "sony a7c ii",
+      "a7c ii",
+      "a7cii",
+      "alpha 7c ii",
+      "alpha7c ii",
+      "ilce-7cm2"
+    ],
+    "related_devices": [
+      "sony-a7-iv",
+      "sony-a6700"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "Standard video up to 200 Mbps",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "proxy-4k-video",
+        "label": "4K recording with proxy recording",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "all-intra-video",
+        "label": "XAVC S-I recording",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Required card performance depends on recording format, bit rate, and whether proxy recording is enabled.",
+      "Sony documents UHS-I and UHS-II compatibility for the SD card slot.",
+      "Sony does not document a numeric maximum SD card capacity in the cited Help Guide."
+    ],
+    "sources": [
+      {
+        "id": "sony-a7c-ii-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ILCE-7CM2 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/ilc/2360/v1/en/contents/0002H_usable_memory_card.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-a7c-ii-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ILCE-7CM2 Help Guide - Specifications",
+        "url": "https://helpguide.sony.net/ilc/2360/v1/en/contents/231h_specifications_ilc2360.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "sony-a7c-ii-memory-cards",
+      "evidence": "Sony documents SD, SDHC, and SDXC memory cards for the alpha 7C II."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "sony-a7c-ii-specifications",
+      "evidence": "Sony specifies SD recording media compatible with UHS-I and UHS-II."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_uhs_speed_class",
+      "source_id": "sony-a7c-ii-memory-cards",
+      "evidence": "Sony specifies U3 or higher for XAVC HS 4K and XAVC S 4K recording up to 200Mbps and XAVC S HD up to 100Mbps."
+    },
+    {
+      "field": "usage_profiles.2.requirements.minimum_video_speed_class",
+      "source_id": "sony-a7c-ii-memory-cards",
+      "evidence": "Sony specifies SDXC V60 or higher for 4K recording up to 200Mbps when proxy recording is enabled."
+    },
+    {
+      "field": "usage_profiles.3.requirements.minimum_video_speed_class",
+      "source_id": "sony-a7c-ii-memory-cards",
+      "evidence": "Sony specifies SDXC V90 or higher for XAVC S-I recording."
+    }
+  ]
+}

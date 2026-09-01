@@ -13,7 +13,7 @@
     "model": "4",
     "category": "single-board-computer",
     "priority": "medium",
-    "status": "todo"
+    "status": "published"
   },
   {
     "id": "insta360-x5",
@@ -29,7 +29,7 @@
     "model": "a7C II",
     "category": "camera",
     "priority": "medium",
-    "status": "todo"
+    "status": "published"
   },
   {
     "id": "viofo-a229-pro",

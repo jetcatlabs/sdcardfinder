@@ -1,0 +1,102 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "raspberry-pi-4",
+    "category": "single-board-computer",
+    "manufacturer": "Raspberry Pi",
+    "model": "4",
+    "aliases": [
+      "raspberry pi 4",
+      "raspberrypi 4",
+      "rpi 4",
+      "pi 4"
+    ],
+    "related_devices": [
+      "raspberry-pi-5"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "application_class": "A2",
+            "host_bus_mode": "DDR50"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "operating-system-storage",
+        "label": "Operating system and application storage",
+        "requirements": {},
+        "recommendations": {
+          "application_class": "A2"
+        }
+      }
+    ],
+    "notes": [
+      "Raspberry Pi 4 uses a microSD card slot for loading the operating system and data storage.",
+      "Raspberry Pi documents DDR50 as the Raspberry Pi 4 interface used with its official microSD cards.",
+      "Raspberry Pi promotes A2 microSD cards for improved random-I/O performance and responsiveness.",
+      "Official Raspberry Pi SD cards are C10, U3, V30, and A2, but U3 and V30 are not modeled as generic Raspberry Pi 4 requirements.",
+      "Raspberry Pi does not document a maximum microSD card capacity for Raspberry Pi 4 in the cited specifications."
+    ],
+    "sources": [
+      {
+        "id": "raspberry-pi-4-product-brief",
+        "type": "manufacturer_specification",
+        "publisher": "Raspberry Pi",
+        "title": "Raspberry Pi 4 Model B Product Brief",
+        "url": "https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "raspberry-pi-sd-card-docs",
+        "type": "manufacturer_documentation",
+        "publisher": "Raspberry Pi",
+        "title": "SD Cards - Raspberry Pi Documentation",
+        "url": "https://www.raspberrypi.com/documentation/accessories/sd-cards.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "raspberry-pi-4-product-brief",
+      "evidence": "Raspberry Pi specifies a microSD card slot for loading the operating system and data storage."
+    },
+    {
+      "field": "storage.slots.0.recommendations.application_class",
+      "source_id": "raspberry-pi-sd-card-docs",
+      "evidence": "Raspberry Pi promotes Class A2 microSD cards for improved Raspberry Pi storage performance."
+    },
+    {
+      "field": "storage.slots.0.recommendations.host_bus_mode",
+      "source_id": "raspberry-pi-sd-card-docs",
+      "evidence": "Raspberry Pi documents DDR50 as the interface used by Raspberry Pi 4 with its official SD cards."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.application_class",
+      "source_id": "raspberry-pi-sd-card-docs",
+      "evidence": "Raspberry Pi promotes Class A2 microSD cards for improved system responsiveness and random-I/O performance."
+    }
+  ]
+}

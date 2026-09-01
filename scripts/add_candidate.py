@@ -1,6 +1,8 @@
 import argparse
 import re
+import subprocess
 import sys
+from pathlib import Path
 
 from device_common import (
     CANDIDATES_PATH,
@@ -38,6 +40,48 @@ ID_PATTERN = re.compile(
     r"^[a-z0-9]+(?:-[a-z0-9]+)*$"
 )
 
+SCRIPTS_DIR = Path(__file__).resolve().parent
+
+
+def start_research(candidate_type, candidate_id):
+    if candidate_type == "device":
+        script = SCRIPTS_DIR / "new_device.py"
+    elif candidate_type == "card":
+        script = SCRIPTS_DIR / "new_card_family.py"
+    else:
+        print(
+            "ERROR: Unknown candidate type: {}".format(
+                candidate_type
+            )
+        )
+        return 1
+
+    print()
+    print(
+        "Starting research: {}".format(
+            candidate_id
+        )
+    )
+
+    result = subprocess.run([
+        sys.executable,
+        str(script),
+        candidate_id,
+    ])
+
+    if result.returncode != 0:
+        print()
+        print(
+            "ERROR: Candidate was created, but "
+            "research could not be started."
+        )
+        print(
+            "Candidate remains available as todo "
+            "unless the scaffold script changed it."
+        )
+        return result.returncode
+
+    return 0
 
 def validate_common_id(candidate_id):
     errors = []
@@ -143,6 +187,12 @@ def add_device_candidate(args):
         "Status: todo"
     )
 
+    if args.start:
+        return start_research(
+            "device",
+            args.id,
+        )
+
     return 0
 
 
@@ -218,6 +268,12 @@ def add_card_candidate(args):
         "Status: todo"
     )
 
+    if args.start:
+        return start_research(
+            "card",
+            args.id,
+        )
+
     return 0
 
 
@@ -271,6 +327,15 @@ def build_parser():
     device_parser.set_defaults(
         handler=add_device_candidate
     )
+    
+    device_parser.add_argument(
+        "--start",
+        action="store_true",
+        help=(
+            "Immediately create the research "
+            "record after adding the candidate."
+        ),
+    )
 
     card_parser = subparsers.add_parser(
         "card",
@@ -296,6 +361,15 @@ def build_parser():
         default="medium",
         choices=sorted(
             VALID_PRIORITIES
+        ),
+    )
+    
+    card_parser.add_argument(
+        "--start",
+        action="store_true",
+        help=(
+            "Immediately create the research "
+            "record after adding the candidate."
         ),
     )
 
