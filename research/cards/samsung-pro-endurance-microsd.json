@@ -9,6 +9,7 @@
       "form_factor": "microSDXC",
       "bus": "UHS-I",
       "speed_classes": {
+        "sd": "C10",
         "uhs": null,
         "video": null,
         "application": null
@@ -124,6 +125,11 @@
       "evidence": "Samsung identifies PRO Endurance for consistent recording and monitoring devices including CCTV, dash cams and body cams."
     },
     {
+      "field": "common.speed_classes.sd",
+      "source_id": "samsung-pro-endurance-datasheet",
+      "evidence": "Samsung specifies Class 10 for the 64GB, 128GB, and 256GB PRO Endurance variants."
+    },
+    {
       "field": "variants.0.capacity_gb",
       "source_id": "samsung-pro-endurance-datasheet",
       "evidence": "Product Lineup lists 64GB."
@@ -151,7 +157,7 @@
     {
       "field": "variants.0.overrides.performance.minimum_sustained_write_mbps",
       "source_id": "samsung-pro-endurance-datasheet",
-      "evidence": "V10 footnote defines a sustained video capture rate of 10MB/s."
+      "evidence": "Samsung states that V10 provides a sustained video capture rate of 10MB/s."
     },
     {
       "field": "variants.0.overrides.endurance.recording_hours",

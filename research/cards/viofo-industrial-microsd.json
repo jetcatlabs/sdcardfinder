@@ -9,9 +9,11 @@
       "form_factor": "microSDXC",
       "bus": null,
       "speed_classes": {
+        "sd": null,
         "uhs": "U3",
         "video": "V30",
-        "application": "A2"
+        "application": "A2",
+        "express": null
       },
       "performance": {
         "max_read_mbps": 100,
@@ -29,6 +31,9 @@
         "capacity_gb": 64,
         "part_number": null,
         "overrides": {
+          "speed_classes": {
+            "sd": "C10"
+          },
           "performance": {
             "max_write_mbps": 40
           }
@@ -38,6 +43,9 @@
         "capacity_gb": 128,
         "part_number": null,
         "overrides": {
+          "speed_classes": {
+            "sd": "C10"
+          },
           "performance": {
             "max_write_mbps": 80
           }
@@ -47,6 +55,9 @@
         "capacity_gb": 256,
         "part_number": null,
         "overrides": {
+          "speed_classes": {
+            "sd": "C10"
+          },
           "performance": {
             "max_write_mbps": 90
           }
@@ -56,6 +67,9 @@
         "capacity_gb": 512,
         "part_number": null,
         "overrides": {
+          "speed_classes": {
+            "sd": "C10"
+          },
           "performance": {
             "max_write_mbps": 90
           }
@@ -177,6 +191,26 @@
       "field": "variants.3.overrides.performance.max_write_mbps",
       "source_id": "viofo-industrial-512gb",
       "evidence": "VIOFO specifies write speeds up to 90MB/s for the 512GB card."
+    },
+    {
+      "field": "variants.0.overrides.speed_classes.sd",
+      "source_id": "viofo-industrial-64gb",
+      "evidence": "VIOFO explicitly describes the 64GB Industrial Grade microSD card as Class10 rated."
+    },
+    {
+      "field": "variants.1.overrides.speed_classes.sd",
+      "source_id": "viofo-industrial-128gb",
+      "evidence": "VIOFO explicitly describes the 128GB Industrial Grade microSD card as Class10 rated."
+    },
+    {
+      "field": "variants.2.overrides.speed_classes.sd",
+      "source_id": "viofo-industrial-256gb",
+      "evidence": "VIOFO explicitly describes the 256GB Industrial Grade microSD card as Class10 rated."
+    },
+    {
+      "field": "variants.3.overrides.speed_classes.sd",
+      "source_id": "viofo-industrial-512gb",
+      "evidence": "VIOFO explicitly describes the 512GB Industrial Grade microSD card as Class10 rated."
     }
   ]
 }

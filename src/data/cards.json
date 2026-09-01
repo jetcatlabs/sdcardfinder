@@ -688,9 +688,11 @@
     "form_factor": "SDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 180,
@@ -707,12 +709,9 @@
         "verified_at": "2026-08-30",
         "supports": [
           "bus",
-          "capacity_gb",
           "form_factor",
-          "part_number",
           "performance.max_read_mbps",
           "performance.max_write_mbps",
-          "performance.minimum_sustained_write_mbps",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -723,7 +722,10 @@
         "title": "256GB PRO Plus Full-Size SDXC Card UHS-I",
         "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-256gb-sku-mb-sd256s-am/",
         "verified_at": "2026-08-30",
-        "supports": []
+        "supports": [
+          "capacity_gb",
+          "part_number"
+        ]
       },
       {
         "type": "manufacturer",
@@ -732,6 +734,17 @@
         "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-512gb-sku-mb-sd512s-am/",
         "verified_at": "2026-08-30",
         "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung SD Card PRO Plus 2024 Data Sheet Revision 1.2",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_SD_Card_PRO_Plus_v1.2.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd"
+        ]
       }
     ],
     "status": "verified",
@@ -746,9 +759,11 @@
     "form_factor": "SDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 180,
@@ -768,7 +783,6 @@
           "form_factor",
           "performance.max_read_mbps",
           "performance.max_write_mbps",
-          "performance.minimum_sustained_write_mbps",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -779,6 +793,14 @@
         "title": "256GB PRO Plus Full-Size SDXC Card UHS-I",
         "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-256gb-sku-mb-sd256s-am/",
         "verified_at": "2026-08-30",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "512GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-512gb-sku-mb-sd512s-am/",
+        "verified_at": "2026-08-30",
         "supports": [
           "capacity_gb",
           "part_number"
@@ -787,10 +809,13 @@
       {
         "type": "manufacturer",
         "publisher": "Samsung",
-        "title": "512GB PRO Plus Full-Size SDXC Card UHS-I",
-        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-512gb-sku-mb-sd512s-am/",
-        "verified_at": "2026-08-30",
-        "supports": []
+        "title": "Samsung SD Card PRO Plus 2024 Data Sheet Revision 1.2",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_SD_Card_PRO_Plus_v1.2.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd"
+        ]
       }
     ],
     "status": "verified",
@@ -805,9 +830,11 @@
     "form_factor": "SDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 180,
@@ -827,7 +854,6 @@
           "form_factor",
           "performance.max_read_mbps",
           "performance.max_write_mbps",
-          "performance.minimum_sustained_write_mbps",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -846,9 +872,19 @@
         "title": "512GB PRO Plus Full-Size SDXC Card UHS-I",
         "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-512gb-sku-mb-sd512s-am/",
         "verified_at": "2026-08-30",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung SD Card PRO Plus 2024 Data Sheet Revision 1.2",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_SD_Card_PRO_Plus_v1.2.pdf",
+        "verified_at": "2026-09-01",
         "supports": [
           "capacity_gb",
-          "part_number"
+          "part_number",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd"
         ]
       }
     ],
@@ -864,9 +900,11 @@
     "form_factor": "SDXC",
     "bus": "UHS-II",
     "speed_classes": {
+      "sd": null,
       "uhs": "U3",
       "video": "V90",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 300,
@@ -915,9 +953,11 @@
     "form_factor": "SDXC",
     "bus": "UHS-II",
     "speed_classes": {
+      "sd": null,
       "uhs": "U3",
       "video": "V90",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 300,
@@ -966,9 +1006,11 @@
     "form_factor": "SDXC",
     "bus": "UHS-II",
     "speed_classes": {
+      "sd": null,
       "uhs": "U3",
       "video": "V90",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 300,
@@ -1017,9 +1059,11 @@
     "form_factor": "SDXC",
     "bus": "UHS-II",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V60",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 280,
@@ -1040,6 +1084,7 @@
           "part_number",
           "performance.max_read_mbps",
           "performance.max_write_mbps",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -1077,9 +1122,11 @@
     "form_factor": "SDXC",
     "bus": "UHS-II",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V60",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 280,
@@ -1100,6 +1147,7 @@
           "part_number",
           "performance.max_read_mbps",
           "performance.max_write_mbps",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -1137,9 +1185,11 @@
     "form_factor": "SDXC",
     "bus": "UHS-II",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V60",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 280,
@@ -1160,6 +1210,7 @@
           "part_number",
           "performance.max_read_mbps",
           "performance.max_write_mbps",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -1197,9 +1248,11 @@
     "form_factor": "SDXC",
     "bus": "UHS-II",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V60",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 280,
@@ -1220,6 +1273,7 @@
           "part_number",
           "performance.max_read_mbps",
           "performance.max_write_mbps",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -1257,6 +1311,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U1",
       "video": "V10",
       "application": null
@@ -1283,6 +1338,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -1315,6 +1371,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": null
@@ -1341,6 +1398,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -1373,6 +1431,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
       "application": null
@@ -1399,6 +1458,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -1431,9 +1491,11 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 100,
@@ -1457,6 +1519,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -1489,9 +1552,11 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 100,
@@ -1515,6 +1580,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -1547,9 +1613,11 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 100,
@@ -1573,6 +1641,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -1605,9 +1674,11 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
-      "application": null
+      "application": null,
+      "express": null
     },
     "performance": {
       "max_read_mbps": 100,
@@ -1631,6 +1702,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -1663,6 +1735,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U1",
       "video": "V10",
       "application": "A1"
@@ -1685,8 +1758,10 @@
           "endurance.continuous_recording",
           "endurance.pe_cycles",
           "endurance.recording_hours",
+          "form_factor",
           "performance.max_read_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs"
         ]
       },
@@ -1718,7 +1793,6 @@
         "verified_at": "2026-08-31",
         "supports": [
           "capacity_gb",
-          "form_factor",
           "part_number",
           "performance.max_write_mbps"
         ]
@@ -1757,6 +1831,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U1",
       "video": "V10",
       "application": "A1"
@@ -1779,8 +1854,10 @@
           "endurance.continuous_recording",
           "endurance.pe_cycles",
           "endurance.recording_hours",
+          "form_factor",
           "performance.max_read_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs"
         ]
       },
@@ -1820,7 +1897,6 @@
         "verified_at": "2026-08-31",
         "supports": [
           "capacity_gb",
-          "form_factor",
           "part_number",
           "performance.max_write_mbps"
         ]
@@ -1851,6 +1927,7 @@
     "form_factor": "microSDXC",
     "bus": "UHS-I",
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U1",
       "video": "V10",
       "application": "A1"
@@ -1873,8 +1950,10 @@
           "endurance.continuous_recording",
           "endurance.pe_cycles",
           "endurance.recording_hours",
+          "form_factor",
           "performance.max_read_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs"
         ]
       },
@@ -1922,7 +2001,6 @@
         "verified_at": "2026-08-31",
         "supports": [
           "capacity_gb",
-          "form_factor",
           "part_number",
           "performance.max_write_mbps"
         ]
@@ -1945,9 +2023,11 @@
     "form_factor": "microSDXC",
     "bus": null,
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
-      "application": "A2"
+      "application": "A2",
+      "express": null
     },
     "performance": {
       "max_read_mbps": 100,
@@ -1969,6 +2049,7 @@
           "performance.max_read_mbps",
           "performance.max_write_mbps",
           "speed_classes.application",
+          "speed_classes.sd",
           "speed_classes.uhs",
           "speed_classes.video"
         ]
@@ -2015,9 +2096,11 @@
     "form_factor": "microSDXC",
     "bus": null,
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
-      "application": "A2"
+      "application": "A2",
+      "express": null
     },
     "performance": {
       "max_read_mbps": 100,
@@ -2049,7 +2132,8 @@
         "verified_at": "2026-08-31",
         "supports": [
           "capacity_gb",
-          "performance.max_write_mbps"
+          "performance.max_write_mbps",
+          "speed_classes.sd"
         ]
       },
       {
@@ -2086,9 +2170,11 @@
     "form_factor": "microSDXC",
     "bus": null,
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
-      "application": "A2"
+      "application": "A2",
+      "express": null
     },
     "performance": {
       "max_read_mbps": 100,
@@ -2128,7 +2214,8 @@
         "verified_at": "2026-08-31",
         "supports": [
           "capacity_gb",
-          "performance.max_write_mbps"
+          "performance.max_write_mbps",
+          "speed_classes.sd"
         ]
       },
       {
@@ -2157,9 +2244,11 @@
     "form_factor": "microSDXC",
     "bus": null,
     "speed_classes": {
+      "sd": "C10",
       "uhs": "U3",
       "video": "V30",
-      "application": "A2"
+      "application": "A2",
+      "express": null
     },
     "performance": {
       "max_read_mbps": 100,
@@ -2207,7 +2296,8 @@
         "verified_at": "2026-08-31",
         "supports": [
           "capacity_gb",
-          "performance.max_write_mbps"
+          "performance.max_write_mbps",
+          "speed_classes.sd"
         ]
       }
     ],
@@ -3501,5 +3591,75 @@
       "recording_hours": null,
       "pe_cycles": null
     }
+  },
+  {
+    "id": "samsung-pro-plus-sdxc-64gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Plus",
+    "model": "64GB SDXC",
+    "capacity_gb": 64,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 180,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-SD64S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "128GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-128gb-sku-mb-sd128s-am/",
+        "verified_at": "2026-08-30",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "256GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-256gb-sku-mb-sd256s-am/",
+        "verified_at": "2026-08-30",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "512GB PRO Plus Full-Size SDXC Card UHS-I",
+        "url": "https://www.samsung.com/us/business/memory-storage/memory-card/pro-plus-full-size-sdxc-card-512gb-sku-mb-sd512s-am/",
+        "verified_at": "2026-08-30",
+        "supports": []
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung SD Card PRO Plus 2024 Data Sheet Revision 1.2",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_SD_Card_PRO_Plus_v1.2.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-08-30"
   }
 ]

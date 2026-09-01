@@ -9,10 +9,11 @@
       "form_factor": "SDXC",
       "bus": "UHS-II",
       "speed_classes": {
-		"sd": "C10",
+        "sd": null,
         "uhs": "U3",
         "video": "V90",
-        "application": null
+        "application": null,
+        "express": null
       },
       "performance": {
         "max_read_mbps": 300,

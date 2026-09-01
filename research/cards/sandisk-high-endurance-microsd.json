@@ -9,9 +9,11 @@
       "form_factor": "microSDXC",
       "bus": "UHS-I",
       "speed_classes": {
+        "sd": "C10",
         "uhs": "U3",
         "video": "V30",
-        "application": null
+        "application": null,
+        "express": null
       },
       "performance": {
         "max_read_mbps": 100,
@@ -97,6 +99,11 @@
       "field": "common.bus",
       "source_id": "sandisk-high-endurance-datasheet",
       "evidence": "SanDisk identifies the product as a microSD UHS-I card."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "sandisk-high-endurance-datasheet",
+      "evidence": "SanDisk specifies Class 10 for the High Endurance microSD card."
     },
     {
       "field": "common.speed_classes.uhs",

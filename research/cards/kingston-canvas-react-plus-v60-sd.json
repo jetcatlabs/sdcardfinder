@@ -9,9 +9,11 @@
       "form_factor": "SDXC",
       "bus": "UHS-II",
       "speed_classes": {
+        "sd": "C10",
         "uhs": "U3",
         "video": "V60",
-        "application": null
+        "application": null,
+        "express": null
       },
       "performance": {
         "max_read_mbps": 280,
@@ -102,6 +104,11 @@
       "field": "common.bus",
       "source_id": "kingston-canvas-react-plus-v60-datasheet",
       "evidence": "Standard/Class specifies UHS-II."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "kingston-canvas-react-plus-v60-datasheet",
+      "evidence": "Kingston specifies Class 10 for the Canvas React Plus V60 SD card."
     },
     {
       "field": "common.speed_classes.uhs",

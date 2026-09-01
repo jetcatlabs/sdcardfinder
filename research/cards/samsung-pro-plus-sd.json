@@ -9,9 +9,11 @@
       "form_factor": "SDXC",
       "bus": "UHS-I",
       "speed_classes": {
+        "sd": "C10",
         "uhs": "U3",
         "video": "V30",
-        "application": null
+        "application": null,
+        "express": null
       },
       "performance": {
         "max_read_mbps": 180,
@@ -21,16 +23,24 @@
     },
     "variants": [
       {
+        "capacity_gb": 64,
+        "part_number": "MB-SD64S",
+        "overrides": {}
+      },
+      {
         "capacity_gb": 128,
-        "part_number": "MB-SD128S"
+        "part_number": "MB-SD128S",
+        "overrides": {}
       },
       {
         "capacity_gb": 256,
-        "part_number": "MB-SD256S"
+        "part_number": "MB-SD256S",
+        "overrides": {}
       },
       {
         "capacity_gb": 512,
-        "part_number": "MB-SD512S"
+        "part_number": "MB-SD512S",
+        "overrides": {}
       }
     ],
     "sources": [
@@ -63,6 +73,16 @@
         "verified_at": "2026-08-30",
         "authority": "manufacturer",
         "first_party_confirmed": true
+      },
+      {
+        "id": "samsung-pro-plus-sd-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "Samsung",
+        "title": "Samsung SD Card PRO Plus 2024 Data Sheet Revision 1.2",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2024_Samsung_Data_sheet_SD_Card_PRO_Plus_v1.2.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
       }
     ],
     "status": "verified",
@@ -78,6 +98,11 @@
       "field": "common.bus",
       "source_id": "samsung-pro-plus-sd-128-product-page",
       "evidence": "Samsung identifies the PRO Plus full-size card as UHS-I."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "samsung-pro-plus-sd-datasheet",
+      "evidence": "Samsung specifies Class 10 for the PRO Plus SD card lineup."
     },
     {
       "field": "common.speed_classes.uhs",
@@ -101,8 +126,8 @@
     },
     {
       "field": "common.performance.minimum_sustained_write_mbps",
-      "source_id": "samsung-pro-plus-sd-128-product-page",
-      "evidence": "Samsung's V30 footnote specifies a sustained video capture rate of 30MB/s."
+      "source_id": "samsung-pro-plus-sd-datasheet",
+      "evidence": "Samsung states that V30 means a sustained video capture rate of 30MB/s."
     },
     {
       "field": "variants.0.capacity_gb",
@@ -133,6 +158,16 @@
       "field": "variants.2.part_number",
       "source_id": "samsung-pro-plus-sd-512-product-page",
       "evidence": "Samsung identifies the 512GB base model as MB-SD512S."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "samsung-pro-plus-sd-datasheet",
+      "evidence": "Samsung lists a 512GB PRO Plus SD card variant."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "samsung-pro-plus-sd-datasheet",
+      "evidence": "Samsung lists model number MB-SD512S for the 512GB PRO Plus SD card."
     }
   ]
 }
