@@ -1,18 +1,30 @@
 {
-  "research_status": "researching",
-  "reviewed_by_human": false,
+  "research_status": "published",
+  "reviewed_by_human": true,
   "device": {
     "id": "sony-zv-1-ii",
     "category": "camera",
     "manufacturer": "Sony",
     "model": "ZV-1 II",
-    "aliases": [],
-    "related_devices": [],
+    "aliases": [
+      "sony zv-1 ii",
+      "zv-1 ii",
+      "zv1 ii",
+      "zv1ii",
+      "zv-1m2"
+    ],
+    "related_devices": [
+      "sony-zv-e10-ii"
+    ],
     "storage": {
       "slots": [
         {
           "slot": 1,
-          "accepted_formats": [],
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
           "bus_support": [],
           "requirements": {},
           "recommendations": {},
@@ -23,11 +35,60 @@
         }
       ]
     },
-    "usage_profiles": [],
-    "notes": [],
-    "sources": [],
-    "status": "draft",
-    "last_verified": null
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "Video recording up to 60 Mbps",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "high-bitrate-video",
+        "label": "100 Mbps video recording",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Sony documents SD, SDHC, and SDXC cards for the ZV-1 II.",
+      "For movie recording up to 60 Mbps, Sony specifies Class 10 or U1 or faster; this OR condition is preserved as manufacturer wording rather than converted into separate AND requirements.",
+      "Sony requires U3 for 100 Mbps XAVC S 4K and XAVC S HD recording.",
+      "The camera also supports certain Memory Stick media, which is outside SD Card Finder's card catalog.",
+      "Sony does not document a numeric maximum SD card capacity in the cited Help Guide."
+    ],
+    "sources": [
+      {
+        "id": "sony-zv-1-ii-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ZV-1M2 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/dc/2310/v1/en/contents/0002H_usable_memory_card.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
   },
-  "claims": []
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "sony-zv-1-ii-memory-cards",
+      "evidence": "Sony documents SD, SDHC, and SDXC memory cards for the ZV-1 II."
+    },
+    {
+      "field": "usage_profiles.2.requirements.minimum_uhs_speed_class",
+      "source_id": "sony-zv-1-ii-memory-cards",
+      "evidence": "Sony specifies U3 for XAVC S 4K and XAVC S HD recording at 100Mbps."
+    }
+  ]
 }

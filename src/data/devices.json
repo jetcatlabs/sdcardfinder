@@ -2206,5 +2206,507 @@
     ],
     "status": "verified",
     "last_verified": "2026-09-01"
+  },
+  {
+    "id": "sony-fx30",
+    "category": "camera",
+    "manufacturer": "Sony",
+    "model": "FX30",
+    "aliases": [
+      "sony fx30",
+      "fx30",
+      "ilme-fx30"
+    ],
+    "related_devices": [
+      "sony-a6700",
+      "sony-a7-iv"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        },
+        {
+          "slot": 2,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "XAVC S HD up to 100 Mbps",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "high-bitrate-4k",
+        "label": "XAVC HS/S 4K up to 280 Mbps",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "all-intra-video",
+        "label": "XAVC S-I recording",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Both slots also accept CFexpress Type A media.",
+      "Required SD card performance depends on recording format, bit rate, and frame rate.",
+      "Sony does not document a numeric maximum SD card capacity in the cited Help Guide."
+    ],
+    "sources": [
+      {
+        "id": "sony-fx30-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ILME-FX30 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/ilc/2220/v1/en/contents/TP1000867593.html",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.1.accepted_formats",
+          "usage_profiles.1.requirements.minimum_uhs_speed_class",
+          "usage_profiles.2.requirements.minimum_video_speed_class",
+          "usage_profiles.3.requirements.minimum_video_speed_class"
+        ]
+      },
+      {
+        "id": "sony-fx30-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ILME-FX30 Help Guide - Specifications",
+        "url": "https://helpguide.sony.net/ilc/2220/v1/en/contents/TP1000888850.html",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.bus_support",
+          "storage.slots.1.bus_support"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  {
+    "id": "canon-eos-r8",
+    "category": "camera",
+    "manufacturer": "Canon",
+    "model": "EOS R8",
+    "aliases": [
+      "canon r8",
+      "canon eos r8",
+      "eos r8",
+      "r8"
+    ],
+    "related_devices": [
+      "canon-eos-r50",
+      "canon-eos-r10"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "high-performance-video",
+        "label": "4K and high-frame-rate video",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "10-bit-high-performance-video",
+        "label": "10-bit high-frame-rate 4K and Full HD video",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Canon states that SD, SDHC, and SDXC cards can be used regardless of capacity.",
+      "Canon explicitly supports both UHS-I and UHS-II cards.",
+      "Required card performance depends on resolution, frame rate, compression, and bit depth."
+    ],
+    "sources": [
+      {
+        "id": "canon-r8-compatible-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Canon",
+        "title": "EOS R8 - Compatible Cards",
+        "url": "https://cam.start.canon/en/C013/manual/html/UG-00_Before_0080.html",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.bus_support"
+        ]
+      },
+      {
+        "id": "canon-r8-specifications",
+        "type": "manufacturer_manual",
+        "publisher": "Canon",
+        "title": "EOS R8 - Specifications",
+        "url": "https://cam.start.canon/en/C013/manual/html/UG-10_Reference_0100.html",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "usage_profiles.1.requirements.minimum_uhs_speed_class",
+          "usage_profiles.2.requirements.minimum_video_speed_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  {
+    "id": "garmin-dash-cam-mini-3",
+    "category": "dash-camera",
+    "manufacturer": "Garmin",
+    "model": "Dash Cam Mini 3",
+    "aliases": [
+      "garmin dash cam mini 3",
+      "dash cam mini 3",
+      "garmin mini 3",
+      "dashcam mini 3"
+    ],
+    "related_devices": [
+      "garmin-dash-cam-x310"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [],
+          "requirements": {
+            "minimum_sd_speed_class": "C10"
+          },
+          "recommendations": {},
+          "setup_requirements": {
+            "filesystem": "FAT32"
+          },
+          "min_capacity_gb": 8,
+          "max_capacity_gb": 512,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "continuous-recording",
+        "label": "Continuous dash-camera recording",
+        "requirements": {
+          "minimum_sd_speed_class": "C10"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Garmin requires microSDHC or microSDXC media from 8 GB through 512 GB.",
+      "Garmin requires Class 10 or higher and FAT32 formatting.",
+      "Garmin notes that microSD cards wear out after repeated overwriting and may require periodic replacement."
+    ],
+    "sources": [
+      {
+        "id": "garmin-mini-3-memory-card-specifications",
+        "type": "manufacturer_manual",
+        "publisher": "Garmin",
+        "title": "Garmin Dash Cam Mini 3 - Memory Card Specifications",
+        "url": "https://www8.garmin.com/manuals/webhelp/GUID-8B5CEA4F-A508-4496-9EDE-B6D1669C09BE/EN-US/GUID-7D4A7BEE-124E-4D06-857C-8D497AFE81F4.html",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.min_capacity_gb",
+          "storage.slots.0.requirements.minimum_sd_speed_class",
+          "storage.slots.0.setup_requirements.filesystem",
+          "usage_profiles.0.requirements.minimum_sd_speed_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  {
+    "id": "gopro-max",
+    "category": "action-camera",
+    "manufacturer": "GoPro",
+    "model": "MAX",
+    "aliases": [
+      "gopro max",
+      "go pro max",
+      "max 360",
+      "gopro max 360"
+    ],
+    "related_devices": [
+      "gopro-hero9-black"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 256,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "GoPro specifies a brand-name microSD, microSDHC, or microSDXC card with a Class 10 or UHS-I rating.",
+      "The Class 10-or-UHS-I condition is preserved as manufacturer wording rather than converted into separate AND requirements.",
+      "Maximum documented capacity is 256 GB."
+    ],
+    "sources": [
+      {
+        "id": "gopro-max-manual",
+        "type": "manufacturer_manual",
+        "publisher": "GoPro",
+        "title": "GoPro MAX User Manual",
+        "url": "https://gopro.com/content/dam/help/max/manuals/MAX_UM_GB_REVB.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.max_capacity_gb"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  {
+    "id": "sony-zv-1-ii",
+    "category": "camera",
+    "manufacturer": "Sony",
+    "model": "ZV-1 II",
+    "aliases": [
+      "sony zv-1 ii",
+      "zv-1 ii",
+      "zv1 ii",
+      "zv1ii",
+      "zv-1m2"
+    ],
+    "related_devices": [
+      "sony-zv-e10-ii"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "Video recording up to 60 Mbps",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "high-bitrate-video",
+        "label": "100 Mbps video recording",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Sony documents SD, SDHC, and SDXC cards for the ZV-1 II.",
+      "For movie recording up to 60 Mbps, Sony specifies Class 10 or U1 or faster; this OR condition is preserved as manufacturer wording rather than converted into separate AND requirements.",
+      "Sony requires U3 for 100 Mbps XAVC S 4K and XAVC S HD recording.",
+      "The camera also supports certain Memory Stick media, which is outside SD Card Finder's card catalog.",
+      "Sony does not document a numeric maximum SD card capacity in the cited Help Guide."
+    ],
+    "sources": [
+      {
+        "id": "sony-zv-1-ii-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ZV-1M2 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/dc/2310/v1/en/contents/0002H_usable_memory_card.html",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "usage_profiles.2.requirements.minimum_uhs_speed_class"
+        ]
+      },
+      {
+        "id": "sony-zv-1-ii-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ZV-1M2 Specifications",
+        "url": "https://www.sony.com/electronics/support/compact-cameras-zv-series/zv-1m2/specifications",
+        "verified_at": "2026-09-01",
+        "supports": []
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  {
+    "id": "raspberry-pi-zero-2-w",
+    "category": "single-board-computer",
+    "manufacturer": "Raspberry Pi",
+    "model": "Zero 2 W",
+    "aliases": [
+      "raspberry pi zero 2 w",
+      "raspberrypi zero 2 w",
+      "pi zero 2 w",
+      "rpi zero 2 w",
+      "zero 2 w"
+    ],
+    "related_devices": [
+      "raspberry-pi-4"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "operating-system-storage",
+        "label": "Operating system and application storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Raspberry Pi explicitly documents a microSD card slot on Raspberry Pi Zero 2 W.",
+      "Raspberry Pi does not publish a Zero 2 W-specific SD bus mode, speed-class requirement, application-class recommendation, or numeric maximum capacity in the cited first-party specifications."
+    ],
+    "sources": [
+      {
+        "id": "raspberry-pi-zero-2-w-product-brief",
+        "type": "manufacturer_specification",
+        "publisher": "Raspberry Pi",
+        "title": "Raspberry Pi Zero 2 W Product Brief",
+        "url": "https://datasheets.raspberrypi.com/rpizero2/raspberry-pi-zero-2-w-product-brief.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "storage.slots.0.accepted_formats"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
   }
 ]

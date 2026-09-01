@@ -1,18 +1,28 @@
 {
-  "research_status": "researching",
-  "reviewed_by_human": false,
+  "research_status": "published",
+  "reviewed_by_human": true,
   "device": {
     "id": "raspberry-pi-zero-2-w",
     "category": "single-board-computer",
     "manufacturer": "Raspberry Pi",
     "model": "Zero 2 W",
-    "aliases": [],
-    "related_devices": [],
+    "aliases": [
+      "raspberry pi zero 2 w",
+      "raspberrypi zero 2 w",
+      "pi zero 2 w",
+      "rpi zero 2 w",
+      "zero 2 w"
+    ],
+    "related_devices": [
+      "raspberry-pi-4"
+    ],
     "storage": {
       "slots": [
         {
           "slot": 1,
-          "accepted_formats": [],
+          "accepted_formats": [
+            "microSD"
+          ],
           "bus_support": [],
           "requirements": {},
           "recommendations": {},
@@ -23,11 +33,38 @@
         }
       ]
     },
-    "usage_profiles": [],
-    "notes": [],
-    "sources": [],
-    "status": "draft",
-    "last_verified": null
+    "usage_profiles": [
+      {
+        "id": "operating-system-storage",
+        "label": "Operating system and application storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Raspberry Pi explicitly documents a microSD card slot on Raspberry Pi Zero 2 W.",
+      "Raspberry Pi does not publish a Zero 2 W-specific SD bus mode, speed-class requirement, application-class recommendation, or numeric maximum capacity in the cited first-party specifications."
+    ],
+    "sources": [
+      {
+        "id": "raspberry-pi-zero-2-w-product-brief",
+        "type": "manufacturer_specification",
+        "publisher": "Raspberry Pi",
+        "title": "Raspberry Pi Zero 2 W Product Brief",
+        "url": "https://datasheets.raspberrypi.com/rpizero2/raspberry-pi-zero-2-w-product-brief.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
   },
-  "claims": []
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "raspberry-pi-zero-2-w-product-brief",
+      "evidence": "Raspberry Pi specifies a microSD card slot on Raspberry Pi Zero 2 W."
+    }
+  ]
 }

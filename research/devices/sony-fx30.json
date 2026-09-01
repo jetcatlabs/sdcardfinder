@@ -1,19 +1,51 @@
 {
-  "research_status": "researching",
-  "reviewed_by_human": false,
+  "research_status": "published",
+  "reviewed_by_human": true,
   "device": {
     "id": "sony-fx30",
     "category": "camera",
     "manufacturer": "Sony",
     "model": "FX30",
-    "aliases": [],
-    "related_devices": [],
+    "aliases": [
+      "sony fx30",
+      "fx30",
+      "ilme-fx30"
+    ],
+    "related_devices": [
+      "sony-a6700",
+      "sony-a7-iv"
+    ],
     "storage": {
       "slots": [
         {
           "slot": 1,
-          "accepted_formats": [],
-          "bus_support": [],
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        },
+        {
+          "slot": 2,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
           "requirements": {},
           "recommendations": {},
           "setup_requirements": {},
@@ -23,11 +55,103 @@
         }
       ]
     },
-    "usage_profiles": [],
-    "notes": [],
-    "sources": [],
-    "status": "draft",
-    "last_verified": null
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "XAVC S HD up to 100 Mbps",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "high-bitrate-4k",
+        "label": "XAVC HS/S 4K up to 280 Mbps",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "all-intra-video",
+        "label": "XAVC S-I recording",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Both slots also accept CFexpress Type A media.",
+      "Required SD card performance depends on recording format, bit rate, and frame rate.",
+      "Sony does not document a numeric maximum SD card capacity in the cited Help Guide."
+    ],
+    "sources": [
+      {
+        "id": "sony-fx30-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ILME-FX30 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/ilc/2220/v1/en/contents/TP1000867593.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-fx30-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ILME-FX30 Help Guide - Specifications",
+        "url": "https://helpguide.sony.net/ilc/2220/v1/en/contents/TP1000888850.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
   },
-  "claims": []
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "sony-fx30-memory-cards",
+      "evidence": "Sony documents SD, SDHC, and SDXC cards for the FX30."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "sony-fx30-specifications",
+      "evidence": "Sony specifies Slot 1 for SD cards compatible with UHS-I and UHS-II."
+    },
+    {
+      "field": "storage.slots.1.accepted_formats",
+      "source_id": "sony-fx30-memory-cards",
+      "evidence": "Sony documents SD, SDHC, and SDXC cards for the FX30."
+    },
+    {
+      "field": "storage.slots.1.bus_support",
+      "source_id": "sony-fx30-specifications",
+      "evidence": "Sony specifies Slot 2 for SD cards compatible with UHS-I and UHS-II."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_uhs_speed_class",
+      "source_id": "sony-fx30-memory-cards",
+      "evidence": "Sony specifies U3 or higher for XAVC S HD recording up to 100Mbps."
+    },
+    {
+      "field": "usage_profiles.2.requirements.minimum_video_speed_class",
+      "source_id": "sony-fx30-memory-cards",
+      "evidence": "Sony specifies SDXC V60 or higher for XAVC HS 4K and XAVC S 4K recording up to 280Mbps."
+    },
+    {
+      "field": "usage_profiles.3.requirements.minimum_video_speed_class",
+      "source_id": "sony-fx30-memory-cards",
+      "evidence": "Sony specifies SDXC V90 or higher for XAVC S-I recording."
+    }
+  ]
 }

@@ -1,33 +1,102 @@
 {
-  "research_status": "researching",
-  "reviewed_by_human": false,
+  "research_status": "published",
+  "reviewed_by_human": true,
   "device": {
     "id": "garmin-dash-cam-mini-3",
     "category": "dash-camera",
     "manufacturer": "Garmin",
     "model": "Dash Cam Mini 3",
-    "aliases": [],
-    "related_devices": [],
+    "aliases": [
+      "garmin dash cam mini 3",
+      "dash cam mini 3",
+      "garmin mini 3",
+      "dashcam mini 3"
+    ],
+    "related_devices": [
+      "garmin-dash-cam-x310"
+    ],
     "storage": {
       "slots": [
         {
           "slot": 1,
-          "accepted_formats": [],
+          "accepted_formats": [
+            "microSDHC",
+            "microSDXC"
+          ],
           "bus_support": [],
-          "requirements": {},
+          "requirements": {
+            "minimum_sd_speed_class": "C10"
+          },
           "recommendations": {},
-          "setup_requirements": {},
-          "min_capacity_gb": null,
-          "max_capacity_gb": null,
-          "max_capacity_status": "not_documented"
+          "setup_requirements": {
+            "filesystem": "FAT32"
+          },
+          "min_capacity_gb": 8,
+          "max_capacity_gb": 512,
+          "max_capacity_status": "manufacturer_documented"
         }
       ]
     },
-    "usage_profiles": [],
-    "notes": [],
-    "sources": [],
-    "status": "draft",
-    "last_verified": null
+    "usage_profiles": [
+      {
+        "id": "continuous-recording",
+        "label": "Continuous dash-camera recording",
+        "requirements": {
+          "minimum_sd_speed_class": "C10"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Garmin requires microSDHC or microSDXC media from 8 GB through 512 GB.",
+      "Garmin requires Class 10 or higher and FAT32 formatting.",
+      "Garmin notes that microSD cards wear out after repeated overwriting and may require periodic replacement."
+    ],
+    "sources": [
+      {
+        "id": "garmin-mini-3-memory-card-specifications",
+        "type": "manufacturer_manual",
+        "publisher": "Garmin",
+        "title": "Garmin Dash Cam Mini 3 - Memory Card Specifications",
+        "url": "https://www8.garmin.com/manuals/webhelp/GUID-8B5CEA4F-A508-4496-9EDE-B6D1669C09BE/EN-US/GUID-7D4A7BEE-124E-4D06-857C-8D497AFE81F4.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
   },
-  "claims": []
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "garmin-mini-3-memory-card-specifications",
+      "evidence": "Garmin requires microSDHC or microSDXC cards for Dash Cam Mini 3."
+    },
+    {
+      "field": "storage.slots.0.min_capacity_gb",
+      "source_id": "garmin-mini-3-memory-card-specifications",
+      "evidence": "Garmin specifies a minimum memory-card capacity of 8GB."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "garmin-mini-3-memory-card-specifications",
+      "evidence": "Garmin specifies a maximum memory-card capacity of 512GB."
+    },
+    {
+      "field": "storage.slots.0.requirements.minimum_sd_speed_class",
+      "source_id": "garmin-mini-3-memory-card-specifications",
+      "evidence": "Garmin requires SD Speed Class 10 or higher."
+    },
+    {
+      "field": "storage.slots.0.setup_requirements.filesystem",
+      "source_id": "garmin-mini-3-memory-card-specifications",
+      "evidence": "Garmin specifies FAT32 as the required memory-card filesystem."
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_sd_speed_class",
+      "source_id": "garmin-mini-3-memory-card-specifications",
+      "evidence": "Garmin requires Class 10 or higher for Dash Cam Mini 3 video recording."
+    }
+  ]
 }

@@ -1,19 +1,34 @@
 {
-  "research_status": "researching",
-  "reviewed_by_human": false,
+  "research_status": "published",
+  "reviewed_by_human": true,
   "device": {
     "id": "canon-eos-r8",
     "category": "camera",
     "manufacturer": "Canon",
     "model": "EOS R8",
-    "aliases": [],
-    "related_devices": [],
+    "aliases": [
+      "canon r8",
+      "canon eos r8",
+      "eos r8",
+      "r8"
+    ],
+    "related_devices": [
+      "canon-eos-r50",
+      "canon-eos-r10"
+    ],
     "storage": {
       "slots": [
         {
           "slot": 1,
-          "accepted_formats": [],
-          "bus_support": [],
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
           "requirements": {},
           "recommendations": {},
           "setup_requirements": {},
@@ -23,11 +38,80 @@
         }
       ]
     },
-    "usage_profiles": [],
-    "notes": [],
-    "sources": [],
-    "status": "draft",
-    "last_verified": null
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "high-performance-video",
+        "label": "4K and high-frame-rate video",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "10-bit-high-performance-video",
+        "label": "10-bit high-frame-rate 4K and Full HD video",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Canon states that SD, SDHC, and SDXC cards can be used regardless of capacity.",
+      "Canon explicitly supports both UHS-I and UHS-II cards.",
+      "Required card performance depends on resolution, frame rate, compression, and bit depth."
+    ],
+    "sources": [
+      {
+        "id": "canon-r8-compatible-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Canon",
+        "title": "EOS R8 - Compatible Cards",
+        "url": "https://cam.start.canon/en/C013/manual/html/UG-00_Before_0080.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "canon-r8-specifications",
+        "type": "manufacturer_manual",
+        "publisher": "Canon",
+        "title": "EOS R8 - Specifications",
+        "url": "https://cam.start.canon/en/C013/manual/html/UG-10_Reference_0100.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
   },
-  "claims": []
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "canon-r8-compatible-cards",
+      "evidence": "Canon documents SD, SDHC, and SDXC memory cards as compatible with the EOS R8."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "canon-r8-compatible-cards",
+      "evidence": "Canon explicitly states that both UHS-I and UHS-II cards are compatible."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_uhs_speed_class",
+      "source_id": "canon-r8-specifications",
+      "evidence": "Canon specifies UHS Speed Class 3 or higher for several 4K and high-frame-rate movie settings."
+    },
+    {
+      "field": "usage_profiles.2.requirements.minimum_video_speed_class",
+      "source_id": "canon-r8-specifications",
+      "evidence": "Canon specifies Video Speed Class V60 or higher for demanding 10-bit 4K and high-frame-rate movie settings."
+    }
+  ]
 }

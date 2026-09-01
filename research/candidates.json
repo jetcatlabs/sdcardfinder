@@ -213,7 +213,7 @@
     "model": "MAX",
     "category": "action-camera",
     "priority": "medium",
-    "status": "researching"
+    "status": "published"
   },
   {
     "id": "dji-osmo-action-3",
@@ -245,7 +245,7 @@
     "model": "FX30",
     "category": "camera",
     "priority": "high",
-    "status": "researching"
+    "status": "published"
   },
   {
     "id": "sony-zv-1-ii",
@@ -253,7 +253,7 @@
     "model": "ZV-1 II",
     "category": "camera",
     "priority": "medium",
-    "status": "researching"
+    "status": "published"
   },
   {
     "id": "canon-eos-r8",
@@ -261,7 +261,7 @@
     "model": "EOS R8",
     "category": "camera",
     "priority": "high",
-    "status": "researching"
+    "status": "published"
   },
   {
     "id": "raspberry-pi-zero-2-w",
@@ -269,7 +269,7 @@
     "model": "Zero 2 W",
     "category": "single-board-computer",
     "priority": "medium",
-    "status": "researching"
+    "status": "published"
   },
   {
     "id": "garmin-dash-cam-mini-3",
@@ -277,6 +277,6 @@
     "model": "Dash Cam Mini 3",
     "category": "dash-camera",
     "priority": "medium",
-    "status": "researching"
+    "status": "published"
   }
 ]
