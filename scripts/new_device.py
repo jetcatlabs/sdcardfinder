@@ -1,3 +1,10 @@
+from device_common import (
+    CANDIDATES_PATH,
+    find_candidate,
+    load_json,
+    research_path,
+    write_json,
+)
 import sys
 
 from device_common import (
@@ -25,6 +32,16 @@ def main():
         print(
             "Candidate not found: {}".format(
                 device_id
+            )
+        )
+        return 1
+    
+    if candidate.get("status") != "todo":
+        print(
+            "ERROR: Candidate status must be todo "
+            "to start research. Current status: {}"
+            .format(
+                candidate.get("status")
             )
         )
         return 1
@@ -90,6 +107,20 @@ def main():
     write_json(
         path,
         record
+    )
+    
+    candidates = load_json(
+        CANDIDATES_PATH
+    )
+
+    for item in candidates:
+        if item.get("id") == device_id:
+            item["status"] = "researching"
+            break
+
+    write_json(
+        CANDIDATES_PATH,
+        candidates
     )
 
     print(

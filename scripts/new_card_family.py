@@ -16,7 +16,7 @@ def main():
             "Usage: python scripts\\new_card_family.py "
             "<candidate-id>"
         )
-        sys.exit(1)
+        return 1
 
     card_id = sys.argv[1]
 
@@ -30,7 +30,17 @@ def main():
                 card_id
             )
         )
-        sys.exit(1)
+        return 1
+
+    if candidate.get("status") != "todo":
+        print(
+            "ERROR: Candidate status must be todo "
+            "to start research. Current status: {}"
+            .format(
+                candidate.get("status")
+            )
+        )
+        return 1
 
     path = card_research_path(
         card_id
@@ -42,7 +52,7 @@ def main():
                 path
             )
         )
-        sys.exit(1)
+        return 1
 
     RESEARCH_CARDS_DIR.mkdir(
         parents=True,
@@ -120,5 +130,8 @@ def main():
     )
 
 
+    return 0
+
+
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

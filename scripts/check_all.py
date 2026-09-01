@@ -32,6 +32,8 @@ PYTHON_FILES = [
     "scripts/promote_device.py",
     "scripts/promote_card_family.py",
     "scripts/check_all.py",
+    "scripts/review_device.py",
+    "scripts/review_card_family.py",
 ]
 
 VERIFICATION_STALE_DAYS = 180
@@ -393,6 +395,16 @@ def check_candidate_consistency(
 
     errors = []
 
+    valid_statuses = {
+        "todo",
+        "researching",
+        "needs-review",
+        "verified",
+        "published",
+        "needs-reverification",
+        "blocked",
+    }
+
     candidate_map = {}
 
     for candidate in candidates:
@@ -412,12 +424,27 @@ def check_candidate_consistency(
                     candidate_id
                 )
             )
+            continue
+
+        candidate_status = candidate.get(
+            "status"
+        )
+
+        if candidate_status not in valid_statuses:
+            errors.append(
+                "Candidate {} has invalid status: {}"
+                .format(
+                    candidate_id,
+                    candidate_status,
+                )
+            )
 
         candidate_map[
             candidate_id
         ] = candidate
 
     research_map = {}
+    research_paths = {}
 
     for path in sorted(
         research_dir.glob("*.json")
@@ -444,9 +471,33 @@ def check_candidate_consistency(
             )
             continue
 
+        if path.stem != item_id:
+            errors.append(
+                "Research filename/id mismatch: {} contains {}"
+                .format(
+                    path.name,
+                    item_id,
+                )
+            )
+
+        if item_id in research_map:
+            errors.append(
+                "Duplicate research id {} in {} and {}"
+                .format(
+                    item_id,
+                    research_paths[item_id],
+                    path.name,
+                )
+            )
+            continue
+
         research_map[
             item_id
         ] = record
+
+        research_paths[
+            item_id
+        ] = path.name
 
         if item_id not in candidate_map:
             errors.append(
@@ -454,6 +505,44 @@ def check_candidate_consistency(
                     item_id
                 )
             )
+            continue
+
+        candidate = candidate_map[
+            item_id
+        ]
+
+        if object_key == "device":
+            identity_fields = (
+                "manufacturer",
+                "model",
+                "category",
+            )
+        else:
+            identity_fields = (
+                "manufacturer",
+                "product_family",
+            )
+
+        for field in identity_fields:
+            candidate_value = candidate.get(
+                field
+            )
+
+            research_value = item.get(
+                field
+            )
+
+            if candidate_value != research_value:
+                errors.append(
+                    "{} {} mismatch for {}: candidate={!r}, research={!r}"
+                    .format(
+                        object_key,
+                        field,
+                        item_id,
+                        candidate_value,
+                        research_value,
+                    )
+                )
 
     for candidate_id, candidate in (
         candidate_map.items()
@@ -466,45 +555,58 @@ def check_candidate_consistency(
             candidate_id
         )
 
-        if (
-            candidate_status == "published"
-            and research is None
-        ):
-            errors.append(
-                "Published candidate has no research file: {}"
-                .format(candidate_id)
-            )
+        # todo means the item has entered the pipeline
+        # but research has not started yet.
+        if candidate_status == "todo":
+            if research is not None:
+                errors.append(
+                    "Candidate {} is todo but already has a research file"
+                    .format(
+                        candidate_id
+                    )
+                )
 
             continue
 
+        # blocked items may be blocked either before or
+        # after research begins.
+        if (
+            candidate_status == "blocked"
+            and research is None
+        ):
+            continue
+
         if research is None:
+            errors.append(
+                "Candidate {} is {} but has no research file"
+                .format(
+                    candidate_id,
+                    candidate_status,
+                )
+            )
             continue
 
         research_status = research.get(
             "research_status"
         )
 
-        if (
-            candidate_status == "published"
-            and research_status != "published"
-        ):
+        if research_status not in valid_statuses:
             errors.append(
-                "Candidate {} is published but research_status is {}"
+                "Research {} has invalid status: {}"
                 .format(
                     candidate_id,
                     research_status,
                 )
             )
+            continue
 
-        if (
-            research_status == "published"
-            and candidate_status != "published"
-        ):
+        if candidate_status != research_status:
             errors.append(
-                "Research {} is published but candidate status is {}"
+                "Candidate/research status mismatch for {}: {} != {}"
                 .format(
                     candidate_id,
                     candidate_status,
+                    research_status,
                 )
             )
 

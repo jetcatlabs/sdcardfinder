@@ -54,6 +54,51 @@ def main():
         )
         return 1
 
+    candidates = load_json(
+        CANDIDATES_PATH
+    )
+
+    candidate_matches = [
+        candidate
+        for candidate in candidates
+        if candidate.get("id") == device_id
+    ]
+
+    if len(candidate_matches) != 1:
+        print(
+            "ERROR: Expected exactly one candidate for {}. "
+            "Found {}."
+            .format(
+                device_id,
+                len(candidate_matches),
+            )
+        )
+        return 1
+
+    candidate = candidate_matches[0]
+
+    if candidate.get("status") != "verified":
+        print(
+            "ERROR: Candidate status must be verified. "
+            "Current status: {}"
+            .format(
+                candidate.get("status")
+            )
+        )
+        return 1
+
+    for field in (
+        "manufacturer",
+        "model",
+        "category",
+    ):
+        if candidate.get(field) != device.get(field):
+            print(
+                "ERROR: Candidate/research {} mismatch."
+                .format(field)
+            )
+            return 1
+
     errors, warnings = validate(device_id)
 
     for warning in warnings:
@@ -173,10 +218,6 @@ def main():
     )
 
     # Mark candidate published.
-    candidates = load_json(
-        CANDIDATES_PATH
-    )
-
     for candidate in candidates:
         if candidate["id"] == device_id:
             candidate["status"] = "published"
