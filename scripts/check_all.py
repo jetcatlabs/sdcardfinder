@@ -538,24 +538,94 @@ def check_published_device_production():
     production_ids = {
         device.get("id")
         for device in devices
+        if device.get("id")
     }
+
+    published_candidate_ids = {
+        candidate.get("id")
+        for candidate in candidates
+        if candidate.get("status") == "published"
+        and candidate.get("id")
+    }
+
+    research_by_id = {}
+
+    for path in sorted(
+        DEVICE_DIR.glob("*.json")
+    ):
+        research = load_json(path)
+
+        device_id = (
+            research.get("device", {})
+            .get("id")
+        )
+
+        if not device_id:
+            continue
+
+        research_by_id.setdefault(
+            device_id,
+            []
+        ).append({
+            "file": path.name,
+            "status": research.get(
+                "research_status"
+            ),
+        })
 
     errors = []
 
-    for candidate in candidates:
-        if candidate.get(
-            "status"
-        ) != "published":
-            continue
-
-        device_id = candidate.get(
-            "id"
-        )
-
+    # Exit-side check:
+    # anything marked published as a candidate
+    # must actually exist in production.
+    for device_id in sorted(
+        published_candidate_ids
+    ):
         if device_id not in production_ids:
             errors.append(
                 "Published device missing from production: {}"
                 .format(device_id)
+            )
+
+    # Side-wall check:
+    # every production device must trace back to
+    # exactly one published research record.
+    for device_id in sorted(
+        production_ids
+    ):
+        records = research_by_id.get(
+            device_id,
+            []
+        )
+
+        if not records:
+            errors.append(
+                "Production device has no research record: {}"
+                .format(device_id)
+            )
+            continue
+
+        if len(records) != 1:
+            errors.append(
+                "Production device has {} research records: {}"
+                .format(
+                    len(records),
+                    device_id,
+                )
+            )
+            continue
+
+        record = records[0]
+
+        if record["status"] != "published":
+            errors.append(
+                "Production device research is not published: {} "
+                "({}: {})"
+                .format(
+                    device_id,
+                    record["file"],
+                    record["status"],
+                )
             )
 
     if errors:
@@ -567,7 +637,11 @@ def check_published_device_production():
             )
     else:
         print(
-            "PASS  All published devices are in production"
+            "PASS  {} production devices have exactly one "
+            "published research record"
+            .format(
+                len(production_ids)
+            )
         )
 
     return errors
