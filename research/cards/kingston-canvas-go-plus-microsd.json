@@ -70,16 +70,6 @@
         "first_party_confirmed": true
       },
       {
-        "id": "kingston-canvas-go-plus-microsd-product-page",
-        "type": "manufacturer_product_page",
-        "publisher": "Kingston",
-        "title": "Kingston Canvas Go! Plus microSD Memory Card",
-        "url": "https://www.kingston.com/en/memory-cards/canvas-go-plus-microsd-card-sdcg4",
-        "verified_at": "2026-08-30",
-        "authority": "manufacturer",
-        "first_party_confirmed": true
-      },
-      {
         "id": "kingston-memory-glossary",
         "type": "manufacturer_reference",
         "publisher": "Kingston",

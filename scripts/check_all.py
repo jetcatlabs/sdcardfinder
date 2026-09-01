@@ -1,6 +1,7 @@
 import json
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 
@@ -33,6 +34,7 @@ PYTHON_FILES = [
     "scripts/check_all.py",
 ]
 
+VERIFICATION_STALE_DAYS = 180
 
 def run_command(args):
     return subprocess.run(
@@ -228,6 +230,152 @@ def check_card_semantic_duplicates():
         )
 
     return errors
+
+def check_research_maintenance():
+    print()
+    print("Research maintenance")
+    print("--------------------")
+
+    warnings = []
+    errors = []
+
+    research_files = (
+        list(DEVICE_DIR.glob("*.json"))
+        + list(CARD_DIR.glob("*.json"))
+    )
+
+    today = date.today()
+
+    for path in sorted(research_files):
+        record = load_json(path)
+
+        if "device" in record:
+            item = record.get("device", {})
+        else:
+            item = record.get("card_family", {})
+
+        sources = item.get(
+            "sources",
+            []
+        )
+
+        claims = record.get(
+            "claims",
+            []
+        )
+
+        source_ids = {
+            source.get("id")
+            for source in sources
+            if source.get("id")
+        }
+
+        claimed_source_ids = {
+            claim.get("source_id")
+            for claim in claims
+            if claim.get("source_id")
+        }
+
+        # Claims pointing to nonexistent sources.
+        for claim in claims:
+            source_id = claim.get(
+                "source_id"
+            )
+
+            if (
+                source_id
+                and source_id not in source_ids
+            ):
+                errors.append(
+                    "{} claim {} references missing source {}"
+                    .format(
+                        path.name,
+                        claim.get(
+                            "field",
+                            "<unknown field>"
+                        ),
+                        source_id,
+                    )
+                )
+
+        # Sources that support no claims.
+        for source in sources:
+            source_id = source.get(
+                "id"
+            )
+
+            if (
+                source_id
+                and source_id not in claimed_source_ids
+            ):
+                warnings.append(
+                    "{} source has no claims: {}"
+                    .format(
+                        path.name,
+                        source_id,
+                    )
+                )
+
+            verified_at = source.get(
+                "verified_at"
+            )
+
+            if not verified_at:
+                continue
+
+            try:
+                verified_date = (
+                    date.fromisoformat(
+                        verified_at
+                    )
+                )
+            except ValueError:
+                errors.append(
+                    "{} source {} has invalid verified_at: {}"
+                    .format(
+                        path.name,
+                        source_id,
+                        verified_at,
+                    )
+                )
+                continue
+
+            age_days = (
+                today - verified_date
+            ).days
+
+            if age_days > VERIFICATION_STALE_DAYS:
+                warnings.append(
+                    "{} source {} verification is {} days old"
+                    .format(
+                        path.name,
+                        source_id,
+                        age_days,
+                    )
+                )
+
+    if errors:
+        for error in errors:
+            print(
+                "FAIL  {}".format(
+                    error
+                )
+            )
+
+    if warnings:
+        for warning in warnings:
+            print(
+                "WARN  {}".format(
+                    warning
+                )
+            )
+
+    if not errors and not warnings:
+        print(
+            "PASS  No maintenance issues"
+        )
+
+    return errors, warnings
 
 def check_candidate_consistency(
     candidate_path,
@@ -616,6 +764,286 @@ def check_published_card_production():
         )
 
     return errors
+    
+def normalize_value(value):
+    if isinstance(value, dict):
+        return {
+            key: normalize_value(item)
+            for key, item in value.items()
+            if item is not None
+        }
+
+    if isinstance(value, list):
+        return [
+            normalize_value(item)
+            for item in value
+        ]
+
+    return value
+
+
+def merge_dicts(base, overrides):
+    result = {}
+
+    for key, value in base.items():
+        if isinstance(value, dict):
+            result[key] = merge_dicts(
+                value,
+                {}
+            )
+        else:
+            result[key] = value
+
+    for key, value in overrides.items():
+        if (
+            isinstance(value, dict)
+            and isinstance(
+                result.get(key),
+                dict
+            )
+        ):
+            result[key] = merge_dicts(
+                result[key],
+                value,
+            )
+        else:
+            result[key] = value
+
+    return result
+
+def check_research_production_drift():
+    print()
+    print("Research / production drift")
+    print("---------------------------")
+
+    errors = []
+
+    production_devices = {
+        item.get("id"): item
+        for item in load_json(
+            DEVICES_PATH
+        )
+    }
+
+    #
+    # Devices
+    #
+    device_fields = [
+        "manufacturer",
+        "model",
+        "aliases",
+        "category",
+        "related_devices",
+        "storage",
+        "usage_profiles",
+        "notes",
+        "status",
+        "last_verified",
+    ]
+
+    for path in sorted(
+        DEVICE_DIR.glob("*.json")
+    ):
+        record = load_json(path)
+
+        if record.get(
+            "research_status"
+        ) != "published":
+            continue
+
+        research = record.get(
+            "device",
+            {}
+        )
+
+        device_id = research.get(
+            "id"
+        )
+
+        production = production_devices.get(
+            device_id
+        )
+
+        if not production:
+            continue
+
+        for field in device_fields:
+            expected = normalize_value(
+                research.get(field)
+            )
+
+            actual = normalize_value(
+                production.get(field)
+            )
+
+            if expected != actual:
+                errors.append(
+                    (
+                        "Device drift: {} field {}"
+                    ).format(
+                        device_id,
+                        field,
+                    )
+                )
+
+    #
+    # Cards
+    #
+    production_cards = load_json(
+        CARDS_PATH
+    )
+
+    production_card_map = {}
+
+    for card in production_cards:
+        key = (
+            card.get("manufacturer"),
+            card.get("product_family"),
+            card.get("form_factor"),
+            card.get("capacity_gb"),
+        )
+
+        production_card_map[key] = card
+
+    card_fields = [
+        "form_factor",
+        "bus",
+        "speed_classes",
+        "performance",
+        "endurance",
+    ]
+
+    for path in sorted(
+        CARD_DIR.glob("*.json")
+    ):
+        record = load_json(path)
+
+        if record.get(
+            "research_status"
+        ) != "published":
+            continue
+
+        family = record.get(
+            "card_family",
+            {}
+        )
+
+        manufacturer = family.get(
+            "manufacturer"
+        )
+
+        product_family = family.get(
+            "product_family"
+        )
+
+        common = family.get(
+            "common",
+            {}
+        )
+
+        for index, variant in enumerate(
+            family.get(
+                "variants",
+                []
+            )
+        ):
+            combined = merge_dicts(
+                common,
+                variant.get(
+                    "overrides",
+                    {}
+                ),
+            )
+
+            capacity = variant.get(
+                "capacity_gb"
+            )
+
+            form_factor = combined.get(
+                "form_factor"
+            )
+
+            key = (
+                manufacturer,
+                product_family,
+                form_factor,
+                capacity,
+            )
+
+            production = (
+                production_card_map.get(
+                    key
+                )
+            )
+
+            if not production:
+                # Coverage checker reports this.
+                continue
+
+            for field in card_fields:
+                expected = normalize_value(
+                    combined.get(field)
+                )
+
+                actual = normalize_value(
+                    production.get(field)
+                )
+
+                if expected != actual:
+                    errors.append(
+                        (
+                            "Card drift: {} variant {} "
+                            "field {}"
+                        ).format(
+                            family.get("id"),
+                            index,
+                            field,
+                        )
+                    )
+
+            expected_part_number = (
+                variant.get(
+                    "part_number"
+                )
+            )
+
+            actual_part_number = (
+                production.get(
+                    "part_number"
+                )
+            )
+
+            if (
+                normalize_value(
+                    expected_part_number
+                )
+                != normalize_value(
+                    actual_part_number
+                )
+            ):
+                errors.append(
+                    (
+                        "Card drift: {} variant {} "
+                        "field part_number"
+                    ).format(
+                        family.get("id"),
+                        index,
+                    )
+                )
+
+    if errors:
+        for error in errors:
+            print(
+                "FAIL  {}".format(
+                    error
+                )
+            )
+    else:
+        print(
+            "PASS  Published research matches production"
+        )
+
+    return errors
 
 def compile_python():
     print()
@@ -771,6 +1199,14 @@ def main():
     published_card_errors = (
         check_published_card_production()
     )
+    
+    maintenance_errors, maintenance_warnings = (
+        check_research_maintenance()
+    )
+    
+    drift_errors = (
+        check_research_production_drift()
+    )
 
     compile_failures = compile_python()
 
@@ -784,6 +1220,8 @@ def main():
         card_candidate_errors,
         published_device_errors,
         published_card_errors,
+        maintenance_errors,
+        drift_errors,
         compile_failures,
     ])
 
@@ -838,6 +1276,8 @@ def main():
         published_device_errors,
         published_card_errors,
         compile_failures,
+        maintenance_errors,
+        drift_errors,
         build_failure,
     ])
 
@@ -849,6 +1289,22 @@ def main():
         "Devices:       {} PASS / {} FAIL".format(
             device_passed,
             len(device_failures),
+        )
+    )
+
+    print(
+        "Maintenance:   {}{}".format(
+            "FAIL"
+            if maintenance_errors
+            else "PASS",
+            (
+                " / {} warning(s)"
+                .format(
+                    len(maintenance_warnings)
+                )
+                if maintenance_warnings
+                else ""
+            ),
         )
     )
 
@@ -868,6 +1324,7 @@ def main():
                 or semantic_duplicate_errors
                 or published_device_errors
                 or published_card_errors
+                or drift_errors
             )
             else "PASS"
         )
