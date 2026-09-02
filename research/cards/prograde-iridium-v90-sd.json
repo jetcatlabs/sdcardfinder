@@ -1,0 +1,133 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "prograde-iridium-v90-sd",
+    "manufacturer": "ProGrade Digital",
+    "product_family": "SDXC UHS-II V90 Iridium",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V90",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 300,
+        "max_write_mbps": 275,
+        "minimum_sustained_write_mbps": 90
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 200
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 512,
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 1024,
+        "overrides": {}
+      }
+    ],
+    "sources": [
+      {
+        "id": "prograde-iridium-v90-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "ProGrade Digital",
+        "title": "ProGrade Digital SDXC UHS-II V90 300R Iridium Memory Card",
+        "url": "https://shop.progradedigital.com/products/sdxc-uhs-ii-v90-300r-iridium-memory-card",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade identifies the Iridium V90 family as SDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade states that the Iridium V90 card uses the UHS-II bus."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade states that the card is compatible with the Class 10 standard."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade identifies U3 speed-class compatibility."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade specifies Video Speed Class V90."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade rates the Iridium V90 family up to 300MB/s read."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade rates the 256GB, 512GB, and 1TB capacities up to 275MB/s write; the 128GB difference is represented by an override."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade states that V90 guarantees minimum write speeds of at least 90MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade lists a 128GB capacity."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade rates the 128GB capacity up to 200MB/s write."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade lists a 256GB capacity."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade lists a 512GB capacity."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "prograde-iridium-v90-product-page",
+      "evidence": "ProGrade lists a 1TB capacity."
+    }
+  ]
+}
