@@ -1067,8 +1067,8 @@ def generate_usage_recommendations(device, cards):
             key=usage_priority
         )
 
-        visible_profile_matches = profile_matches[:6]
-        hidden_profile_matches = profile_matches[6:]
+        visible_profile_matches = profile_matches[:3]
+        hidden_profile_matches = profile_matches[3:]
 
         output += f"""
         <div class="usage-recommendation-group">
@@ -1152,11 +1152,11 @@ def generate_application_recommendations(device, cards):
         key=usage_priority
     )
 
-    visible_preferred = preferred[:6]
-    hidden_preferred = preferred[6:]
+    visible_preferred = preferred[:3]
+    hidden_preferred = preferred[3:]
 
-    visible_others = others[:6]
-    hidden_others = others[6:]
+    visible_others = others[:3]
+    hidden_others = others[3:]
 
     output = ""
 
@@ -1287,11 +1287,11 @@ def generate_recommended_spec_recommendations(device, cards):
                     match
                 )
 
-        visible_endurance = endurance_matches[:6]
-        hidden_endurance = endurance_matches[6:]
+        visible_endurance = endurance_matches[:3]
+        hidden_endurance = endurance_matches[3:]
 
-        visible_standard = standard_matches[:6]
-        hidden_standard = standard_matches[6:]
+        visible_standard = standard_matches[:3]
+        hidden_standard = standard_matches[3:]
 
         output = ""
 
@@ -1435,14 +1435,14 @@ def generate_recommended_spec_recommendations(device, cards):
                 match
             )
 
-    visible_preferred = preferred[:6]
-    hidden_preferred = preferred[6:]
+    visible_preferred = preferred[:3]
+    hidden_preferred = preferred[3:]
 
-    visible_endurance = endurance_others[:6]
-    hidden_endurance = endurance_others[6:]
+    visible_endurance = endurance_others[:3]
+    hidden_endurance = endurance_others[3:]
 
-    visible_standard = standard_others[:6]
-    hidden_standard = standard_others[6:]
+    visible_standard = standard_others[:3]
+    hidden_standard = standard_others[3:]
 
     output = ""
 
