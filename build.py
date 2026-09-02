@@ -13,6 +13,11 @@ CARDS_FILE = SRC / "data" / "cards.json"
 
 SITE_URL = "https://sdcardfinder.com"
 
+APPLICATION_CLASS_RANK = {
+    "A1": 1,
+    "A2": 2,
+}
+
 VIDEO_SPEED_RANK = {
     "V6": 6,
     "V10": 10,
@@ -139,6 +144,31 @@ def card_meets_requirements(card, requirements):
         ):
             return False
     
+    minimum_application = requirements.get(
+        "minimum_application_class"
+    )
+
+    if minimum_application:
+        card_application = card.get(
+            "speed_classes",
+            {}
+        ).get("application")
+
+        if not card_application:
+            return False
+
+        if (
+            APPLICATION_CLASS_RANK.get(
+                card_application,
+                0
+            )
+            < APPLICATION_CLASS_RANK.get(
+                minimum_application,
+                0
+            )
+        ):
+            return False
+
     minimum_video = requirements.get(
         "minimum_video_speed_class"
     )
