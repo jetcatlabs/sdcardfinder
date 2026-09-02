@@ -13,6 +13,29 @@ CARDS_FILE = SRC / "data" / "cards.json"
 
 SITE_URL = "https://sdcardfinder.com"
 
+HOME_CATEGORY_ORDER = [
+    "gaming-handheld",
+    "action-camera",
+    "camera",
+    "single-board-computer",
+    "dash-camera",
+]
+
+HOME_CATEGORY_LABELS = {
+    "gaming-handheld": "Gaming handhelds",
+    "action-camera": "Action cameras",
+    "camera": "Cameras",
+    "single-board-computer": "Single-board computers",
+    "dash-camera": "Dash cameras",
+}
+
+HOME_FEATURED_DEVICE_IDS = [
+    "steam-deck-oled",
+    "gopro-hero13-black",
+    "sony-a7-iv",
+    "raspberry-pi-5",
+]
+
 APPLICATION_CLASS_RANK = {
     "A1": 1,
     "A2": 2,
@@ -87,14 +110,120 @@ def clean_dist():
 
     DIST.mkdir()
 
+def homepage_category_cards(devices):
+    output = []
 
-def copy_static_files():
-    shutil.copy2(
-        SRC / "index.html",
-        DIST / "index.html"
+    for category in HOME_CATEGORY_ORDER:
+        matches = [
+            device
+            for device in devices
+            if device.get("category") == category
+        ]
+
+        if not matches:
+            continue
+
+        count = len(matches)
+        label = HOME_CATEGORY_LABELS[category]
+
+        output.append(
+            f"""
+            <a
+                class="category-card"
+                href="/devices/#{html.escape(category)}"
+            >
+                <span class="category-card-name">
+                    {html.escape(label)}
+                </span>
+
+                <span class="category-card-count">
+                    {count}
+                    {"device" if count == 1 else "devices"}
+                </span>
+
+                <span class="category-card-link">
+                    Browse →
+                </span>
+            </a>
+            """
+        )
+
+    return "\n".join(output)
+
+
+def homepage_featured_cards(devices):
+    devices_by_id = {
+        device["id"]: device
+        for device in devices
+    }
+
+    output = []
+
+    for device_id in HOME_FEATURED_DEVICE_IDS:
+        device = devices_by_id.get(device_id)
+
+        if not device:
+            continue
+
+        category = device["category"].replace(
+            "-",
+            " "
+        ).title()
+
+        output.append(
+            f"""
+            <a
+                class="featured-device-card"
+                href="/device/{html.escape(device["id"])}/"
+            >
+                <span class="featured-category">
+                    {html.escape(category)}
+                </span>
+
+                <strong>
+                    {html.escape(device["manufacturer"])}
+                    {html.escape(device["model"])}
+                </strong>
+
+                <span class="featured-link">
+                    View guide →
+                </span>
+            </a>
+            """
+        )
+
+    return "\n".join(output)
+
+def copy_static_files(devices):
+    homepage = (
+        SRC / "index.html"
+    ).read_text(
+        encoding="utf-8"
     )
 
-    for directory in ["css", "js", "data", "assets"]:
+    homepage = homepage.replace(
+        "<!-- BUILD:CATEGORY_CARDS -->",
+        homepage_category_cards(devices),
+    )
+
+    homepage = homepage.replace(
+        "<!-- BUILD:FEATURED_CARDS -->",
+        homepage_featured_cards(devices),
+    )
+
+    (
+        DIST / "index.html"
+    ).write_text(
+        homepage,
+        encoding="utf-8"
+    )
+
+    for directory in [
+        "css",
+        "js",
+        "data",
+        "assets",
+    ]:
         shutil.copytree(
             SRC / directory,
             DIST / directory
@@ -4015,7 +4144,7 @@ def build():
     )
 
     clean_dist()
-    copy_static_files()
+    copy_static_files(devices)
 
     generate_devices_page(devices)
 
