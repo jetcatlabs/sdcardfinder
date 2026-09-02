@@ -6254,5 +6254,152 @@
       "recording_hours": null,
       "pe_cycles": null
     }
+  },
+  {
+    "id": "prograde-v60-microsd-uhs-ii-128gb",
+    "manufacturer": "ProGrade Digital",
+    "product_family": "microSDXC UHS-II V60",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 250,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "ProGrade Digital",
+        "title": "ProGrade Digital microSDXC UHS-II V60 Data Sheet",
+        "url": "https://progradedigital.com/wp-content/uploads/2024/06/ProGrade_DS_microSD_V60_6-20-24.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "prograde-v60-microsd-uhs-ii-256gb",
+    "manufacturer": "ProGrade Digital",
+    "product_family": "microSDXC UHS-II V60",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 250,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "ProGrade Digital",
+        "title": "ProGrade Digital microSDXC UHS-II V60 Data Sheet",
+        "url": "https://progradedigital.com/wp-content/uploads/2024/06/ProGrade_DS_microSD_V60_6-20-24.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "prograde-v60-microsd-uhs-ii-512gb",
+    "manufacturer": "ProGrade Digital",
+    "product_family": "microSDXC UHS-II V60",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 250,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": null,
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "ProGrade Digital",
+        "title": "ProGrade Digital microSDXC UHS-II V60 Data Sheet",
+        "url": "https://progradedigital.com/wp-content/uploads/2024/06/ProGrade_DS_microSD_V60_6-20-24.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
   }
 ]

@@ -1,0 +1,115 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "prograde-v60-microsd-uhs-ii",
+    "manufacturer": "ProGrade Digital",
+    "product_family": "microSDXC UHS-II V60",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V60",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 250,
+        "max_write_mbps": 130,
+        "minimum_sustained_write_mbps": 60
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 256,
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 512,
+        "overrides": {}
+      }
+    ],
+    "sources": [
+      {
+        "id": "prograde-v60-microsd-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "ProGrade Digital",
+        "title": "ProGrade Digital microSDXC UHS-II V60 Data Sheet",
+        "url": "https://progradedigital.com/wp-content/uploads/2024/06/ProGrade_DS_microSD_V60_6-20-24.pdf",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "prograde-v60-microsd-datasheet",
+      "evidence": "ProGrade identifies the family as microSDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "prograde-v60-microsd-datasheet",
+      "evidence": "ProGrade specifies the family as UHS-II."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "prograde-v60-microsd-datasheet",
+      "evidence": "ProGrade specifies SD standard Speed Class C10."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "prograde-v60-microsd-datasheet",
+      "evidence": "ProGrade specifies UHS Speed Class U3."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "prograde-v60-microsd-datasheet",
+      "evidence": "ProGrade specifies Video Speed Class V60."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "prograde-v60-microsd-datasheet",
+      "evidence": "ProGrade rates the family up to 250MB/s read."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "prograde-v60-microsd-datasheet",
+      "evidence": "ProGrade rates the family up to 130MB/s write."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "prograde-v60-microsd-datasheet",
+      "evidence": "ProGrade certifies V60 performance at a minimum sustained write rate of 60MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "prograde-v60-microsd-datasheet",
+      "evidence": "ProGrade lists a 128GB capacity."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "prograde-v60-microsd-datasheet",
+      "evidence": "ProGrade lists a 256GB capacity."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "prograde-v60-microsd-datasheet",
+      "evidence": "ProGrade lists a 512GB capacity."
+    }
+  ]
+}
