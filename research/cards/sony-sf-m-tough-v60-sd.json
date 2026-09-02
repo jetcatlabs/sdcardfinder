@@ -1,0 +1,178 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "sony-sf-m-tough-v60-sd",
+    "manufacturer": "Sony",
+    "product_family": "SF-M series TOUGH specification",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V60",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 277,
+        "max_write_mbps": 150,
+        "minimum_sustained_write_mbps": 60
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": "SF-M64T",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "SF-M128T",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "SF-M256T",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "SF-M512T",
+        "overrides": {}
+      }
+    ],
+    "sources": [
+      {
+        "id": "sony-sf-m64t-specifications",
+        "type": "manufacturer_product_page",
+        "publisher": "Sony",
+        "title": "SF-M64T Specifications",
+        "url": "https://www.sony.com/electronics/support/memory-cards-sd-cards/sf-m64t/specifications",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-sf-m128t-specifications",
+        "type": "manufacturer_product_page",
+        "publisher": "Sony",
+        "title": "SF-M128T Specifications",
+        "url": "https://www.sony.com/electronics/support/memory-cards-sd-cards/sf-m128t/specifications",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-sf-m256t-specifications",
+        "type": "manufacturer_product_page",
+        "publisher": "Sony",
+        "title": "SF-M256T Specifications",
+        "url": "https://www.sony.com/electronics/support/memory-cards-sd-cards/sf-m256t/specifications",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-sf-m512t-product",
+        "type": "manufacturer_product_page",
+        "publisher": "Sony",
+        "title": "Sony 512 GB TOUGH M Series UHS-II SDXC Memory Card",
+        "url": "https://electronics.sony.com/imaging/imaging-accessories/media/p/sfm512t-t1",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "sony-sf-m512t-product",
+      "evidence": "Sony identifies the TOUGH M Series card as SDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "sony-sf-m128t-specifications",
+      "evidence": "Sony specifies the interface as UHS-II."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "sony-sf-m128t-specifications",
+      "evidence": "Sony specifies Class 10 as the SD Speed Class."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "sony-sf-m128t-specifications",
+      "evidence": "Sony specifies UHS Speed Class 3 (U3)."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "sony-sf-m128t-specifications",
+      "evidence": "Sony specifies Video Speed Class V60."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "sony-sf-m128t-specifications",
+      "evidence": "Sony rates UHS-II read performance up to 277MB/s."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "sony-sf-m128t-specifications",
+      "evidence": "Sony rates UHS-II write performance up to 150MB/s."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "sony-sf-m512t-product",
+      "evidence": "Sony states that V60 guarantees a minimum sustained write speed of 60MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "sony-sf-m64t-specifications",
+      "evidence": "Sony lists the SF-M64T capacity as 64GB."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "sony-sf-m64t-specifications",
+      "evidence": "Sony identifies the 64GB TOUGH model as SF-M64T."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "sony-sf-m128t-specifications",
+      "evidence": "Sony lists the SF-M128T capacity as 128GB."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "sony-sf-m128t-specifications",
+      "evidence": "Sony identifies the 128GB TOUGH model as SF-M128T."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "sony-sf-m256t-specifications",
+      "evidence": "Sony lists the SF-M256T capacity as 256GB."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "sony-sf-m256t-specifications",
+      "evidence": "Sony identifies the 256GB TOUGH model as SF-M256T."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "sony-sf-m512t-product",
+      "evidence": "Sony lists the TOUGH M Series card in a 512GB capacity."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "sony-sf-m512t-product",
+      "evidence": "Sony identifies the 512GB TOUGH M Series model as SF-M512T."
+    }
+  ]
+}
