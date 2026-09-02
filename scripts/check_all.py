@@ -35,6 +35,7 @@ PYTHON_FILES = [
     "scripts/review_device.py",
     "scripts/review_card_family.py",
     "scripts/add_candidate.py",
+    "scripts/triage_device.py",
 ]
 
 VERIFICATION_STALE_DAYS = 180

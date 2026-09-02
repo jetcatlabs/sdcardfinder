@@ -44,10 +44,25 @@ SCRIPTS_DIR = Path(__file__).resolve().parent
 
 
 def start_research(candidate_type, candidate_id):
+    
+    extra_args = []
+
     if candidate_type == "device":
-        script = SCRIPTS_DIR / "new_device.py"
+        script = (
+            SCRIPTS_DIR
+            / "triage_device.py"
+        )
+
+        extra_args = [
+            "--start"
+        ]
+
     elif candidate_type == "card":
-        script = SCRIPTS_DIR / "new_card_family.py"
+        script = (
+            SCRIPTS_DIR
+            / "new_card_family.py"
+        )
+        
     else:
         print(
             "ERROR: Unknown candidate type: {}".format(
@@ -67,6 +82,7 @@ def start_research(candidate_type, candidate_id):
         sys.executable,
         str(script),
         candidate_id,
+        *extra_args,
     ])
 
     if result.returncode != 0:
