@@ -830,6 +830,139 @@ def usage_priority(match):
         card.get("product_family", "")
     )
 
+PRACTICAL_CAPACITY_TARGETS = {
+    "action-camera": [
+        128,
+        256,
+        512,
+    ],
+    "camera": [
+        128,
+        256,
+        512,
+    ],
+}
+
+
+def split_visible_matches(
+    matches,
+    category,
+    limit=3,
+):
+    targets = PRACTICAL_CAPACITY_TARGETS.get(
+        category
+    )
+
+    if not targets:
+        return (
+            matches[:limit],
+            matches[limit:],
+        )
+
+    selected = []
+    selected_ids = set()
+
+    indexed_matches = list(
+        enumerate(matches)
+    )
+
+    selected_families = set()
+    selected_manufacturers = set()
+
+    for target in targets[:limit]:
+        candidates = [
+            (index, match)
+            for index, match
+            in indexed_matches
+            if match["card"]["id"]
+            not in selected_ids
+        ]
+
+        if not candidates:
+            break
+
+        index, match = min(
+            candidates,
+            key=lambda item: (
+                abs(
+                    item[1]["card"].get(
+                        "capacity_gb",
+                        0,
+                    )
+                    - target
+                ),
+                1
+                if (
+                    item[1]["card"].get(
+                        "manufacturer",
+                        ""
+                    ),
+                    item[1]["card"].get(
+                        "product_family",
+                        ""
+                    ),
+                ) in selected_families
+                else 0,
+                1
+                if item[1]["card"].get(
+                    "manufacturer",
+                    ""
+                ) in selected_manufacturers
+                else 0,
+                item[0],
+            ),
+        )
+
+        selected.append(match)
+        selected_ids.add(
+            match["card"]["id"]
+        )
+
+        selected_families.add(
+            (
+                match["card"].get(
+                    "manufacturer",
+                    ""
+                ),
+                match["card"].get(
+                    "product_family",
+                    ""
+                ),
+            )
+        )
+
+        selected_manufacturers.add(
+            match["card"].get(
+                "manufacturer",
+                ""
+            )
+        )
+
+    if len(selected) < limit:
+        for match in matches:
+            if (
+                match["card"]["id"]
+                in selected_ids
+            ):
+                continue
+
+            selected.append(match)
+            selected_ids.add(
+                match["card"]["id"]
+            )
+
+            if len(selected) >= limit:
+                break
+
+    hidden = [
+        match
+        for match in matches
+        if match["card"]["id"]
+        not in selected_ids
+    ]
+
+    return selected, hidden
+
 def alternate_priority(match):
     card = match["card"]
 
@@ -1067,8 +1200,13 @@ def generate_usage_recommendations(device, cards):
             key=usage_priority
         )
 
-        visible_profile_matches = profile_matches[:3]
-        hidden_profile_matches = profile_matches[3:]
+        (
+            visible_profile_matches,
+            hidden_profile_matches,
+        ) = split_visible_matches(
+            profile_matches,
+            device["category"],
+        )
 
         output += f"""
         <div class="usage-recommendation-group">
@@ -1152,11 +1290,21 @@ def generate_application_recommendations(device, cards):
         key=usage_priority
     )
 
-    visible_preferred = preferred[:3]
-    hidden_preferred = preferred[3:]
+    (
+        visible_preferred,
+        hidden_preferred,
+    ) = split_visible_matches(
+        preferred,
+        device["category"],
+    )
 
-    visible_others = others[:3]
-    hidden_others = others[3:]
+    (
+        visible_others,
+        hidden_others,
+    ) = split_visible_matches(
+        others,
+        device["category"],
+    )
 
     output = ""
 
@@ -1435,14 +1583,29 @@ def generate_recommended_spec_recommendations(device, cards):
                 match
             )
 
-    visible_preferred = preferred[:3]
-    hidden_preferred = preferred[3:]
+    (
+        visible_preferred,
+        hidden_preferred,
+    ) = split_visible_matches(
+        preferred,
+        device["category"],
+    )
 
-    visible_endurance = endurance_others[:3]
-    hidden_endurance = endurance_others[3:]
+    (
+        visible_endurance,
+        hidden_endurance,
+    ) = split_visible_matches(
+        endurance_others,
+        device["category"],
+    )
 
-    visible_standard = standard_others[:3]
-    hidden_standard = standard_others[3:]
+    (
+        visible_standard,
+        hidden_standard,
+    ) = split_visible_matches(
+        standard_others,
+        device["category"],
+    )
 
     output = ""
 
@@ -1923,6 +2086,24 @@ def minimum_speed_text(requirements):
 
     return " · ".join(values)
 
+def recommended_speed_text(recommendations):
+    values = []
+
+    for key in [
+        "minimum_sd_speed_class",
+        "uhs_speed_class",
+        "video_speed_class",
+        "application_class",
+    ]:
+        value = recommendations.get(key)
+
+        if value:
+            values.append(value)
+
+    if not values:
+        return None
+
+    return " · ".join(values)
 
 def capacity_summary(slot):
     min_capacity = slot.get(
@@ -2113,6 +2294,19 @@ def generate_requirements_summary(device):
             output += requirement_item(
                 "Minimum speed",
                 minimum_speed,
+            )
+
+        recommended_speed = recommended_speed_text(
+            slot.get(
+                "recommendations",
+                {}
+            )
+        )
+
+        if recommended_speed:
+            output += requirement_item(
+                "Recommended speed",
+                recommended_speed,
             )
 
         if (
