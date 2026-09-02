@@ -1,0 +1,257 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "sandisk-extreme-microsd",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "sd": null,
+        "uhs": "U3",
+        "video": "V30",
+        "application": "A2",
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 245,
+        "max_write_mbps": 170,
+        "minimum_sustained_write_mbps": 30
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 32,
+        "part_number": "SDSQXH9-032G-GZ6MA",
+        "overrides": {
+          "form_factor": "microSDHC",
+          "performance": {
+            "max_read_mbps": 100,
+            "max_write_mbps": 60
+          }
+        }
+      },
+      {
+        "capacity_gb": 64,
+        "part_number": "SDSQXH9-064G-GZ6MA",
+        "overrides": {
+          "performance": {
+            "max_read_mbps": 170,
+            "max_write_mbps": 80
+          }
+        }
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "SDSQXH9-128G-GZ6MA",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 120
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "SDSQXH9-256G-GZ6MA",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "SDSQXH9-512G-GZ6MA",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 1024,
+        "part_number": "SDSQXH9-1T00-GZ6MA",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 2048,
+        "part_number": "SDSQXH9-2T00-GN6MA",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 150
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "sandisk-extreme-microsd-2026-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-microsd-a2/data-sheet-extreme-uhs-i-microsd-a2.pdf",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sandisk-extreme-microsd-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-uhs-i-microsd-a2",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "sandisk-extreme-microsd-product-page",
+      "evidence": "SanDisk identifies the 64GB through 2TB variants as microSDXC; the 32GB microSDHC variant is represented by an override."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk specifies the interface as UHS-I."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk identifies the current Extreme microSD family as UHS Speed Class U3."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk identifies the current Extreme microSD family as Video Speed Class V30."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk states that the current Extreme microSD family is rated A2."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk rates the 128GB through 2TB variants up to 245MB/s read; lower-capacity differences are represented by overrides."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk rates the 256GB through 1TB variants up to 170MB/s write; other capacity differences are represented by overrides."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk defines the V30 rating as a sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk lists a 32GB capacity."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "sandisk-extreme-microsd-product-page",
+      "evidence": "SanDisk lists SDSQXH9-032G-GZ6MA for the 32GB model."
+    },
+    {
+      "field": "variants.0.overrides.form_factor",
+      "source_id": "sandisk-extreme-microsd-product-page",
+      "evidence": "SanDisk identifies the 32GB model as microSDHC."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_read_mbps",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk rates the 32GB variant up to 100MB/s read."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk rates the 32GB variant up to 60MB/s write."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk lists a 64GB capacity."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "sandisk-extreme-microsd-product-page",
+      "evidence": "SanDisk lists SDSQXH9-064G-GZ6MA for the 64GB model."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_read_mbps",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk rates the 64GB variant up to 170MB/s read."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk rates the 64GB variant up to 80MB/s write."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk lists a 128GB capacity."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "sandisk-extreme-microsd-product-page",
+      "evidence": "SanDisk lists SDSQXH9-128G-GZ6MA for the 128GB model."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk rates the 128GB variant up to 120MB/s write."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk lists a 256GB capacity."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "sandisk-extreme-microsd-product-page",
+      "evidence": "SanDisk lists SDSQXH9-256G-GZ6MA for the 256GB model."
+    },
+    {
+      "field": "variants.4.capacity_gb",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk lists a 512GB capacity."
+    },
+    {
+      "field": "variants.4.part_number",
+      "source_id": "sandisk-extreme-microsd-product-page",
+      "evidence": "SanDisk lists SDSQXH9-512G-GZ6MA for the 512GB model."
+    },
+    {
+      "field": "variants.5.capacity_gb",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk lists a 1TB capacity."
+    },
+    {
+      "field": "variants.5.part_number",
+      "source_id": "sandisk-extreme-microsd-product-page",
+      "evidence": "SanDisk lists SDSQXH9-1T00-GZ6MA for the 1TB model."
+    },
+    {
+      "field": "variants.6.capacity_gb",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk lists a 2TB capacity."
+    },
+    {
+      "field": "variants.6.part_number",
+      "source_id": "sandisk-extreme-microsd-product-page",
+      "evidence": "SanDisk lists SDSQXH9-2T00-GN6MA for the 2TB model."
+    },
+    {
+      "field": "variants.6.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-microsd-2026-datasheet",
+      "evidence": "SanDisk rates the 2TB variant up to 150MB/s write."
+    }
+  ]
+}

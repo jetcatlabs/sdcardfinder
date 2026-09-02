@@ -5417,5 +5417,418 @@
       "recording_hours": 120000,
       "pe_cycles": null
     }
+  },
+  {
+    "id": "sandisk-extreme-microsd-32gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme",
+    "model": "32GB microSDHC",
+    "capacity_gb": 32,
+    "form_factor": "microSDHC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 60,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQXH9-032G-GZ6MA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-microsd-a2/data-sheet-extreme-uhs-i-microsd-a2.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-uhs-i-microsd-a2",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "form_factor",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-extreme-microsd-64gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme",
+    "model": "64GB microSDXC",
+    "capacity_gb": 64,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 170,
+      "max_write_mbps": 80,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQXH9-064G-GZ6MA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-microsd-a2/data-sheet-extreme-uhs-i-microsd-a2.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-uhs-i-microsd-a2",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "form_factor",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-extreme-microsd-128gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 245,
+      "max_write_mbps": 120,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQXH9-128G-GZ6MA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-microsd-a2/data-sheet-extreme-uhs-i-microsd-a2.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-uhs-i-microsd-a2",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "form_factor",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-extreme-microsd-256gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 245,
+      "max_write_mbps": 170,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQXH9-256G-GZ6MA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-microsd-a2/data-sheet-extreme-uhs-i-microsd-a2.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-uhs-i-microsd-a2",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "form_factor",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-extreme-microsd-512gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 245,
+      "max_write_mbps": 170,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQXH9-512G-GZ6MA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-microsd-a2/data-sheet-extreme-uhs-i-microsd-a2.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-uhs-i-microsd-a2",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "form_factor",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-extreme-microsd-1tb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme",
+    "model": "1TB microSDXC",
+    "capacity_gb": 1024,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 245,
+      "max_write_mbps": 170,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQXH9-1T00-GZ6MA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-microsd-a2/data-sheet-extreme-uhs-i-microsd-a2.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-uhs-i-microsd-a2",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "form_factor",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-extreme-microsd-2048gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme",
+    "model": "2048GB microSDXC",
+    "capacity_gb": 2048,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 245,
+      "max_write_mbps": 150,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQXH9-2T00-GN6MA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-microsd-a2/data-sheet-extreme-uhs-i-microsd-a2.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SANDISK Extreme microSD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-extreme-uhs-i-microsd-a2",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "form_factor",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
   }
 ]
