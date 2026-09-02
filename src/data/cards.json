@@ -7207,5 +7207,182 @@
       "recording_hours": null,
       "pe_cycles": null
     }
+  },
+  {
+    "id": "pny-elitex-pro60-v60-sd-128gb",
+    "manufacturer": "PNY",
+    "product_family": "EliteX-PRO60",
+    "model": "128GB SDXC",
+    "capacity_gb": 128,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 100,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": "P-SD128V60280EXP6-GE",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "PNY",
+        "title": "EliteX-PRO60 Class 10 U3 V60 UHS-II SD Flash Memory Card",
+        "url": "https://www.pny.com/elitex-pro60-class-10-u3-v60-uhs-ii-sd-flash-memory-card",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "PNY",
+        "title": "EliteX-PRO60 Class 10 U3 V60 UHS-II SD Flash Memory Card",
+        "url": "https://www.pny.com/file%20library/company/support/product%20brochures/flash%20memory%20cards/pny-elitex-pro60-class-10-u3-sd.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "form_factor",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "pny-elitex-pro60-v60-sd-256gb",
+    "manufacturer": "PNY",
+    "product_family": "EliteX-PRO60",
+    "model": "256GB SDXC",
+    "capacity_gb": 256,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 180,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": "P-SD256V60280EXP6-GE",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "PNY",
+        "title": "EliteX-PRO60 Class 10 U3 V60 UHS-II SD Flash Memory Card",
+        "url": "https://www.pny.com/elitex-pro60-class-10-u3-v60-uhs-ii-sd-flash-memory-card",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "PNY",
+        "title": "EliteX-PRO60 Class 10 U3 V60 UHS-II SD Flash Memory Card",
+        "url": "https://www.pny.com/file%20library/company/support/product%20brochures/flash%20memory%20cards/pny-elitex-pro60-class-10-u3-sd.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "form_factor",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "pny-elitex-pro60-v60-sd-512gb",
+    "manufacturer": "PNY",
+    "product_family": "EliteX-PRO60",
+    "model": "512GB SDXC",
+    "capacity_gb": 512,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 150,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": "P-SD512V60280EXP6-GE",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "PNY",
+        "title": "EliteX-PRO60 Class 10 U3 V60 UHS-II SD Flash Memory Card",
+        "url": "https://www.pny.com/elitex-pro60-class-10-u3-v60-uhs-ii-sd-flash-memory-card",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "PNY",
+        "title": "EliteX-PRO60 Class 10 U3 V60 UHS-II SD Flash Memory Card",
+        "url": "https://www.pny.com/file%20library/company/support/product%20brochures/flash%20memory%20cards/pny-elitex-pro60-class-10-u3-sd.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "form_factor",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
   }
 ]

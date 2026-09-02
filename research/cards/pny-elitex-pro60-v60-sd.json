@@ -1,0 +1,161 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "pny-elitex-pro60-v60-sd",
+    "manufacturer": "PNY",
+    "product_family": "EliteX-PRO60",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V60",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 280,
+        "max_write_mbps": 180,
+        "minimum_sustained_write_mbps": 60
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "part_number": "P-SD128V60280EXP6-GE",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 100
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "P-SD256V60280EXP6-GE",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "P-SD512V60280EXP6-GE",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 150
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "pny-elitex-pro60-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "PNY",
+        "title": "EliteX-PRO60 Class 10 U3 V60 UHS-II SD Flash Memory Card",
+        "url": "https://www.pny.com/elitex-pro60-class-10-u3-v60-uhs-ii-sd-flash-memory-card",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "pny-elitex-pro60-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "PNY",
+        "title": "EliteX-PRO60 Class 10 U3 V60 UHS-II SD Flash Memory Card",
+        "url": "https://www.pny.com/file%20library/company/support/product%20brochures/flash%20memory%20cards/pny-elitex-pro60-class-10-u3-sd.pdf",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "pny-elitex-pro60-datasheet",
+      "evidence": "PNY specifies compatibility with host devices using an SDXC slot and lists the EliteX-PRO60 capacities as SDXC cards."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY specifies UHS-II technology and interface compatibility."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY specifies Class 10."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY specifies UHS Speed Class U3."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY specifies Video Speed Class V60."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY rates all EliteX-PRO60 capacities up to 280MB/s sequential read."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY rates the 256GB capacity up to 180MB/s write; the 128GB and 512GB differences are represented by overrides."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY states that V60 ensures a minimum sustained write speed of 60MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY lists a 128GB capacity."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "pny-elitex-pro60-datasheet",
+      "evidence": "PNY identifies the 128GB model as P-SD128V60280EXP6-GE."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY rates the 128GB capacity up to 100MB/s write."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY lists a 256GB capacity."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "pny-elitex-pro60-datasheet",
+      "evidence": "PNY identifies the 256GB model as P-SD256V60280EXP6-GE."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY lists a 512GB capacity."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "pny-elitex-pro60-datasheet",
+      "evidence": "PNY identifies the 512GB model as P-SD512V60280EXP6-GE."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "pny-elitex-pro60-product-page",
+      "evidence": "PNY rates the 512GB capacity up to 150MB/s write."
+    }
+  ]
+}
