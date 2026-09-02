@@ -1,0 +1,153 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "samsung-p9-express-microsd",
+    "manufacturer": "Samsung",
+    "product_family": "P9 Express",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "SD Express",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V30",
+        "application": "A1",
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 800,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": 30
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 256,
+        "part_number": "MB-MK256T",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 200
+          }
+        }
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "MB-MK512T",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 310
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "samsung-p9-express-datasheet",
+        "publisher": "Samsung",
+        "title": "Samsung microSD P9 Express Card Data Sheet Rev. 1.0",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/Samsung_microSD_Express_Card_P9_Express_Datasheet_Rev.1.0.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "samsung-p9-express-brochure",
+        "publisher": "Samsung",
+        "title": "P9 Express Brochure",
+        "url": "https://download.semiconductor.samsung.com/resources/brochure/microSD_Express_Card_P9_Express_Brochure_10150012100312.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "samsung-p9-express-newsroom",
+        "publisher": "Samsung",
+        "title": "Samsung launches P9 Express for mobile gaming",
+        "url": "https://news.samsung.com/de/schnell-richtig-schnell-express-samsung-launcht-p9-express-fur-mobile-gaming-abenteuer",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "samsung-p9-express-datasheet",
+      "evidence": "Samsung identifies the P9 Express form factor as microSDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "samsung-p9-express-datasheet",
+      "evidence": "Samsung specifies PCIe Gen 3.0 x1, NVMe 1.3, and SD 7.1 for Express operation, with UHS-I fallback."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "samsung-p9-express-datasheet",
+      "evidence": "Samsung specifies Class 10."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "samsung-p9-express-datasheet",
+      "evidence": "Samsung specifies UHS Speed Grade 3 (U3)."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "samsung-p9-express-datasheet",
+      "evidence": "Samsung specifies Video Speed Class V30."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "samsung-p9-express-brochure",
+      "evidence": "Samsung lists Application Performance Class A1 for the P9 Express."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "samsung-p9-express-datasheet",
+      "evidence": "Samsung specifies sequential SD Express read performance of up to 800 MB/s."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-p9-express-datasheet",
+      "evidence": "Samsung states that V30 represents a sustained video capture rate of 30 MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "samsung-p9-express-brochure",
+      "evidence": "Samsung lists a 256GB P9 Express variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "samsung-p9-express-brochure",
+      "evidence": "Samsung identifies the 256GB P9 Express as model MB-MK256T."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "samsung-p9-express-newsroom",
+      "evidence": "Samsung specifies sequential write performance up to 200 MB/s for the 256GB variant."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "samsung-p9-express-brochure",
+      "evidence": "Samsung lists a 512GB P9 Express variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "samsung-p9-express-brochure",
+      "evidence": "Samsung identifies the 512GB P9 Express as model MB-MK512T."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "samsung-p9-express-newsroom",
+      "evidence": "Samsung specifies sequential write performance up to 310 MB/s for the 512GB variant."
+    }
+  ]
+}

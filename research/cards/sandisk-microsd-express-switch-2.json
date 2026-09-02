@@ -1,0 +1,161 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "sandisk-microsd-express-switch-2",
+    "manufacturer": "SanDisk",
+    "product_family": "microSD Express Card for Nintendo Switch 2",
+    "common": {
+      "form_factor": "microSD",
+      "bus": "SD Express",
+      "speed_classes": {
+        "sd": null,
+        "uhs": null,
+        "video": null,
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 880,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": null
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 256,
+        "part_number": "SDSQXFN-256G-GR6ZZ",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 650,
+            "minimum_sustained_write_mbps": 210
+          }
+        }
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "SDSQXFN-512G-GR6ZN",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 650,
+            "minimum_sustained_write_mbps": 220
+          }
+        }
+      },
+      {
+        "capacity_gb": 1024,
+        "part_number": "SDSQXF8-1T00-GR6ZN",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 800,
+            "minimum_sustained_write_mbps": 745
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "sandisk-switch-2-express-product",
+        "publisher": "SanDisk",
+        "title": "SanDisk microSD Express Card for Nintendo Switch 2",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-microsd-express-card-for-nintendo-switch-2",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sandisk-switch-2-express-datasheet",
+        "publisher": "SanDisk",
+        "title": "SanDisk microSD Express Card for Nintendo Switch 2 Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/microsd-express-card-for-nintendo-switch-2/data-sheet-microsd-express-card-for-nintendo-switch-2.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk explicitly lists the form factor as microSD card."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk identifies the product as microSD Express and specifies PCIe 3.1 NVMe with microSD UHS-I backward-compatible operation."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk specifies read performance up to 880 MB/s for all documented capacities."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk lists a 256GB capacity."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "sandisk-switch-2-express-product",
+      "evidence": "SanDisk identifies the 256GB model as SDSQXFN-256G-GR6ZZ."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk specifies write performance up to 650 MB/s for the 256GB variant."
+    },
+    {
+      "field": "variants.0.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk specifies a 210 MB/s minimum sustained write speed for the 256GB variant."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk lists a 512GB capacity."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "sandisk-switch-2-express-product",
+      "evidence": "SanDisk identifies the 512GB model as SDSQXFN-512G-GR6ZN."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk specifies write performance up to 650 MB/s for the 512GB variant."
+    },
+    {
+      "field": "variants.1.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk specifies a 220 MB/s minimum sustained write speed for the 512GB variant."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk lists a 1TB capacity."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "sandisk-switch-2-express-product",
+      "evidence": "SanDisk identifies the 1TB model as SDSQXF8-1T00-GR6ZN."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk specifies write performance up to 800 MB/s for the 1TB variant."
+    },
+    {
+      "field": "variants.2.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "sandisk-switch-2-express-datasheet",
+      "evidence": "SanDisk specifies a 745 MB/s minimum sustained write speed for the 1TB variant."
+    }
+  ]
+}

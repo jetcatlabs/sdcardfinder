@@ -117,5 +117,61 @@
     "product_family": "EVO Plus",
     "priority": "high",
     "status": "published"
+  },
+  {
+    "id": "samsung-p9-express-microsd",
+    "manufacturer": "Samsung",
+    "product_family": "P9 Express",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "lexar-play-pro-microsd-express",
+    "manufacturer": "Lexar",
+    "product_family": "PLAY PRO microSDXC Express",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "sandisk-microsd-express-switch-2",
+    "manufacturer": "SanDisk",
+    "product_family": "microSD Express Card for Nintendo Switch 2",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "sandisk-max-endurance-microsd",
+    "manufacturer": "SanDisk",
+    "product_family": "MAX ENDURANCE",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "samsung-pro-ultimate-microsd",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Ultimate microSD",
+    "priority": "medium",
+    "status": "published"
+  },
+  {
+    "id": "samsung-pro-ultimate-sd",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Ultimate SD",
+    "priority": "medium",
+    "status": "published"
+  },
+  {
+    "id": "sandisk-extreme-sd-uhs-i",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme SD UHS-I",
+    "priority": "medium",
+    "status": "published"
+  },
+  {
+    "id": "lexar-professional-gold-microsd-uhs-ii",
+    "manufacturer": "Lexar",
+    "product_family": "Professional GOLD microSDXC UHS-II",
+    "priority": "high",
+    "status": "published"
   }
 ]

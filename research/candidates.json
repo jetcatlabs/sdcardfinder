@@ -278,5 +278,85 @@
     "category": "dash-camera",
     "priority": "medium",
     "status": "published"
+  },
+  {
+    "id": "nintendo-switch-2",
+    "manufacturer": "Nintendo",
+    "model": "Switch 2",
+    "category": "gaming-handheld",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "asus-rog-ally-x",
+    "manufacturer": "ASUS",
+    "model": "ROG Ally X",
+    "category": "gaming-handheld",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "lenovo-legion-go",
+    "manufacturer": "Lenovo",
+    "model": "Legion Go",
+    "category": "gaming-handheld",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "sony-a7r-v",
+    "manufacturer": "Sony",
+    "model": "a7R V",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "canon-eos-r6-mark-ii",
+    "manufacturer": "Canon",
+    "model": "EOS R6 Mark II",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "dji-osmo-pocket-2",
+    "manufacturer": "DJI",
+    "model": "Osmo Pocket 2",
+    "category": "camera",
+    "priority": "medium",
+    "status": "published"
+  },
+  {
+    "id": "viofo-a329",
+    "manufacturer": "VIOFO",
+    "model": "A329",
+    "category": "dash-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "garmin-dash-cam-live",
+    "manufacturer": "Garmin",
+    "model": "Dash Cam Live",
+    "category": "dash-camera",
+    "priority": "medium",
+    "status": "published"
+  },
+  {
+    "id": "gopro-hero8-black",
+    "manufacturer": "GoPro",
+    "model": "HERO8 Black",
+    "category": "action-camera",
+    "priority": "medium",
+    "status": "published"
+  },
+  {
+    "id": "raspberry-pi-3-model-b-plus",
+    "manufacturer": "Raspberry Pi",
+    "model": "3 Model B+",
+    "category": "single-board-computer",
+    "priority": "medium",
+    "status": "published"
   }
 ]

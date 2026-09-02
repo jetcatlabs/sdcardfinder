@@ -1,0 +1,80 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "gopro-hero8-black",
+    "category": "action-camera",
+    "manufacturer": "GoPro",
+    "model": "HERO8 Black",
+    "aliases": [
+      "gopro hero8 black",
+      "gopro hero 8 black",
+      "hero8 black",
+      "hero 8 black",
+      "hero8",
+      "hero 8"
+    ],
+    "related_devices": [
+      "gopro-hero9-black",
+      "gopro-hero10-black"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 256,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "GoPro specifies a brand-name microSD, microSDHC, or microSDXC card with a Class 10 or UHS-I rating.",
+      "The Class 10-or-UHS-I condition is preserved as manufacturer wording rather than converted into separate AND requirements.",
+      "Maximum documented capacity is 256 GB."
+    ],
+    "sources": [
+      {
+        "id": "gopro-hero8-manual",
+        "type": "manufacturer_manual",
+        "publisher": "GoPro",
+        "title": "HERO8 Black User Manual",
+        "url": "https://gopro.com/content/dam/help/hero8-black/manuals/HERO8Black_UM_ENG_REVC.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "gopro-hero8-manual",
+      "evidence": "GoPro specifies microSD, microSDHC, or microSDXC cards for HERO8 Black."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "gopro-hero8-manual",
+      "evidence": "GoPro specifies memory-card capacity up to 256GB."
+    }
+  ]
+}

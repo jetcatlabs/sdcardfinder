@@ -96,7 +96,19 @@ def format_list(values):
 
 def card_meets_requirements(card, requirements):
     requirements = requirements or {}
+    
+    required_bus = requirements.get(
+        "required_bus"
+    )
 
+    if required_bus:
+        card_bus = card.get(
+            "bus"
+        )
+
+        if card_bus != required_bus:
+            return False
+    
     minimum_video = requirements.get(
         "minimum_video_speed_class"
     )
@@ -198,16 +210,6 @@ def card_fits_slot(card, slot):
         and card.get("capacity_gb", 0) < min_capacity
     ):
         return False    
-
-    min_capacity = slot.get(
-        "min_capacity_gb"
-    )
-
-    if (
-        min_capacity is not None
-        and card.get("capacity_gb", 0) < min_capacity
-    ):
-        return False
 
     max_capacity = slot.get("max_capacity_gb")
 

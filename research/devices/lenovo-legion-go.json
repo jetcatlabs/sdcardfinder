@@ -1,0 +1,86 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "lenovo-legion-go",
+    "category": "gaming-handheld",
+    "manufacturer": "Lenovo",
+    "model": "Legion Go",
+    "aliases": [
+      "lenovo legion go",
+      "legion go",
+      "legion go 8apu1",
+      "8apu1"
+    ],
+    "related_devices": [
+      "asus-rog-ally-x",
+      "steam-deck-oled"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 2048,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "game-storage",
+        "label": "Game storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Lenovo documents a microSD card reader for the original Legion Go.",
+      "Lenovo documents support for up to 2 TB of additional microSD storage.",
+      "No UHS bus generation is asserted because the cited first-generation Lenovo documentation does not explicitly specify one."
+    ],
+    "sources": [
+      {
+        "id": "lenovo-legion-go-user-guide",
+        "type": "manufacturer_manual",
+        "publisher": "Lenovo",
+        "title": "Legion Go User Guide",
+        "url": "https://download.lenovo.com/pccbbs/pubs/legion_go_8apu1/user_guide/en/index.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "lenovo-legion-go-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "Lenovo",
+        "title": "Lenovo Legion Go Datasheet",
+        "url": "https://psrefstuff.lenovo.com/syspool/Sys/PDF/datasheet/Legion_Go_8APU1_Datasheet_EN.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "lenovo-legion-go-user-guide",
+      "evidence": "Lenovo documents a microSD card slot on the original Legion Go."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "lenovo-legion-go-datasheet",
+      "evidence": "Lenovo specifies that the Legion Go microSD card reader supports up to 2TB."
+    }
+  ]
+}

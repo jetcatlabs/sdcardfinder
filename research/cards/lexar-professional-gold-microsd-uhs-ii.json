@@ -1,0 +1,125 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "lexar-professional-gold-microsd-uhs-ii",
+    "manufacturer": "Lexar",
+    "product_family": "Professional GOLD microSDXC UHS-II",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "sd": null,
+        "uhs": "U3",
+        "video": "V60",
+        "application": "A1",
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 280,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": null
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "part_number": "LMSGOLD128G-BNNNG",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 100
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "LMSGOLD256G-BNNNG",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 180
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "lexar-gold-microsd-setup",
+        "publisher": "Lexar",
+        "title": "Lexar Professional GOLD microSDXC UHS-II Card Setup Sheet",
+        "url": "https://resources.lexar.com/download/1213/documents/8297/setup_gold-microsd-202309.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar specifies microSDXC as the form factor."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar explicitly specifies UHS-II."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar specifies UHS Speed Class U3."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar specifies Video Speed Class V60."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar specifies Application Performance Class A1."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar specifies read performance up to 280MB/s for both capacities."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar lists a 128GB variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar identifies the 128GB model as LMSGOLD128G-BNNNG."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar specifies write performance up to 100MB/s for the 128GB card."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar lists a 256GB variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar identifies the 256GB model as LMSGOLD256G-BNNNG."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "lexar-gold-microsd-setup",
+      "evidence": "Lexar specifies write performance up to 180MB/s for the 256GB card."
+    }
+  ]
+}

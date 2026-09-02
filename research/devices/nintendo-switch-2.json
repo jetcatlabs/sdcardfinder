@@ -1,0 +1,92 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "nintendo-switch-2",
+    "category": "gaming-handheld",
+    "manufacturer": "Nintendo",
+    "model": "Switch 2",
+    "aliases": [
+      "nintendo switch 2",
+      "switch 2",
+      "switch2"
+    ],
+    "related_devices": [
+      "nintendo-switch",
+      "nintendo-switch-oled",
+      "nintendo-switch-lite"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [
+            "SD Express"
+          ],
+          "requirements": {
+            "required_bus": "SD Express"
+          },
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 2048,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "game-storage",
+        "label": "Game storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Nintendo Switch 2 is only compatible with microSD Express cards for expandable game and data storage.",
+      "Ordinary microSD, microSDHC, and microSDXC cards that do not support the microSD Express standard cannot be used for normal expandable storage.",
+      "Nintendo supports microSD Express cards up to 2 TB.",
+      "A system update via the internet is required the first time a microSD Express card is used.",
+      "No SD Express Speed Class such as E150 or E300 is required by Nintendo; compatibility is based on meeting the microSD Express standard."
+    ],
+    "sources": [
+      {
+        "id": "nintendo-switch-2-microsd-express",
+        "type": "manufacturer_support",
+        "publisher": "Nintendo",
+        "title": "microSD Card and microSD Express Card Compatibility with Nintendo Switch 2 and Nintendo Switch",
+        "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68425/p/897",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "nintendo-switch-2-microsd-express",
+      "evidence": "Nintendo documents microSD Express as the expandable memory-card standard used by Nintendo Switch 2."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "nintendo-switch-2-microsd-express",
+      "evidence": "Nintendo explicitly states that Nintendo Switch 2 is compatible with the microSD Express standard."
+    },
+    {
+      "field": "storage.slots.0.requirements.required_bus",
+      "source_id": "nintendo-switch-2-microsd-express",
+      "evidence": "Nintendo states that Nintendo Switch 2 is only compatible with microSD Express cards."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "nintendo-switch-2-microsd-express",
+      "evidence": "Nintendo specifies support for microSD Express cards with capacities up to 2TB."
+    }
+  ]
+}

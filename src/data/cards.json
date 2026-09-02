@@ -3911,5 +3911,1511 @@
       "recording_hours": null,
       "pe_cycles": null
     }
+  },
+  {
+    "id": "samsung-p9-express-microsdxc-256gb",
+    "manufacturer": "Samsung",
+    "product_family": "P9 Express",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "SD Express",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 800,
+      "max_write_mbps": 200,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MK256T",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD P9 Express Card Data Sheet Rev. 1.0",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/Samsung_microSD_Express_Card_P9_Express_Datasheet_Rev.1.0.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "P9 Express Brochure",
+        "url": "https://download.semiconductor.samsung.com/resources/brochure/microSD_Express_Card_P9_Express_Brochure_10150012100312.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "part_number",
+          "speed_classes.application"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung launches P9 Express for mobile gaming",
+        "url": "https://news.samsung.com/de/schnell-richtig-schnell-express-samsung-launcht-p9-express-fur-mobile-gaming-abenteuer",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "performance.max_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-p9-express-microsdxc-512gb",
+    "manufacturer": "Samsung",
+    "product_family": "P9 Express",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "SD Express",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 800,
+      "max_write_mbps": 310,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MK512T",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD P9 Express Card Data Sheet Rev. 1.0",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/Samsung_microSD_Express_Card_P9_Express_Datasheet_Rev.1.0.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "P9 Express Brochure",
+        "url": "https://download.semiconductor.samsung.com/resources/brochure/microSD_Express_Card_P9_Express_Brochure_10150012100312.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "part_number",
+          "speed_classes.application"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung launches P9 Express for mobile gaming",
+        "url": "https://news.samsung.com/de/schnell-richtig-schnell-express-samsung-launcht-p9-express-fur-mobile-gaming-abenteuer",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "performance.max_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-play-pro-microsdxc-express-microsdxc-256gb",
+    "manufacturer": "Lexar",
+    "product_family": "PLAY PRO microSDXC Express",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "SD Express",
+    "speed_classes": {
+      "sd": null,
+      "uhs": null,
+      "video": null,
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 900,
+      "max_write_mbps": 600,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMSXPS0256G-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY PRO microSDXC Express Card",
+        "url": "https://americas.lexar.com/product/lexar-play-pro-microsdxc-express-card/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY PRO microSDXC Express Card Setup Sheet",
+        "url": "https://resources.lexar.com/download/1989/documents/12819/setup_play-pro_microsdxc_202411.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-play-pro-microsdxc-express-microsdxc-512gb",
+    "manufacturer": "Lexar",
+    "product_family": "PLAY PRO microSDXC Express",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "SD Express",
+    "speed_classes": {
+      "sd": null,
+      "uhs": null,
+      "video": null,
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 900,
+      "max_write_mbps": 600,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMSXPS0512G-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY PRO microSDXC Express Card",
+        "url": "https://americas.lexar.com/product/lexar-play-pro-microsdxc-express-card/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY PRO microSDXC Express Card Setup Sheet",
+        "url": "https://resources.lexar.com/download/1989/documents/12819/setup_play-pro_microsdxc_202411.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-play-pro-microsdxc-express-microsdxc-1tb",
+    "manufacturer": "Lexar",
+    "product_family": "PLAY PRO microSDXC Express",
+    "model": "1TB microSDXC",
+    "capacity_gb": 1024,
+    "form_factor": "microSDXC",
+    "bus": "SD Express",
+    "speed_classes": {
+      "sd": null,
+      "uhs": null,
+      "video": null,
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 900,
+      "max_write_mbps": 600,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMSXPS0001T-BNNNU",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY PRO microSDXC Express Card",
+        "url": "https://americas.lexar.com/product/lexar-play-pro-microsdxc-express-card/",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY PRO microSDXC Express Card Setup Sheet",
+        "url": "https://resources.lexar.com/download/1989/documents/12819/setup_play-pro_microsdxc_202411.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-microsd-express-card-for-nintendo-switch-2-microsd-256gb",
+    "manufacturer": "SanDisk",
+    "product_family": "microSD Express Card for Nintendo Switch 2",
+    "model": "256GB microSD",
+    "capacity_gb": 256,
+    "form_factor": "microSD",
+    "bus": "SD Express",
+    "speed_classes": {
+      "sd": null,
+      "uhs": null,
+      "video": null,
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 880,
+      "max_write_mbps": 650,
+      "minimum_sustained_write_mbps": 210
+    },
+    "part_number": "SDSQXFN-256G-GR6ZZ",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk microSD Express Card for Nintendo Switch 2",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-microsd-express-card-for-nintendo-switch-2",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "part_number"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk microSD Express Card for Nintendo Switch 2 Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/microsd-express-card-for-nintendo-switch-2/data-sheet-microsd-express-card-for-nintendo-switch-2.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-microsd-express-card-for-nintendo-switch-2-microsd-512gb",
+    "manufacturer": "SanDisk",
+    "product_family": "microSD Express Card for Nintendo Switch 2",
+    "model": "512GB microSD",
+    "capacity_gb": 512,
+    "form_factor": "microSD",
+    "bus": "SD Express",
+    "speed_classes": {
+      "sd": null,
+      "uhs": null,
+      "video": null,
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 880,
+      "max_write_mbps": 650,
+      "minimum_sustained_write_mbps": 220
+    },
+    "part_number": "SDSQXFN-512G-GR6ZN",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk microSD Express Card for Nintendo Switch 2",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-microsd-express-card-for-nintendo-switch-2",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "part_number"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk microSD Express Card for Nintendo Switch 2 Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/microsd-express-card-for-nintendo-switch-2/data-sheet-microsd-express-card-for-nintendo-switch-2.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-microsd-express-card-for-nintendo-switch-2-microsd-1tb",
+    "manufacturer": "SanDisk",
+    "product_family": "microSD Express Card for Nintendo Switch 2",
+    "model": "1TB microSD",
+    "capacity_gb": 1024,
+    "form_factor": "microSD",
+    "bus": "SD Express",
+    "speed_classes": {
+      "sd": null,
+      "uhs": null,
+      "video": null,
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 880,
+      "max_write_mbps": 800,
+      "minimum_sustained_write_mbps": 745
+    },
+    "part_number": "SDSQXF8-1T00-GR6ZN",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk microSD Express Card for Nintendo Switch 2",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-microsd-express-card-for-nintendo-switch-2",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "part_number"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk microSD Express Card for Nintendo Switch 2 Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/microsd-express-card-for-nintendo-switch-2/data-sheet-microsd-express-card-for-nintendo-switch-2.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-pro-ultimate-microsd-microsdxc-128gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Ultimate microSD",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MY128S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD Card PRO Ultimate Data Sheet",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2023_Samsung_Data_sheet_microSD_Card__PRO_Ultimate_v1.0.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-pro-ultimate-microsd-microsdxc-256gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Ultimate microSD",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MY256S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD Card PRO Ultimate Data Sheet",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2023_Samsung_Data_sheet_microSD_Card__PRO_Ultimate_v1.0.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-pro-ultimate-microsd-microsdxc-512gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Ultimate microSD",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A2",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-MY512S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung microSD Card PRO Ultimate Data Sheet",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2023_Samsung_Data_sheet_microSD_Card__PRO_Ultimate_v1.0.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-gold-microsdxc-uhs-ii-microsdxc-128gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional GOLD microSDXC UHS-II",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V60",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 100,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMSGOLD128G-BNNNG",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional GOLD microSDXC UHS-II Card Setup Sheet",
+        "url": "https://resources.lexar.com/download/1213/documents/8297/setup_gold-microsd-202309.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "lexar-professional-gold-microsdxc-uhs-ii-microsdxc-256gb",
+    "manufacturer": "Lexar",
+    "product_family": "Professional GOLD microSDXC UHS-II",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": null,
+      "uhs": "U3",
+      "video": "V60",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 180,
+      "minimum_sustained_write_mbps": null
+    },
+    "part_number": "LMSGOLD256G-BNNNG",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Lexar",
+        "title": "Lexar Professional GOLD microSDXC UHS-II Card Setup Sheet",
+        "url": "https://resources.lexar.com/download/1213/documents/8297/setup_gold-microsd-202309.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "speed_classes.application",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-pro-ultimate-sd-sdxc-64gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Ultimate SD",
+    "model": "64GB SDXC",
+    "capacity_gb": 64,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-SY64S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung SD Card PRO Ultimate Data Sheet",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2023_Samsung_Data_sheet_SD_Card__PRO_Ultimate_v1.0.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-pro-ultimate-sd-sdxc-128gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Ultimate SD",
+    "model": "128GB SDXC",
+    "capacity_gb": 128,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-SY128S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung SD Card PRO Ultimate Data Sheet",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2023_Samsung_Data_sheet_SD_Card__PRO_Ultimate_v1.0.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-pro-ultimate-sd-sdxc-256gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Ultimate SD",
+    "model": "256GB SDXC",
+    "capacity_gb": 256,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-SY256S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung SD Card PRO Ultimate Data Sheet",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2023_Samsung_Data_sheet_SD_Card__PRO_Ultimate_v1.0.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "samsung-pro-ultimate-sd-sdxc-512gb",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Ultimate SD",
+    "model": "512GB SDXC",
+    "capacity_gb": 512,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 200,
+      "max_write_mbps": 130,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "MB-SY512S",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Samsung",
+        "title": "Samsung SD Card PRO Ultimate Data Sheet",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2023_Samsung_Data_sheet_SD_Card__PRO_Ultimate_v1.0.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-extreme-sd-uhs-i-sdhc-32gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme SD UHS-I",
+    "model": "32GB SDHC",
+    "capacity_gb": 32,
+    "form_factor": "SDHC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 60,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSDXVT-032G-GUCIN",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd-v30/data-sheet-sandisk-extreme-uhs-i-sd-v30.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Cards Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd/data-sheet-extreme-uhs-i-sd-180mbps.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "form_factor",
+          "speed_classes.sd"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/sd-cards/sandisk-extreme-uhs-i-sd-v30",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-extreme-sd-uhs-i-sdxc-64gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme SD UHS-I",
+    "model": "64GB SDXC",
+    "capacity_gb": 64,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 170,
+      "max_write_mbps": 80,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSDXV2-064G-GUCIN",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd-v30/data-sheet-sandisk-extreme-uhs-i-sd-v30.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Cards Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd/data-sheet-extreme-uhs-i-sd-180mbps.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "form_factor",
+          "speed_classes.sd"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/sd-cards/sandisk-extreme-uhs-i-sd-v30",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-extreme-sd-uhs-i-sdxc-128gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme SD UHS-I",
+    "model": "128GB SDXC",
+    "capacity_gb": 128,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 230,
+      "max_write_mbps": 120,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSDXV9-128G-GUCIN",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd-v30/data-sheet-sandisk-extreme-uhs-i-sd-v30.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Cards Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd/data-sheet-extreme-uhs-i-sd-180mbps.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "form_factor",
+          "speed_classes.sd"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/sd-cards/sandisk-extreme-uhs-i-sd-v30",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-extreme-sd-uhs-i-sdxc-256gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme SD UHS-I",
+    "model": "256GB SDXC",
+    "capacity_gb": 256,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 230,
+      "max_write_mbps": 160,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSDXV9-256G-GUCIN",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd-v30/data-sheet-sandisk-extreme-uhs-i-sd-v30.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Cards Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd/data-sheet-extreme-uhs-i-sd-180mbps.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "form_factor",
+          "speed_classes.sd"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/sd-cards/sandisk-extreme-uhs-i-sd-v30",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-extreme-sd-uhs-i-sdxc-512gb",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme SD UHS-I",
+    "model": "512GB SDXC",
+    "capacity_gb": 512,
+    "form_factor": "SDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 230,
+      "max_write_mbps": 160,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSDXV9-512G-GUCIN",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd-v30/data-sheet-sandisk-extreme-uhs-i-sd-v30.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Cards Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd/data-sheet-extreme-uhs-i-sd-180mbps.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "form_factor",
+          "speed_classes.sd"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/sd-cards/sandisk-extreme-uhs-i-sd-v30",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-max-endurance-microsdhc-32gb",
+    "manufacturer": "SanDisk",
+    "product_family": "MAX ENDURANCE",
+    "model": "32GB microSDHC",
+    "capacity_gb": 32,
+    "form_factor": "microSDHC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 40,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQQVR-032G-GN6IA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk MAX ENDURANCE microSD Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/max-endurance-uhs-i-microsd/data-sheet-max-endurance-uhs-i-microsd.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "endurance.continuous_recording",
+          "endurance.recording_hours",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk MAX ENDURANCE microSD Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-max-endurance-uhs-i-microsd",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 15000,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-max-endurance-microsdxc-64gb",
+    "manufacturer": "SanDisk",
+    "product_family": "MAX ENDURANCE",
+    "model": "64GB microSDXC",
+    "capacity_gb": 64,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 40,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQQVR-064G-GN6IA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk MAX ENDURANCE microSD Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/max-endurance-uhs-i-microsd/data-sheet-max-endurance-uhs-i-microsd.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "endurance.continuous_recording",
+          "endurance.recording_hours",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk MAX ENDURANCE microSD Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-max-endurance-uhs-i-microsd",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 30000,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-max-endurance-microsdxc-128gb",
+    "manufacturer": "SanDisk",
+    "product_family": "MAX ENDURANCE",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 40,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQQVR-128G-GN6IA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk MAX ENDURANCE microSD Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/max-endurance-uhs-i-microsd/data-sheet-max-endurance-uhs-i-microsd.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "endurance.continuous_recording",
+          "endurance.recording_hours",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk MAX ENDURANCE microSD Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-max-endurance-uhs-i-microsd",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 60000,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "sandisk-max-endurance-microsdxc-256gb",
+    "manufacturer": "SanDisk",
+    "product_family": "MAX ENDURANCE",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": 40,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDSQQVR-256G-GN6IA",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk MAX ENDURANCE microSD Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/max-endurance-uhs-i-microsd/data-sheet-max-endurance-uhs-i-microsd.pdf",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "capacity_gb",
+          "endurance.continuous_recording",
+          "endurance.recording_hours",
+          "form_factor",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "SanDisk",
+        "title": "SanDisk MAX ENDURANCE microSD Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-max-endurance-uhs-i-microsd",
+        "verified_at": "2026-09-01",
+        "supports": [
+          "bus",
+          "part_number"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01",
+    "endurance": {
+      "continuous_recording": true,
+      "recording_hours": 120000,
+      "pe_cycles": null
+    }
   }
 ]

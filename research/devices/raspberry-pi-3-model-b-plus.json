@@ -1,0 +1,72 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "raspberry-pi-3-model-b-plus",
+    "category": "single-board-computer",
+    "manufacturer": "Raspberry Pi",
+    "model": "3 Model B+",
+    "aliases": [
+      "raspberry pi 3 model b+",
+      "raspberry pi 3 b+",
+      "raspberry pi 3b+",
+      "pi 3 b+",
+      "pi 3b+",
+      "rpi 3b+"
+    ],
+    "related_devices": [
+      "raspberry-pi-4",
+      "raspberry-pi-zero-2-w"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "operating-system-storage",
+        "label": "Operating system and application storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Raspberry Pi explicitly documents Micro SD format for operating-system loading and data storage.",
+      "No numeric maximum capacity, UHS bus generation, SD speed class, or Application Performance Class requirement is asserted because Raspberry Pi does not document those fields for the 3 Model B+ in the cited product brief."
+    ],
+    "sources": [
+      {
+        "id": "raspberry-pi-3-b-plus-product-brief",
+        "type": "manufacturer_specification",
+        "publisher": "Raspberry Pi",
+        "title": "Raspberry Pi 3 Model B+ Product Brief",
+        "url": "https://datasheets.raspberrypi.com/rpi3/raspberry-pi-3-b-plus-product-brief.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "raspberry-pi-3-b-plus-product-brief",
+      "evidence": "Raspberry Pi specifies Micro SD format for loading the operating system and storing data."
+    }
+  ]
+}

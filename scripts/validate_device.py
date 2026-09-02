@@ -193,11 +193,27 @@ def validate(device_id):
                 )
             )
         
+        requirements = slot.get(
+            "requirements",
+            {}
+        )
+        
+        required_bus = requirements.get(
+            "required_bus"
+        )
+        
+        if (
+            required_bus is not None
+            and required_bus not in ALLOWED_BUSES
+        ):
+            errors.append(
+                "Unknown required bus: {}".format(
+                    required_bus
+                )
+            )
+        
         validate_speed_values(
-            slot.get(
-                "requirements",
-                {}
-            ),
+            requirements,
             errors
         )
 

@@ -1,0 +1,203 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "sandisk-max-endurance-microsd",
+    "manufacturer": "SanDisk",
+    "product_family": "MAX ENDURANCE",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V30",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 100,
+        "max_write_mbps": 40,
+        "minimum_sustained_write_mbps": 30
+      },
+      "endurance": {
+        "continuous_recording": true,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 32,
+        "part_number": "SDSQQVR-032G-GN6IA",
+        "overrides": {
+          "form_factor": "microSDHC",
+          "endurance": {
+            "recording_hours": 15000
+          }
+        }
+      },
+      {
+        "capacity_gb": 64,
+        "part_number": "SDSQQVR-064G-GN6IA",
+        "overrides": {
+          "endurance": {
+            "recording_hours": 30000
+          }
+        }
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "SDSQQVR-128G-GN6IA",
+        "overrides": {
+          "endurance": {
+            "recording_hours": 60000
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "SDSQQVR-256G-GN6IA",
+        "overrides": {
+          "endurance": {
+            "recording_hours": 120000
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "sandisk-max-endurance-datasheet",
+        "publisher": "SanDisk",
+        "title": "SanDisk MAX ENDURANCE microSD Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/max-endurance-uhs-i-microsd/data-sheet-max-endurance-uhs-i-microsd.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sandisk-max-endurance-product",
+        "publisher": "SanDisk",
+        "title": "SanDisk MAX ENDURANCE microSD Card",
+        "url": "https://www.sandisk.com/products/memory-cards/microsd-cards/sandisk-max-endurance-uhs-i-microsd",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk specifies microSDXC for the 64GB, 128GB, and 256GB variants."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "sandisk-max-endurance-product",
+      "evidence": "SanDisk specifies the interface as UHS-I."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk specifies Class 10."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk specifies UHS Speed Class U3."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk specifies Video Speed Class V30."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk specifies read speeds up to 100MB/s."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk specifies write speeds up to 40MB/s."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk explicitly defines V30 as a sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "common.endurance.continuous_recording",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk states that MAX ENDURANCE is engineered for continuous recording and re-recording."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk lists a 32GB variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "sandisk-max-endurance-product",
+      "evidence": "SanDisk identifies the 32GB model as SDSQQVR-032G-GN6IA."
+    },
+    {
+      "field": "variants.0.overrides.form_factor",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk specifies the 32GB variant as microSDHC."
+    },
+    {
+      "field": "variants.0.overrides.endurance.recording_hours",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk specifies up to 15,000 hours of Full HD video recording for the 32GB variant."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk lists a 64GB variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "sandisk-max-endurance-product",
+      "evidence": "SanDisk identifies the 64GB model as SDSQQVR-064G-GN6IA."
+    },
+    {
+      "field": "variants.1.overrides.endurance.recording_hours",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk specifies up to 30,000 hours of Full HD video recording for the 64GB variant."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk lists a 128GB variant."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "sandisk-max-endurance-product",
+      "evidence": "SanDisk identifies the 128GB model as SDSQQVR-128G-GN6IA."
+    },
+    {
+      "field": "variants.2.overrides.endurance.recording_hours",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk specifies up to 60,000 hours of Full HD video recording for the 128GB variant."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk lists a 256GB variant."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "sandisk-max-endurance-product",
+      "evidence": "SanDisk identifies the 256GB model as SDSQQVR-256G-GN6IA."
+    },
+    {
+      "field": "variants.3.overrides.endurance.recording_hours",
+      "source_id": "sandisk-max-endurance-datasheet",
+      "evidence": "SanDisk specifies up to 120,000 hours of Full HD video recording for the 256GB variant."
+    }
+  ]
+}

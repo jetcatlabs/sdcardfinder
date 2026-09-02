@@ -33,6 +33,7 @@ BUSES = {
     "UHS-I",
     "UHS-II",
     "UHS-III",
+    "SD Express",
 }
 
 UHS_SPEED_CLASSES = {

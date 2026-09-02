@@ -74,6 +74,7 @@ ALLOWED_BUSES = {
     "UHS-I",
     "UHS-II",
     "UHS-III",
+    "SD Express",
 }
 
 ALLOWED_UHS_SPEED_CLASSES = {

@@ -1,0 +1,251 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "sandisk-extreme-sd-uhs-i",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme SD UHS-I",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V30",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": null,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": 30
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 32,
+        "part_number": "SDSDXVT-032G-GUCIN",
+        "overrides": {
+          "form_factor": "SDHC",
+          "performance": {
+            "max_read_mbps": 100,
+            "max_write_mbps": 60
+          }
+        }
+      },
+      {
+        "capacity_gb": 64,
+        "part_number": "SDSDXV2-064G-GUCIN",
+        "overrides": {
+          "performance": {
+            "max_read_mbps": 170,
+            "max_write_mbps": 80
+          }
+        }
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "SDSDXV9-128G-GUCIN",
+        "overrides": {
+          "performance": {
+            "max_read_mbps": 230,
+            "max_write_mbps": 120
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "SDSDXV9-256G-GUCIN",
+        "overrides": {
+          "performance": {
+            "max_read_mbps": 230,
+            "max_write_mbps": 160
+          }
+        }
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "SDSDXV9-512G-GUCIN",
+        "overrides": {
+          "performance": {
+            "max_read_mbps": 230,
+            "max_write_mbps": 160
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "sandisk-extreme-sd-current-datasheet",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd-v30/data-sheet-sandisk-extreme-uhs-i-sd-v30.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sandisk-extreme-sd-form-factor-datasheet",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Cards Data Sheet",
+        "url": "https://documents.sandisk.com/content/dam/asset-library/en_us/assets/public/sandisk/product/memory-cards/extreme-uhs-i-sd/data-sheet-extreme-uhs-i-sd-180mbps.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sandisk-extreme-sd-product",
+        "publisher": "SanDisk",
+        "title": "SanDisk Extreme SD UHS-I Card",
+        "url": "https://www.sandisk.com/products/memory-cards/sd-cards/sandisk-extreme-uhs-i-sd-v30",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "sandisk-extreme-sd-form-factor-datasheet",
+      "evidence": "SanDisk specifies SDXC for the 64GB, 128GB, 256GB, and 512GB Extreme SD variants."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies the interface as UHS-I."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "sandisk-extreme-sd-form-factor-datasheet",
+      "evidence": "SanDisk identifies the Extreme SD UHS-I family as Class 10."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies UHS Speed Class U3."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies Video Speed Class V30."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk explicitly defines V30 as a sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk lists a 32GB variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "sandisk-extreme-sd-product",
+      "evidence": "SanDisk identifies the 32GB model as SDSDXVT-032G-GUCIN."
+    },
+    {
+      "field": "variants.0.overrides.form_factor",
+      "source_id": "sandisk-extreme-sd-form-factor-datasheet",
+      "evidence": "SanDisk specifies the 32GB variant as SDHC."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_read_mbps",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies up to 100MB/s read for the 32GB card."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies up to 60MB/s write for the 32GB card."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk lists a 64GB variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "sandisk-extreme-sd-product",
+      "evidence": "SanDisk identifies the 64GB model as SDSDXV2-064G-GUCIN."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_read_mbps",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies up to 170MB/s read for the 64GB card."
+    },
+    {
+      "field": "variants.1.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies up to 80MB/s write for the 64GB card."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk lists a 128GB variant."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "sandisk-extreme-sd-product",
+      "evidence": "SanDisk identifies the 128GB model as SDSDXV9-128G-GUCIN."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_read_mbps",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies up to 230MB/s read for the 128GB card."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies up to 120MB/s write for the 128GB card."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk lists a 256GB variant."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "sandisk-extreme-sd-product",
+      "evidence": "SanDisk identifies the 256GB model as SDSDXV9-256G-GUCIN."
+    },
+    {
+      "field": "variants.3.overrides.performance.max_read_mbps",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies up to 230MB/s read for the 256GB card."
+    },
+    {
+      "field": "variants.3.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies up to 160MB/s write for the 256GB card."
+    },
+    {
+      "field": "variants.4.capacity_gb",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk lists a 512GB variant."
+    },
+    {
+      "field": "variants.4.part_number",
+      "source_id": "sandisk-extreme-sd-product",
+      "evidence": "SanDisk identifies the 512GB model as SDSDXV9-512G-GUCIN."
+    },
+    {
+      "field": "variants.4.overrides.performance.max_read_mbps",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies up to 230MB/s read for the 512GB card."
+    },
+    {
+      "field": "variants.4.overrides.performance.max_write_mbps",
+      "source_id": "sandisk-extreme-sd-current-datasheet",
+      "evidence": "SanDisk specifies up to 160MB/s write for the 512GB card."
+    }
+  ]
+}

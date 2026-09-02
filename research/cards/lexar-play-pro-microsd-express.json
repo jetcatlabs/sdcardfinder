@@ -1,0 +1,121 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "lexar-play-pro-microsd-express",
+    "manufacturer": "Lexar",
+    "product_family": "PLAY PRO microSDXC Express",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "SD Express",
+      "speed_classes": {
+        "sd": null,
+        "uhs": null,
+        "video": null,
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 900,
+        "max_write_mbps": 600,
+        "minimum_sustained_write_mbps": null
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 256,
+        "part_number": "LMSXPS0256G-BNNNU",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "LMSXPS0512G-BNNNU",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 1024,
+        "part_number": "LMSXPS0001T-BNNNU",
+        "overrides": {}
+      }
+    ],
+    "sources": [
+      {
+        "id": "lexar-play-pro-product",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY PRO microSDXC Express Card",
+        "url": "https://americas.lexar.com/product/lexar-play-pro-microsdxc-express-card/",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "lexar-play-pro-setup-sheet",
+        "publisher": "Lexar",
+        "title": "Lexar PLAY PRO microSDXC Express Card Setup Sheet",
+        "url": "https://resources.lexar.com/download/1989/documents/12819/setup_play-pro_microsdxc_202411.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "lexar-play-pro-product",
+      "evidence": "Lexar specifies the product form factor as microSDXC Express; the catalog separates this into microSDXC form factor and SD Express bus."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "lexar-play-pro-product",
+      "evidence": "Lexar identifies the card as microSD Express and specifies PCIe and NVMe interface technologies."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "lexar-play-pro-product",
+      "evidence": "Lexar repeatedly states in the product Key Features and Features sections that PLAY PRO delivers up to 900 MB/s read. The page's specification table separately contains a conflicting 205 MB/s value; this record follows the repeated Express-specific product-feature value."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "lexar-play-pro-product",
+      "evidence": "Lexar repeatedly states in the product Key Features and Features sections that PLAY PRO delivers up to 600 MB/s write. The page's specification table separately contains a conflicting 140 MB/s value; this record follows the repeated Express-specific product-feature value."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "lexar-play-pro-product",
+      "evidence": "Lexar lists a 256GB PLAY PRO microSDXC Express variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "lexar-play-pro-setup-sheet",
+      "evidence": "Lexar's North American ordering information lists LMSXPS0256G-BNNNU for the 256GB card."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "lexar-play-pro-product",
+      "evidence": "Lexar lists a 512GB PLAY PRO microSDXC Express variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "lexar-play-pro-setup-sheet",
+      "evidence": "Lexar's North American ordering information lists LMSXPS0512G-BNNNU for the 512GB card."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "lexar-play-pro-product",
+      "evidence": "Lexar lists a 1TB PLAY PRO microSDXC Express variant."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "lexar-play-pro-setup-sheet",
+      "evidence": "Lexar's North American ordering information lists LMSXPS0001T-BNNNU for the 1TB card."
+    }
+  ]
+}

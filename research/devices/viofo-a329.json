@@ -1,0 +1,76 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "viofo-a329",
+    "category": "dash-camera",
+    "manufacturer": "VIOFO",
+    "model": "A329",
+    "aliases": [
+      "viofo a329",
+      "a329",
+      "viofo a329 2ch",
+      "a329 2ch"
+    ],
+    "related_devices": [
+      "viofo-a229-pro"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 512,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "continuous-recording",
+        "label": "Continuous dash-camera recording",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "VIOFO documents microSD storage up to 512 GB for the A329.",
+      "The A329 also supports external SSD storage, which is outside SD Card Finder's card catalog.",
+      "VIOFO explicitly recommends high-endurance microSD media for dash-camera recording because of heavy continuous write cycles.",
+      "No generic UHS or Video Speed Class requirement is asserted because VIOFO does not state one for the A329 on the cited product specification."
+    ],
+    "sources": [
+      {
+        "id": "viofo-a329-product",
+        "type": "manufacturer_specification",
+        "publisher": "VIOFO",
+        "title": "VIOFO A329 2-Channel 4K 60FPS Front and 2K Rear Dash Cam",
+        "url": "https://www.viofo.com/products/viofo-a329-2ch-first-4k-60fps-front-and-2k-rear-wi-fi-6-dash-cam-hdr-with-sony-starvis-2-sensors-support-ssd-storage",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "viofo-a329-product",
+      "evidence": "VIOFO specifies microSD card storage for the A329."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "viofo-a329-product",
+      "evidence": "VIOFO specifies microSD storage up to 512GB for the A329."
+    }
+  ]
+}

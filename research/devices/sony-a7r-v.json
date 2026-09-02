@@ -1,0 +1,162 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "sony-a7r-v",
+    "category": "camera",
+    "manufacturer": "Sony",
+    "model": "a7R V",
+    "aliases": [
+      "sony a7r v",
+      "sony a7rv",
+      "a7r v",
+      "a7rv",
+      "ilce-7rm5"
+    ],
+    "related_devices": [
+      "sony-a7-iv",
+      "sony-a7c-ii"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        },
+        {
+          "slot": 2,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "XAVC HS 4K / XAVC S 4K / XAVC S HD",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "8k-video",
+        "label": "XAVC HS 8K",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "all-intra-video",
+        "label": "XAVC S-I recording",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Both memory-card slots support SD cards compatible with UHS-I and UHS-II.",
+      "Both slots also accept CFexpress Type A media, which is outside SD Card Finder's card catalog.",
+      "Sony requires U3 or higher for XAVC HS 4K, XAVC S 4K, and XAVC S HD recording.",
+      "Sony requires V60 or higher SDXC media for XAVC HS 8K recording.",
+      "Sony requires V90 or higher SDXC media for XAVC S-I recording.",
+      "Sony does not document a numeric maximum SD card capacity in the cited sources."
+    ],
+    "sources": [
+      {
+        "id": "sony-a7r-v-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ILCE-7RM5 Specifications",
+        "url": "https://www.sony.com/electronics/support/e-mount-body-ilce-7-series/ilce-7rm5/specifications",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-a7r-v-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ILCE-7RM5 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/ilc/2230/v1/en/contents/TP1000867593.html",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "sony-a7r-v-specifications",
+      "evidence": "Sony specifies SD, SDHC, and SDXC media for the a7R V."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "sony-a7r-v-specifications",
+      "evidence": "Sony specifies Slot 1 as compatible with UHS-I and UHS-II SD cards."
+    },
+    {
+      "field": "storage.slots.1.accepted_formats",
+      "source_id": "sony-a7r-v-specifications",
+      "evidence": "Sony specifies SD, SDHC, and SDXC media for the a7R V."
+    },
+    {
+      "field": "storage.slots.1.bus_support",
+      "source_id": "sony-a7r-v-specifications",
+      "evidence": "Sony specifies Slot 2 as compatible with UHS-I and UHS-II SD cards."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_uhs_speed_class",
+      "source_id": "sony-a7r-v-memory-cards",
+      "evidence": "Sony specifies U3 or higher for XAVC HS 4K, XAVC S 4K, and XAVC S HD recording."
+    },
+    {
+      "field": "usage_profiles.2.requirements.minimum_video_speed_class",
+      "source_id": "sony-a7r-v-memory-cards",
+      "evidence": "Sony specifies SDXC V60 or higher for XAVC HS 8K recording."
+    },
+    {
+      "field": "usage_profiles.3.requirements.minimum_video_speed_class",
+      "source_id": "sony-a7r-v-memory-cards",
+      "evidence": "Sony specifies SDXC V90 or higher for XAVC S-I recording."
+    }
+  ]
+}

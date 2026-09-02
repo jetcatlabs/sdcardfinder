@@ -1,0 +1,98 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "dji-osmo-pocket-2",
+    "category": "camera",
+    "manufacturer": "DJI",
+    "model": "Osmo Pocket 2",
+    "aliases": [
+      "dji pocket 2",
+      "dji osmo pocket 2",
+      "osmo pocket 2",
+      "pocket 2"
+    ],
+    "related_devices": [
+      "dji-osmo-pocket-3"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [
+            "UHS-I"
+          ],
+          "requirements": {
+            "minimum_uhs_speed_class": "U1"
+          },
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 256,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {
+          "minimum_uhs_speed_class": "U1"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "DJI documents SDHC/SDXC UHS-I microSD cards up to 256 GB.",
+      "Supported cards are UHS-I Speed Grade 1 or Speed Grade 3, represented as a minimum U1 requirement.",
+      "DJI documents FAT32 for cards up to and including 32 GB and exFAT for cards larger than 32 GB.",
+      "The capacity-dependent FAT32/exFAT rule is preserved in notes rather than reduced to one setup_requirements.filesystem value."
+    ],
+    "sources": [
+      {
+        "id": "dji-pocket-2-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "DJI",
+        "title": "DJI Pocket 2 - Specifications",
+        "url": "https://www.dji.com/pocket-2/specs",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "dji-pocket-2-specifications",
+      "evidence": "DJI specifies SDHC and SDXC microSD cards for Pocket 2."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "dji-pocket-2-specifications",
+      "evidence": "DJI specifies UHS-I microSD media for Pocket 2."
+    },
+    {
+      "field": "storage.slots.0.requirements.minimum_uhs_speed_class",
+      "source_id": "dji-pocket-2-specifications",
+      "evidence": "DJI specifies UHS-I Speed Grade 1 or Speed Grade 3 cards, establishing U1 as the minimum supported UHS speed class."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "dji-pocket-2-specifications",
+      "evidence": "DJI specifies a maximum supported microSD capacity of 256GB."
+    },
+    {
+      "field": "usage_profiles.0.requirements.minimum_uhs_speed_class",
+      "source_id": "dji-pocket-2-specifications",
+      "evidence": "DJI specifies UHS-I Speed Grade 1 or Speed Grade 3 media for Pocket 2 recording."
+    }
+  ]
+}

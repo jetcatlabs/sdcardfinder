@@ -1,0 +1,79 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "asus-rog-ally-x",
+    "category": "gaming-handheld",
+    "manufacturer": "ASUS",
+    "model": "ROG Ally X",
+    "aliases": [
+      "asus rog ally x",
+      "rog ally x",
+      "ally x",
+      "rc72la"
+    ],
+    "related_devices": [
+      "lenovo-legion-go",
+      "steam-deck-oled"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "game-storage",
+        "label": "Game storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "ASUS explicitly specifies a UHS-II microSD card reader supporting SD, SDHC, and SDXC media.",
+      "ASUS does not document a numeric maximum microSD card capacity in the cited technical specifications."
+    ],
+    "sources": [
+      {
+        "id": "asus-rog-ally-x-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "ASUS",
+        "title": "ROG Ally X (2024) Specifications",
+        "url": "https://rog.asus.com/gaming-handhelds/rog-ally/rog-ally-x-2024/spec/",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "asus-rog-ally-x-specifications",
+      "evidence": "ASUS specifies a microSD card reader supporting SD, SDHC, and SDXC media."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "asus-rog-ally-x-specifications",
+      "evidence": "ASUS explicitly identifies the ROG Ally X card reader as UHS-II."
+    }
+  ]
+}

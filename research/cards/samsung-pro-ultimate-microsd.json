@@ -1,0 +1,137 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "samsung-pro-ultimate-microsd",
+    "manufacturer": "Samsung",
+    "product_family": "PRO Ultimate microSD",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V30",
+        "application": "A2",
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 200,
+        "max_write_mbps": 130,
+        "minimum_sustained_write_mbps": 30
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "part_number": "MB-MY128S",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "MB-MY256S",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "MB-MY512S",
+        "overrides": {}
+      }
+    ],
+    "sources": [
+      {
+        "id": "samsung-pro-ultimate-microsd-datasheet",
+        "publisher": "Samsung",
+        "title": "Samsung microSD Card PRO Ultimate Data Sheet",
+        "url": "https://download.semiconductor.samsung.com/resources/data-sheet/2023_Samsung_Data_sheet_microSD_Card__PRO_Ultimate_v1.0.pdf",
+        "verified_at": "2026-09-01",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-01"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung specifies microSDXC as the PRO Ultimate microSD form factor."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung specifies UHS-I bus operation."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung specifies SD Speed Class 10."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung specifies UHS Speed Grade 3 (U3)."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung specifies Video Speed Class V30."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung specifies Application Performance Class A2."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung specifies sequential read performance up to 200MB/s."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung specifies sequential write performance up to 130MB/s."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung explicitly defines its V30 rating as a sustained video capture rate of 30MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung lists a 128GB PRO Ultimate microSD variant."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung identifies the 128GB model as MB-MY128S."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung lists a 256GB PRO Ultimate microSD variant."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung identifies the 256GB model as MB-MY256S."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung lists a 512GB PRO Ultimate microSD variant."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "samsung-pro-ultimate-microsd-datasheet",
+      "evidence": "Samsung identifies the 512GB model as MB-MY512S."
+    }
+  ]
+}
