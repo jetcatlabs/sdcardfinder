@@ -173,5 +173,75 @@
     "product_family": "Professional GOLD microSDXC UHS-II",
     "priority": "high",
     "status": "published"
+  },
+  {
+    "id": "sandisk-extreme-microsd",
+    "manufacturer": "SanDisk",
+    "product_family": "Extreme",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": "prograde-gold-v60-sd",
+    "manufacturer": "ProGrade Digital",
+    "product_family": "SDXC UHS-II V60 250R Gold",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": "prograde-iridium-v90-sd",
+    "manufacturer": "ProGrade Digital",
+    "product_family": "SDXC UHS-II V90 Iridium",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": "prograde-v60-microsd-uhs-ii",
+    "manufacturer": "ProGrade Digital",
+    "product_family": "microSDXC UHS-II V60",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": "sony-sf-m-tough-v60-sd",
+    "manufacturer": "Sony",
+    "product_family": "SF-M series TOUGH specification",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": "sony-sf-g-tough-v90-sd",
+    "manufacturer": "Sony",
+    "product_family": "SF-G series TOUGH specification",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": "nextorage-nx-f2se-v60-sd",
+    "manufacturer": "Nextorage",
+    "product_family": "NX-F2SE Series",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": "nextorage-nx-f2pro-v90-sd",
+    "manufacturer": "Nextorage",
+    "product_family": "NX-F2PRO Series",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": "pny-elitex-pro60-v60-sd",
+    "manufacturer": "PNY",
+    "product_family": "EliteX-PRO60",
+    "priority": "medium",
+    "status": "todo"
+  },
+  {
+    "id": "kingston-canvas-select-plus-microsd",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Select Plus",
+    "priority": "medium",
+    "status": "todo"
   }
 ]
