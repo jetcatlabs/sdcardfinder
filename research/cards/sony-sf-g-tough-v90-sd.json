@@ -1,0 +1,153 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "sony-sf-g-tough-v90-sd",
+    "manufacturer": "Sony",
+    "product_family": "SF-G series TOUGH specification",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V90",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 300,
+        "max_write_mbps": 299,
+        "minimum_sustained_write_mbps": 90
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": "SF-G64T",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "SF-G128T",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "SF-G256T",
+        "overrides": {}
+      }
+    ],
+    "sources": [
+      {
+        "id": "sony-sf-g-tough-specifications",
+        "type": "manufacturer_product_page",
+        "publisher": "Sony",
+        "title": "SF-G Series TOUGH Specification",
+        "url": "https://www.sony.com/lr/electronics/sd-cards/sf-gt-series/specifications",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-sf-g256t-product",
+        "type": "manufacturer_product_page",
+        "publisher": "Sony",
+        "title": "Sony UHS-II G TOUGH series 256GB",
+        "url": "https://electronics.sony.com/imaging/imaging-accessories/media/p/sfg256t-t1",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-sf-g-tough-manual",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "SF Series TOUGH Specification Operating Instructions",
+        "url": "https://www.sony.com/electronics/support/res/manuals/5049/91578ae69dd23b9ee881aa6a8495a7f3/50495571M.pdf",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "sony-sf-g-tough-manual",
+      "evidence": "Sony identifies the SF-G TOUGH family as SDHC/SDXC memory cards; the current included 64GB through 256GB variants are represented as SDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "sony-sf-g-tough-specifications",
+      "evidence": "Sony specifies the SF-G TOUGH family interface as UHS-II."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "sony-sf-g-tough-specifications",
+      "evidence": "Sony specifies Class 10 as the SD Speed Class."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "sony-sf-g-tough-specifications",
+      "evidence": "Sony specifies UHS Speed Class 3 (U3)."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "sony-sf-g-tough-specifications",
+      "evidence": "Sony specifies Video Speed Class V90."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "sony-sf-g-tough-specifications",
+      "evidence": "Sony rates UHS-II read performance up to 300MB/s."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "sony-sf-g-tough-specifications",
+      "evidence": "Sony rates UHS-II write performance up to 299MB/s."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "sony-sf-g256t-product",
+      "evidence": "Sony states that the V90 rating guarantees a minimum sustained write speed of 90MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "sony-sf-g256t-product",
+      "evidence": "Sony's current G TOUGH listing offers a 64GB option."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "sony-sf-g-tough-specifications",
+      "evidence": "Sony identifies the 64GB TOUGH model as SF-G64T."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "sony-sf-g256t-product",
+      "evidence": "Sony's current G TOUGH listing offers a 128GB option."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "sony-sf-g-tough-specifications",
+      "evidence": "Sony identifies the 128GB TOUGH model as SF-G128T."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "sony-sf-g256t-product",
+      "evidence": "Sony's current G TOUGH listing offers a 256GB option."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "sony-sf-g-tough-specifications",
+      "evidence": "Sony identifies the 256GB TOUGH model as SF-G256T."
+    }
+  ]
+}
