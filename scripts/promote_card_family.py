@@ -254,6 +254,20 @@ def main():
         card["id"]: index
         for index, card in enumerate(cards)
     }
+    
+    existing_by_semantic_key = {}
+
+    for index, card in enumerate(cards):
+        semantic_key = (
+            card.get("manufacturer"),
+            card.get("product_family"),
+            card.get("form_factor"),
+            card.get("capacity_gb"),
+        )
+
+        existing_by_semantic_key[
+            semantic_key
+        ] = index
 
     promoted_ids = []
 
@@ -275,24 +289,59 @@ def main():
         form_factor = variant_specs[
             "form_factor"
         ]
+        
+        semantic_key = (
+            card_family["manufacturer"],
+            card_family["product_family"],
+            form_factor,
+            capacity_gb,
+        )
 
-        production_id = (
-            "{}-{}-{}".format(
-                card_family["manufacturer"]
-                    .lower()
-                    .replace(" ", "-"),
-                card_family["product_family"]
-                    .lower()
-                    .replace(" ", "-")
-                    .replace("!", ""),
-                "{}-{}".format(
-                    form_factor.lower(),
-                    capacity_slug(
-                        capacity_gb
-                    ),
-                ),
+        existing_index = (
+            existing_by_semantic_key.get(
+                semantic_key
             )
         )
+
+        if existing_index is not None:
+            production_id = cards[
+                existing_index
+            ]["id"]
+
+        else:
+            production_id = "{}-{}".format(
+                card_family["id"],
+                capacity_slug(
+                    capacity_gb
+                ),
+            )
+
+            collision_index = (
+                existing_by_id.get(
+                    production_id
+                )
+            )
+
+            if collision_index is not None:
+                print(
+                    "ERROR: Generated production "
+                    "card ID already exists: {}"
+                    .format(
+                        production_id
+                    )
+                )
+
+                print(
+                    "The existing card has a "
+                    "different semantic identity."
+                )
+
+                print()
+                print(
+                    "Promotion refused."
+                )
+
+                return 1
 
         production_card = {
             "id": production_id,
@@ -347,20 +396,22 @@ def main():
                 "endurance"
             ] = copy.deepcopy(
                 endurance
-            )        
-
-        existing_index = existing_by_id.get(
-            production_id
-        )
+            )     
 
         if existing_index is None:
             cards.append(
                 production_card
             )
 
+            new_index = len(cards) - 1
+
             existing_by_id[
                 production_id
-            ] = len(cards) - 1
+            ] = new_index
+
+            existing_by_semantic_key[
+                semantic_key
+            ] = new_index
 
             print(
                 "Added production card: {}".format(
