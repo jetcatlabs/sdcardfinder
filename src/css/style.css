@@ -350,7 +350,10 @@ h1 {
 
 .requirement-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(180px, 1fr)
+    );
     gap: 12px;
     margin-top: 25px;
 }
@@ -370,6 +373,14 @@ h1 {
 
 .requirement strong {
     font-size: 14px;
+}
+
+.requirement-detail {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.4;
 }
 
 .device-section {

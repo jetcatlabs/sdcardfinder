@@ -1903,20 +1903,28 @@ def get_interface_display(slot):
         "Not specified by manufacturer"
     )
 
-def generate_requirements_summary(device):
-    slot = device["storage"]["slots"][0]
-    
-    setup_html = generate_setup_requirements(
-        slot
-    )
+def minimum_speed_text(requirements):
+    values = []
 
-    formats = format_list(
-        slot.get("accepted_formats", [])
-    )
+    for key in [
+        "minimum_sd_speed_class",
+        "minimum_uhs_speed_class",
+        "minimum_video_speed_class",
+        "minimum_application_class",
+        "minimum_sd_express_speed_class",
+    ]:
+        value = requirements.get(key)
 
-    interface_label, interface_value = \
-        get_interface_display(slot)
+        if value:
+            values.append(value)
 
+    if not values:
+        return None
+
+    return " · ".join(values)
+
+
+def capacity_summary(slot):
     min_capacity = slot.get(
         "min_capacity_gb"
     )
@@ -1924,64 +1932,252 @@ def generate_requirements_summary(device):
     max_capacity = slot.get(
         "max_capacity_gb"
     )
-    
+
+    status = slot.get(
+        "max_capacity_status"
+    )
+
+    detail = None
+
     if (
         min_capacity is not None
         and max_capacity is not None
     ):
-        capacity = "{} to {}".format(
+        label = "Capacity"
+        value = "{} to {}".format(
             format_capacity(min_capacity),
-            format_capacity(max_capacity)
+            format_capacity(max_capacity),
         )
-    
+
     elif max_capacity is not None:
-        capacity = "Up to {}".format(
+        label = "Maximum capacity"
+        value = "Up to {}".format(
             format_capacity(max_capacity)
         )
-    
+
     elif min_capacity is not None:
-        capacity = "At least {}".format(
+        label = "Minimum capacity"
+        value = "At least {}".format(
             format_capacity(min_capacity)
         )
-    
+
     else:
-        capacity = "Not specified by manufacturer"
+        label = "Maximum capacity"
 
-    return f"""
+        if status == "not_documented":
+            value = "Not documented"
+            detail = (
+                "No maximum found in the verified "
+                "manufacturer documentation."
+            )
+        else:
+            value = "Not specified by manufacturer"
+
+    if (
+        max_capacity is not None
+        and status == "manufacturer_documented"
+    ):
+        detail = "Manufacturer documented"
+
+    return label, value, detail
+
+
+def requirement_item(
+    label,
+    value,
+    detail=None,
+):
+    detail_html = ""
+
+    if detail:
+        detail_html = """
+            <span class="requirement-detail">
+                {}
+            </span>
+        """.format(
+            html.escape(str(detail))
+        )
+
+    return """
+        <div class="requirement">
+            <span class="requirement-label">
+                {}
+            </span>
+
+            <strong>
+                {}
+            </strong>
+
+            {}
+        </div>
+    """.format(
+        html.escape(str(label)),
+        html.escape(str(value)),
+        detail_html,
+    )
+
+def generate_requirements_summary(device):
+    slots = device["storage"]["slots"]
+
+    output = ""
+
+    if len(slots) > 1:
+        output += requirement_item(
+            "SD card slots",
+            len(slots),
+        )
+
+        for slot in slots:
+            formats = format_list(
+                slot.get(
+                    "accepted_formats",
+                    []
+                )
+            )
+
+            interface_label, interface_value = \
+                get_interface_display(slot)
+
+            parts = [
+                formats
+            ]
+
+            if (
+                slot.get("bus_support")
+                or slot.get(
+                    "requirements",
+                    {}
+                ).get("required_bus")
+            ):
+                parts.append(
+                    interface_value
+                )
+
+            notes = slot.get(
+                "notes",
+                []
+            )
+
+            detail = (
+                " ".join(notes)
+                if notes
+                else None
+            )
+
+            output += requirement_item(
+                "Slot {}".format(
+                    slot["slot"]
+                ),
+                " · ".join(parts),
+                detail,
+            )
+
+        first_slot = slots[0]
+
+        capacity_label, capacity_value, \
+            capacity_detail = capacity_summary(
+                first_slot
+            )
+
+        output += requirement_item(
+            capacity_label,
+            capacity_value,
+            capacity_detail,
+        )
+
+    else:
+        slot = slots[0]
+
+        formats = format_list(
+            slot.get(
+                "accepted_formats",
+                []
+            )
+        )
+
+        output += requirement_item(
+            "Card type",
+            formats,
+        )
+
+        requirements = slot.get(
+            "requirements",
+            {}
+        )
+
+        minimum_speed = minimum_speed_text(
+            requirements
+        )
+
+        if minimum_speed:
+            output += requirement_item(
+                "Minimum speed",
+                minimum_speed,
+            )
+
+        if (
+            slot.get("bus_support")
+            or requirements.get(
+                "required_bus"
+            )
+        ):
+            interface_label, interface_value = \
+                get_interface_display(slot)
+
+            output += requirement_item(
+                interface_label,
+                interface_value,
+            )
+
+        capacity_label, capacity_value, \
+            capacity_detail = capacity_summary(
+                slot
+            )
+
+        output += requirement_item(
+            capacity_label,
+            capacity_value,
+            capacity_detail,
+        )
+
+        recommendations = slot.get(
+            "recommendations",
+            {}
+        )
+
+        preferred_bus = recommendations.get(
+            "preferred_bus"
+        )
+
+        if preferred_bus:
+            output += requirement_item(
+                "Recommended interface",
+                preferred_bus,
+            )
+
+        transfer_speed = recommendations.get(
+            "recommended_transfer_mbps"
+        )
+
+        if transfer_speed:
+            output += requirement_item(
+                "Recommended transfer speed",
+                "{} MB/s".format(
+                    transfer_speed
+                ),
+            )
+
+        output += generate_setup_requirements(
+            slot
+        )
+
+    return """
     <div class="requirement-grid">
-        <div class="requirement">
-            <span class="requirement-label">
-                Card type
-            </span>
-
-            <strong>
-                {html.escape(formats)}
-            </strong>
-        </div>
-
-        <div class="requirement">
-            <span class="requirement-label">
-                {html.escape(interface_label)}
-            </span>
-
-            <strong>
-               {html.escape(interface_value)}
-            </strong>
-        </div>
-
-        <div class="requirement">
-            <span class="requirement-label">
-                Capacity
-            </span>
-
-            <strong>
-                {html.escape(capacity)}
-            </strong>
-        </div>
-        
-        {setup_html}
+        {}
     </div>
-    """
+    """.format(
+        output
+    )
 
 def requirement_text(requirements):
     requirements = requirements or {}
@@ -2445,6 +2641,27 @@ def generate_device_page(device, cards, devices):
         .title()
     )
 
+    slot_count = len(
+        device["storage"]["slots"]
+    )
+
+    if slot_count > 1:
+        quick_answer_title = (
+            "{} {} SD card slots and requirements"
+            .format(
+                manufacturer,
+                model,
+            )
+        )
+    else:
+        quick_answer_title = (
+            "{} {} SD card requirements"
+            .format(
+                manufacturer,
+                model,
+            )
+        )
+
     recommendations = \
         generate_card_recommendations(
             device,
@@ -2564,11 +2781,11 @@ def generate_device_page(device, cards, devices):
 
             <div>
                 <p class="answer-label">
-                    WHAT YOU NEED
+                    QUICK ANSWER
                 </p>
 
                 <h2>
-                    Compatible SD card specifications
+                    {quick_answer_title}
                 </h2>
             </div>
         </div>
