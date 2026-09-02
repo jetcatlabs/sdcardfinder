@@ -3534,5 +3534,870 @@
     ],
     "status": "verified",
     "last_verified": "2026-09-01"
+  },
+  {
+    "id": "asus-rog-xbox-ally-x",
+    "category": "gaming-handheld",
+    "manufacturer": "ASUS",
+    "model": "ROG Xbox Ally X",
+    "aliases": [
+      "asus rog xbox ally x",
+      "rog xbox ally x",
+      "xbox ally x"
+    ],
+    "related_devices": [
+      "asus-rog-ally-x",
+      "lenovo-legion-go",
+      "steam-deck-oled"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "game-storage",
+        "label": "Game storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "ASUS explicitly specifies a UHS-II microSD card reader supporting SD, SDHC, and SDXC media.",
+      "ASUS does not document a numeric maximum microSD card capacity in the cited technical specifications."
+    ],
+    "sources": [
+      {
+        "id": "asus-rog-xbox-ally-x-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "ASUS",
+        "title": "ROG Xbox Ally X (2025) Specifications",
+        "url": "https://rog.asus.com/us/gaming-handhelds/rog-ally/rog-xbox-ally-x-2025/spec/",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.bus_support"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  {
+    "id": "msi-claw-8-ai-plus",
+    "category": "gaming-handheld",
+    "manufacturer": "MSI",
+    "model": "Claw 8 AI+",
+    "aliases": [
+      "msi claw 8 ai+",
+      "msi claw 8 ai plus",
+      "claw 8 ai+",
+      "claw 8 ai plus"
+    ],
+    "related_devices": [
+      "asus-rog-ally-x",
+      "asus-rog-xbox-ally-x",
+      "lenovo-legion-go"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "game-storage",
+        "label": "Game storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "MSI explicitly documents one Micro SD Card Reader on the Claw 8 AI+.",
+      "The cited MSI specification does not document a UHS bus generation, speed-class requirement, or numeric maximum card capacity."
+    ],
+    "sources": [
+      {
+        "id": "msi-claw-8-ai-plus-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "MSI",
+        "title": "Claw 8 AI+ A2VM Specifications",
+        "url": "https://www.msi.com/Handheld/Claw-8-AI-Plus-A2VMX/Specification",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.accepted_formats"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  {
+    "id": "raspberry-pi-500",
+    "category": "single-board-computer",
+    "manufacturer": "Raspberry Pi",
+    "model": "500",
+    "aliases": [
+      "raspberry pi 500",
+      "raspberrypi 500",
+      "rpi 500",
+      "pi 500"
+    ],
+    "related_devices": [
+      "raspberry-pi-5",
+      "raspberry-pi-4"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "application_class": "A2"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "operating-system-storage",
+        "label": "Operating system and application storage",
+        "requirements": {},
+        "recommendations": {
+          "application_class": "A2"
+        }
+      }
+    ],
+    "notes": [
+      "Raspberry Pi 500 has a microSD card slot for operating system and data storage.",
+      "Raspberry Pi promotes its Class A2 microSD cards for optimal performance and a smoother experience on Raspberry Pi computers.",
+      "The cited Raspberry Pi 500 product brief does not document a numeric maximum microSD card capacity."
+    ],
+    "sources": [
+      {
+        "id": "raspberry-pi-500-product-brief",
+        "type": "manufacturer_specification",
+        "publisher": "Raspberry Pi",
+        "title": "Raspberry Pi 500 Product Brief",
+        "url": "https://datasheets.raspberrypi.com/pi500/raspberry-pi-500-product-brief.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.accepted_formats"
+        ]
+      },
+      {
+        "id": "raspberry-pi-sd-card-product",
+        "type": "manufacturer_documentation",
+        "publisher": "Raspberry Pi",
+        "title": "Raspberry Pi SD Cards",
+        "url": "https://www.raspberrypi.com/products/sd-cards/",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.recommendations.application_class",
+          "usage_profiles.0.recommendations.application_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  {
+    "id": "dji-osmo-action-6",
+    "category": "action-camera",
+    "manufacturer": "DJI",
+    "model": "Osmo Action 6",
+    "aliases": [
+      "dji osmo action 6",
+      "osmo action 6",
+      "action 6",
+      "dji action 6"
+    ],
+    "related_devices": [
+      "dji-osmo-action-5-pro",
+      "dji-osmo-action-4"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3",
+            "video_speed_class": "V30",
+            "application_class": "A2"
+          },
+          "setup_requirements": {
+            "filesystem": "exFAT"
+          },
+          "min_capacity_gb": null,
+          "max_capacity_gb": 1024,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3",
+          "video_speed_class": "V30",
+          "application_class": "A2"
+        }
+      }
+    ],
+    "notes": [
+      "DJI publishes specific recommended microSD models for Osmo Action 6. Every listed model is rated U3, A2, and V30.",
+      "The manufacturer-documented maximum microSD capacity is 1 TB.",
+      "DJI specifies exFAT as the supported file system."
+    ],
+    "sources": [
+      {
+        "id": "dji-osmo-action-6-specs",
+        "type": "manufacturer_specification",
+        "publisher": "DJI",
+        "title": "Osmo Action 6 Specifications",
+        "url": "https://www.dji.com/osmo-action-6/specs",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.recommendations.application_class",
+          "storage.slots.0.recommendations.uhs_speed_class",
+          "storage.slots.0.recommendations.video_speed_class",
+          "storage.slots.0.setup_requirements.filesystem",
+          "usage_profiles.0.recommendations.application_class",
+          "usage_profiles.0.recommendations.uhs_speed_class",
+          "usage_profiles.0.recommendations.video_speed_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  {
+    "id": "dji-osmo-360",
+    "category": "action-camera",
+    "manufacturer": "DJI",
+    "model": "Osmo 360",
+    "aliases": [
+      "dji osmo 360",
+      "osmo 360",
+      "dji 360"
+    ],
+    "related_devices": [
+      "dji-osmo-action-6",
+      "insta360-x5"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3",
+            "video_speed_class": "V30",
+            "application_class": "A2"
+          },
+          "setup_requirements": {
+            "filesystem": "exFAT"
+          },
+          "min_capacity_gb": null,
+          "max_capacity_gb": 1024,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3",
+          "video_speed_class": "V30",
+          "application_class": "A2"
+        }
+      }
+    ],
+    "notes": [
+      "DJI publishes specific recommended microSD models for Osmo 360. Every listed model is rated U3, A2, and V30.",
+      "The manufacturer-documented maximum microSD capacity is 1 TB.",
+      "DJI specifies exFAT as the supported file system."
+    ],
+    "sources": [
+      {
+        "id": "dji-osmo-360-specs",
+        "type": "manufacturer_specification",
+        "publisher": "DJI",
+        "title": "Osmo 360 Specifications",
+        "url": "https://www.dji.com/360/specs",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.recommendations.application_class",
+          "storage.slots.0.recommendations.uhs_speed_class",
+          "storage.slots.0.recommendations.video_speed_class",
+          "storage.slots.0.setup_requirements.filesystem",
+          "usage_profiles.0.recommendations.application_class",
+          "usage_profiles.0.recommendations.uhs_speed_class",
+          "usage_profiles.0.recommendations.video_speed_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  {
+    "id": "viofo-a229-plus",
+    "category": "dash-camera",
+    "manufacturer": "VIOFO",
+    "model": "A229 Plus",
+    "aliases": [
+      "viofo a229 plus",
+      "a229 plus"
+    ],
+    "related_devices": [
+      "viofo-a229-pro",
+      "viofo-a329"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3",
+            "video_speed_class": "V30",
+            "application_class": "A2",
+            "endurance": {
+              "continuous_recording": true
+            }
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 512,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [],
+    "notes": [
+      "VIOFO recommends high-endurance memory for dashcam recording.",
+      "The A229 Plus product page offers VIOFO's U3, A2, V30 industrial high-endurance microSD card.",
+      "Maximum manufacturer-documented capacity is 512 GB."
+    ],
+    "sources": [
+      {
+        "id": "viofo-a229-plus-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "VIOFO",
+        "title": "VIOFO A229 Plus",
+        "url": "https://www.viofo.com/products/viofo-a229-plus-2ch-front-and-rear-2k2k-hdr-5ghz-wi-fi-gps-voice-control-dual-dash-camera-with-sony-starvis-2-sensor",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.max_capacity_gb",
+          "storage.slots.0.recommendations.application_class",
+          "storage.slots.0.recommendations.endurance.continuous_recording",
+          "storage.slots.0.recommendations.uhs_speed_class",
+          "storage.slots.0.recommendations.video_speed_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  {
+    "id": "nikon-z6iii",
+    "category": "camera",
+    "manufacturer": "Nikon",
+    "model": "Z6III",
+    "aliases": [
+      "nikon z6iii",
+      "nikon z6 iii",
+      "z6iii",
+      "z6 iii"
+    ],
+    "related_devices": [
+      "canon-eos-r5-mark-ii",
+      "sony-a7r-v"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3"
+        }
+      }
+    ],
+    "notes": [
+      "The Z6III provides an SD slot supporting SD, SDHC, and SDXC cards with UHS-I and UHS-II support.",
+      "Nikon recommends UHS Speed Class 3 or better SD cards for video recording and playback.",
+      "For video with a high frame size or rate, Nikon additionally recommends SD media with substantially higher transfer performance; this is retained as a note rather than translated into a generic SD speed-class requirement.",
+      "The camera also accepts CFexpress Type B and XQD media in its other card slot, which is outside SD Card Finder's catalog.",
+      "Nikon does not document a numeric maximum SD-card capacity in the cited documentation."
+    ],
+    "sources": [
+      {
+        "id": "nikon-z6iii-approved-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Nikon",
+        "title": "Z6III - Approved Memory Cards",
+        "url": "https://onlinemanual.nikonimglib.com/z6III/en/approved_memory_cards_397.html",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.bus_support",
+          "storage.slots.0.recommendations.uhs_speed_class",
+          "usage_profiles.1.recommendations.uhs_speed_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  {
+    "id": "fujifilm-x-t5",
+    "category": "camera",
+    "manufacturer": "Fujifilm",
+    "model": "X-T5",
+    "aliases": [
+      "fujifilm x-t5",
+      "fujifilm xt5",
+      "fuji x-t5",
+      "fuji xt5",
+      "x-t5",
+      "xt5"
+    ],
+    "related_devices": [
+      "sony-a6700",
+      "canon-eos-r6-mark-ii"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        },
+        {
+          "slot": 2,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "100 / 200 Mbps movie recording",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "360mbps-video",
+        "label": "360 Mbps movie recording",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "The X-T5 has two SD card slots, and both support SD, SDHC, and SDXC cards with UHS-I and UHS-II.",
+      "Fujifilm recommends UHS-II cards for high-speed burst photography; recommended bus performance is retained as a note because the current recommendation schema does not model a preferred host bus.",
+      "Fujifilm specifies U3 or better for 100 Mbps and 200 Mbps movie recording.",
+      "Fujifilm specifies V60 or better for 360 Mbps movie recording.",
+      "Fujifilm does not document a numeric maximum SD-card capacity in the cited documentation."
+    ],
+    "sources": [
+      {
+        "id": "fujifilm-x-t5-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Fujifilm",
+        "title": "X-T5 - Inserting Memory Cards",
+        "url": "https://app.fujifilm-dsc.com/en/manual/x-t5/first_step/insert_card/",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.bus_support",
+          "storage.slots.1.accepted_formats",
+          "storage.slots.1.bus_support"
+        ]
+      },
+      {
+        "id": "fujifilm-x-t5-movie-recording",
+        "type": "manufacturer_manual",
+        "publisher": "Fujifilm",
+        "title": "X-T5 - Recording Movies",
+        "url": "https://fujifilm-dsc.com/en/manual/x-t5/basic_movie/movie_rec/",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "usage_profiles.1.requirements.minimum_uhs_speed_class",
+          "usage_profiles.2.requirements.minimum_video_speed_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  {
+    "id": "canon-eos-r5-mark-ii",
+    "category": "camera",
+    "manufacturer": "Canon",
+    "model": "EOS R5 Mark II",
+    "aliases": [
+      "canon eos r5 mark ii",
+      "canon r5 mark ii",
+      "eos r5 mark ii",
+      "r5 mark ii",
+      "r5 ii",
+      "r5ii"
+    ],
+    "related_devices": [
+      "canon-eos-r6-mark-ii",
+      "canon-eos-r8",
+      "sony-a1-ii"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "u3-video",
+        "label": "SD movie modes requiring U3",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "v60-video",
+        "label": "SD movie modes requiring V60",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "v90-video",
+        "label": "SD movie modes requiring V90",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "The EOS R5 Mark II provides one SD/SDHC/SDXC card slot compatible with UHS-I and UHS-II.",
+      "The camera also provides a CFexpress Type B slot, which is outside SD Card Finder's catalog.",
+      "Canon's required SD-card performance varies by recording format, compression method, resolution, and frame rate.",
+      "Canon's specification tables include SD recording modes requiring U3, V60, or V90 media.",
+      "Some movie modes require CFexpress and therefore are not represented as SD usage profiles.",
+      "Canon does not document a generic numeric maximum SD-card capacity in the cited compatibility material."
+    ],
+    "sources": [
+      {
+        "id": "canon-r5-mark-ii-compatible-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Canon",
+        "title": "EOS R5 Mark II - Compatible Cards",
+        "url": "https://cam.start.canon/en/C017/manual/html/UG-00_Before_0090.html",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.0.bus_support"
+        ]
+      },
+      {
+        "id": "canon-r5-mark-ii-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Canon",
+        "title": "EOS R5 Mark II - Specifications",
+        "url": "https://cam.start.canon/en/C017/manual/html/UG-10_Reference_0110.html",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "usage_profiles.1.requirements.minimum_uhs_speed_class",
+          "usage_profiles.2.requirements.minimum_video_speed_class",
+          "usage_profiles.3.requirements.minimum_video_speed_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  {
+    "id": "sony-a1-ii",
+    "category": "camera",
+    "manufacturer": "Sony",
+    "model": "a1 II",
+    "aliases": [
+      "sony a1 ii",
+      "sony alpha 1 ii",
+      "sony alpha1 ii",
+      "a1 ii",
+      "alpha 1 ii",
+      "ilce-1m2"
+    ],
+    "related_devices": [
+      "sony-a7r-v",
+      "sony-a7-iv",
+      "canon-eos-r5-mark-ii"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        },
+        {
+          "slot": 2,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "XAVC S HD and supported lower-bitrate modes",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "high-bitrate-4k",
+        "label": "XAVC HS 4K / XAVC S 4K",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "highest-performance-video",
+        "label": "8K / XAVC S-I / high-bitrate S&Q",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Both Sony a1 II card slots accept SD media compatible with UHS-I and UHS-II.",
+      "Both slots also accept CFexpress Type A media, which is outside SD Card Finder's catalog.",
+      "Sony specifies U3 or higher for supported lower-bitrate SD movie recording such as XAVC S HD.",
+      "Sony specifies V60 or higher for supported XAVC HS 4K and XAVC S 4K recording.",
+      "Sony specifies V90 or higher for XAVC HS 8K, XAVC S-I recording, and several high-bitrate S&Q modes.",
+      "Some proxy and high-bitrate modes require CFexpress Type A media and are therefore outside the SD-card usage profiles modeled here.",
+      "Sony does not document a numeric maximum SD-card capacity in the cited sources."
+    ],
+    "sources": [
+      {
+        "id": "sony-a1-ii-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ILCE-1M2 Specifications",
+        "url": "https://helpguide.sony.net/ilc/2440/v1/en/contents/231h_specifications_ilc2440.html",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.bus_support",
+          "storage.slots.1.bus_support"
+        ]
+      },
+      {
+        "id": "sony-a1-ii-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ILCE-1M2 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/ilc/2440/v1/en/contents/0002H_usable_memory_card.html",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "storage.slots.0.accepted_formats",
+          "storage.slots.1.accepted_formats",
+          "usage_profiles.1.requirements.minimum_uhs_speed_class",
+          "usage_profiles.2.requirements.minimum_video_speed_class",
+          "usage_profiles.3.requirements.minimum_video_speed_class"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
   }
 ]

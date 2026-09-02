@@ -49,6 +49,9 @@ SD_EXPRESS_SPEED_RANK = {
 DEVICE_RECOMMENDATION_OVERRIDES = {
     "dji-osmo-action-4": "recommended-spec",
     "dji-osmo-action-5-pro": "recommended-spec",
+    "dji-osmo-action-6": "recommended-spec",
+    "dji-osmo-360": "recommended-spec",
+    "nikon-z6iii": "recommended-spec",
 }
 
 RECOMMENDATION_STRATEGIES = {

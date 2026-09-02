@@ -1,0 +1,71 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "msi-claw-8-ai-plus",
+    "category": "gaming-handheld",
+    "manufacturer": "MSI",
+    "model": "Claw 8 AI+",
+    "aliases": [
+      "msi claw 8 ai+",
+      "msi claw 8 ai plus",
+      "claw 8 ai+",
+      "claw 8 ai plus"
+    ],
+    "related_devices": [
+      "asus-rog-ally-x",
+      "asus-rog-xbox-ally-x",
+      "lenovo-legion-go"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "game-storage",
+        "label": "Game storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "MSI explicitly documents one Micro SD Card Reader on the Claw 8 AI+.",
+      "The cited MSI specification does not document a UHS bus generation, speed-class requirement, or numeric maximum card capacity."
+    ],
+    "sources": [
+      {
+        "id": "msi-claw-8-ai-plus-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "MSI",
+        "title": "Claw 8 AI+ A2VM Specifications",
+        "url": "https://www.msi.com/Handheld/Claw-8-AI-Plus-A2VMX/Specification",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "msi-claw-8-ai-plus-specifications",
+      "evidence": "MSI specifies one Micro SD Card Reader for the Claw 8 AI+."
+    }
+  ]
+}

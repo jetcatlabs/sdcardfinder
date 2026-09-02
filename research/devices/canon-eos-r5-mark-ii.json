@@ -1,0 +1,136 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "canon-eos-r5-mark-ii",
+    "category": "camera",
+    "manufacturer": "Canon",
+    "model": "EOS R5 Mark II",
+    "aliases": [
+      "canon eos r5 mark ii",
+      "canon r5 mark ii",
+      "eos r5 mark ii",
+      "r5 mark ii",
+      "r5 ii",
+      "r5ii"
+    ],
+    "related_devices": [
+      "canon-eos-r6-mark-ii",
+      "canon-eos-r8",
+      "sony-a1-ii"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "u3-video",
+        "label": "SD movie modes requiring U3",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "v60-video",
+        "label": "SD movie modes requiring V60",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "v90-video",
+        "label": "SD movie modes requiring V90",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "The EOS R5 Mark II provides one SD/SDHC/SDXC card slot compatible with UHS-I and UHS-II.",
+      "The camera also provides a CFexpress Type B slot, which is outside SD Card Finder's catalog.",
+      "Canon's required SD-card performance varies by recording format, compression method, resolution, and frame rate.",
+      "Canon's specification tables include SD recording modes requiring U3, V60, or V90 media.",
+      "Some movie modes require CFexpress and therefore are not represented as SD usage profiles.",
+      "Canon does not document a generic numeric maximum SD-card capacity in the cited compatibility material."
+    ],
+    "sources": [
+      {
+        "id": "canon-r5-mark-ii-compatible-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Canon",
+        "title": "EOS R5 Mark II - Compatible Cards",
+        "url": "https://cam.start.canon/en/C017/manual/html/UG-00_Before_0090.html",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "canon-r5-mark-ii-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Canon",
+        "title": "EOS R5 Mark II - Specifications",
+        "url": "https://cam.start.canon/en/C017/manual/html/UG-10_Reference_0110.html",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "canon-r5-mark-ii-compatible-cards",
+      "evidence": "Canon documents SD, SDHC, and SDXC cards as compatible with the EOS R5 Mark II."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "canon-r5-mark-ii-compatible-cards",
+      "evidence": "Canon specifies compatibility with both UHS-I and UHS-II SD cards."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_uhs_speed_class",
+      "source_id": "canon-r5-mark-ii-specifications",
+      "evidence": "Canon's card-performance tables identify SD movie modes requiring UHS Speed Class U3."
+    },
+    {
+      "field": "usage_profiles.2.requirements.minimum_video_speed_class",
+      "source_id": "canon-r5-mark-ii-specifications",
+      "evidence": "Canon's card-performance tables identify SD movie modes requiring Video Speed Class V60."
+    },
+    {
+      "field": "usage_profiles.3.requirements.minimum_video_speed_class",
+      "source_id": "canon-r5-mark-ii-specifications",
+      "evidence": "Canon's card-performance tables identify SD movie modes requiring Video Speed Class V90."
+    }
+  ]
+}

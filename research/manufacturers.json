@@ -1,7 +1,7 @@
 {
   "GoPro": [
     "gopro.com",
-	"gopro.my.salesforce.com"
+    "gopro.my.salesforce.com"
   ],
   "Valve": [
     "steamdeck.com"
@@ -26,7 +26,7 @@
     "raspberrypi.com"
   ],
   "Samsung": [
-  "samsung.com"
+    "samsung.com"
   ],
   "SanDisk": [
     "sandisk.com"
@@ -38,15 +38,26 @@
     "viofo.com"
   ],
   "Garmin": [
-  "garmin.com"
+    "garmin.com"
   ],
   "Lexar": [
-  "lexar.com"
+    "lexar.com"
   ],
   "ASUS": [
-  "asus.com"
+    "asus.com"
   ],
   "Lenovo": [
-  "lenovo.com"
+    "lenovo.com"
+  ],
+  "MSI": [
+    "msi.com"
+  ],
+  "Nikon": [
+    "nikonusa.com",
+    "nikonimglib.com"
+  ],
+  "Fujifilm": [
+    "fujifilm-x.com",
+    "fujifilm-dsc.com"
   ]
 }

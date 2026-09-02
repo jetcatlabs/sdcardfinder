@@ -1,0 +1,121 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "dji-osmo-action-6",
+    "category": "action-camera",
+    "manufacturer": "DJI",
+    "model": "Osmo Action 6",
+    "aliases": [
+      "dji osmo action 6",
+      "osmo action 6",
+      "action 6",
+      "dji action 6"
+    ],
+    "related_devices": [
+      "dji-osmo-action-5-pro",
+      "dji-osmo-action-4"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3",
+            "video_speed_class": "V30",
+            "application_class": "A2"
+          },
+          "setup_requirements": {
+            "filesystem": "exFAT"
+          },
+          "min_capacity_gb": null,
+          "max_capacity_gb": 1024,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3",
+          "video_speed_class": "V30",
+          "application_class": "A2"
+        }
+      }
+    ],
+    "notes": [
+      "DJI publishes specific recommended microSD models for Osmo Action 6. Every listed model is rated U3, A2, and V30.",
+      "The manufacturer-documented maximum microSD capacity is 1 TB.",
+      "DJI specifies exFAT as the supported file system."
+    ],
+    "sources": [
+      {
+        "id": "dji-osmo-action-6-specs",
+        "type": "manufacturer_specification",
+        "publisher": "DJI",
+        "title": "Osmo Action 6 Specifications",
+        "url": "https://www.dji.com/osmo-action-6/specs",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "dji-osmo-action-6-specs",
+      "evidence": "DJI lists the supported storage card type as microSD."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "dji-osmo-action-6-specs",
+      "evidence": "DJI specifies support for microSD cards up to 1TB."
+    },
+    {
+      "field": "storage.slots.0.recommendations.uhs_speed_class",
+      "source_id": "dji-osmo-action-6-specs",
+      "evidence": "Every card in DJI's published recommended-card list is U3."
+    },
+    {
+      "field": "storage.slots.0.recommendations.video_speed_class",
+      "source_id": "dji-osmo-action-6-specs",
+      "evidence": "Every card in DJI's published recommended-card list is V30."
+    },
+    {
+      "field": "storage.slots.0.recommendations.application_class",
+      "source_id": "dji-osmo-action-6-specs",
+      "evidence": "Every card in DJI's published recommended-card list is A2."
+    },
+    {
+      "field": "storage.slots.0.setup_requirements.filesystem",
+      "source_id": "dji-osmo-action-6-specs",
+      "evidence": "DJI specifies exFAT as the supported file system."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.uhs_speed_class",
+      "source_id": "dji-osmo-action-6-specs",
+      "evidence": "Every card in DJI's published recommended-card list is U3."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.video_speed_class",
+      "source_id": "dji-osmo-action-6-specs",
+      "evidence": "Every card in DJI's published recommended-card list is V30."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.application_class",
+      "source_id": "dji-osmo-action-6-specs",
+      "evidence": "Every card in DJI's published recommended-card list is A2."
+    }
+  ]
+}

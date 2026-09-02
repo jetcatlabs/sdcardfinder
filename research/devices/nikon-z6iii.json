@@ -1,0 +1,103 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "nikon-z6iii",
+    "category": "camera",
+    "manufacturer": "Nikon",
+    "model": "Z6III",
+    "aliases": [
+      "nikon z6iii",
+      "nikon z6 iii",
+      "z6iii",
+      "z6 iii"
+    ],
+    "related_devices": [
+      "canon-eos-r5-mark-ii",
+      "sony-a7r-v"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "video-recording",
+        "label": "Video recording",
+        "requirements": {},
+        "recommendations": {
+          "uhs_speed_class": "U3"
+        }
+      }
+    ],
+    "notes": [
+      "The Z6III provides an SD slot supporting SD, SDHC, and SDXC cards with UHS-I and UHS-II support.",
+      "Nikon recommends UHS Speed Class 3 or better SD cards for video recording and playback.",
+      "For video with a high frame size or rate, Nikon additionally recommends SD media with substantially higher transfer performance; this is retained as a note rather than translated into a generic SD speed-class requirement.",
+      "The camera also accepts CFexpress Type B and XQD media in its other card slot, which is outside SD Card Finder's catalog.",
+      "Nikon does not document a numeric maximum SD-card capacity in the cited documentation."
+    ],
+    "sources": [
+      {
+        "id": "nikon-z6iii-approved-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Nikon",
+        "title": "Z6III - Approved Memory Cards",
+        "url": "https://onlinemanual.nikonimglib.com/z6III/en/approved_memory_cards_397.html",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "nikon-z6iii-approved-cards",
+      "evidence": "Nikon specifies SD, SDHC, and SDXC memory cards for the Z6III."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "nikon-z6iii-approved-cards",
+      "evidence": "Nikon states that UHS-I and UHS-II SD cards are supported."
+    },
+    {
+      "field": "storage.slots.0.recommendations.uhs_speed_class",
+      "source_id": "nikon-z6iii-approved-cards",
+      "evidence": "Nikon recommends UHS Speed Class 3 or better SD cards for video recording and playback."
+    },
+    {
+      "field": "usage_profiles.1.recommendations.uhs_speed_class",
+      "source_id": "nikon-z6iii-approved-cards",
+      "evidence": "Nikon recommends UHS Speed Class 3 or better SD cards for video recording and playback."
+    }
+  ]
+}

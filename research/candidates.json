@@ -358,5 +358,85 @@
     "category": "single-board-computer",
     "priority": "medium",
     "status": "published"
+  },
+  {
+    "id": "asus-rog-xbox-ally-x",
+    "manufacturer": "ASUS",
+    "model": "ROG Xbox Ally X",
+    "category": "gaming-handheld",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "msi-claw-8-ai-plus",
+    "manufacturer": "MSI",
+    "model": "Claw 8 AI+",
+    "category": "gaming-handheld",
+    "priority": "medium",
+    "status": "published"
+  },
+  {
+    "id": "raspberry-pi-500",
+    "manufacturer": "Raspberry Pi",
+    "model": "500",
+    "category": "single-board-computer",
+    "priority": "medium",
+    "status": "published"
+  },
+  {
+    "id": "dji-osmo-action-6",
+    "manufacturer": "DJI",
+    "model": "Osmo Action 6",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "dji-osmo-360",
+    "manufacturer": "DJI",
+    "model": "Osmo 360",
+    "category": "action-camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "viofo-a229-plus",
+    "manufacturer": "VIOFO",
+    "model": "A229 Plus",
+    "category": "dash-camera",
+    "priority": "medium",
+    "status": "published"
+  },
+  {
+    "id": "nikon-z6iii",
+    "manufacturer": "Nikon",
+    "model": "Z6III",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "fujifilm-x-t5",
+    "manufacturer": "Fujifilm",
+    "model": "X-T5",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "canon-eos-r5-mark-ii",
+    "manufacturer": "Canon",
+    "model": "EOS R5 Mark II",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
+  },
+  {
+    "id": "sony-a1-ii",
+    "manufacturer": "Sony",
+    "model": "a1 II",
+    "category": "camera",
+    "priority": "high",
+    "status": "published"
   }
 ]

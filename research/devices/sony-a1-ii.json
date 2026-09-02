@@ -1,0 +1,165 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "sony-a1-ii",
+    "category": "camera",
+    "manufacturer": "Sony",
+    "model": "a1 II",
+    "aliases": [
+      "sony a1 ii",
+      "sony alpha 1 ii",
+      "sony alpha1 ii",
+      "a1 ii",
+      "alpha 1 ii",
+      "ilce-1m2"
+    ],
+    "related_devices": [
+      "sony-a7r-v",
+      "sony-a7-iv",
+      "canon-eos-r5-mark-ii"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        },
+        {
+          "slot": 2,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "XAVC S HD and supported lower-bitrate modes",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "high-bitrate-4k",
+        "label": "XAVC HS 4K / XAVC S 4K",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "highest-performance-video",
+        "label": "8K / XAVC S-I / high-bitrate S&Q",
+        "requirements": {
+          "minimum_video_speed_class": "V90"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "Both Sony a1 II card slots accept SD media compatible with UHS-I and UHS-II.",
+      "Both slots also accept CFexpress Type A media, which is outside SD Card Finder's catalog.",
+      "Sony specifies U3 or higher for supported lower-bitrate SD movie recording such as XAVC S HD.",
+      "Sony specifies V60 or higher for supported XAVC HS 4K and XAVC S 4K recording.",
+      "Sony specifies V90 or higher for XAVC HS 8K, XAVC S-I recording, and several high-bitrate S&Q modes.",
+      "Some proxy and high-bitrate modes require CFexpress Type A media and are therefore outside the SD-card usage profiles modeled here.",
+      "Sony does not document a numeric maximum SD-card capacity in the cited sources."
+    ],
+    "sources": [
+      {
+        "id": "sony-a1-ii-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "Sony",
+        "title": "ILCE-1M2 Specifications",
+        "url": "https://helpguide.sony.net/ilc/2440/v1/en/contents/231h_specifications_ilc2440.html",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "sony-a1-ii-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Sony",
+        "title": "ILCE-1M2 Help Guide - Memory cards that can be used",
+        "url": "https://helpguide.sony.net/ilc/2440/v1/en/contents/0002H_usable_memory_card.html",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "sony-a1-ii-memory-cards",
+      "evidence": "Sony specifies SD, SDHC, and SDXC cards as usable in the a1 II."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "sony-a1-ii-specifications",
+      "evidence": "Sony specifies Slot 1 as compatible with UHS-I and UHS-II SD cards."
+    },
+    {
+      "field": "storage.slots.1.accepted_formats",
+      "source_id": "sony-a1-ii-memory-cards",
+      "evidence": "Sony documents SD media support for both memory-card slots."
+    },
+    {
+      "field": "storage.slots.1.bus_support",
+      "source_id": "sony-a1-ii-specifications",
+      "evidence": "Sony specifies Slot 2 as compatible with UHS-I and UHS-II SD cards."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_uhs_speed_class",
+      "source_id": "sony-a1-ii-memory-cards",
+      "evidence": "Sony specifies U3 or higher SDHC/SDXC media for supported XAVC S HD recording."
+    },
+    {
+      "field": "usage_profiles.2.requirements.minimum_video_speed_class",
+      "source_id": "sony-a1-ii-memory-cards",
+      "evidence": "Sony specifies SDXC V60 or higher for supported XAVC HS 4K and XAVC S 4K recording."
+    },
+    {
+      "field": "usage_profiles.3.requirements.minimum_video_speed_class",
+      "source_id": "sony-a1-ii-memory-cards",
+      "evidence": "Sony specifies SDXC V90 or higher for XAVC HS 8K, XAVC S-I, and several high-bitrate S&Q recording modes."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "asus-rog-xbox-ally-x",
+    "category": "gaming-handheld",
+    "manufacturer": "ASUS",
+    "model": "ROG Xbox Ally X",
+    "aliases": [
+      "asus rog xbox ally x",
+      "rog xbox ally x",
+      "xbox ally x"
+    ],
+    "related_devices": [
+      "asus-rog-ally-x",
+      "lenovo-legion-go",
+      "steam-deck-oled"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD",
+            "microSDHC",
+            "microSDXC"
+          ],
+          "bus_support": [
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "game-storage",
+        "label": "Game storage",
+        "requirements": {},
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "ASUS explicitly specifies a UHS-II microSD card reader supporting SD, SDHC, and SDXC media.",
+      "ASUS does not document a numeric maximum microSD card capacity in the cited technical specifications."
+    ],
+    "sources": [
+      {
+        "id": "asus-rog-xbox-ally-x-specifications",
+        "type": "manufacturer_specification",
+        "publisher": "ASUS",
+        "title": "ROG Xbox Ally X (2025) Specifications",
+        "url": "https://rog.asus.com/us/gaming-handhelds/rog-ally/rog-xbox-ally-x-2025/spec/",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "asus-rog-xbox-ally-x-specifications",
+      "evidence": "ASUS specifies a UHS-II microSD card reader supporting SD, SDHC, and SDXC media."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "asus-rog-xbox-ally-x-specifications",
+      "evidence": "ASUS explicitly identifies the ROG Xbox Ally X card reader as UHS-II."
+    }
+  ]
+}

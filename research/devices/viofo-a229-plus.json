@@ -1,0 +1,94 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "viofo-a229-plus",
+    "category": "dash-camera",
+    "manufacturer": "VIOFO",
+    "model": "A229 Plus",
+    "aliases": [
+      "viofo a229 plus",
+      "a229 plus"
+    ],
+    "related_devices": [
+      "viofo-a229-pro",
+      "viofo-a329"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "uhs_speed_class": "U3",
+            "video_speed_class": "V30",
+            "application_class": "A2",
+            "endurance": {
+              "continuous_recording": true
+            }
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": 512,
+          "max_capacity_status": "manufacturer_documented"
+        }
+      ]
+    },
+    "usage_profiles": [],
+    "notes": [
+      "VIOFO recommends high-endurance memory for dashcam recording.",
+      "The A229 Plus product page offers VIOFO's U3, A2, V30 industrial high-endurance microSD card.",
+      "Maximum manufacturer-documented capacity is 512 GB."
+    ],
+    "sources": [
+      {
+        "id": "viofo-a229-plus-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "VIOFO",
+        "title": "VIOFO A229 Plus",
+        "url": "https://www.viofo.com/products/viofo-a229-plus-2ch-front-and-rear-2k2k-hdr-5ghz-wi-fi-gps-voice-control-dual-dash-camera-with-sony-starvis-2-sensor",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "viofo-a229-plus-product-page",
+      "evidence": "VIOFO lists external microSD storage for the A229 Plus."
+    },
+    {
+      "field": "storage.slots.0.max_capacity_gb",
+      "source_id": "viofo-a229-plus-product-page",
+      "evidence": "VIOFO specifies support for an external microSD card up to 512GB."
+    },
+    {
+      "field": "storage.slots.0.recommendations.uhs_speed_class",
+      "source_id": "viofo-a229-plus-product-page",
+      "evidence": "The A229 Plus page offers VIOFO's U3 A2 V30 industrial microSD card as a memory-card accessory."
+    },
+    {
+      "field": "storage.slots.0.recommendations.video_speed_class",
+      "source_id": "viofo-a229-plus-product-page",
+      "evidence": "The A229 Plus page offers VIOFO's U3 A2 V30 industrial microSD card as a memory-card accessory."
+    },
+    {
+      "field": "storage.slots.0.recommendations.application_class",
+      "source_id": "viofo-a229-plus-product-page",
+      "evidence": "The A229 Plus page offers VIOFO's U3 A2 V30 industrial microSD card as a memory-card accessory."
+    },
+    {
+      "field": "storage.slots.0.recommendations.endurance.continuous_recording",
+      "source_id": "viofo-a229-plus-product-page",
+      "evidence": "VIOFO says dashcams require media able to withstand heavy writing cycles and recommends high-endurance media for write-intensive recording."
+    }
+  ]
+}

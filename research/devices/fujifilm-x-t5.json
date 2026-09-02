@@ -1,0 +1,149 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "fujifilm-x-t5",
+    "category": "camera",
+    "manufacturer": "Fujifilm",
+    "model": "X-T5",
+    "aliases": [
+      "fujifilm x-t5",
+      "fujifilm xt5",
+      "fuji x-t5",
+      "fuji xt5",
+      "x-t5",
+      "xt5"
+    ],
+    "related_devices": [
+      "sony-a6700",
+      "canon-eos-r6-mark-ii"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        },
+        {
+          "slot": 2,
+          "accepted_formats": [
+            "SD",
+            "SDHC",
+            "SDXC"
+          ],
+          "bus_support": [
+            "UHS-I",
+            "UHS-II"
+          ],
+          "requirements": {},
+          "recommendations": {},
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "still-photography",
+        "label": "Still photography",
+        "requirements": {},
+        "recommendations": {}
+      },
+      {
+        "id": "standard-video",
+        "label": "100 / 200 Mbps movie recording",
+        "requirements": {
+          "minimum_uhs_speed_class": "U3"
+        },
+        "recommendations": {}
+      },
+      {
+        "id": "360mbps-video",
+        "label": "360 Mbps movie recording",
+        "requirements": {
+          "minimum_video_speed_class": "V60"
+        },
+        "recommendations": {}
+      }
+    ],
+    "notes": [
+      "The X-T5 has two SD card slots, and both support SD, SDHC, and SDXC cards with UHS-I and UHS-II.",
+      "Fujifilm recommends UHS-II cards for high-speed burst photography; recommended bus performance is retained as a note because the current recommendation schema does not model a preferred host bus.",
+      "Fujifilm specifies U3 or better for 100 Mbps and 200 Mbps movie recording.",
+      "Fujifilm specifies V60 or better for 360 Mbps movie recording.",
+      "Fujifilm does not document a numeric maximum SD-card capacity in the cited documentation."
+    ],
+    "sources": [
+      {
+        "id": "fujifilm-x-t5-memory-cards",
+        "type": "manufacturer_manual",
+        "publisher": "Fujifilm",
+        "title": "X-T5 - Inserting Memory Cards",
+        "url": "https://app.fujifilm-dsc.com/en/manual/x-t5/first_step/insert_card/",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "fujifilm-x-t5-movie-recording",
+        "type": "manufacturer_manual",
+        "publisher": "Fujifilm",
+        "title": "X-T5 - Recording Movies",
+        "url": "https://fujifilm-dsc.com/en/manual/x-t5/basic_movie/movie_rec/",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "fujifilm-x-t5-memory-cards",
+      "evidence": "Fujifilm specifies SD, SDHC, and SDXC cards for the X-T5."
+    },
+    {
+      "field": "storage.slots.0.bus_support",
+      "source_id": "fujifilm-x-t5-memory-cards",
+      "evidence": "Fujifilm states that both UHS-I and UHS-II interfaces are supported."
+    },
+    {
+      "field": "storage.slots.1.accepted_formats",
+      "source_id": "fujifilm-x-t5-memory-cards",
+      "evidence": "Fujifilm documents two SD-card slots with the same supported SD, SDHC, and SDXC media."
+    },
+    {
+      "field": "storage.slots.1.bus_support",
+      "source_id": "fujifilm-x-t5-memory-cards",
+      "evidence": "Fujifilm documents both X-T5 card slots as supporting the UHS-I and UHS-II interfaces."
+    },
+    {
+      "field": "usage_profiles.1.requirements.minimum_uhs_speed_class",
+      "source_id": "fujifilm-x-t5-movie-recording",
+      "evidence": "Fujifilm specifies UHS Speed Class 3 or better for movie recording at 100 or 200 Mbps."
+    },
+    {
+      "field": "usage_profiles.2.requirements.minimum_video_speed_class",
+      "source_id": "fujifilm-x-t5-movie-recording",
+      "evidence": "Fujifilm specifies Video Speed Class V60 or better for movie recording at 360 Mbps."
+    }
+  ]
+}

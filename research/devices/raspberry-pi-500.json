@@ -1,0 +1,95 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "device": {
+    "id": "raspberry-pi-500",
+    "category": "single-board-computer",
+    "manufacturer": "Raspberry Pi",
+    "model": "500",
+    "aliases": [
+      "raspberry pi 500",
+      "raspberrypi 500",
+      "rpi 500",
+      "pi 500"
+    ],
+    "related_devices": [
+      "raspberry-pi-5",
+      "raspberry-pi-4"
+    ],
+    "storage": {
+      "slots": [
+        {
+          "slot": 1,
+          "accepted_formats": [
+            "microSD"
+          ],
+          "bus_support": [],
+          "requirements": {},
+          "recommendations": {
+            "application_class": "A2"
+          },
+          "setup_requirements": {},
+          "min_capacity_gb": null,
+          "max_capacity_gb": null,
+          "max_capacity_status": "not_documented"
+        }
+      ]
+    },
+    "usage_profiles": [
+      {
+        "id": "operating-system-storage",
+        "label": "Operating system and application storage",
+        "requirements": {},
+        "recommendations": {
+          "application_class": "A2"
+        }
+      }
+    ],
+    "notes": [
+      "Raspberry Pi 500 has a microSD card slot for operating system and data storage.",
+      "Raspberry Pi promotes its Class A2 microSD cards for optimal performance and a smoother experience on Raspberry Pi computers.",
+      "The cited Raspberry Pi 500 product brief does not document a numeric maximum microSD card capacity."
+    ],
+    "sources": [
+      {
+        "id": "raspberry-pi-500-product-brief",
+        "type": "manufacturer_specification",
+        "publisher": "Raspberry Pi",
+        "title": "Raspberry Pi 500 Product Brief",
+        "url": "https://datasheets.raspberrypi.com/pi500/raspberry-pi-500-product-brief.pdf",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "raspberry-pi-sd-card-product",
+        "type": "manufacturer_documentation",
+        "publisher": "Raspberry Pi",
+        "title": "Raspberry Pi SD Cards",
+        "url": "https://www.raspberrypi.com/products/sd-cards/",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "storage.slots.0.accepted_formats",
+      "source_id": "raspberry-pi-500-product-brief",
+      "evidence": "Raspberry Pi specifies a microSD card slot for operating system and data storage on Raspberry Pi 500."
+    },
+    {
+      "field": "storage.slots.0.recommendations.application_class",
+      "source_id": "raspberry-pi-sd-card-product",
+      "evidence": "Raspberry Pi describes its Class A2 microSD cards as tested for optimal performance and says they help provide the smoothest user experience on Raspberry Pi computers."
+    },
+    {
+      "field": "usage_profiles.0.recommendations.application_class",
+      "source_id": "raspberry-pi-sd-card-product",
+      "evidence": "Raspberry Pi promotes Class A2 microSD cards for improved Raspberry Pi storage performance."
+    }
+  ]
+}
