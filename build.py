@@ -515,6 +515,77 @@ def featured_card_sort_key(item):
         ),
     )
 
+def capacity_featured_sort_key(device, item):
+    card = item["card"]
+
+    speed_classes = card.get(
+        "speed_classes",
+        {}
+    )
+
+    application_rank = {
+        None: 0,
+        "A1": 1,
+        "A2": 2,
+    }
+
+    application = speed_classes.get(
+        "application"
+    )
+
+    uhs = speed_classes.get(
+        "uhs"
+    )
+
+    video = speed_classes.get(
+        "video"
+    )
+
+    bus = card.get(
+        "bus"
+    )
+
+    # For ordinary gaming-handheld compatibility,
+    # prefer UHS-I when it works instead of rewarding
+    # more expensive interfaces the host may not use.
+    if device.get("category") == "gaming-handheld":
+        bus_rank = {
+            "UHS-I": 0,
+            "UHS-II": 1,
+            "SD Express": 2,
+            None: 3,
+        }.get(
+            bus,
+            4,
+        )
+    else:
+        bus_rank = 0
+
+    return (
+        is_specialty_card(card),
+        bus_rank,
+        -application_rank.get(
+            application,
+            0
+        ),
+        -UHS_SPEED_RANK.get(
+            uhs,
+            0
+        ),
+        -VIDEO_SPEED_RANK.get(
+            video,
+            0
+        ),
+        card.get(
+            "manufacturer",
+            ""
+        ),
+        card.get(
+            "product_family",
+            ""
+        ),
+    )
+
 def select_featured_cards(device, matches):
     profile = CAPACITY_PROFILES.get(
         device["category"]
@@ -524,39 +595,74 @@ def select_featured_cards(device, matches):
         return []
 
     featured = []
+    used_families = set()
 
     tiers = [
         (
-            "Smallest option",
-            profile["smallest"]
+            "Smaller capacity",
+            profile["smallest"],
+            "A smaller compatible capacity for lighter storage needs."
         ),
         (
-            "Balanced Capacity",
-            profile["recommended"]
+            "Balanced capacity",
+            profile["recommended"],
+            "A practical middle-ground capacity for most users."
         ),
         (
             "More storage",
-            profile["more_storage"]
+            profile["more_storage"],
+            "More room when you want to keep a larger library installed."
         ),
     ]
 
-    for label, capacity in tiers:
+    for label, capacity, reason in tiers:
         candidates = [
             item
             for item in matches
             if item["card"]["capacity_gb"] == capacity
         ]
-        
-        match = min(
-            candidates,
-            key=featured_card_sort_key,
-            default=None
+
+        candidates.sort(
+            key=lambda item:
+                capacity_featured_sort_key(
+                    device,
+                    item,
+                )
         )
 
+        match = None
+
+        # Prefer some recommendation diversity when
+        # there is another similarly suitable family.
+        for candidate in candidates:
+            card = candidate["card"]
+
+            family_key = (
+                card.get("manufacturer"),
+                card.get("product_family"),
+            )
+
+            if family_key not in used_families:
+                match = candidate
+                break
+
+        if match is None and candidates:
+            match = candidates[0]
+
         if match:
+            card = match["card"]
+
+            used_families.add(
+                (
+                    card.get("manufacturer"),
+                    card.get("product_family"),
+                )
+            )
+
             featured.append({
                 "label": label,
-                "match": match
+                "match": match,
+                "reason": reason,
             })
 
     return featured
@@ -708,9 +814,9 @@ def alternate_priority(match):
 
     bus = card.get("bus")
 
-    if bus == "UHS-II":
+    if bus == "UHS-I":
         bus_rank = 0
-    elif bus == "UHS-I":
+    elif bus == "UHS-II":
         bus_rank = 1
     elif bus == "SD Express":
         bus_rank = 2
@@ -763,8 +869,37 @@ def generate_capacity_recommendations(device, cards):
         key=alternate_priority
     )
 
-    visible_other_matches = other_matches[:6]
-    hidden_other_matches = other_matches[6:]
+    profile = CAPACITY_PROFILES.get(
+        device["category"],
+        {}
+    )
+    
+    minimum_visible_capacity = profile.get(
+        "smallest",
+        0,
+    )
+    
+    visible_pool = [
+        match
+        for match in other_matches
+        if match["card"].get(
+            "capacity_gb",
+            0,
+        ) >= minimum_visible_capacity
+    ]
+    
+    visible_other_matches = visible_pool[:3]
+    
+    visible_ids = {
+        match["card"]["id"]
+        for match in visible_other_matches
+    }
+    
+    hidden_other_matches = [
+        match
+        for match in other_matches
+        if match["card"]["id"] not in visible_ids
+    ]
 
     output = ""
 
@@ -776,7 +911,10 @@ def generate_capacity_recommendations(device, cards):
         for item in featured:
             output += render_recommendation_card(
                 item["match"],
-                item["label"]
+                item["label"],
+                recommendation_reason=item[
+                    "reason"
+                ],
             )
 
         output += """
@@ -2325,7 +2463,7 @@ def generate_device_page(device, cards, devices):
 
     <meta
         name="description"
-        content="Find compatible SD cards for the {manufacturer} {model}, including supported formats, speeds and capacities."
+        content="Compatible SD cards for the {manufacturer} {model}: supported formats, speed requirements, capacity limits, and sensible card recommendations."
     >
     <link
         rel="icon"
@@ -2381,8 +2519,9 @@ def generate_device_page(device, cards, devices):
         </h1>
 
         <p class="device-intro">
-            Here's what to look for when choosing
-            an SD card for your device.
+            Use the verified requirements below to choose
+            an SD card for the {manufacturer} {model}, then
+            compare sensible capacity and performance options.
         </p>
     </section>
 
