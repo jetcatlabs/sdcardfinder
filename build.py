@@ -607,6 +607,65 @@ def render_recommendation_card(
     </article>
     """
 
+def usage_priority(match):
+    card = match["card"]
+
+    endurance = card.get(
+        "endurance",
+        {}
+    )
+
+    is_endurance = endurance.get(
+        "continuous_recording"
+    ) is True
+
+    bus_unspecified = (
+        card.get("bus") is None
+    )
+
+    return (
+        1 if is_endurance else 0,
+        1 if bus_unspecified else 0,
+        card.get("capacity_gb", 0),
+        card.get("manufacturer", ""),
+        card.get("product_family", "")
+    )
+
+def alternate_priority(match):
+    card = match["card"]
+
+    endurance = card.get(
+        "endurance",
+        {}
+    )
+
+    is_endurance = endurance.get(
+        "continuous_recording"
+    ) is True
+
+    bus = card.get("bus")
+
+    if bus == "UHS-II":
+        bus_rank = 0
+    elif bus == "UHS-I":
+        bus_rank = 1
+    elif bus == "SD Express":
+        bus_rank = 2
+    elif bus is None:
+        bus_rank = 4
+    else:
+        bus_rank = 3
+
+    endurance_rank = 1 if is_endurance else 0
+
+    return (
+        endurance_rank,
+        bus_rank,
+        card.get("capacity_gb", 0),
+        card.get("manufacturer", ""),
+        card.get("product_family", "")
+    )
+
 def generate_capacity_recommendations(device, cards):
     matches = compatible_cards(
         device,
@@ -637,6 +696,13 @@ def generate_capacity_recommendations(device, cards):
         if match["card"]["id"] not in featured_ids
     ]
 
+    other_matches.sort(
+        key=alternate_priority
+    )
+
+    visible_other_matches = other_matches[:6]
+    hidden_other_matches = other_matches[6:]
+
     output = ""
 
     if featured:
@@ -654,7 +720,7 @@ def generate_capacity_recommendations(device, cards):
         </div>
         """
 
-    if other_matches:
+    if visible_other_matches:
         output += """
         <div class="other-compatible">
             <h3>Other compatible cards</h3>
@@ -662,7 +728,7 @@ def generate_capacity_recommendations(device, cards):
             <div class="other-compatible-grid">
         """
 
-        for match in other_matches:
+        for match in visible_other_matches:
             output += render_recommendation_card(
                 match
             )
@@ -670,6 +736,27 @@ def generate_capacity_recommendations(device, cards):
         output += """
             </div>
         </div>
+        """
+
+    if hidden_other_matches:
+        output += f"""
+        <details class="all-compatible-cards">
+            <summary>
+                Show {len(hidden_other_matches)}
+                more compatible cards
+            </summary>
+
+            <div class="other-compatible-grid">
+        """
+
+        for match in hidden_other_matches:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </details>
         """
 
     return output
@@ -729,6 +816,13 @@ def generate_usage_recommendations(device, cards):
 
         if not profile_matches:
             continue
+            
+        profile_matches.sort(
+            key=usage_priority
+        )
+
+        visible_profile_matches = profile_matches[:6]
+        hidden_profile_matches = profile_matches[6:]
 
         output += f"""
         <div class="usage-recommendation-group">
@@ -739,17 +833,42 @@ def generate_usage_recommendations(device, cards):
             <div class="usage-recommendation-grid">
         """
 
-        for match in profile_matches:
+        for match in visible_profile_matches:
             output += render_recommendation_card(
                 match
             )
 
         output += """
             </div>
-        </div>
         """
 
+        if hidden_profile_matches:
+            output += f"""
+            <details class="all-compatible-cards">
+                <summary>
+                    Show {len(hidden_profile_matches)}
+                    more cards for this mode
+                </summary>
+
+                <div class="usage-recommendation-grid">
+            """
+
+            for match in hidden_profile_matches:
+                output += render_recommendation_card(
+                    match
+                )
+
+            output += """
+                </div>
+            </details>
+            """
+
+        output += """
+        </div>
+        """
+  
     return output
+  
 
 def generate_application_recommendations(device, cards):
     matches = compatible_cards(
@@ -779,9 +898,23 @@ def generate_application_recommendations(device, cards):
         else:
             others.append(match)
 
+    preferred.sort(
+        key=usage_priority
+    )
+
+    others.sort(
+        key=usage_priority
+    )
+
+    visible_preferred = preferred[:6]
+    hidden_preferred = preferred[6:]
+
+    visible_others = others[:6]
+    hidden_others = others[6:]
+
     output = ""
 
-    if preferred:
+    if visible_preferred:
         output += """
         <div class="usage-recommendation-group">
             <h3>Recommended for best responsiveness</h3>
@@ -789,7 +922,7 @@ def generate_application_recommendations(device, cards):
             <div class="usage-recommendation-grid">
         """
 
-        for match in preferred:
+        for match in visible_preferred:
             output += render_recommendation_card(
                 match
             )
@@ -799,7 +932,28 @@ def generate_application_recommendations(device, cards):
         </div>
         """
 
-    if others:
+    if hidden_preferred:
+        output += f"""
+        <details class="all-compatible-cards">
+            <summary>
+                Show {len(hidden_preferred)}
+                more A2 cards
+            </summary>
+
+            <div class="usage-recommendation-grid">
+        """
+
+        for match in hidden_preferred:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </details>
+        """
+
+    if visible_others:
         output += """
         <div class="other-compatible">
             <h3>Other compatible cards</h3>
@@ -807,7 +961,7 @@ def generate_application_recommendations(device, cards):
             <div class="other-compatible-grid">
         """
 
-        for match in others:
+        for match in visible_others:
             output += render_recommendation_card(
                 match
             )
@@ -815,6 +969,27 @@ def generate_application_recommendations(device, cards):
         output += """
             </div>
         </div>
+        """
+
+    if hidden_others:
+        output += f"""
+        <details class="all-compatible-cards">
+            <summary>
+                Show {len(hidden_others)}
+                more compatible cards
+            </summary>
+
+            <div class="other-compatible-grid">
+        """
+
+        for match in hidden_others:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </details>
         """
 
     return output
@@ -839,24 +1014,118 @@ def generate_recommended_spec_recommendations(device, cards):
         "recommendations",
         {}
     )
-    
-    if not recommendations:
-        output = """
-        <div class="other-compatible">
-            <h3>Compatible cards</h3>
 
-            <div class="other-compatible-grid">
-        """
+    # Devices such as Garmin may document hard
+    # requirements but no separate recommended spec.
+    # For dash-camera use, surface endurance cards
+    # separately without calling them manufacturer
+    # recommendations.
+    if not recommendations:
+        endurance_matches = []
+        standard_matches = []
 
         for match in matches:
-            output += render_recommendation_card(
-                match
+            endurance = match["card"].get(
+                "endurance",
+                {}
             )
 
-        output += """
+            if endurance.get(
+                "continuous_recording"
+            ) is True:
+                endurance_matches.append(
+                    match
+                )
+            else:
+                standard_matches.append(
+                    match
+                )
+
+        visible_endurance = endurance_matches[:6]
+        hidden_endurance = endurance_matches[6:]
+
+        visible_standard = standard_matches[:6]
+        hidden_standard = standard_matches[6:]
+
+        output = ""
+
+        if visible_endurance:
+            output += """
+            <div class="other-compatible">
+                <h3>High-endurance options</h3>
+
+                <div class="other-compatible-grid">
+            """
+
+            for match in visible_endurance:
+                output += render_recommendation_card(
+                    match
+                )
+
+            output += """
+                </div>
             </div>
-        </div>
-        """
+            """
+
+        if hidden_endurance:
+            output += f"""
+            <details class="all-compatible-cards">
+                <summary>
+                    Show {len(hidden_endurance)}
+                    more high-endurance cards
+                </summary>
+
+                <div class="other-compatible-grid">
+            """
+
+            for match in hidden_endurance:
+                output += render_recommendation_card(
+                    match
+                )
+
+            output += """
+                </div>
+            </details>
+            """
+
+        if visible_standard:
+            output += """
+            <div class="other-compatible">
+                <h3>Other compatible cards</h3>
+
+                <div class="other-compatible-grid">
+            """
+
+            for match in visible_standard:
+                output += render_recommendation_card(
+                    match
+                )
+
+            output += """
+                </div>
+            </div>
+            """
+
+        if hidden_standard:
+            output += f"""
+            <details class="all-compatible-cards">
+                <summary>
+                    Show {len(hidden_standard)}
+                    more compatible cards
+                </summary>
+
+                <div class="other-compatible-grid">
+            """
+
+            for match in hidden_standard:
+                output += render_recommendation_card(
+                    match
+                )
+
+            output += """
+                </div>
+            </details>
+            """
 
         return output
 
@@ -874,9 +1143,13 @@ def generate_recommended_spec_recommendations(device, cards):
             card,
             recommendations
         ):
-            preferred.append(match)
+            preferred.append(
+                match
+            )
         else:
-            others.append(match)
+            others.append(
+                match
+            )
 
     others.sort(
         key=lambda match: other_recommendation_sort_key(
@@ -884,7 +1157,7 @@ def generate_recommended_spec_recommendations(device, cards):
             recommendations
         )
     )
-    
+
     endurance_recommended = bool(
         recommendations.get(
             "endurance"
@@ -916,9 +1189,18 @@ def generate_recommended_spec_recommendations(device, cards):
                 match
             )
 
+    visible_preferred = preferred[:6]
+    hidden_preferred = preferred[6:]
+
+    visible_endurance = endurance_others[:6]
+    hidden_endurance = endurance_others[6:]
+
+    visible_standard = standard_others[:6]
+    hidden_standard = standard_others[6:]
+
     output = ""
 
-    if preferred:
+    if visible_preferred:
         output += """
         <div class="usage-recommendation-group">
             <h3>Matches manufacturer recommendations</h3>
@@ -926,7 +1208,7 @@ def generate_recommended_spec_recommendations(device, cards):
             <div class="usage-recommendation-grid">
         """
 
-        for match in preferred:
+        for match in visible_preferred:
             output += render_recommendation_card(
                 match,
                 badge_text="Recommended",
@@ -938,7 +1220,30 @@ def generate_recommended_spec_recommendations(device, cards):
         </div>
         """
 
-    if endurance_others:
+    if hidden_preferred:
+        output += f"""
+        <details class="all-compatible-cards">
+            <summary>
+                Show {len(hidden_preferred)}
+                more recommended cards
+            </summary>
+
+            <div class="usage-recommendation-grid">
+        """
+
+        for match in hidden_preferred:
+            output += render_recommendation_card(
+                match,
+                badge_text="Recommended",
+                recommendation_reason=recommendation_reason,
+            )
+
+        output += """
+            </div>
+        </details>
+        """
+
+    if visible_endurance:
         output += """
         <div class="other-compatible">
             <h3>High-endurance alternatives</h3>
@@ -946,7 +1251,7 @@ def generate_recommended_spec_recommendations(device, cards):
             <div class="other-compatible-grid">
         """
 
-        for match in endurance_others:
+        for match in visible_endurance:
             output += render_recommendation_card(
                 match
             )
@@ -956,7 +1261,28 @@ def generate_recommended_spec_recommendations(device, cards):
         </div>
         """
 
-    if standard_others:
+    if hidden_endurance:
+        output += f"""
+        <details class="all-compatible-cards">
+            <summary>
+                Show {len(hidden_endurance)}
+                more high-endurance alternatives
+            </summary>
+
+            <div class="other-compatible-grid">
+        """
+
+        for match in hidden_endurance:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </details>
+        """
+
+    if visible_standard:
         output += """
         <div class="other-compatible">
             <h3>Other compatible cards</h3>
@@ -964,7 +1290,7 @@ def generate_recommended_spec_recommendations(device, cards):
             <div class="other-compatible-grid">
         """
 
-        for match in standard_others:
+        for match in visible_standard:
             output += render_recommendation_card(
                 match
             )
@@ -972,6 +1298,27 @@ def generate_recommended_spec_recommendations(device, cards):
         output += """
             </div>
         </div>
+        """
+
+    if hidden_standard:
+        output += f"""
+        <details class="all-compatible-cards">
+            <summary>
+                Show {len(hidden_standard)}
+                more compatible cards
+            </summary>
+
+            <div class="other-compatible-grid">
+        """
+
+        for match in hidden_standard:
+            output += render_recommendation_card(
+                match
+            )
+
+        output += """
+            </div>
+        </details>
         """
 
     return output
@@ -1280,6 +1627,36 @@ def generate_setup_requirements(slot):
         html.escape(filesystem)
     )
 
+def get_interface_display(slot):
+    required_bus = slot.get(
+        "requirements",
+        {}
+    ).get(
+        "required_bus"
+    )
+
+    if required_bus:
+        return (
+            "Required interface",
+            required_bus
+        )
+
+    buses = slot.get(
+        "bus_support",
+        []
+    )
+
+    if buses:
+        return (
+            "Host interface",
+            format_list(buses)
+        )
+
+    return (
+        "Interface",
+        "Not specified by manufacturer"
+    )
+
 def generate_requirements_summary(device):
     slot = device["storage"]["slots"][0]
     
@@ -1291,9 +1668,8 @@ def generate_requirements_summary(device):
         slot.get("accepted_formats", [])
     )
 
-    buses = format_list(
-        slot.get("bus_support", [])
-    )
+    interface_label, interface_value = \
+        get_interface_display(slot)
 
     min_capacity = slot.get(
         "min_capacity_gb"
@@ -1339,11 +1715,11 @@ def generate_requirements_summary(device):
 
         <div class="requirement">
             <span class="requirement-label">
-                Interface
+                {html.escape(interface_label)}
             </span>
 
             <strong>
-                {html.escape(buses)}
+               {html.escape(interface_value)}
             </strong>
         </div>
 
@@ -1391,19 +1767,55 @@ def generate_usage_profiles(device):
 
         values = []
 
-        video = requirements.get(
-            "minimum_video_speed_class"
+        required_bus = requirements.get(
+            "required_bus"
+        )
+
+        sd = requirements.get(
+            "minimum_sd_speed_class"
         )
 
         uhs = requirements.get(
             "minimum_uhs_speed_class"
         )
 
+        video = requirements.get(
+            "minimum_video_speed_class"
+        )
+
+        application = requirements.get(
+            "minimum_application_class"
+        )
+
+        express = requirements.get(
+            "minimum_sd_express_speed_class"
+        )
+
+        if required_bus:
+            values.append(
+                "{} required".format(
+                    required_bus
+                )
+            )
+
+        if sd:
+            values.append(f"{sd} or better")
+
         if uhs:
             values.append(f"{uhs} or better")
 
         if video:
             values.append(f"{video} or better")
+
+        if application:
+            values.append(
+                f"{application} or better"
+            )
+
+        if express:
+            values.append(
+                f"{express} or better"
+            )
 
         rows += f"""
         <div class="usage-row">
@@ -1452,12 +1864,8 @@ def generate_technical_details(device):
             )
         )
 
-        buses = format_list(
-            slot.get(
-                "bus_support",
-                []
-            )
-        )
+        interface_label, interface_value = \
+            get_interface_display(slot)
 
         max_capacity = slot.get(
             "max_capacity_gb"
@@ -1481,9 +1889,11 @@ def generate_technical_details(device):
                     {html.escape(formats)}
                 </dd>
 
-                <dt>Interface</dt>
+                <dt>
+                    {html.escape(interface_label)}
+                </dt>
                 <dd>
-                    {html.escape(buses)}
+                    {html.escape(interface_value)}
                 </dd>
 
                 <dt>Maximum capacity</dt>
