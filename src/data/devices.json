@@ -2173,7 +2173,15 @@
           "setup_requirements": {},
           "min_capacity_gb": null,
           "max_capacity_gb": 256,
-          "max_capacity_status": "manufacturer_documented"
+          "max_capacity_status": "manufacturer_documented",
+          "requirements_any_of": [
+            {
+              "minimum_sd_speed_class": "C10"
+            },
+            {
+              "minimum_uhs_bus": "UHS-I"
+            }
+          ]
         }
       ]
     },
@@ -2182,12 +2190,19 @@
         "id": "video-recording",
         "label": "Video recording",
         "requirements": {},
-        "recommendations": {}
+        "recommendations": {},
+        "requirements_any_of": [
+          {
+            "minimum_sd_speed_class": "C10"
+          },
+          {
+            "minimum_uhs_bus": "UHS-I"
+          }
+        ]
       }
     ],
     "notes": [
       "GoPro specifies a brand-name microSD, microSDHC, or microSDXC card with a Class 10 or UHS-I rating.",
-      "The Class 10-or-UHS-I condition is preserved as manufacturer wording rather than converted into separate AND requirements.",
       "Maximum documented capacity is 256 GB."
     ],
     "sources": [
@@ -2198,10 +2213,8 @@
         "title": "HERO9 Black User Manual",
         "url": "https://gopro.com/content/dam/help/hero9-black/manuals/HERO9Black_UM_ENG_REVB.pdf",
         "verified_at": "2026-09-01",
-        "supports": [
-          "storage.slots.0.accepted_formats",
-          "storage.slots.0.max_capacity_gb"
-        ]
+        "authority": "manufacturer",
+        "first_party_confirmed": true
       }
     ],
     "status": "verified",
@@ -2526,7 +2539,15 @@
           "setup_requirements": {},
           "min_capacity_gb": null,
           "max_capacity_gb": 256,
-          "max_capacity_status": "manufacturer_documented"
+          "max_capacity_status": "manufacturer_documented",
+          "requirements_any_of": [
+            {
+              "minimum_sd_speed_class": "C10"
+            },
+            {
+              "minimum_uhs_bus": "UHS-I"
+            }
+          ]
         }
       ]
     },
@@ -2535,12 +2556,19 @@
         "id": "video-recording",
         "label": "Video recording",
         "requirements": {},
-        "recommendations": {}
+        "recommendations": {},
+        "requirements_any_of": [
+          {
+            "minimum_sd_speed_class": "C10"
+          },
+          {
+            "minimum_uhs_bus": "UHS-I"
+          }
+        ]
       }
     ],
     "notes": [
       "GoPro specifies a brand-name microSD, microSDHC, or microSDXC card with a Class 10 or UHS-I rating.",
-      "The Class 10-or-UHS-I condition is preserved as manufacturer wording rather than converted into separate AND requirements.",
       "Maximum documented capacity is 256 GB."
     ],
     "sources": [
@@ -2551,10 +2579,8 @@
         "title": "GoPro MAX User Manual",
         "url": "https://gopro.com/content/dam/help/max/manuals/MAX_UM_GB_REVB.pdf",
         "verified_at": "2026-09-01",
-        "supports": [
-          "storage.slots.0.accepted_formats",
-          "storage.slots.0.max_capacity_gb"
-        ]
+        "authority": "manufacturer",
+        "first_party_confirmed": true
       }
     ],
     "status": "verified",
@@ -3400,7 +3426,15 @@
           "setup_requirements": {},
           "min_capacity_gb": null,
           "max_capacity_gb": 256,
-          "max_capacity_status": "manufacturer_documented"
+          "max_capacity_status": "manufacturer_documented",
+          "requirements_any_of": [
+            {
+              "minimum_sd_speed_class": "C10"
+            },
+            {
+              "minimum_uhs_bus": "UHS-I"
+            }
+          ]
         }
       ]
     },
@@ -3409,12 +3443,19 @@
         "id": "video-recording",
         "label": "Video recording",
         "requirements": {},
-        "recommendations": {}
+        "recommendations": {},
+        "requirements_any_of": [
+          {
+            "minimum_sd_speed_class": "C10"
+          },
+          {
+            "minimum_uhs_bus": "UHS-I"
+          }
+        ]
       }
     ],
     "notes": [
       "GoPro specifies a brand-name microSD, microSDHC, or microSDXC card with a Class 10 or UHS-I rating.",
-      "The Class 10-or-UHS-I condition is preserved as manufacturer wording rather than converted into separate AND requirements.",
       "Maximum documented capacity is 256 GB."
     ],
     "sources": [
@@ -3425,10 +3466,8 @@
         "title": "HERO8 Black User Manual",
         "url": "https://gopro.com/content/dam/help/hero8-black/manuals/HERO8Black_UM_ENG_REVC.pdf",
         "verified_at": "2026-09-01",
-        "supports": [
-          "storage.slots.0.accepted_formats",
-          "storage.slots.0.max_capacity_gb"
-        ]
+        "authority": "manufacturer",
+        "first_party_confirmed": true
       }
     ],
     "status": "verified",

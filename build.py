@@ -26,6 +26,12 @@ UHS_SPEED_RANK = {
     "U3": 3,
 }
 
+UHS_BUS_RANK = {
+    "UHS-I": 1,
+    "UHS-II": 2,
+    "UHS-III": 3,
+}
+
 SD_SPEED_RANK = {
     "C2": 2,
     "C4": 4,
@@ -109,6 +115,27 @@ def card_meets_requirements(card, requirements):
         if card_bus != required_bus:
             return False
     
+    minimum_uhs_bus = requirements.get(
+        "minimum_uhs_bus"
+    )
+
+    if minimum_uhs_bus:
+        card_bus = card.get(
+            "bus"
+        )
+
+        if card_bus not in UHS_BUS_RANK:
+            return False
+
+        if (
+            UHS_BUS_RANK.get(card_bus, 0)
+            < UHS_BUS_RANK.get(
+                minimum_uhs_bus,
+                0
+            )
+        ):
+            return False
+    
     minimum_video = requirements.get(
         "minimum_video_speed_class"
     )
@@ -180,6 +207,32 @@ def card_meets_requirements(card, requirements):
 
     return True
 
+def card_meets_requirement_set(
+    card,
+    requirements=None,
+    requirements_any_of=None,
+):
+    if not card_meets_requirements(
+        card,
+        requirements or {}
+    ):
+        return False
+
+    requirements_any_of = (
+        requirements_any_of or []
+    )
+
+    if requirements_any_of:
+        if not any(
+            card_meets_requirements(
+                card,
+                option
+            )
+            for option in requirements_any_of
+        ):
+            return False
+
+    return True
 
 def card_fits_slot(card, slot):
     if not form_factor_matches(
@@ -219,9 +272,16 @@ def card_fits_slot(card, slot):
     ):
         return False
 
-    if not card_meets_requirements(
+    if not card_meets_requirement_set(
         card,
-        slot.get("requirements", {})
+        slot.get(
+            "requirements",
+            {}
+        ),
+        slot.get(
+            "requirements_any_of",
+            []
+        ),
     ):
         return False
 
@@ -777,8 +837,16 @@ def generate_usage_recommendations(device, cards):
 
     profiles = [
         profile
-        for profile in device.get("usage_profiles", [])
-        if profile.get("requirements")
+        for profile in device.get(
+            "usage_profiles",
+            []
+        )
+        if (
+            profile.get("requirements")
+            or profile.get(
+                "requirements_any_of"
+            )
+        )
     ]
 
     output = ""
@@ -808,9 +876,16 @@ def generate_usage_recommendations(device, cards):
         for match in matches:
             card = match["card"]
 
-            if card_meets_requirements(
+            if card_meets_requirement_set(
                 card,
-                profile.get("requirements", {})
+                profile.get(
+                    "requirements",
+                    {}
+                ),
+                profile.get(
+                    "requirements_any_of",
+                    []
+                ),
             ):
                 profile_matches.append(match)
 
@@ -1737,6 +1812,89 @@ def generate_requirements_summary(device):
     </div>
     """
 
+def requirement_text(requirements):
+    requirements = requirements or {}
+
+    values = []
+
+    required_bus = requirements.get(
+        "required_bus"
+    )
+
+    minimum_uhs_bus = requirements.get(
+        "minimum_uhs_bus"
+    )
+
+    sd = requirements.get(
+        "minimum_sd_speed_class"
+    )
+
+    uhs = requirements.get(
+        "minimum_uhs_speed_class"
+    )
+
+    video = requirements.get(
+        "minimum_video_speed_class"
+    )
+
+    application = requirements.get(
+        "minimum_application_class"
+    )
+
+    express = requirements.get(
+        "minimum_sd_express_speed_class"
+    )
+
+    if required_bus:
+        values.append(
+            "{} required".format(
+                required_bus
+            )
+        )
+
+    if minimum_uhs_bus:
+        values.append(
+            "{} or newer UHS interface".format(
+                minimum_uhs_bus
+            )
+        )
+
+    if sd:
+        values.append(
+            "{} or better".format(
+                sd
+            )
+        )
+
+    if uhs:
+        values.append(
+            "{} or better".format(
+                uhs
+            )
+        )
+
+    if video:
+        values.append(
+            "{} or better".format(
+                video
+            )
+        )
+
+    if application:
+        values.append(
+            "{} or better".format(
+                application
+            )
+        )
+
+    if express:
+        values.append(
+            "{} or better".format(
+                express
+            )
+        )
+
+    return " AND ".join(values)
 
 def generate_usage_profiles(device):
     profiles = device.get(
@@ -1752,7 +1910,12 @@ def generate_usage_profiles(device):
             {}
         )
 
-        if requirements:
+        requirements_any_of = profile.get(
+            "requirements_any_of",
+            []
+        )
+
+        if requirements or requirements_any_of:
             useful_profiles.append(profile)
 
     if not useful_profiles:
@@ -1765,57 +1928,54 @@ def generate_usage_profiles(device):
             "requirements"
         ]
 
-        values = []
+        requirement_parts = []
 
-        required_bus = requirements.get(
-            "required_bus"
+        base_requirement_text = requirement_text(
+            requirements
         )
 
-        sd = requirements.get(
-            "minimum_sd_speed_class"
+        if base_requirement_text:
+            requirement_parts.append(
+                base_requirement_text
+            )
+
+        requirements_any_of = profile.get(
+            "requirements_any_of",
+            []
         )
 
-        uhs = requirements.get(
-            "minimum_uhs_speed_class"
-        )
+        if requirements_any_of:
+            option_texts = []
 
-        video = requirements.get(
-            "minimum_video_speed_class"
-        )
-
-        application = requirements.get(
-            "minimum_application_class"
-        )
-
-        express = requirements.get(
-            "minimum_sd_express_speed_class"
-        )
-
-        if required_bus:
-            values.append(
-                "{} required".format(
-                    required_bus
+            for option in requirements_any_of:
+                text = requirement_text(
+                    option
                 )
-            )
 
-        if sd:
-            values.append(f"{sd} or better")
+                if text:
+                    option_texts.append(
+                        text
+                    )
 
-        if uhs:
-            values.append(f"{uhs} or better")
+            if option_texts:
+                option_display = " OR ".join(
+                    option_texts
+                )
 
-        if video:
-            values.append(f"{video} or better")
+                if base_requirement_text:
+                    option_display = (
+                        "("
+                        + option_display
+                        + ")"
+                    )
 
-        if application:
-            values.append(
-                f"{application} or better"
-            )
+                requirement_parts.append(
+                    option_display
+                )
 
-        if express:
-            values.append(
-                f"{express} or better"
-            )
+        requirement_display = " AND ".join(
+            requirement_parts
+        )
 
         rows += f"""
         <div class="usage-row">
@@ -1824,7 +1984,7 @@ def generate_usage_profiles(device):
             </span>
 
             <strong>
-                {html.escape(", ".join(values))}
+                {html.escape(requirement_display)}
             </strong>
         </div>
         """

@@ -31,7 +31,15 @@
           "setup_requirements": {},
           "min_capacity_gb": null,
           "max_capacity_gb": 256,
-          "max_capacity_status": "manufacturer_documented"
+          "max_capacity_status": "manufacturer_documented",
+          "requirements_any_of": [
+            {
+              "minimum_sd_speed_class": "C10"
+            },
+            {
+              "minimum_uhs_bus": "UHS-I"
+            }
+          ]
         }
       ]
     },
@@ -40,12 +48,19 @@
         "id": "video-recording",
         "label": "Video recording",
         "requirements": {},
-        "recommendations": {}
+        "recommendations": {},
+        "requirements_any_of": [
+          {
+            "minimum_sd_speed_class": "C10"
+          },
+          {
+            "minimum_uhs_bus": "UHS-I"
+          }
+        ]
       }
     ],
     "notes": [
       "GoPro specifies a brand-name microSD, microSDHC, or microSDXC card with a Class 10 or UHS-I rating.",
-      "The Class 10-or-UHS-I condition is preserved as manufacturer wording rather than converted into separate AND requirements.",
       "Maximum documented capacity is 256 GB."
     ],
     "sources": [
@@ -73,6 +88,26 @@
       "field": "storage.slots.0.max_capacity_gb",
       "source_id": "gopro-hero9-manual",
       "evidence": "GoPro specifies memory-card capacity up to 256GB."
+    },
+    {
+      "field": "storage.slots.0.requirements_any_of.0.minimum_sd_speed_class",
+      "source_id": "gopro-hero9-manual",
+      "evidence": "GoPro specifies a Class 10 or UHS-I rated card for HERO9 Black."
+    },
+    {
+      "field": "storage.slots.0.requirements_any_of.1.minimum_uhs_bus",
+      "source_id": "gopro-hero9-manual",
+      "evidence": "GoPro specifies a Class 10 or UHS-I rated card for HERO9 Black."
+    },
+    {
+      "field": "usage_profiles.0.requirements_any_of.0.minimum_sd_speed_class",
+      "source_id": "gopro-hero9-manual",
+      "evidence": "GoPro specifies a Class 10 or UHS-I rated card for HERO9 Black."
+    },
+    {
+      "field": "usage_profiles.0.requirements_any_of.1.minimum_uhs_bus",
+      "source_id": "gopro-hero9-manual",
+      "evidence": "GoPro specifies a Class 10 or UHS-I rated card for HERO9 Black."
     }
   ]
 }

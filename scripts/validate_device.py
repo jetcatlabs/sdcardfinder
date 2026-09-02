@@ -177,44 +177,24 @@ def validate(device_id):
                 "{} min_capacity_gb cannot exceed max_capacity_gb."
                 .format(prefix)
             )
-
-        max_capacity = slot.get(
-            "max_capacity_gb"
-        )
-        
-        if (
-            min_capacity is not None
-            and max_capacity is not None
-            and min_capacity > max_capacity
-        ):
-            errors.append(
-                "storage.slots.{}.min_capacity_gb cannot exceed max_capacity_gb.".format(
-                    slot_index
-                )
-            )
         
         requirements = slot.get(
             "requirements",
             {}
         )
-        
-        required_bus = requirements.get(
-            "required_bus"
-        )
-        
-        if (
-            required_bus is not None
-            and required_bus not in ALLOWED_BUSES
-        ):
-            errors.append(
-                "Unknown required bus: {}".format(
-                    required_bus
-                )
-            )
-        
-        validate_speed_values(
+
+        validate_requirement_object(
             requirements,
-            errors
+            errors,
+            prefix + ".requirements",
+        )
+
+        validate_requirements_any_of(
+            slot.get(
+                "requirements_any_of"
+            ),
+            errors,
+            prefix + ".requirements_any_of",
         )
 
         validate_speed_values(
@@ -276,16 +256,31 @@ def validate(device_id):
                     )
                 )
         
-    for profile in device.get(
-        "usage_profiles",
-        []
+    for profile_index, profile in enumerate(
+        device.get(
+            "usage_profiles",
+            []
+        )
     ):
-        validate_speed_values(
+        validate_requirement_object(
             profile.get(
                 "requirements",
                 {}
             ),
-            errors
+            errors,
+            "usage_profiles.{}.requirements".format(
+                profile_index
+            ),
+        )
+
+        validate_requirements_any_of(
+            profile.get(
+                "requirements_any_of"
+            ),
+            errors,
+            "usage_profiles.{}.requirements_any_of".format(
+                profile_index
+            ),
         )
 
         validate_speed_values(
@@ -458,6 +453,93 @@ def validate(device_id):
 
     return errors, warnings
 
+def validate_requirement_object(
+    values,
+    errors,
+    prefix,
+):
+    if not isinstance(values, dict):
+        errors.append(
+            "{} must be an object.".format(
+                prefix
+            )
+        )
+        return
+
+    required_bus = values.get(
+        "required_bus"
+    )
+
+    if (
+        required_bus is not None
+        and required_bus not in ALLOWED_BUSES
+    ):
+        errors.append(
+            "{} has unknown required bus: {}"
+            .format(
+                prefix,
+                required_bus
+            )
+        )
+
+    validate_speed_values(
+        values,
+        errors
+    )
+
+
+def validate_requirements_any_of(
+    values,
+    errors,
+    prefix,
+):
+    if values is None:
+        return
+
+    if not isinstance(values, list):
+        errors.append(
+            "{} must be an array.".format(
+                prefix
+            )
+        )
+        return
+
+    if not values:
+        errors.append(
+            "{} must contain at least one option."
+            .format(
+                prefix
+            )
+        )
+        return
+
+    for index, option in enumerate(values):
+        option_prefix = "{}.{}".format(
+            prefix,
+            index
+        )
+
+        if not isinstance(option, dict):
+            errors.append(
+                "{} must be an object.".format(
+                    option_prefix
+                )
+            )
+            continue
+
+        if not option:
+            errors.append(
+                "{} cannot be empty.".format(
+                    option_prefix
+                )
+            )
+            continue
+
+        validate_requirement_object(
+            option,
+            errors,
+            option_prefix,
+        )
 
 def validate_speed_values(values, errors):
     uhs = values.get(
@@ -535,6 +617,16 @@ def factual_fields(device):
                     base + "." + key,
                     nested_value
                 )
+
+        elif isinstance(value, list):
+            for index, nested_value in enumerate(
+                value
+            ):
+                add_nested_fields(
+                    base + "." + str(index),
+                    nested_value
+                )
+
         else:
             fields.add(base)
 
@@ -579,6 +671,17 @@ def factual_fields(device):
             fields.add(
                 base + ".max_capacity_gb"
             )
+            
+        requirements_any_of = slot.get(
+            "requirements_any_of",
+            []
+        )
+
+        if requirements_any_of:
+            add_nested_fields(
+                base + ".requirements_any_of",
+                requirements_any_of
+            )
 
         for key, value in slot.get(
             "requirements",
@@ -590,7 +693,18 @@ def factual_fields(device):
                 + key,
                 value
             )
+        
+        requirements_any_of = slot.get(
+            "requirements_any_of",
+            []
+        )
 
+        if requirements_any_of:
+            add_nested_fields(
+                base + ".requirements_any_of",
+                requirements_any_of
+            )
+        
         for key, value in slot.get(
             "recommendations",
             {}
@@ -633,7 +747,18 @@ def factual_fields(device):
                 + key,
                 value
             )
+        
+        requirements_any_of = profile.get(
+            "requirements_any_of",
+            []
+        )
 
+        if requirements_any_of:
+            add_nested_fields(
+                base + ".requirements_any_of",
+                requirements_any_of
+            )
+        
         for key, value in profile.get(
             "recommendations",
             {}
