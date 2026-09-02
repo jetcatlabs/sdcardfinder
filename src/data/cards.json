@@ -6907,5 +6907,155 @@
       "recording_hours": null,
       "pe_cycles": null
     }
+  },
+  {
+    "id": "nextorage-nx-f2se-v60-sd-128gb",
+    "manufacturer": "Nextorage",
+    "product_family": "NX-F2SE Series",
+    "model": "128GB SDXC",
+    "capacity_gb": 128,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 100,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": "NX-F2SE128G",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Nextorage",
+        "title": "NX-F2SE Series | SDXC UHS-II Memory Cards",
+        "url": "https://www.nextorage.net/en/cards/sd/f2se/",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "nextorage-nx-f2se-v60-sd-256gb",
+    "manufacturer": "Nextorage",
+    "product_family": "NX-F2SE Series",
+    "model": "256GB SDXC",
+    "capacity_gb": 256,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 170,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": "NX-F2SE256G",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Nextorage",
+        "title": "NX-F2SE Series | SDXC UHS-II Memory Cards",
+        "url": "https://www.nextorage.net/en/cards/sd/f2se/",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "nextorage-nx-f2se-v60-sd-512gb",
+    "manufacturer": "Nextorage",
+    "product_family": "NX-F2SE Series",
+    "model": "512GB SDXC",
+    "capacity_gb": 512,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V60",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 280,
+      "max_write_mbps": 150,
+      "minimum_sustained_write_mbps": 60
+    },
+    "part_number": "NX-F2SE512G",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Nextorage",
+        "title": "NX-F2SE Series | SDXC UHS-II Memory Cards",
+        "url": "https://www.nextorage.net/en/cards/sd/f2se/",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
   }
 ]

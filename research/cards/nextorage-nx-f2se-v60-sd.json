@@ -1,0 +1,151 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "nextorage-nx-f2se-v60-sd",
+    "manufacturer": "Nextorage",
+    "product_family": "NX-F2SE Series",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V60",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 280,
+        "max_write_mbps": 170,
+        "minimum_sustained_write_mbps": 60
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 128,
+        "part_number": "NX-F2SE128G",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 100
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "NX-F2SE256G",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "NX-F2SE512G",
+        "overrides": {
+          "performance": {
+            "max_write_mbps": 150
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "nextorage-nx-f2se-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Nextorage",
+        "title": "NX-F2SE Series | SDXC UHS-II Memory Cards",
+        "url": "https://www.nextorage.net/en/cards/sd/f2se/",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage specifies the NX-F2SE Series form factor as SDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage specifies the interface as UHS-II."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage specifies SD Speed Class 10."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage specifies UHS Speed Class 3 (U3)."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage specifies Video Speed Class V60."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage rates the NX-F2SE Series up to 280MB/s read."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage rates the 256GB variant up to 170MB/s write; the 128GB and 512GB differences are represented by overrides."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage states that V60 guarantees a minimum transfer rate of 60MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage lists a 128GB capacity."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage identifies the 128GB model as NX-F2SE128G."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_write_mbps",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage rates NX-F2SE128G up to 100MB/s write."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage lists a 256GB capacity."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage identifies the 256GB model as NX-F2SE256G."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage lists a 512GB capacity."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage identifies the 512GB model as NX-F2SE512G."
+    },
+    {
+      "field": "variants.2.overrides.performance.max_write_mbps",
+      "source_id": "nextorage-nx-f2se-product-page",
+      "evidence": "Nextorage rates NX-F2SE512G up to 150MB/s write."
+    }
+  ]
+}
