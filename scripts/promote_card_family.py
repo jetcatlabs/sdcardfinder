@@ -372,9 +372,9 @@ def main():
                     "performance"
                 ]
             ),
-            "part_number": variant[
+            "part_number": variant.get(
                 "part_number"
-            ],
+            ),
             "sources": build_production_sources(
                 research_sources,
                 claims,
