@@ -1,0 +1,261 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "kingston-canvas-select-plus-microsd",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Select Plus",
+    "common": {
+      "form_factor": "microSDXC",
+      "bus": "UHS-I",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": null,
+        "video": null,
+        "application": "A1",
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 150,
+        "max_write_mbps": null,
+        "minimum_sustained_write_mbps": 10
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": "SDCS3/64GB",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U1",
+            "video": "V10"
+          },
+          "performance": {
+            "max_read_mbps": 100
+          }
+        }
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "SDCS3/128GB",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U1",
+            "video": "V10"
+          }
+        }
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "SDCS3/256GB",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U1",
+            "video": "V10"
+          }
+        }
+      },
+      {
+        "capacity_gb": 512,
+        "part_number": "SDCS3/512GB",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U3",
+            "video": "V30"
+          },
+          "performance": {
+            "minimum_sustained_write_mbps": 30
+          }
+        }
+      },
+      {
+        "capacity_gb": 1024,
+        "part_number": "SDCS3/1TB",
+        "overrides": {
+          "speed_classes": {
+            "uhs": "U3",
+            "video": "V30"
+          },
+          "performance": {
+            "minimum_sustained_write_mbps": 30
+          }
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "kingston-canvas-select-plus-microsd-datasheet",
+        "type": "manufacturer_datasheet",
+        "publisher": "Kingston",
+        "title": "Canvas Select Plus microSD Memory Card Datasheet",
+        "url": "https://www.kingston.com/datasheets/SDCS3_us.pdf",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      },
+      {
+        "id": "kingston-memory-card-speed-classes",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies the current 64GB through 1TB Canvas Select Plus models as microSDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies the current Canvas Select Plus microSD family as UHS-I."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies Class 10."
+    },
+    {
+      "field": "common.speed_classes.application",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies Application Performance Class A1."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston rates the 128GB through 1TB variants up to 150MB/s read; the 64GB difference is represented by an override."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "kingston-memory-card-speed-classes",
+      "evidence": "Kingston defines U1 and V10 as minimum sustained write performance of 10MB/s; the U3/V30 variants are represented by overrides."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston lists a 64GB capacity."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston lists SDCS3/64GB as the 64GB adapter-included part number."
+    },
+    {
+      "field": "variants.0.overrides.speed_classes.uhs",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies U1 for the 64GB variant."
+    },
+    {
+      "field": "variants.0.overrides.speed_classes.video",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies V10 for the 64GB variant."
+    },
+    {
+      "field": "variants.0.overrides.performance.max_read_mbps",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston rates the 64GB variant up to 100MB/s read."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston lists a 128GB capacity."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston lists SDCS3/128GB as the 128GB adapter-included part number."
+    },
+    {
+      "field": "variants.1.overrides.speed_classes.uhs",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies U1 for the 128GB variant."
+    },
+    {
+      "field": "variants.1.overrides.speed_classes.video",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies V10 for the 128GB variant."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston lists a 256GB capacity."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston lists SDCS3/256GB as the 256GB adapter-included part number."
+    },
+    {
+      "field": "variants.2.overrides.speed_classes.uhs",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies U1 for the 256GB variant."
+    },
+    {
+      "field": "variants.2.overrides.speed_classes.video",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies V10 for the 256GB variant."
+    },
+    {
+      "field": "variants.3.capacity_gb",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston lists a 512GB capacity."
+    },
+    {
+      "field": "variants.3.part_number",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston lists SDCS3/512GB as the 512GB adapter-included part number."
+    },
+    {
+      "field": "variants.3.overrides.speed_classes.uhs",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies U3 for the 512GB variant."
+    },
+    {
+      "field": "variants.3.overrides.speed_classes.video",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies V30 for the 512GB variant."
+    },
+    {
+      "field": "variants.3.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "kingston-memory-card-speed-classes",
+      "evidence": "Kingston defines U3 and V30 as minimum sustained write performance of 30MB/s."
+    },
+    {
+      "field": "variants.4.capacity_gb",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston lists a 1TB capacity."
+    },
+    {
+      "field": "variants.4.part_number",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston lists SDCS3/1TB as the 1TB adapter-included part number."
+    },
+    {
+      "field": "variants.4.overrides.speed_classes.uhs",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies U3 for the 1TB variant."
+    },
+    {
+      "field": "variants.4.overrides.speed_classes.video",
+      "source_id": "kingston-canvas-select-plus-microsd-datasheet",
+      "evidence": "Kingston specifies V30 for the 1TB variant."
+    },
+    {
+      "field": "variants.4.overrides.performance.minimum_sustained_write_mbps",
+      "source_id": "kingston-memory-card-speed-classes",
+      "evidence": "Kingston defines U3 and V30 as minimum sustained write performance of 30MB/s."
+    }
+  ]
+}

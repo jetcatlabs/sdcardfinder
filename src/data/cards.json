@@ -7384,5 +7384,300 @@
       "recording_hours": null,
       "pe_cycles": null
     }
+  },
+  {
+    "id": "kingston-canvas-select-plus-microsd-64gb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Select Plus",
+    "model": "64GB microSDXC",
+    "capacity_gb": 64,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U1",
+      "video": "V10",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 100,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": 10
+    },
+    "part_number": "SDCS3/64GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Canvas Select Plus microSD Memory Card Datasheet",
+        "url": "https://www.kingston.com/datasheets/SDCS3_us.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "kingston-canvas-select-plus-microsd-128gb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Select Plus",
+    "model": "128GB microSDXC",
+    "capacity_gb": 128,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U1",
+      "video": "V10",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 150,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": 10
+    },
+    "part_number": "SDCS3/128GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Canvas Select Plus microSD Memory Card Datasheet",
+        "url": "https://www.kingston.com/datasheets/SDCS3_us.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "kingston-canvas-select-plus-microsd-256gb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Select Plus",
+    "model": "256GB microSDXC",
+    "capacity_gb": 256,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U1",
+      "video": "V10",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 150,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": 10
+    },
+    "part_number": "SDCS3/256GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Canvas Select Plus microSD Memory Card Datasheet",
+        "url": "https://www.kingston.com/datasheets/SDCS3_us.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "kingston-canvas-select-plus-microsd-512gb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Select Plus",
+    "model": "512GB microSDXC",
+    "capacity_gb": 512,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 150,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDCS3/512GB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Canvas Select Plus microSD Memory Card Datasheet",
+        "url": "https://www.kingston.com/datasheets/SDCS3_us.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "kingston-canvas-select-plus-microsd-1tb",
+    "manufacturer": "Kingston",
+    "product_family": "Canvas Select Plus",
+    "model": "1TB microSDXC",
+    "capacity_gb": 1024,
+    "form_factor": "microSDXC",
+    "bus": "UHS-I",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V30",
+      "application": "A1",
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 150,
+      "max_write_mbps": null,
+      "minimum_sustained_write_mbps": 30
+    },
+    "part_number": "SDCS3/1TB",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "Canvas Select Plus microSD Memory Card Datasheet",
+        "url": "https://www.kingston.com/datasheets/SDCS3_us.pdf",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "speed_classes.application",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      },
+      {
+        "type": "manufacturer",
+        "publisher": "Kingston",
+        "title": "A Guide to Speed Classes for SD and microSD Cards",
+        "url": "https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "performance.minimum_sustained_write_mbps"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
   }
 ]
