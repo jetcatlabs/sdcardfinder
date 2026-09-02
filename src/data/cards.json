@@ -7057,5 +7057,155 @@
       "recording_hours": null,
       "pe_cycles": null
     }
+  },
+  {
+    "id": "nextorage-nx-f2pro-v90-sd-64gb",
+    "manufacturer": "Nextorage",
+    "product_family": "NX-F2PRO Series",
+    "model": "64GB SDXC",
+    "capacity_gb": 64,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V90",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 300,
+      "max_write_mbps": 299,
+      "minimum_sustained_write_mbps": 90
+    },
+    "part_number": "NX-F2PRO64G",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Nextorage",
+        "title": "NX-F2PRO Series | SDXC UHS-II Memory Cards",
+        "url": "https://www.nextorage.net/en/cards/sd/f2pro/",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "nextorage-nx-f2pro-v90-sd-128gb",
+    "manufacturer": "Nextorage",
+    "product_family": "NX-F2PRO Series",
+    "model": "128GB SDXC",
+    "capacity_gb": 128,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V90",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 300,
+      "max_write_mbps": 299,
+      "minimum_sustained_write_mbps": 90
+    },
+    "part_number": "NX-F2PRO128G",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Nextorage",
+        "title": "NX-F2PRO Series | SDXC UHS-II Memory Cards",
+        "url": "https://www.nextorage.net/en/cards/sd/f2pro/",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
+  },
+  {
+    "id": "nextorage-nx-f2pro-v90-sd-256gb",
+    "manufacturer": "Nextorage",
+    "product_family": "NX-F2PRO Series",
+    "model": "256GB SDXC",
+    "capacity_gb": 256,
+    "form_factor": "SDXC",
+    "bus": "UHS-II",
+    "speed_classes": {
+      "sd": "C10",
+      "uhs": "U3",
+      "video": "V90",
+      "application": null,
+      "express": null
+    },
+    "performance": {
+      "max_read_mbps": 300,
+      "max_write_mbps": 299,
+      "minimum_sustained_write_mbps": 90
+    },
+    "part_number": "NX-F2PRO256G",
+    "sources": [
+      {
+        "type": "manufacturer",
+        "publisher": "Nextorage",
+        "title": "NX-F2PRO Series | SDXC UHS-II Memory Cards",
+        "url": "https://www.nextorage.net/en/cards/sd/f2pro/",
+        "verified_at": "2026-09-02",
+        "supports": [
+          "bus",
+          "capacity_gb",
+          "form_factor",
+          "part_number",
+          "performance.max_read_mbps",
+          "performance.max_write_mbps",
+          "performance.minimum_sustained_write_mbps",
+          "speed_classes.sd",
+          "speed_classes.uhs",
+          "speed_classes.video"
+        ]
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02",
+    "endurance": {
+      "continuous_recording": null,
+      "recording_hours": null,
+      "pe_cycles": null
+    }
   }
 ]

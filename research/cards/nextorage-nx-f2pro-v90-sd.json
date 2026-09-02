@@ -1,0 +1,133 @@
+{
+  "research_status": "published",
+  "reviewed_by_human": true,
+  "card_family": {
+    "id": "nextorage-nx-f2pro-v90-sd",
+    "manufacturer": "Nextorage",
+    "product_family": "NX-F2PRO Series",
+    "common": {
+      "form_factor": "SDXC",
+      "bus": "UHS-II",
+      "speed_classes": {
+        "sd": "C10",
+        "uhs": "U3",
+        "video": "V90",
+        "application": null,
+        "express": null
+      },
+      "performance": {
+        "max_read_mbps": 300,
+        "max_write_mbps": 299,
+        "minimum_sustained_write_mbps": 90
+      },
+      "endurance": {
+        "continuous_recording": null,
+        "recording_hours": null,
+        "pe_cycles": null
+      }
+    },
+    "variants": [
+      {
+        "capacity_gb": 64,
+        "part_number": "NX-F2PRO64G",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 128,
+        "part_number": "NX-F2PRO128G",
+        "overrides": {}
+      },
+      {
+        "capacity_gb": 256,
+        "part_number": "NX-F2PRO256G",
+        "overrides": {}
+      }
+    ],
+    "sources": [
+      {
+        "id": "nextorage-nx-f2pro-product-page",
+        "type": "manufacturer_product_page",
+        "publisher": "Nextorage",
+        "title": "NX-F2PRO Series | SDXC UHS-II Memory Cards",
+        "url": "https://www.nextorage.net/en/cards/sd/f2pro/",
+        "verified_at": "2026-09-02",
+        "authority": "manufacturer",
+        "first_party_confirmed": true
+      }
+    ],
+    "status": "verified",
+    "last_verified": "2026-09-02"
+  },
+  "claims": [
+    {
+      "field": "common.form_factor",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage specifies the NX-F2PRO Series form factor as SDXC."
+    },
+    {
+      "field": "common.bus",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage specifies the interface as UHS-II."
+    },
+    {
+      "field": "common.speed_classes.sd",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage specifies SD Speed Class 10."
+    },
+    {
+      "field": "common.speed_classes.uhs",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage specifies UHS Speed Class 3 (U3)."
+    },
+    {
+      "field": "common.speed_classes.video",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage specifies Video Speed Class V90."
+    },
+    {
+      "field": "common.performance.max_read_mbps",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage rates the NX-F2PRO Series up to 300MB/s read."
+    },
+    {
+      "field": "common.performance.max_write_mbps",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage rates the NX-F2PRO Series up to 299MB/s write."
+    },
+    {
+      "field": "common.performance.minimum_sustained_write_mbps",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage states that V90 guarantees a minimum transfer rate of 90MB/s."
+    },
+    {
+      "field": "variants.0.capacity_gb",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage lists a 64GB capacity."
+    },
+    {
+      "field": "variants.0.part_number",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage identifies the 64GB model as NX-F2PRO64G."
+    },
+    {
+      "field": "variants.1.capacity_gb",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage lists a 128GB capacity."
+    },
+    {
+      "field": "variants.1.part_number",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage identifies the 128GB model as NX-F2PRO128G."
+    },
+    {
+      "field": "variants.2.capacity_gb",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage lists a 256GB capacity."
+    },
+    {
+      "field": "variants.2.part_number",
+      "source_id": "nextorage-nx-f2pro-product-page",
+      "evidence": "Nextorage identifies the 256GB model as NX-F2PRO256G."
+    }
+  ]
+}
