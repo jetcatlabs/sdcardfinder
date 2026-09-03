@@ -67,15 +67,27 @@ async function handleEvent(request, env) {
         });
     }
 
+	const cardId = clean(
+		body.card_id,
+		100
+	);
+
+	const merchant = clean(
+		body.merchant,
+		100
+	);
+
     env.EVENTS.writeDataPoint({
         indexes: [
             event
         ],
         blobs: [
-            clean(body.page, 200),
-            clean(body.device_id, 100),
-            clean(body.detail, 160)
-        ],
+			clean(body.page, 200),
+			clean(body.device_id, 100),
+			clean(body.detail, 160),
+			cardId,
+			merchant
+		],
         doubles: [
             1
         ]

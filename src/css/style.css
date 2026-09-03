@@ -1028,3 +1028,27 @@ h1 {
 .category-link:hover {
     text-decoration: underline;
 }
+
+.merchant-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.merchant-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.merchant-link:hover {
+    border-color: var(--accent);
+}

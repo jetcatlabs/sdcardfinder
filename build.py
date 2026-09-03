@@ -1,4 +1,5 @@
 from pathlib import Path
+from urllib.parse import urlparse
 import json
 import shutil
 import html
@@ -10,6 +11,8 @@ DIST = ROOT / "dist"
 
 DEVICES_FILE = SRC / "data" / "devices.json"
 CARDS_FILE = SRC / "data" / "cards.json"
+MERCHANTS_FILE = SRC / "data" / "merchants.json"
+MERCHANT_OFFERS_BY_CARD = {}
 
 SITE_URL = "https://sdcardfinder.com"
 
@@ -103,6 +106,118 @@ def load_json(path):
     with path.open("r", encoding="utf-8") as file:
         return json.load(file)
 
+def validate_and_index_merchants(
+    merchant_data,
+    cards,
+):
+    offers = merchant_data.get(
+        "offers"
+    )
+
+    if not isinstance(offers, list):
+        raise ValueError(
+            "merchants.json must contain an offers list"
+        )
+
+    valid_card_ids = {
+        card["id"]
+        for card in cards
+    }
+
+    seen = set()
+    by_card = {}
+
+    for index, offer in enumerate(offers):
+        if not isinstance(offer, dict):
+            raise ValueError(
+                f"Merchant offer {index} must be an object"
+            )
+
+        card_id = offer.get("card_id")
+        merchant = offer.get("merchant")
+        url = offer.get("url")
+        region = offer.get("region")
+        affiliate = offer.get("affiliate")
+
+        if (
+            not isinstance(card_id, str)
+            or not card_id
+        ):
+            raise ValueError(
+                f"Merchant offer {index} has invalid card_id"
+            )
+
+        if card_id not in valid_card_ids:
+            raise ValueError(
+                f"Merchant offer references unknown card: "
+                f"{card_id}"
+            )
+
+        if (
+            not isinstance(merchant, str)
+            or not merchant.strip()
+        ):
+            raise ValueError(
+                f"Merchant offer {index} has invalid merchant"
+            )
+
+        if (
+            not isinstance(region, str)
+            or not region.strip()
+        ):
+            raise ValueError(
+                f"Merchant offer {index} has invalid region"
+            )
+
+        if type(affiliate) is not bool:
+            raise ValueError(
+                f"Merchant offer {index} must explicitly "
+                f"set affiliate true or false"
+            )
+
+        if not isinstance(url, str):
+            raise ValueError(
+                f"Merchant offer {index} has invalid URL"
+            )
+
+        parsed = urlparse(url)
+
+        if (
+            parsed.scheme != "https"
+            or not parsed.netloc
+        ):
+            raise ValueError(
+                f"Merchant offer {index} must use HTTPS"
+            )
+
+        unique_key = (
+            card_id,
+            merchant.casefold(),
+            region.casefold(),
+        )
+
+        if unique_key in seen:
+            raise ValueError(
+                f"Duplicate merchant offer for "
+                f"{card_id}: {merchant} / {region}"
+            )
+
+        seen.add(unique_key)
+
+        by_card.setdefault(
+            card_id,
+            []
+        ).append(offer)
+
+    for card_offers in by_card.values():
+        card_offers.sort(
+            key=lambda offer: (
+                offer["region"],
+                offer["merchant"].casefold(),
+            )
+        )
+
+    return by_card
 
 def clean_dist():
     if DIST.exists():
@@ -835,6 +950,66 @@ def format_capacity(capacity_gb):
 
     return f"{capacity_gb} GB"
 
+def render_merchant_links(card):
+    offers = MERCHANT_OFFERS_BY_CARD.get(
+        card["id"],
+        []
+    )
+
+    if not offers:
+        return ""
+
+    links = []
+
+    for offer in offers:
+        merchant = html.escape(
+            offer["merchant"]
+        )
+
+        url = html.escape(
+            offer["url"],
+            quote=True
+        )
+
+        region = html.escape(
+            offer["region"]
+        )
+
+        card_id = html.escape(
+            card["id"],
+            quote=True
+        )
+
+        rel = (
+            "sponsored nofollow noopener"
+            if offer["affiliate"]
+            else "nofollow noopener"
+        )
+
+        links.append(
+            f"""
+            <a
+                class="merchant-link"
+                href="{url}"
+                rel="{rel}"
+                target="_blank"
+                data-card-id="{card_id}"
+                data-merchant="{merchant}"
+                data-region="{region}"
+            >
+                Check price at {merchant}
+            </a>
+            """
+        )
+
+    return """
+    <div class="merchant-links">
+        {}
+    </div>
+    """.format(
+        "\n".join(links)
+    )
+
 def render_recommendation_card(
         match,
         label=None,
@@ -885,6 +1060,10 @@ def render_recommendation_card(
         card
     )
 
+    merchant_links = render_merchant_links(
+        card
+    )
+
     label_html = ""
 
     if label:
@@ -931,6 +1110,7 @@ def render_recommendation_card(
 
         {reason_html}
         {endurance_badge}
+        {merchant_links}
 
     </article>
     """
@@ -4142,6 +4322,18 @@ def build():
     cards = load_json(
         CARDS_FILE
     )
+
+    merchant_data = load_json(
+        MERCHANTS_FILE
+    )
+
+    global MERCHANT_OFFERS_BY_CARD
+
+    MERCHANT_OFFERS_BY_CARD = \
+        validate_and_index_merchants(
+            merchant_data,
+            cards,
+        )
 
     clean_dist()
     copy_static_files(devices)
