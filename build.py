@@ -3201,7 +3201,7 @@ def generate_device_page(device, cards, devices):
         SD card specifications.
     </p>
 </footer>
-
+<script src="/js/events.js"></script>
 </body>
 </html>
 """
